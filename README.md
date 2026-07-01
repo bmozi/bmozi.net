@@ -37,11 +37,11 @@ The intended production target is Vercel with GitHub integration:
 
 ## Cloudflare DNS
 
-When the domain is managed in Cloudflare and the site is hosted on Vercel, use DNS-only records while Vercel validates the domain:
+When the domain is managed in Cloudflare and the site is hosted on Vercel, use DNS-only records while Vercel validates the domain. Vercel currently recommends these records for this project:
 
 | Type | Name | Target | Proxy |
 | --- | --- | --- | --- |
-| A | `@` | `76.76.21.21` | DNS only |
-| CNAME | `www` | `cname.vercel-dns.com` | DNS only |
+| CNAME | `@` | `d1560239b58f2b5c.vercel-dns-017.com` | DNS only |
+| CNAME | `www` | `d1560239b58f2b5c.vercel-dns-017.com` | DNS only |
 
 After Vercel shows the domain as valid and SSL is issued, Cloudflare can remain DNS-only for the cleanest setup. If Cloudflare proxy is enabled later, set SSL/TLS mode to `Full` or `Full (strict)` and keep Vercel's certificate active.
