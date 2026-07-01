@@ -51,20 +51,20 @@ const proofPoints = [
 
 const projects = [
   {
-    title: "Greenix operating layer",
-    kind: "Product system",
-    status: "Conversion design",
-    tags: ["UX", "Design system", "SaaS"],
+    title: "Sentinel",
+    kind: "Trust system",
+    status: "Flagship",
+    tags: ["AI", "APIs", "MCP", "Governance"],
     result:
-      "A cleaner product narrative, reusable pricing modules, and homepage flow built around user decisions.",
+      "An API gatekeeper and AI trust layer that turns integrations into scoped, audited tools, with a companion MCP server and a path toward an MCP fleet.",
   },
   {
-    title: "Resonance frequency lab",
-    kind: "Interactive tool",
-    status: "Prototype",
-    tags: ["Audio", "Visualization", "Web app"],
+    title: "Merlin Software Factory",
+    kind: "AI delivery system",
+    status: "Operating model",
+    tags: ["AI", "Automation", "Governance", "Delivery"],
     result:
-      "A browser-native exploration space for sound patterns, timing, and generative visual feedback.",
+      "A governed software-production workflow for AI-assisted engineering: standards, review paths, context discipline, and repeatable delivery habits.",
   },
   {
     title: "Fiction Forge",
@@ -75,13 +75,48 @@ const projects = [
       "A structured authoring environment for project memory, generation control, and draft iteration.",
   },
   {
-    title: "PestGenie field flow",
-    kind: "Service platform",
-    status: "Discovery",
-    tags: ["Ops", "Forms", "Automation"],
+    title: "Resonance Frequency Lab",
+    kind: "Interactive research lab",
+    status: "Prototype",
+    tags: ["Audio", "Visualization", "Web app"],
     result:
-      "A practical service interface concept for intake, triage, scheduling, and field-ready handoff.",
+      "A browser-native exploration space for sound patterns, timing, harmonic relationships, and generative visual feedback.",
   },
+];
+
+const sentinelCapabilities = [
+  [
+    "API gatekeeper",
+    "Scoped access, explicit service contracts, and audited integration boundaries.",
+  ],
+  [
+    "Companion MCP server",
+    "Operational capabilities exposed to agents as governed tools, not raw vendor credentials.",
+  ],
+  [
+    "MCP fleet pattern",
+    "A path for multiple domain servers with shared policy, identity, observability, and replay discipline.",
+  ],
+];
+
+const soaLineage = [
+  [
+    "SOA",
+    "The intellectual ancestor: standardized contracts, loose coupling, reusable and discoverable services, and governance.",
+  ],
+  ["Microservices", "Kept the principles and removed the ESB center of gravity."],
+  [
+    "Event-driven",
+    "Added temporal decoupling, replay, and better separation between producers and consumers.",
+  ],
+  [
+    "API-first",
+    "Treats APIs and events as products with catalogs, ownership, lifecycle discipline, and clear consumers.",
+  ],
+  [
+    "Agent mesh",
+    "The emerging next rung: governed agents, scoped tools, identity, policy, audit, and operational boundaries.",
+  ],
 ];
 
 const operatingModes = [
@@ -176,7 +211,7 @@ export default function Home() {
           className="relative isolate overflow-hidden border-b border-white/10"
         >
           <SignalField />
-          <div className="mx-auto grid min-h-[calc(100svh-53px)] max-w-7xl items-center gap-4 px-4 pb-5 pt-7 sm:min-h-[calc(100svh-73px)] sm:gap-10 sm:px-8 sm:pb-12 sm:pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:pb-16">
+          <div className="mx-auto grid min-h-[calc(100svh-53px)] max-w-7xl items-center gap-4 px-4 pb-5 pt-7 sm:min-h-[calc(100svh-73px)] sm:gap-10 sm:px-8 sm:pb-12 sm:pt-16 lg:grid-cols-[1fr_1fr] lg:items-end lg:pb-16 xl:grid-cols-[0.96fr_1.04fr]">
             <div className="relative z-10 max-w-4xl">
               <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-6 sm:px-3 sm:py-2 sm:text-xs">
                 <Radar size={15} aria-hidden="true" />
@@ -210,7 +245,7 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-4">
+            <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-5">
               <div className="hidden border border-white/10 bg-black/30 p-4 lg:block">
                 <BrandLockup
                   markClassName="h-20 w-20"
@@ -220,13 +255,13 @@ export default function Home() {
                   Founder-led technical studio
                 </p>
               </div>
-              <div className="grid auto-rows-fr grid-cols-2 gap-2 sm:gap-3">
+              <div className="grid auto-rows-fr grid-cols-2 gap-2 sm:gap-4">
                 {proofPoints.map(([value, label]) => (
                   <div
                     key={label}
-                    className="flex min-h-20 min-w-0 flex-col justify-between border border-white/10 p-2.5 sm:min-h-36 sm:p-5"
+                    className="flex min-h-24 min-w-0 flex-col justify-between overflow-hidden border border-white/10 p-2.5 sm:min-h-40 sm:p-6"
                   >
-                    <p className="whitespace-nowrap font-display text-[clamp(1.25rem,5.6vw,1.5rem)] font-black leading-none text-white sm:text-[clamp(2rem,2.4vw,2.35rem)]">
+                    <p className="whitespace-nowrap font-display text-[clamp(1.15rem,5vw,1.42rem)] font-black leading-none text-white sm:text-[clamp(1.75rem,2vw,2.08rem)]">
                       {value}
                     </p>
                     <p className="mt-2 break-words font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-4 sm:text-xs">
@@ -280,29 +315,50 @@ export default function Home() {
         </section>
 
         <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1fr]">
-            <div>
-              <p className="font-mono text-xs uppercase text-[var(--magenta)]">
-                Service surface
-              </p>
-              <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                From SOA principles to AI-enabled software people can actually
-                use.
-              </h2>
+          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+            <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+              <div>
+                <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+                  Service surface
+                </p>
+                <h2 className="mt-4 font-display text-5xl font-black leading-none">
+                  From SOA principles to AI-enabled software people can actually
+                  use.
+                </h2>
+                <p className="mt-6 max-w-xl leading-7 text-black/70">
+                  The constant is governance and clear contracts. BMOZI carries
+                  that line from SOA into APIs, events, AI tools, and the
+                  emerging agent mesh without losing the operating discipline
+                  that makes systems trustworthy.
+                </p>
+              </div>
+              <div className="grid gap-3">
+                {operatingModes.map((mode) => (
+                  <div
+                    key={mode}
+                    className="flex gap-4 border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
+                  >
+                    <BadgeCheck
+                      className="mt-1 shrink-0 text-[var(--magenta)]"
+                      size={19}
+                      aria-hidden="true"
+                    />
+                    <p className="text-base leading-7">{mode}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="grid gap-3">
-              {operatingModes.map((mode) => (
-                <div
-                  key={mode}
-                  className="flex gap-4 border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
+            <div className="mt-10 grid gap-3 md:grid-cols-5">
+              {soaLineage.map(([name, text]) => (
+                <article
+                  key={name}
+                  className="border border-black/10 bg-white p-4"
                 >
-                  <BadgeCheck
-                    className="mt-1 shrink-0 text-[var(--magenta)]"
-                    size={19}
-                    aria-hidden="true"
-                  />
-                  <p className="text-base leading-7">{mode}</p>
-                </div>
+                  <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+                    {name}
+                  </p>
+                  <p className="mt-4 text-sm leading-6 text-black/70">{text}</p>
+                </article>
               ))}
             </div>
           </div>
@@ -358,13 +414,45 @@ export default function Home() {
                   Portfolio signals
                 </p>
                 <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
-                  Project directions that show the range.
+                  Flagship systems that show the operating range.
                 </h2>
               </div>
               <p className="max-w-md leading-7 text-[var(--soft)]">
-                A living portfolio for public case studies, product prototypes,
-                and technical demonstrations as BMOZI ships new work.
+                Sentinel leads the portfolio: a trust system and API gatekeeper
+                for governed AI access. Merlin, Fiction Forge, and Resonance
+                show the same pattern applied to delivery, creative systems, and
+                interactive research.
               </p>
+            </div>
+            <div className="mb-6 border border-[var(--signal)]/35 bg-[linear-gradient(135deg,rgba(25,214,197,0.13),rgba(255,255,255,0.025))] p-5 sm:p-7">
+              <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+                <div>
+                  <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                    Sentinel trust system
+                  </p>
+                  <h3 className="mt-4 font-display text-4xl font-black leading-none text-white">
+                    The gatekeeper for governed API and AI access.
+                  </h3>
+                </div>
+                <p className="max-w-2xl leading-7 text-[var(--soft)] lg:justify-self-end">
+                  Sentinel is the clearest expression of the BMOZI pattern:
+                  protect the enterprise boundary, turn APIs into controlled
+                  capabilities, and let agents work through scoped MCP tools
+                  with policy, audit, and accountability built in.
+                </p>
+              </div>
+              <div className="mt-7 grid gap-3 md:grid-cols-3">
+                {sentinelCapabilities.map(([name, text]) => (
+                  <div key={name} className="border border-white/10 p-4">
+                    <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                      {name}
+                    </p>
+                    <p className="mt-4 text-sm leading-6 text-[var(--soft)]">
+                      {text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
             <ProjectFilter projects={projects} />
           </div>
