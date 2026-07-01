@@ -15,6 +15,7 @@ import {
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
+import { BrandLockup } from "@/components/brand-lockup";
 import { ProjectFilter } from "@/components/project-filter";
 import { SignalField } from "@/components/signal-field";
 
@@ -116,21 +117,10 @@ export default function Home() {
         <header className="sticky top-0 z-40 border-b border-white/10 bg-[rgba(10,13,17,0.78)] backdrop-blur-xl">
           <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-8 sm:py-4">
             <a href="#top" className="group flex items-center gap-3">
-              <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:shadow-[6px_6px_0_var(--signal)]">
-                <Image
-                  src="/brand/bmozi-technical-mark.svg"
-                  alt=""
-                  width={330}
-                  height={330}
-                  priority
-                  className="h-8 w-8 object-cover sm:h-10 sm:w-10"
-                />
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="font-display text-base font-semibold sm:text-lg">
-                  BMOZI Technical
-                </span>
-              </span>
+              <BrandLockup
+                markClassName="h-8 w-8 sm:h-10 sm:w-10"
+                textClassName="text-base sm:text-lg"
+              />
             </a>
             <div className="hidden items-center gap-6 font-mono text-xs text-[var(--muted)] md:flex">
               <a className="transition-colors hover:text-white" href="#systems">
@@ -198,15 +188,10 @@ export default function Home() {
             </div>
 
             <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-4">
-              <div className="hidden overflow-hidden border border-white/10 bg-black/30 p-3 lg:block">
-                <Image
-                  src="/brand/bmozi-technical-wordmark.svg"
-                  alt="BMOZI Technical"
-                  width={1020}
-                  height={310}
-                  priority
-                  sizes="(min-width: 1024px) 32vw, 0px"
-                  className="h-auto w-full"
+              <div className="hidden border border-white/10 bg-black/30 p-4 lg:block">
+                <BrandLockup
+                  markClassName="h-20 w-20"
+                  textClassName="text-[2.35rem]"
                 />
               </div>
               <div className="grid grid-cols-4 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-2">
@@ -423,14 +408,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
-            <div className="max-w-96 overflow-hidden border border-[var(--ink)]/20 bg-[var(--ink)] p-3">
-              <Image
-                src="/brand/bmozi-technical-wordmark.svg"
-                alt="BMOZI Technical logo"
-                width={1020}
-                height={310}
-                sizes="384px"
-                className="h-auto w-full"
+            <div className="inline-flex border border-[var(--ink)]/20 bg-[var(--ink)] p-4">
+              <BrandLockup
+                markClassName="h-16 w-16"
+                textClassName="text-3xl"
               />
             </div>
           </div>

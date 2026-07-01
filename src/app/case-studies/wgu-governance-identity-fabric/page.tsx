@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Waypoints,
 } from "lucide-react";
+import { BrandLockup } from "@/components/brand-lockup";
 
 export const metadata: Metadata = {
   title: "Governance and Identity Fabric Thesis",
@@ -124,19 +125,7 @@ export default function GovernanceIdentityFabricPage() {
         <header className="border-b border-white/10 bg-[rgba(10,13,17,0.86)]">
           <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
             <Link href="/" className="group inline-flex items-center gap-3">
-              <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[5px_5px_0_var(--signal)]">
-                <Image
-                  src="/brand/bmozi-technical-mark.svg"
-                  alt=""
-                  width={330}
-                  height={330}
-                  priority
-                  className="h-9 w-9 object-cover"
-                />
-              </span>
-              <span className="font-display text-lg font-semibold leading-none">
-                BMOZI Technical
-              </span>
+              <BrandLockup markClassName="h-9 w-9" textClassName="text-lg" />
             </Link>
             <Link
               href="/case-studies/wgu-unified-student-object"
