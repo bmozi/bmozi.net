@@ -46,7 +46,7 @@ const proofPoints = [
   ["1.59M+", "AI-assisted production lines personally shipped"],
   ["Contracts", "Explicit service, tool, and data boundaries"],
   ["Guardrails", "Policy, audit, review, and human accountability"],
-  ["SOA roots", "UCO, Sentinel, Merlin, governed services"],
+  ["SOA Roots", "UCO, Sentinel, Merlin, governed services"],
 ];
 
 const projects = [
@@ -216,14 +216,17 @@ export default function Home() {
                   markClassName="h-20 w-20"
                   textClassName="text-[2.35rem]"
                 />
-                <p className="mt-4 border-t border-white/10 pt-4 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                <p className="mt-4 whitespace-nowrap border-t border-white/10 pt-4 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-[var(--muted)]">
                   Founder-led technical studio
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {proofPoints.map(([value, label]) => (
-                  <div key={label} className="border border-white/10 p-2 sm:p-4">
-                    <p className="font-display text-xl font-black leading-none text-white sm:text-4xl">
+                  <div
+                    key={label}
+                    className="min-w-0 border border-white/10 p-2 sm:min-h-28 sm:p-4"
+                  >
+                    <p className="whitespace-nowrap font-display text-[clamp(1.25rem,5.6vw,1.5rem)] font-black leading-none text-white sm:text-[clamp(2rem,2.4vw,2.35rem)]">
                       {value}
                     </p>
                     <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">
