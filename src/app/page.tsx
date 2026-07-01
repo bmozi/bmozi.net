@@ -220,16 +220,16 @@ export default function Home() {
                   Founder-led technical studio
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              <div className="grid auto-rows-fr grid-cols-2 gap-2 sm:gap-3">
                 {proofPoints.map(([value, label]) => (
                   <div
                     key={label}
-                    className="min-w-0 border border-white/10 p-2 sm:min-h-28 sm:p-4"
+                    className="flex min-h-20 min-w-0 flex-col justify-between border border-white/10 p-2.5 sm:min-h-36 sm:p-5"
                   >
                     <p className="whitespace-nowrap font-display text-[clamp(1.25rem,5.6vw,1.5rem)] font-black leading-none text-white sm:text-[clamp(2rem,2.4vw,2.35rem)]">
                       {value}
                     </p>
-                    <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">
+                    <p className="mt-2 break-words font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-4 sm:text-xs">
                       {label}
                     </p>
                   </div>
