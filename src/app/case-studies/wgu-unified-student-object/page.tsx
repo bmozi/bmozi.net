@@ -138,7 +138,7 @@ const meshReceipts = [
   },
   {
     title: "Merlin",
-    text: "Coordinated multi-agent work patterns with standards, review loops, and delivery discipline.",
+    text: "An express software factory pattern with quality gates, provenance, review loops, and auditable delivery discipline.",
   },
 ];
 
@@ -153,7 +153,7 @@ const talkTracks = [
   },
   {
     label: "Mesh of meshes vision",
-    text: "The enterprise is becoming a mesh of meshes: service mesh, data mesh, and the emerging agent mesh tied together by one governance and identity fabric. The vision is forward-looking; the receipts are Sentinel, GreenixOS, and Merlin.",
+    text: "WGU appears to be exploring mesh-of-meshes thinking. My contribution is a discussion thesis: service mesh, data mesh, and the emerging agent mesh need a thin governance and identity fabric at the seams.",
   },
   {
     label: "Architecture communication",
@@ -195,7 +195,7 @@ export default function UnifiedStudentObjectPage() {
             <Link href="/" className="group inline-flex items-center gap-3">
               <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[5px_5px_0_var(--signal)]">
                 <Image
-                  src="/brand/bmozi-technical-uso-icon.png"
+                  src="/brand/bmozi-technical-mark.svg"
                   alt=""
                   width={330}
                   height={330}
@@ -204,9 +204,8 @@ export default function UnifiedStudentObjectPage() {
                 />
               </span>
               <span className="flex flex-col leading-none">
-                <span className="font-display text-lg font-semibold">BMOZI</span>
-                <span className="font-mono text-[0.62rem] uppercase text-[var(--muted)]">
-                  technical case study
+                <span className="font-display text-lg font-semibold">
+                  BMOZI Technical
                 </span>
               </span>
             </Link>
@@ -221,7 +220,7 @@ export default function UnifiedStudentObjectPage() {
         </header>
 
         <section className="relative isolate overflow-hidden border-b border-white/10">
-          <div className="absolute inset-0 -z-10 opacity-35">
+          <div className="absolute inset-0 -z-10 opacity-100">
             <Image
               src="/brand/unified-student-object-case-study.png"
               alt=""
@@ -230,7 +229,8 @@ export default function UnifiedStudentObjectPage() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,#0a0d11_0%,rgba(10,13,17,0.9)_42%,rgba(10,13,17,0.54)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,13,17,0.9)_0%,rgba(10,13,17,0.5)_38%,rgba(10,13,17,0.08)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,13,17,0.55)_0%,rgba(10,13,17,0)_46%,rgba(10,13,17,0.22)_100%)]" />
           </div>
 
           <div className="mx-auto grid min-h-[calc(100svh-73px)] max-w-7xl items-end gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1fr_0.78fr]">
@@ -466,16 +466,24 @@ export default function UnifiedStudentObjectPage() {
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                Mesh of meshes
+                Mesh of meshes thesis
               </p>
               <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
-                Vision, grounded in receipts.
+                Exploration, grounded in receipts.
               </h2>
               <p className="mt-6 leading-7 text-[var(--soft)]">
-                Service mesh and data mesh are established. Agent mesh is
-                emerging. The leadership move is to frame the forward vision,
-                then immediately anchor it in concrete systems already built.
+                This is not a claim to originate WGU&apos;s mesh-of-meshes
+                thinking or to know internal plans. It is a learning thesis and
+                partnership proposal: take an emerging idea, reason about the
+                seams, and show how governed AI patterns could make it real.
               </p>
+              <Link
+                href="/case-studies/wgu-governance-identity-fabric"
+                className="mt-8 inline-flex h-12 items-center justify-center gap-2 border border-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--signal)] transition-colors hover:bg-[var(--signal)] hover:text-[var(--ink)]"
+              >
+                Read the fabric thesis
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
             </div>
             <div className="grid gap-4">
               <div className="relative overflow-hidden border border-white/12 bg-white/[0.035]">

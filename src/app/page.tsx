@@ -118,7 +118,7 @@ export default function Home() {
             <a href="#top" className="group flex items-center gap-3">
               <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:shadow-[6px_6px_0_var(--signal)]">
                 <Image
-                  src="/brand/bmozi-technical-uso-icon.png"
+                  src="/brand/bmozi-technical-mark.svg"
                   alt=""
                   width={330}
                   height={330}
@@ -128,10 +128,7 @@ export default function Home() {
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-display text-base font-semibold sm:text-lg">
-                  BMOZI
-                </span>
-                <span className="font-mono text-[0.55rem] uppercase text-[var(--muted)] sm:text-[0.62rem]">
-                  technical branch
+                  BMOZI Technical
                 </span>
               </span>
             </a>
@@ -203,7 +200,7 @@ export default function Home() {
             <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-4">
               <div className="hidden overflow-hidden border border-white/10 bg-black/30 p-3 lg:block">
                 <Image
-                  src="/brand/bmozi-technical-uso-wordmark.png"
+                  src="/brand/bmozi-technical-wordmark.svg"
                   alt="BMOZI Technical"
                   width={1020}
                   height={310}
@@ -308,13 +305,22 @@ export default function Home() {
                 competency-based, personalized learning with governed AI and
                 human accountability.
               </p>
-              <a
-                href="/case-studies/wgu-unified-student-object"
-                className="mt-8 inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
-              >
-                Read the case study
-                <ArrowUpRight size={17} aria-hidden="true" />
-              </a>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/case-studies/wgu-unified-student-object"
+                  className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+                >
+                  Read the case study
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </a>
+                <a
+                  href="/case-studies/wgu-governance-identity-fabric"
+                  className="inline-flex h-12 items-center justify-center gap-2 border border-white/15 px-5 font-mono text-sm font-bold text-white transition-colors hover:border-[var(--signal)] hover:text-[var(--signal)]"
+                >
+                  Mesh thesis
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </a>
+              </div>
             </div>
             <a
               href="/case-studies/wgu-unified-student-object"
@@ -419,7 +425,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
             <div className="max-w-96 overflow-hidden border border-[var(--ink)]/20 bg-[var(--ink)] p-3">
               <Image
-                src="/brand/bmozi-technical-uso-wordmark.png"
+                src="/brand/bmozi-technical-wordmark.svg"
                 alt="BMOZI Technical logo"
                 width={1020}
                 height={310}

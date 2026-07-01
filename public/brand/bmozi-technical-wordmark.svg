@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" role="img" aria-labelledby="title desc">
+  <title id="title">BMOZI Technical wordmark</title>
+  <desc id="desc">BMOZI Technical wordmark with a geometric blue and magenta B mark.</desc>
+  <defs>
+    <linearGradient id="blue" x1="31" y1="30" x2="214" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2D6DEB"/>
+      <stop offset="0.55" stop-color="#28A8FF"/>
+      <stop offset="1" stop-color="#19D6C5"/>
+    </linearGradient>
+    <linearGradient id="magenta" x1="88" y1="105" x2="202" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF4FD8"/>
+      <stop offset="1" stop-color="#B445FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="980" height="260" fill="#071019"/>
+  <g transform="translate(28 27) scale(.78)">
+    <path d="M49 38H151C192 38 224 67 224 106C224 142 197 171 162 175L109 175V137H157C172 137 184 124 184 108C184 91 172 78 155 78H49V38Z" fill="url(#blue)"/>
+    <path d="M49 78H91V178H150C166 178 180 164 180 148C180 132 166 119 150 119H102V81H151C192 81 224 111 224 149C224 188 191 218 150 218H49V78Z" fill="url(#blue)" opacity=".95"/>
+    <path d="M91 121H149C164 121 176 133 176 148C176 164 164 176 149 176H91V121Z" fill="url(#magenta)"/>
+    <path d="M49 78L91 78V218H49V78Z" fill="#2D6DEB"/>
+    <path d="M91 147L129 119H150C165 119 176 132 176 148C176 164 164 176 149 176H91V147Z" fill="#071019" opacity=".74"/>
+  </g>
+  <line x1="247" y1="52" x2="247" y2="209" stroke="#19D6C5" stroke-opacity=".74" stroke-width="2"/>
+  <rect x="240" y="127" width="14" height="14" fill="#FF4FD8"/>
+  <text x="305" y="124" fill="#F4F7F9" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="12">BMOZI</text>
+  <line x1="306" y1="170" x2="358" y2="170" stroke="#FF4FD8" stroke-width="5"/>
+  <text x="384" y="187" fill="#19D6C5" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" font-weight="700" letter-spacing="22">TECHNICAL</text>
+  <line x1="874" y1="170" x2="927" y2="170" stroke="#F2B84B" stroke-width="5"/>
+</svg>
