@@ -226,21 +226,21 @@ export default function Home() {
           className="relative isolate overflow-hidden border-b border-white/10"
         >
           <SignalField />
-          <div className="mx-auto grid min-h-[calc(100svh-53px)] max-w-7xl items-center gap-4 px-4 pb-5 pt-7 sm:min-h-[calc(100svh-73px)] sm:gap-10 sm:px-8 sm:pb-12 sm:pt-16 lg:grid-cols-[1fr_1fr] lg:items-end lg:pb-16 xl:grid-cols-[0.96fr_1.04fr]">
+          <div className="mx-auto grid max-w-7xl items-start gap-4 px-4 pb-6 pt-6 sm:gap-8 sm:px-8 sm:pb-10 sm:pt-10 lg:grid-cols-[1fr_1fr] lg:py-10 xl:grid-cols-[0.96fr_1.04fr]">
             <div className="relative z-10 max-w-4xl">
-              <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-6 sm:px-3 sm:py-2 sm:text-xs">
+              <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-5 sm:px-3 sm:py-2 sm:text-xs">
                 <Radar size={15} aria-hidden="true" />
                 AI-enabled architecture and product systems
               </p>
               <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3rem,6.4vw,4.8rem)] 2xl:text-[clamp(4.8rem,8vw,7.2rem)]">
                 BMOZI turns architecture into governed software.
               </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-7 sm:text-xl sm:leading-8">
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-5 sm:text-xl sm:leading-8">
                 Founded by John Briggs, BMOZI builds the visible product layer
                 and the hidden operating layer behind it: interfaces, AI
                 workflows, integration contracts, and production-ready proof.
               </p>
-              <div className="mt-5 grid grid-cols-[1fr_auto] gap-2 sm:mt-9 sm:flex sm:flex-row sm:gap-3">
+              <div className="mt-5 grid grid-cols-[1fr_auto] gap-2 sm:mt-7 sm:flex sm:flex-row sm:gap-3">
                 <a
                   href="#work"
                   className="inline-flex h-10 items-center justify-center gap-2 bg-[var(--signal)] px-3 font-mono text-[0.68rem] font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5 sm:h-12 sm:px-5 sm:text-sm"
