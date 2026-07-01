@@ -51,7 +51,11 @@ export const metadata: Metadata = {
       "A modern technical brand surface for web design, AI-enabled products, and portfolio-grade digital systems.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 

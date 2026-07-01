@@ -195,7 +195,7 @@ export default function UnifiedStudentObjectPage() {
             <Link href="/" className="group inline-flex items-center gap-3">
               <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[5px_5px_0_var(--signal)]">
                 <Image
-                  src="/brand/bmozi-technical-icon.png"
+                  src="/brand/bmozi-technical-uso-icon.png"
                   alt=""
                   width={330}
                   height={330}

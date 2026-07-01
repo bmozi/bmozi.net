@@ -118,7 +118,7 @@ export default function Home() {
             <a href="#top" className="group flex items-center gap-3">
               <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:shadow-[6px_6px_0_var(--signal)]">
                 <Image
-                  src="/brand/bmozi-technical-icon.png"
+                  src="/brand/bmozi-technical-uso-icon.png"
                   alt=""
                   width={330}
                   height={330}
@@ -203,7 +203,7 @@ export default function Home() {
             <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-4">
               <div className="hidden overflow-hidden border border-white/10 bg-black/30 p-3 lg:block">
                 <Image
-                  src="/brand/bmozi-technical-wordmark.png"
+                  src="/brand/bmozi-technical-uso-wordmark.png"
                   alt="BMOZI Technical"
                   width={1020}
                   height={310}
@@ -419,7 +419,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
             <div className="max-w-96 overflow-hidden border border-[var(--ink)]/20 bg-[var(--ink)] p-3">
               <Image
-                src="/brand/bmozi-technical-wordmark.png"
+                src="/brand/bmozi-technical-uso-wordmark.png"
                 alt="BMOZI Technical logo"
                 width={1020}
                 height={310}
