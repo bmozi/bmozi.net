@@ -21,23 +21,23 @@ import { SignalField } from "@/components/signal-field";
 
 const capabilities = [
   {
-    name: "Interface systems",
-    text: "High-signal web apps, product surfaces, dashboards, and conversion paths built for daily use.",
+    name: "Product interfaces",
+    text: "Dashboards, portals, apps, and decision surfaces that let teams operate complex systems without needing to understand every backend detail.",
     icon: Layers3,
   },
   {
-    name: "Applied AI",
-    text: "Agents, retrieval workflows, structured generation, eval loops, and human-in-the-loop tools.",
+    name: "Trustworthy AI workflows",
+    text: "Agents, retrieval, scoped tools, eval loops, and human review paths that make AI useful without handing it blind authority.",
     icon: Cpu,
   },
   {
-    name: "Cloud delivery",
-    text: "Vercel-native deployments, observability, edge routes, resilient integrations, and release discipline.",
+    name: "Integration architecture",
+    text: "SOA-rooted contracts, events, adapters, APIs, and unified objects that let systems change without breaking the business.",
     icon: Workflow,
   },
   {
-    name: "Technical identity",
-    text: "Brand systems that carry into code: motion, typography, content models, and reusable components.",
+    name: "Reference systems",
+    text: "Working prototypes, case studies, architecture portfolios, and deployable proof that leaders can evaluate before committing spend.",
     icon: Sparkles,
   },
 ];
@@ -46,7 +46,7 @@ const proofPoints = [
   ["1.59M+", "AI-assisted production lines personally shipped"],
   ["Contracts", "Explicit service, tool, and data boundaries"],
   ["Guardrails", "Policy, audit, review, and human accountability"],
-  ["Patterns", "UCO, USO, Sentinel, Merlin, and mesh thesis"],
+  ["SOA roots", "UCO, Sentinel, Merlin, governed services"],
 ];
 
 const projects = [
@@ -85,10 +85,28 @@ const projects = [
 ];
 
 const operatingModes = [
-  "Prototype quickly enough to learn while keeping the final architecture visible.",
-  "Treat brand, copy, and component behavior as one system rather than separate workstreams.",
-  "Instrument the important paths so design decisions can be tested instead of debated forever.",
-  "Ship with deployment, handoff, and maintenance paths already part of the plan.",
+  "Start with the business decision the system needs to support, then work backward into the interface, data, contracts, and controls.",
+  "Use SOA principles as the foundation: explicit contracts, loose coupling, reuse, discoverability, and governance.",
+  "Build AI into bounded workflows with auditable tools, policy checks, and human accountability for high-impact decisions.",
+  "Ship the proof all the way to production infrastructure so architecture can be judged by working behavior, not diagrams alone.",
+];
+
+const buyerOutcomes = [
+  {
+    icon: Blocks,
+    title: "Less integration chaos",
+    text: "A clear operating model for how systems talk, where truth lives, and which contracts teams can safely build against.",
+  },
+  {
+    icon: TerminalSquare,
+    title: "Safer AI adoption",
+    text: "AI connected to real work through scoped tools, audit trails, review gates, and policies leaders can explain.",
+  },
+  {
+    icon: Braces,
+    title: "Working proof faster",
+    text: "A deployable product surface, reference architecture, or prototype that turns strategy into something people can inspect and use.",
+  },
 ];
 
 const jsonLd = {
@@ -97,12 +115,16 @@ const jsonLd = {
   name: "BMOZI",
   url: "https://bmozi.net",
   description:
-    "BMOZI is a technical brand studio for modern web design, AI-enabled products, and cloud-native web creation.",
+    "BMOZI builds governed digital systems: product interfaces, AI workflows, integration architecture, and deployable reference systems.",
+  founder: {
+    "@type": "Person",
+    name: "John Briggs",
+  },
   sameAs: ["https://github.com/bmozi"],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "business inquiries",
-    email: "hello@bmozi.net",
+    email: "hello@bmozi.com",
   },
 };
 
@@ -140,7 +162,7 @@ export default function Home() {
               </a>
             </div>
             <a
-              href="mailto:hello@bmozi.net?subject=BMOZI%20technical%20project"
+              href="mailto:hello@bmozi.com?subject=BMOZI%20technical%20project"
               className="inline-flex h-9 items-center gap-2 border border-white/15 px-3 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:h-10 sm:px-4"
             >
               <Mail size={15} aria-hidden="true" />
@@ -158,21 +180,22 @@ export default function Home() {
             <div className="relative z-10 max-w-4xl">
               <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-6 sm:px-3 sm:py-2 sm:text-xs">
                 <Radar size={15} aria-hidden="true" />
-                Web systems for technical companies
+                AI-enabled architecture and product systems
               </p>
               <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3rem,6.4vw,4.8rem)] 2xl:text-[clamp(4.8rem,8vw,7.2rem)]">
-                BMOZI builds the web layer where brand becomes software.
+                BMOZI turns architecture into governed software.
               </h1>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-7 sm:text-xl sm:leading-8">
-                A technical branch for sharp web design, AI-enabled products,
-                cloud-native delivery, and portfolio-grade digital systems.
+                Founded by John Briggs, BMOZI builds the visible product layer
+                and the hidden operating layer behind it: interfaces, AI
+                workflows, integration contracts, and production-ready proof.
               </p>
               <div className="mt-5 grid grid-cols-[1fr_auto] gap-2 sm:mt-9 sm:flex sm:flex-row sm:gap-3">
                 <a
                   href="#work"
                   className="inline-flex h-10 items-center justify-center gap-2 bg-[var(--signal)] px-3 font-mono text-[0.68rem] font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5 sm:h-12 sm:px-5 sm:text-sm"
                 >
-                  View capability work
+                  View system work
                   <ArrowUpRight size={17} aria-hidden="true" />
                 </a>
                 <a
@@ -193,6 +216,9 @@ export default function Home() {
                   markClassName="h-20 w-20"
                   textClassName="text-[2.35rem]"
                 />
+                <p className="mt-4 border-t border-white/10 pt-4 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  Founder-led technical studio
+                </p>
               </div>
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {proofPoints.map(([value, label]) => (
@@ -217,8 +243,12 @@ export default function Home() {
                 Capability map
               </p>
               <h2 className="mt-4 max-w-xl font-display text-5xl font-black leading-none text-white">
-                Technical taste, production habits.
+                What BMOZI truly builds.
               </h2>
+              <p className="mt-5 max-w-md leading-7 text-[var(--soft)]">
+                The website is only the surface. The deeper work is making
+                complicated operations usable, governable, and ready for AI.
+              </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {capabilities.map((item) => {
@@ -253,7 +283,8 @@ export default function Home() {
                 Service surface
               </p>
               <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                BMOZI can enter at strategy, design, code, or deployment.
+                From SOA principles to AI-enabled software people can actually
+                use.
               </h2>
             </div>
             <div className="grid gap-3">
@@ -288,24 +319,16 @@ export default function Home() {
                 A pre-employment WGU reference architecture mapping the
                 GreenixOS Unified Customer Object pattern onto
                 competency-based, personalized learning with governed AI and
-                human accountability.
+                human accountability, rooted in SOA principles: contracts,
+                loose coupling, reuse, and governance.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="/case-studies/wgu-unified-student-object"
-                  className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
-                >
-                  Read the case study
-                  <ArrowUpRight size={17} aria-hidden="true" />
-                </a>
-                <a
-                  href="/case-studies/wgu-governance-identity-fabric"
-                  className="inline-flex h-12 items-center justify-center gap-2 border border-white/15 px-5 font-mono text-sm font-bold text-white transition-colors hover:border-[var(--signal)] hover:text-[var(--signal)]"
-                >
-                  Mesh thesis
-                  <ArrowUpRight size={17} aria-hidden="true" />
-                </a>
-              </div>
+              <a
+                href="/case-studies/wgu-unified-student-object"
+                className="mt-8 inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+              >
+                Read the case study
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
             </div>
             <a
               href="/case-studies/wgu-unified-student-object"
@@ -346,23 +369,7 @@ export default function Home() {
 
         <section className="border-b border-white/10">
           <div className="mx-auto grid max-w-7xl gap-4 px-5 py-20 sm:px-8 lg:grid-cols-3">
-            {[
-              {
-                icon: Blocks,
-                title: "Composable",
-                text: "Every page section can become a component, campaign module, or product entry point.",
-              },
-              {
-                icon: TerminalSquare,
-                title: "Operational",
-                text: "Repository, deployment, DNS, and monitoring are treated as part of the website, not afterthoughts.",
-              },
-              {
-                icon: Braces,
-                title: "Extensible",
-                text: "The content model is ready for case studies, API demos, project pages, and technical writing.",
-              },
-            ].map((item) => {
+            {buyerOutcomes.map((item) => {
               const Icon = item.icon;
               return (
                 <article
@@ -385,18 +392,20 @@ export default function Home() {
         <section id="contact" className="bg-[var(--signal)] text-[var(--ink)]">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="font-mono text-xs uppercase">Open channel</p>
+              <p className="font-mono text-xs uppercase">
+                Founder: John Briggs
+              </p>
               <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                Bring the technical brand online.
+                Turn architecture into software your teams can trust.
               </h2>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <a
-                href="mailto:hello@bmozi.net?subject=BMOZI%20technical%20project"
+                href="mailto:hello@bmozi.com?subject=BMOZI%20technical%20project"
                 className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--ink)] px-5 font-mono text-sm font-bold text-white"
               >
                 <Mail size={17} aria-hidden="true" />
-                hello@bmozi.net
+                hello@bmozi.com
               </a>
               <a
                 href="/api/signal"

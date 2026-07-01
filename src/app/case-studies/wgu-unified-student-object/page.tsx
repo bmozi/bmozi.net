@@ -604,7 +604,7 @@ export default function UnifiedStudentObjectPage() {
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
               <a
-                href="mailto:hello@bmozi.net?subject=Unified%20Student%20Object"
+                href="mailto:hello@bmozi.com?subject=Unified%20Student%20Object"
                 className="inline-flex h-12 items-center justify-center gap-2 border border-[var(--ink)] px-5 font-mono text-sm font-bold"
               >
                 Discuss the architecture

@@ -24,11 +24,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bmozi.net"),
   title: {
-    default: "BMOZI | Technical Web Design and Creation",
+    default: "BMOZI | Governed Digital Systems",
     template: "%s | BMOZI",
   },
   description:
-    "BMOZI is a technical brand branch for modern web design, AI-enabled products, and cloud-native web creation.",
+    "BMOZI builds governed digital systems: product interfaces, AI workflows, integration architecture, and deployable reference systems.",
   applicationName: "BMOZI",
   authors: [{ name: "BMOZI" }],
   creator: "BMOZI",
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://bmozi.net",
     siteName: "BMOZI",
-    title: "BMOZI | Technical Web Design and Creation",
+    title: "BMOZI | Governed Digital Systems",
     description:
-      "A modern technical brand surface for web design, AI-enabled products, and portfolio-grade digital systems.",
+      "A founder-led technical studio building trustworthy AI workflows, integration architecture, product interfaces, and deployable proof systems.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BMOZI | Technical Web Design and Creation",
+    title: "BMOZI | Governed Digital Systems",
     description:
-      "A modern technical brand surface for web design, AI-enabled products, and portfolio-grade digital systems.",
+      "A founder-led technical studio building trustworthy AI workflows, integration architecture, product interfaces, and deployable proof systems.",
   },
   icons: {
     icon: [

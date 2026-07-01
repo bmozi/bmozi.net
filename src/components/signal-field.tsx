@@ -105,10 +105,12 @@ export function SignalField() {
         context.fill();
       });
 
-      context.fillStyle = "rgba(255, 79, 216, 0.9)";
-      context.fillRect(width * 0.68, height * 0.2, 86, 2);
-      context.fillStyle = "rgba(242, 184, 75, 0.95)";
-      context.fillRect(width * 0.74, height * 0.2 + 12, 44, 2);
+      if (width >= 640) {
+        context.fillStyle = "rgba(255, 79, 216, 0.9)";
+        context.fillRect(width * 0.68, height * 0.2, 86, 2);
+        context.fillStyle = "rgba(242, 184, 75, 0.95)";
+        context.fillRect(width * 0.74, height * 0.2 + 12, 44, 2);
+      }
 
       animation = window.requestAnimationFrame(draw);
     };

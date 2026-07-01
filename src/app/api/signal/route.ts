@@ -5,13 +5,16 @@ export const runtime = "edge";
 export function GET() {
   return NextResponse.json({
     brand: "BMOZI",
+    founder: "John Briggs",
     domain: "bmozi.net",
-    signal: "technical web design and creation",
+    signal: "governed digital systems and trustworthy AI adoption",
     capabilities: [
-      "interface systems",
-      "applied AI workflows",
-      "cloud-native deployment",
-      "technical brand systems",
+      "product interface systems",
+      "trustworthy AI workflows",
+      "SOA-rooted service contracts",
+      "unified operational objects",
+      "technical product systems",
+      "integration architecture",
     ],
     status: "online",
   });

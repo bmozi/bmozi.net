@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "BMOZI",
     short_name: "BMOZI",
     description:
-      "Technical web design, AI-enabled products, and cloud-native web creation.",
+      "Governed digital systems, trustworthy AI workflows, and integration architecture.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0d11",
