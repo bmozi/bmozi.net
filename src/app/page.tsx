@@ -43,13 +43,13 @@ const capabilities = [
 ];
 
 const proofPoints = [
-  ["1.59M+", "AI-assisted production lines personally shipped"],
+  ["In Production", "Sentinel, Merlin, UCO-pattern services"],
   ["Contracts", "Explicit service, tool, and data boundaries"],
   ["Guardrails", "Policy, audit, review, and human accountability"],
-  ["SOA Roots", "UCO, Sentinel, Merlin, governed services"],
+  ["SOA Roots", "From contracts to the agent mesh"],
 ];
 
-const projects = [
+const enterpriseProjects = [
   {
     title: "Sentinel",
     kind: "Trust system",
@@ -66,6 +66,17 @@ const projects = [
     result:
       "A governed software-production workflow for AI-assisted engineering: standards, review paths, context discipline, and repeatable delivery habits.",
   },
+  {
+    title: "GreenixOS UCO Services",
+    kind: "Event-sourced operations core",
+    status: "Production pattern",
+    tags: ["EDA", "Kafka", "SOA", "Data"],
+    result:
+      "An event-sourced Unified Customer Object on Kafka with projections, anti-corruption adapters, and reconciliation patterns for independent service evolution.",
+  },
+];
+
+const labProjects = [
   {
     title: "Fiction Forge",
     kind: "AI workspace",
@@ -155,7 +166,7 @@ const executiveSummary = [
   },
   {
     title: "The proof",
-    text: "Sentinel, the Merlin software factory, and the event-sourced Unified Customer Object on Kafka show the operating model in production under full quality gates.",
+    text: "Sentinel, the Merlin software factory, and the event-sourced Unified Customer Object on Kafka show the operating model in production, judged by working behavior and merged-PR cadence under full quality gates.",
   },
 ];
 
@@ -418,11 +429,11 @@ export default function Home() {
                 The Unified Student Object.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--soft)]">
-                A pre-employment WGU reference architecture mapping the
-                GreenixOS Unified Customer Object pattern onto
-                competency-based, personalized learning with governed AI and
-                human accountability, rooted in SOA principles: contracts,
-                loose coupling, reuse, and governance.
+                A reference architecture applying the GreenixOS Unified
+                Customer Object pattern to competency-based, personalized
+                learning: an event-sourced student timeline, governed AI, and
+                human accountability, rooted in SOA principles: contracts, loose
+                coupling, reuse, and governance.
               </p>
               <a
                 href="/case-studies/wgu-unified-student-object"
@@ -457,14 +468,14 @@ export default function Home() {
                   Portfolio signals
                 </p>
                 <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
-                  Flagship systems that show the operating range.
+                  Flagship enterprise systems first.
                 </h2>
               </div>
               <p className="max-w-md leading-7 text-[var(--soft)]">
-                Sentinel leads the portfolio: a trust system and API gatekeeper
-                for governed AI access. Merlin, Fiction Forge, and Resonance
-                show the same pattern applied to delivery, creative systems, and
-                interactive research.
+                Sentinel, Merlin, and UCO-pattern services carry the enterprise
+                story: API governance, AI-assisted delivery, and event-sourced
+                operating truth. Labs sit below as range, not the center of
+                gravity.
               </p>
             </div>
             <div className="mb-6 border border-[var(--signal)]/35 bg-[linear-gradient(135deg,rgba(25,214,197,0.13),rgba(255,255,255,0.025))] p-5 sm:p-7">
@@ -497,7 +508,42 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <ProjectFilter projects={projects} />
+            <ProjectFilter projects={enterpriseProjects} />
+            <div className="mt-10 border-t border-white/10 pt-8">
+              <div className="mb-5 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+                <div>
+                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                    Also building
+                  </p>
+                  <h3 className="mt-3 font-display text-3xl font-bold text-white">
+                    Labs and creative systems.
+                  </h3>
+                </div>
+                <p className="max-w-lg text-sm leading-6 text-[var(--muted)]">
+                  These projects show range in AI workspaces, interaction
+                  design, and experimental interfaces without competing with the
+                  enterprise systems above.
+                </p>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                {labProjects.map((project) => (
+                  <article
+                    key={project.title}
+                    className="border border-white/10 bg-white/[0.025] p-5"
+                  >
+                    <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                      {project.kind}
+                    </p>
+                    <h4 className="mt-3 font-display text-2xl font-bold text-white">
+                      {project.title}
+                    </h4>
+                    <p className="mt-4 leading-7 text-[var(--soft)]">
+                      {project.result}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -542,20 +588,31 @@ export default function Home() {
                 hello@bmozi.com
               </a>
               <a
-                href="/api/signal"
+                href="https://github.com/bmozi"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex h-12 items-center justify-center gap-2 border border-[var(--ink)] px-5 font-mono text-sm font-bold"
               >
-                <Globe2 size={17} aria-hidden="true" />
-                Signal API
+                <Code2 size={17} aria-hidden="true" />
+                GitHub
               </a>
             </div>
           </div>
           <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
-            <div className="inline-flex border border-[var(--ink)]/20 bg-[var(--ink)] p-4">
-              <BrandLockup
-                markClassName="h-16 w-16"
-                textClassName="text-3xl"
-              />
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div className="inline-flex border border-[var(--ink)]/20 bg-[var(--ink)] p-4">
+                <BrandLockup
+                  markClassName="h-16 w-16"
+                  textClassName="text-3xl"
+                />
+              </div>
+              <a
+                href="/api/signal"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase text-[var(--ink)]/70 transition-colors hover:text-[var(--ink)]"
+              >
+                <Globe2 size={15} aria-hidden="true" />
+                Machine-readable profile
+              </a>
             </div>
           </div>
         </section>
