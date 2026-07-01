@@ -6,6 +6,7 @@ import {
   Code2,
   Cpu,
   Globe2,
+  GraduationCap,
   Layers3,
   Mail,
   Radar,
@@ -13,6 +14,7 @@ import {
   TerminalSquare,
   Workflow,
 } from "lucide-react";
+import Image from "next/image";
 import { ProjectFilter } from "@/components/project-filter";
 import { SignalField } from "@/components/signal-field";
 
@@ -132,6 +134,12 @@ export default function Home() {
               </a>
               <a className="transition-colors hover:text-white" href="#work">
                 work
+              </a>
+              <a
+                className="transition-colors hover:text-white"
+                href="/case-studies/wgu-unified-student-object"
+              >
+                case study
               </a>
               <a className="transition-colors hover:text-white" href="#contact">
                 contact
@@ -261,6 +269,47 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="border-b border-white/10">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div>
+              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--signal)]">
+                <GraduationCap size={16} aria-hidden="true" />
+                Featured architecture case study
+              </p>
+              <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
+                The Unified Student Object.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--soft)]">
+                A pre-employment WGU reference architecture mapping the
+                GreenixOS Unified Customer Object pattern onto
+                competency-based, personalized learning with governed AI and
+                human accountability.
+              </p>
+              <a
+                href="/case-studies/wgu-unified-student-object"
+                className="mt-8 inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+              >
+                Read the case study
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            </div>
+            <a
+              href="/case-studies/wgu-unified-student-object"
+              className="group block overflow-hidden border border-white/12 bg-white/[0.035]"
+              aria-label="Read the Unified Student Object case study"
+            >
+              <Image
+                src="/brand/unified-student-object-case-study.png"
+                alt="Unified Student Object architecture diagram showing event-sourced student timeline, projections, governed AI, and human oversight"
+                width={1672}
+                height={941}
+                sizes="(min-width: 1024px) 48vw, 100vw"
+                className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.025]"
+              />
+            </a>
           </div>
         </section>
 
