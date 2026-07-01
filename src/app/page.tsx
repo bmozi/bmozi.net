@@ -116,8 +116,15 @@ export default function Home() {
         <header className="sticky top-0 z-40 border-b border-white/10 bg-[rgba(10,13,17,0.78)] backdrop-blur-xl">
           <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-8 sm:py-4">
             <a href="#top" className="group flex items-center gap-3">
-              <span className="grid h-8 w-8 place-items-center border border-white/15 bg-white text-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:h-10 sm:w-10 sm:shadow-[6px_6px_0_var(--signal)]">
-                <span className="font-mono text-sm font-black">BM</span>
+              <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:shadow-[6px_6px_0_var(--signal)]">
+                <Image
+                  src="/brand/bmozi-technical-icon.png"
+                  alt=""
+                  width={330}
+                  height={330}
+                  priority
+                  className="h-8 w-8 object-cover sm:h-10 sm:w-10"
+                />
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-display text-base font-semibold sm:text-lg">
@@ -166,7 +173,7 @@ export default function Home() {
                 <Radar size={15} aria-hidden="true" />
                 Web systems for technical companies
               </p>
-              <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3.2rem,11vw,8.5rem)]">
+              <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3rem,6.4vw,4.8rem)] 2xl:text-[clamp(4.8rem,8vw,7.2rem)]">
                 BMOZI builds the web layer where brand becomes software.
               </h1>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-7 sm:text-xl sm:leading-8">
@@ -193,17 +200,30 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="relative z-10 grid grid-cols-4 gap-2 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:grid-cols-2 sm:gap-3 sm:p-4 lg:grid-cols-1">
-              {proofPoints.map(([value, label]) => (
-                <div key={label} className="border border-white/10 p-2 sm:p-4">
-                  <p className="font-display text-2xl font-black leading-none text-white sm:text-4xl">
-                    {value}
-                  </p>
-                  <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">
-                    {label}
-                  </p>
-                </div>
-              ))}
+            <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-4">
+              <div className="hidden overflow-hidden border border-white/10 bg-black/30 p-3 lg:block">
+                <Image
+                  src="/brand/bmozi-technical-wordmark.png"
+                  alt="BMOZI Technical"
+                  width={1020}
+                  height={310}
+                  priority
+                  sizes="(min-width: 1024px) 32vw, 0px"
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="grid grid-cols-4 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-2">
+                {proofPoints.map(([value, label]) => (
+                  <div key={label} className="border border-white/10 p-2 sm:p-4">
+                    <p className="font-display text-2xl font-black leading-none text-white sm:text-4xl">
+                      {value}
+                    </p>
+                    <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </aside>
           </div>
         </section>
@@ -394,6 +414,18 @@ export default function Home() {
                 <Globe2 size={17} aria-hidden="true" />
                 Signal API
               </a>
+            </div>
+          </div>
+          <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
+            <div className="max-w-96 overflow-hidden border border-[var(--ink)]/20 bg-[var(--ink)] p-3">
+              <Image
+                src="/brand/bmozi-technical-wordmark.png"
+                alt="BMOZI Technical logo"
+                width={1020}
+                height={310}
+                sizes="384px"
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </section>

@@ -193,8 +193,15 @@ export default function UnifiedStudentObjectPage() {
         <header className="border-b border-white/10 bg-[rgba(10,13,17,0.86)]">
           <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
             <Link href="/" className="group inline-flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center border border-white/15 bg-white text-[var(--ink)] shadow-[5px_5px_0_var(--signal)]">
-                <span className="font-mono text-sm font-black">BM</span>
+              <span className="overflow-hidden border border-white/15 bg-[var(--ink)] shadow-[5px_5px_0_var(--signal)]">
+                <Image
+                  src="/brand/bmozi-technical-icon.png"
+                  alt=""
+                  width={330}
+                  height={330}
+                  priority
+                  className="h-9 w-9 object-cover"
+                />
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-display text-lg font-semibold">BMOZI</span>
