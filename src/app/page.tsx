@@ -112,14 +112,16 @@ export default function Home() {
       />
       <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
         <header className="sticky top-0 z-40 border-b border-white/10 bg-[rgba(10,13,17,0.78)] backdrop-blur-xl">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+          <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-8 sm:py-4">
             <a href="#top" className="group flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center border border-white/15 bg-white text-[var(--ink)] shadow-[6px_6px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5">
+              <span className="grid h-8 w-8 place-items-center border border-white/15 bg-white text-[var(--ink)] shadow-[4px_4px_0_var(--signal)] transition-transform group-hover:-translate-y-0.5 sm:h-10 sm:w-10 sm:shadow-[6px_6px_0_var(--signal)]">
                 <span className="font-mono text-sm font-black">BM</span>
               </span>
               <span className="flex flex-col leading-none">
-                <span className="font-display text-lg font-semibold">BMOZI</span>
-                <span className="font-mono text-[0.62rem] uppercase text-[var(--muted)]">
+                <span className="font-display text-base font-semibold sm:text-lg">
+                  BMOZI
+                </span>
+                <span className="font-mono text-[0.55rem] uppercase text-[var(--muted)] sm:text-[0.62rem]">
                   technical branch
                 </span>
               </span>
@@ -137,7 +139,7 @@ export default function Home() {
             </div>
             <a
               href="mailto:hello@bmozi.net?subject=BMOZI%20technical%20project"
-              className="inline-flex h-10 items-center gap-2 border border-white/15 px-4 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)]"
+              className="inline-flex h-9 items-center gap-2 border border-white/15 px-3 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:h-10 sm:px-4"
             >
               <Mail size={15} aria-hidden="true" />
               Start
@@ -150,23 +152,23 @@ export default function Home() {
           className="relative isolate overflow-hidden border-b border-white/10"
         >
           <SignalField />
-          <div className="mx-auto grid min-h-[calc(100svh-73px)] max-w-7xl items-end gap-10 px-5 pb-12 pt-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:pb-16">
+          <div className="mx-auto grid min-h-[calc(100svh-53px)] max-w-7xl items-center gap-4 px-4 pb-5 pt-7 sm:min-h-[calc(100svh-73px)] sm:gap-10 sm:px-8 sm:pb-12 sm:pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:pb-16">
             <div className="relative z-10 max-w-4xl">
-              <p className="mb-6 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
+              <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-6 sm:px-3 sm:py-2 sm:text-xs">
                 <Radar size={15} aria-hidden="true" />
                 Web systems for technical companies
               </p>
-              <h1 className="font-display text-[clamp(3.2rem,11vw,8.5rem)] font-black leading-[0.9] text-white">
+              <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3.2rem,11vw,8.5rem)]">
                 BMOZI builds the web layer where brand becomes software.
               </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--soft)] sm:text-xl">
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-7 sm:text-xl sm:leading-8">
                 A technical branch for sharp web design, AI-enabled products,
                 cloud-native delivery, and portfolio-grade digital systems.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 grid grid-cols-[1fr_auto] gap-2 sm:mt-9 sm:flex sm:flex-row sm:gap-3">
                 <a
                   href="#work"
-                  className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+                  className="inline-flex h-10 items-center justify-center gap-2 bg-[var(--signal)] px-3 font-mono text-[0.68rem] font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5 sm:h-12 sm:px-5 sm:text-sm"
                 >
                   View capability work
                   <ArrowUpRight size={17} aria-hidden="true" />
@@ -175,7 +177,7 @@ export default function Home() {
                   href="https://github.com/bmozi"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 border border-white/15 px-5 font-mono text-sm text-white transition-colors hover:border-white/35 hover:bg-white/10"
+                  className="inline-flex h-10 items-center justify-center gap-2 border border-white/15 px-3 font-mono text-[0.68rem] text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:h-12 sm:px-5 sm:text-sm"
                 >
                   <Code2 size={17} aria-hidden="true" />
                   GitHub
@@ -183,13 +185,13 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-4 backdrop-blur-xl sm:grid-cols-2 lg:grid-cols-1">
+            <aside className="relative z-10 grid grid-cols-4 gap-2 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:grid-cols-2 sm:gap-3 sm:p-4 lg:grid-cols-1">
               {proofPoints.map(([value, label]) => (
-                <div key={label} className="border border-white/10 p-4">
-                  <p className="font-display text-4xl font-black text-white">
+                <div key={label} className="border border-white/10 p-2 sm:p-4">
+                  <p className="font-display text-2xl font-black leading-none text-white sm:text-4xl">
                     {value}
                   </p>
-                  <p className="mt-2 font-mono text-xs text-[var(--muted)]">
+                  <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">
                     {label}
                   </p>
                 </div>
