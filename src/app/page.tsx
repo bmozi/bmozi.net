@@ -43,10 +43,10 @@ const capabilities = [
 ];
 
 const proofPoints = [
-  ["16.2", "Next.js App Router"],
-  ["Edge", "Route-ready architecture"],
-  ["0", "Template sections shipped"],
-  ["100%", "Responsive brand surface"],
+  ["1.59M+", "AI-assisted production lines personally shipped"],
+  ["Contracts", "Explicit service, tool, and data boundaries"],
+  ["Guardrails", "Policy, audit, review, and human accountability"],
+  ["Patterns", "UCO, USO, Sentinel, Merlin, and mesh thesis"],
 ];
 
 const projects = [
@@ -194,10 +194,10 @@ export default function Home() {
                   textClassName="text-[2.35rem]"
                 />
               </div>
-              <div className="grid grid-cols-4 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-2">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {proofPoints.map(([value, label]) => (
                   <div key={label} className="border border-white/10 p-2 sm:p-4">
-                    <p className="font-display text-2xl font-black leading-none text-white sm:text-4xl">
+                    <p className="font-display text-xl font-black leading-none text-white sm:text-4xl">
                       {value}
                     </p>
                     <p className="mt-1 font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-2 sm:text-xs">

@@ -35,7 +35,7 @@ export function BrandLockup({
           <span className="font-display font-extrabold tracking-normal text-white">
             BMOZI
           </span>
-          <span className="mt-1 font-mono text-[0.72em] font-medium uppercase tracking-[0.08em] text-[var(--muted)]">
+          <span className="mt-1 font-mono text-[0.72em] font-semibold uppercase tracking-[0.12em] text-[var(--signal)]">
             Technical
           </span>
         </span>

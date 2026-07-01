@@ -1,59 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
   <title id="title">BMOZI Technical mark</title>
-  <desc id="desc">A geometric blue and magenta B mark for BMOZI Technical.</desc>
+  <desc id="desc">A readable blue B mark with a magenta technical signal for BMOZI Technical.</desc>
   <defs>
-    <linearGradient id="bmozi-blue" x1="30" y1="32" x2="222" y2="224" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bmozi-blue" x1="44" y1="34" x2="214" y2="220" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2E73F1"/>
-      <stop offset=".48" stop-color="#2AA9FF"/>
+      <stop offset=".56" stop-color="#2AA9FF"/>
       <stop offset="1" stop-color="#19D6C5"/>
     </linearGradient>
-    <linearGradient id="bmozi-magenta" x1="88" y1="118" x2="196" y2="172" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bmozi-magenta" x1="72" y1="114" x2="184" y2="176" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FF4FD8"/>
-      <stop offset=".72" stop-color="#D7379A"/>
+      <stop offset=".72" stop-color="#E23CA5"/>
       <stop offset="1" stop-color="#19D6C5"/>
     </linearGradient>
-    <filter id="bmozi-glow" x="-18%" y="-18%" width="136%" height="136%">
-      <feGaussianBlur stdDeviation="2.2" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.08 0 0 0 0 0.65 0 0 0 0 0.95 0 0 0 .38 0"/>
+    <filter id="mark-glow" x="-14%" y="-14%" width="128%" height="128%">
+      <feGaussianBlur stdDeviation="2.1" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .10 0 0 0 0 .70 0 0 0 0 1 0 0 0 .28 0"/>
       <feMerge>
         <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <clipPath id="b-clip">
+      <text x="32" y="210" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="206" font-weight="900">B</text>
+    </clipPath>
   </defs>
   <rect width="256" height="256" fill="#071019"/>
-  <g filter="url(#bmozi-glow)">
-    <path
-      d="M42 57H147C190 57 221 86 221 125C221 162 192 190 151 190H82"
-      fill="none"
-      stroke="url(#bmozi-blue)"
-      stroke-width="25"
-      stroke-linecap="square"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M51 110V216H151C196 216 224 187 224 151C224 116 195 91 154 91H82"
-      fill="none"
-      stroke="url(#bmozi-blue)"
-      stroke-width="25"
-      stroke-linecap="square"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M87 131H151C174 131 188 144 188 161C188 179 172 190 149 190H87"
-      fill="none"
-      stroke="url(#bmozi-magenta)"
-      stroke-width="25"
-      stroke-linecap="square"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M88 151H149C166 151 176 155 187 162"
-      fill="none"
-      stroke="#071019"
-      stroke-width="23"
-      stroke-linecap="round"
-      opacity=".9"
-    />
+  <g filter="url(#mark-glow)">
+    <text x="32" y="210" fill="url(#bmozi-blue)" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="206" font-weight="900">B</text>
+    <g clip-path="url(#b-clip)">
+      <rect x="63" y="118" width="122" height="38" fill="url(#bmozi-magenta)"/>
+      <path d="M105 157C127 139 159 139 190 157V185H88V165C92 162 98 160 105 157Z" fill="#071019" opacity=".7"/>
+      <rect x="48" y="86" width="40" height="128" fill="#2E73F1"/>
+    </g>
   </g>
 </svg>
