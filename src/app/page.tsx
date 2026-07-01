@@ -67,7 +67,7 @@ const enterpriseProjects = [
       "A governed software-production workflow for AI-assisted engineering: standards, review paths, context discipline, and repeatable delivery habits.",
   },
   {
-    title: "GreenixOS UCO Services",
+    title: "Event-Sourced UCO Services",
     kind: "Event-sourced operations core",
     status: "Production pattern",
     tags: ["EDA", "Kafka", "SOA", "Data"],
@@ -429,10 +429,10 @@ export default function Home() {
                 The Unified Student Object.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--soft)]">
-                A reference architecture applying the GreenixOS Unified
-                Customer Object pattern to competency-based, personalized
-                learning: an event-sourced student timeline, governed AI, and
-                human accountability, rooted in SOA principles: contracts, loose
+                A reference architecture applying a production Unified Customer
+                Object pattern to competency-based, personalized learning: an
+                event-sourced student timeline, governed AI, and human
+                accountability, rooted in SOA principles: contracts, loose
                 coupling, reuse, and governance.
               </p>
               <a

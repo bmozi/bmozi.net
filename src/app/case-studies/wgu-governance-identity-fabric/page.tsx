@@ -74,7 +74,7 @@ const receipts = [
     text: "A concrete AI trust layer pattern: agents reach systems through scoped, audited tools rather than raw vendor credentials.",
   },
   {
-    title: "GreenixOS",
+    title: "UCO services",
     text: "Domain-owned operational truth exposed through event streams, projections, contracts, and anti-corruption adapters.",
   },
   {

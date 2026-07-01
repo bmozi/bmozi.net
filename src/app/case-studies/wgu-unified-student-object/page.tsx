@@ -20,7 +20,7 @@ import { BrandLockup } from "@/components/brand-lockup";
 export const metadata: Metadata = {
   title: "Unified Student Object Case Study",
   description:
-    "A BMOZI Technical case study mapping the GreenixOS Unified Customer Object pattern onto competency-based personalized learning.",
+    "A BMOZI Technical case study mapping a production Unified Customer Object pattern onto competency-based personalized learning.",
   alternates: {
     canonical: "/case-studies/wgu-unified-student-object",
   },
@@ -134,7 +134,7 @@ const meshReceipts = [
     text: "An early agent-mesh control plane: agents reach systems through scoped, audited tools, never raw credentials.",
   },
   {
-    title: "GreenixOS",
+    title: "Production UCO pattern",
     text: "Domain-owned operational truth served as projections: UCO events, anti-corruption adapters, and independently evolvable read models.",
   },
   {
@@ -253,8 +253,8 @@ export default function UnifiedStudentObjectPage() {
               </p>
               <p className="mt-4 text-lg leading-8 text-white">
                 This is not a claim to know WGU&apos;s internal systems. It is a
-                reference architecture: take a pattern already built in
-                GreenixOS and reason it onto a competency-based,
+                reference architecture: take a production Unified Customer
+                Object pattern and reason it onto a competency-based,
                 personalized-learning domain.
               </p>
             </aside>
@@ -273,7 +273,7 @@ export default function UnifiedStudentObjectPage() {
             </div>
             <div className="border border-black/10 bg-white p-6 shadow-[8px_8px_0_rgba(12,17,22,0.08)]">
               <p className="text-xl leading-9">
-                The GreenixOS UCO answers{" "}
+                The production UCO pattern answers{" "}
                 <strong>
                   “what is the complete operational truth about this customer,
                   and what should we do next?”
@@ -313,7 +313,7 @@ export default function UnifiedStudentObjectPage() {
             <div className="overflow-hidden border border-white/12">
               <div className="grid bg-white/[0.06] font-mono text-xs uppercase text-[var(--amber)] md:grid-cols-[0.65fr_1fr_1fr]">
                 <div className="border-b border-white/10 p-4 md:border-r">
-                  GreenixOS UCO cluster
+                  Production UCO cluster
                 </div>
                 <div className="border-b border-white/10 p-4 md:border-r">
                   WGU Unified Student Object analog
@@ -556,7 +556,7 @@ export default function UnifiedStudentObjectPage() {
                 },
                 {
                   icon: ShieldCheck,
-                  title: "GreenixOS",
+                  title: "UCO platform pattern",
                   text: "A metadata-driven platform engine plus an event-sourced operational core. Vendors sit behind anti-corruption adapters with reconciliation.",
                 },
                 {
