@@ -147,15 +147,15 @@ const buyerOutcomes = [
 const executiveSummary = [
   {
     title: "The problem",
-    text: "Modern teams are trying to adopt AI while their APIs, data, vendor systems, and governance models are still fragmented.",
+    text: "Modern teams are adopting AI on top of fragmented, point-to-point APIs, data, and vendor systems, with governance bolted on after the fact.",
   },
   {
-    title: "The BMOZI answer",
-    text: "Build the product surface and the trust layer together: interfaces, contracts, events, scoped tools, audit, and human review.",
+    title: "The approach",
+    text: "Build the product surface and the trust layer together: API-first, event-driven, and AI-enabled, with contracts, an event backbone, scoped tools, audit, and human review.",
   },
   {
     title: "The proof",
-    text: "Sentinel, Merlin Software Factory, UCO patterns, and 1.59M+ AI-assisted production lines show the operating model in practice.",
+    text: "Sentinel, the Merlin software factory, and the event-sourced Unified Customer Object on Kafka show the operating model in production under full quality gates.",
   },
 ];
 
