@@ -45,3 +45,5 @@ When the domain is managed in Cloudflare and the site is hosted on Vercel, use D
 | CNAME | `www` | `d1560239b58f2b5c.vercel-dns-017.com` | DNS only |
 
 After Vercel shows the domain as valid and SSL is issued, Cloudflare can remain DNS-only for the cleanest setup. If Cloudflare proxy is enabled later, set SSL/TLS mode to `Full` or `Full (strict)` and keep Vercel's certificate active.
+
+Local Cloudflare API credentials are documented in `docs/LOCAL_SECRETS.md`.
