@@ -181,7 +181,7 @@ const jsonLd = {
     "@type": "Person",
     name: "John Briggs",
   },
-  sameAs: ["https://github.com/bmozi"],
+  sameAs: ["https://bmozi.com", "https://github.com/bmozi"],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "business inquiries",
@@ -580,6 +580,15 @@ export default function Home() {
               </h2>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+              <a
+                href="https://bmozi.com"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 border border-[var(--ink)] px-5 font-mono text-sm font-bold"
+              >
+                <Globe2 size={17} aria-hidden="true" />
+                BMOZI.com
+              </a>
               <a
                 href="mailto:hello@bmozi.com?subject=BMOZI%20technical%20project"
                 className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--ink)] px-5 font-mono text-sm font-bold text-white"
