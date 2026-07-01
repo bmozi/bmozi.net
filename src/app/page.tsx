@@ -144,6 +144,21 @@ const buyerOutcomes = [
   },
 ];
 
+const executiveSummary = [
+  {
+    title: "The problem",
+    text: "Modern teams are trying to adopt AI while their APIs, data, vendor systems, and governance models are still fragmented.",
+  },
+  {
+    title: "The BMOZI answer",
+    text: "Build the product surface and the trust layer together: interfaces, contracts, events, scoped tools, audit, and human review.",
+  },
+  {
+    title: "The proof",
+    text: "Sentinel, Merlin Software Factory, UCO patterns, and 1.59M+ AI-assisted production lines show the operating model in practice.",
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -271,6 +286,34 @@ export default function Home() {
                 ))}
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section id="summary" className="scroll-mt-24 border-b border-white/10">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                Executive summary
+              </p>
+              <h2 className="mt-4 max-w-lg font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                Governed AI adoption needs working systems, not slideware.
+              </h2>
+            </div>
+            <div className="grid gap-3 md:grid-cols-3">
+              {executiveSummary.map((item) => (
+                <article
+                  key={item.title}
+                  className="border border-white/12 bg-white/[0.035] p-5"
+                >
+                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                    {item.title}
+                  </p>
+                  <p className="mt-5 leading-7 text-[var(--soft)]">
+                    {item.text}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
