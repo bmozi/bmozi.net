@@ -49,6 +49,13 @@ const proofPoints = [
   ["SOA Roots", "From contracts to the agent mesh"],
 ];
 
+const proofAccentColors = [
+  "var(--signal)",
+  "var(--amber)",
+  "var(--magenta)",
+  "var(--soft)",
+];
+
 const enterpriseProjects = [
   {
     title: "Sentinel",
@@ -282,17 +289,24 @@ export default function Home() {
                 </p>
               </div>
               <div className="grid auto-rows-fr grid-cols-2 gap-2 sm:gap-4">
-                {proofPoints.map(([value, label]) => (
+                {proofPoints.map(([value, label], index) => (
                   <div
                     key={label}
-                    className="flex min-h-24 min-w-0 flex-col justify-between overflow-hidden border border-white/10 p-2.5 sm:min-h-40 sm:p-6"
+                    className="group relative flex min-h-24 min-w-0 flex-col justify-between overflow-hidden border border-white/10 bg-white/[0.025] p-3 transition-colors hover:border-white/20 hover:bg-white/[0.045] sm:min-h-36 sm:p-5"
                   >
-                    <p className="whitespace-nowrap font-display text-[clamp(1.15rem,5vw,1.42rem)] font-black leading-none text-white sm:text-[clamp(1.75rem,2vw,2.08rem)]">
-                      {value}
-                    </p>
-                    <p className="mt-2 break-words font-mono text-[0.48rem] leading-tight text-[var(--muted)] sm:mt-4 sm:text-xs">
-                      {label}
-                    </p>
+                    <span
+                      className="mb-4 block h-0.5 w-9 shrink-0 transition-transform group-hover:scale-x-125 sm:mb-6 sm:w-11"
+                      style={{ backgroundColor: proofAccentColors[index] }}
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <p className="max-w-[9rem] text-balance font-display text-[clamp(1.05rem,4.4vw,1.24rem)] font-black leading-[1.02] text-white sm:max-w-none sm:text-[clamp(1.3rem,1.7vw,1.62rem)]">
+                        {value}
+                      </p>
+                      <p className="mt-4 break-words font-mono text-[0.58rem] leading-snug text-[var(--muted)] sm:text-[0.72rem]">
+                        {label}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

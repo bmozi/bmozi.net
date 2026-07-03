@@ -1,32 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 190" role="img" aria-labelledby="title desc">
   <title id="title">BMOZI Technical wordmark</title>
-  <desc id="desc">Compact BMOZI Technical wordmark with a readable blue B mark and cyan Technical text.</desc>
-  <defs>
-    <linearGradient id="bmozi-blue" x1="44" y1="34" x2="214" y2="220" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2E73F1"/>
-      <stop offset=".56" stop-color="#2AA9FF"/>
-      <stop offset="1" stop-color="#19D6C5"/>
-    </linearGradient>
-    <linearGradient id="bmozi-magenta" x1="72" y1="114" x2="184" y2="176" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF4FD8"/>
-      <stop offset=".72" stop-color="#E23CA5"/>
-      <stop offset="1" stop-color="#19D6C5"/>
-    </linearGradient>
-    <clipPath id="b-clip">
-      <text x="32" y="210" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="206" font-weight="900">B</text>
-    </clipPath>
-  </defs>
-  <rect width="620" height="190" fill="#071019"/>
-  <g transform="translate(22 28) scale(.52)">
-    <rect width="256" height="256" fill="#071019"/>
-    <text x="32" y="210" fill="url(#bmozi-blue)" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="206" font-weight="900">B</text>
-    <g clip-path="url(#b-clip)">
-      <rect x="63" y="118" width="122" height="38" fill="url(#bmozi-magenta)"/>
-      <path d="M105 157C127 139 159 139 190 157V185H88V165C92 162 98 160 105 157Z" fill="#071019" opacity=".7"/>
-      <rect x="48" y="86" width="40" height="128" fill="#2E73F1"/>
-    </g>
+  <desc id="desc">BMOZI Technical wordmark with a custom angular B mark and restrained signal color.</desc>
+  <rect width="620" height="190" fill="#0A0D11"/>
+  <g transform="translate(22 29) scale(.515)">
+    <rect width="256" height="256" fill="#0A0D11"/>
+    <path
+      fill="#F4F7F9"
+      fill-rule="evenodd"
+      d="M49 34H158L205 59V116L183 137L216 157V214L185 242H49L72 219V57L49 34ZM101 76V116H154L176 103V89L155 76H101ZM101 155V201H159L188 185V171L159 155H101Z"
+    />
+    <path fill="#FF4FD8" d="M73 128H141L128 143H73V128Z"/>
   </g>
-  <line x1="196" y1="31" x2="196" y2="159" stroke="#19D6C5" stroke-opacity=".72" stroke-width="3"/>
+  <line x1="196" y1="31" x2="196" y2="159" stroke="#FF4FD8" stroke-opacity=".8" stroke-width="3"/>
   <text x="238" y="84" fill="#F4F7F9" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800" letter-spacing="1">BMOZI</text>
-  <text x="240" y="130" fill="#19D6C5" font-family="Courier, monospace" font-size="27" font-weight="700" letter-spacing="12">TECHNICAL</text>
+  <text x="240" y="130" fill="#19D6C5" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="12">TECHNICAL</text>
 </svg>
