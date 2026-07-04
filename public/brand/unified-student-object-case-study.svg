@@ -173,13 +173,15 @@
     </g>
     <g transform="translate(556 424)">
       <rect width="150" height="58" rx="7" class="tileLearning"/>
-      <text x="75" y="22" text-anchor="middle" class="label">Competency Mastered</text>
-      <text x="75" y="42" text-anchor="middle" class="tiny">10:42 AM</text>
+      <text x="75" y="18" text-anchor="middle" class="label">Competency</text>
+      <text x="75" y="34" text-anchor="middle" class="label">Mastered</text>
+      <text x="75" y="50" text-anchor="middle" class="tiny">10:42 AM</text>
     </g>
     <g transform="translate(718 424)">
       <rect width="140" height="58" rx="7" class="tileLearning"/>
-      <text x="70" y="22" text-anchor="middle" class="label">Assessment Attempt</text>
-      <text x="70" y="42" text-anchor="middle" class="tiny">11:03 AM</text>
+      <text x="70" y="18" text-anchor="middle" class="label">Assessment</text>
+      <text x="70" y="34" text-anchor="middle" class="label">Attempt</text>
+      <text x="70" y="50" text-anchor="middle" class="tiny">11:03 AM</text>
     </g>
     <g transform="translate(870 424)">
       <rect width="136" height="58" rx="7" class="tileLearning"/>
@@ -199,23 +201,27 @@
 
     <g transform="translate(414 508)">
       <rect width="132" height="58" rx="7" class="tileOps"/>
-      <text x="66" y="22" text-anchor="middle" class="label">Document Received</text>
-      <text x="66" y="42" text-anchor="middle" class="tiny">records</text>
+      <text x="66" y="18" text-anchor="middle" class="label">Document</text>
+      <text x="66" y="34" text-anchor="middle" class="label">Received</text>
+      <text x="66" y="50" text-anchor="middle" class="tiny">records</text>
     </g>
     <g transform="translate(558 508)">
       <rect width="142" height="58" rx="7" class="tileOps"/>
-      <text x="71" y="22" text-anchor="middle" class="label">Application Submitted</text>
-      <text x="71" y="42" text-anchor="middle" class="tiny">enrollment</text>
+      <text x="71" y="18" text-anchor="middle" class="label">Application</text>
+      <text x="71" y="34" text-anchor="middle" class="label">Submitted</text>
+      <text x="71" y="50" text-anchor="middle" class="tiny">enrollment</text>
     </g>
     <g transform="translate(712 508)">
       <rect width="134" height="58" rx="7" class="tileOps"/>
-      <text x="67" y="22" text-anchor="middle" class="label">Start Date Changed</text>
-      <text x="67" y="42" text-anchor="middle" class="tiny">records</text>
+      <text x="67" y="18" text-anchor="middle" class="label">Start Date</text>
+      <text x="67" y="34" text-anchor="middle" class="label">Changed</text>
+      <text x="67" y="50" text-anchor="middle" class="tiny">records</text>
     </g>
     <g transform="translate(858 508)">
       <rect width="132" height="58" rx="7" class="tileOps"/>
-      <text x="66" y="22" text-anchor="middle" class="label">Aid Status Changed</text>
-      <text x="66" y="42" text-anchor="middle" class="tiny">funding</text>
+      <text x="66" y="18" text-anchor="middle" class="label">Aid Status</text>
+      <text x="66" y="34" text-anchor="middle" class="label">Changed</text>
+      <text x="66" y="50" text-anchor="middle" class="tiny">funding</text>
     </g>
     <g transform="translate(1002 508)">
       <rect width="118" height="58" rx="7" class="tileOps"/>
@@ -252,19 +258,19 @@
     <text x="1518" y="91" text-anchor="middle" class="eyebrow pink">AI Tools &amp; Actions</text>
     <text x="1518" y="111" text-anchor="middle" class="eyebrow pink">(Governed)</text>
     <g transform="translate(1412 128)">
-      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Content Recommender</text><text x="70" y="42" class="tiny">curated</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">▭</text>
+      <rect width="218" height="58" rx="7" class="card"/><text x="124" y="19" text-anchor="middle" class="label">Content</text><text x="124" y="35" text-anchor="middle" class="label">Recommender</text><text x="124" y="50" text-anchor="middle" class="tiny">curated</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">▭</text>
     </g>
     <g transform="translate(1412 200)">
-      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Practice Generator</text><text x="70" y="42" class="tiny">adaptive</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">⌘</text>
+      <rect width="218" height="58" rx="7" class="card"/><text x="124" y="24" text-anchor="middle" class="label">Practice Generator</text><text x="124" y="43" text-anchor="middle" class="tiny">adaptive</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">⌘</text>
     </g>
     <g transform="translate(1412 272)">
-      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Coach Copilot</text><text x="70" y="42" class="tiny">suggest</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">□</text>
+      <rect width="218" height="58" rx="7" class="card"/><text x="124" y="24" text-anchor="middle" class="label">Coach Copilot</text><text x="124" y="43" text-anchor="middle" class="tiny">suggest</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">□</text>
     </g>
     <g transform="translate(1412 344)">
-      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Outreach Orchestrator</text><text x="70" y="42" class="tiny">nudge</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">↗</text>
+      <rect width="218" height="58" rx="7" class="card"/><text x="124" y="19" text-anchor="middle" class="label">Outreach</text><text x="124" y="35" text-anchor="middle" class="label">Orchestrator</text><text x="124" y="50" text-anchor="middle" class="tiny">nudge</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">↗</text>
     </g>
     <g transform="translate(1412 416)">
-      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Escalation Orchestrator</text><text x="70" y="42" class="tiny">SLA breach routed</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#f2b84b">!</text>
+      <rect width="218" height="58" rx="7" class="card"/><text x="124" y="19" text-anchor="middle" class="label">Escalation</text><text x="124" y="35" text-anchor="middle" class="label">Orchestrator</text><text x="124" y="50" text-anchor="middle" class="tiny">SLA breach routed</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#f2b84b">!</text>
     </g>
   </g>
   <path d="M1286 432H1370" stroke="#ff4fd8" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#pinkArrow)"/>
@@ -307,10 +313,10 @@
   <g filter="url(#soft)">
     <rect x="614" y="732" width="276" height="104" rx="12" class="panel"/>
     <text x="752" y="758" text-anchor="middle" class="eyebrow cyan">Event Streaming Platform</text>
-    <text x="686" y="796" font-size="38" fill="#fff">Kafka</text>
-    <text x="768" y="787" class="tiny">• Durable events</text>
-    <text x="768" y="806" class="tiny">• Replay &amp; reprocess</text>
-    <text x="768" y="825" class="tiny">• Schema governance</text>
+    <text x="660" y="806" font-size="34" fill="#fff">Kafka</text>
+    <text x="760" y="787" class="tiny">• Durable events</text>
+    <text x="760" y="806" class="tiny">• Replay &amp; reprocess</text>
+    <text x="760" y="825" class="tiny">• Schema governance</text>
   </g>
 
   <g filter="url(#soft)">
