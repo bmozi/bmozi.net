@@ -20,14 +20,14 @@ import { BrandLockup } from "@/components/brand-lockup";
 export const metadata: Metadata = {
   title: "Unified Student Object Case Study",
   description:
-    "A BMOZI Technical case study mapping a production Unified Customer Object pattern onto competency-based personalized learning.",
+    "A BMOZI Technical case study mapping a production Unified Customer Object pattern onto competency-based learning, operational accountability, and reliable student access.",
   alternates: {
     canonical: "/case-studies/wgu-unified-student-object",
   },
   openGraph: {
     title: "Unified Student Object | BMOZI Technical",
     description:
-      "A reference architecture for event-sourced student personalization, governed AI, and human-in-the-loop learning support.",
+      "A reference architecture for event-sourced student personalization, administrative lifecycle events, reliable access, governed AI, and human-in-the-loop support.",
     images: ["/brand/unified-student-object-case-study.png"],
   },
 };
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const mapping = [
   {
     uco: "Identity",
-    uso: "Student identity, program, enrollment, transfer credits, prior learning",
+    uso: "Student identity, program, enrollment, documents, start dates, transfer credits, prior learning",
     value: "Start from real context, not a generic experience",
   },
   {
@@ -45,8 +45,8 @@ const mapping = [
   },
   {
     uco: "Service timeline",
-    uso: "Course activity, competency attempts, assessments, milestones",
-    value: "Understand progress and blockers over time",
+    uso: "Course activity, competency attempts, applications, documents, aid changes, cases, SLA breaches",
+    value: "Understand learning progress and operational blockers over time",
   },
   {
     uco: "Financial stream",
@@ -72,28 +72,28 @@ const mapping = [
 
 const eventFlow = [
   {
-    label: "Student systems",
-    text: "LMS, assessment, mentor CRM, support, aid, career",
+    label: "Bounded contexts",
+    text: "LMS, assessment, enrollment and records, financial aid, mentor CRM, support, career",
     icon: Layers3,
   },
   {
     label: "Domain events",
-    text: "course.started, competency.mastered, assessment.evaluation.returned, mentor.checkin.completed, student.inactivity.detected, momentum.score.changed, career.goal.set",
+    text: "competency.mastered, assessment.attempted, document.received, application.submitted, start_date.changed, aid_status.changed, case.assigned, sla.breached, auth.login.failed",
     icon: GitBranch,
   },
   {
     label: "Unified Student Object",
-    text: "Append-only event store with per-student concurrency and replayable student history.",
+    text: "Append-only event store holding both learning journey and operational lifecycle truth.",
     icon: UserRoundCheck,
   },
   {
     label: "Projections",
-    text: "Student dashboard, mentor workspace, instructor blockers, risk queue, next-best-action, analytics warehouse.",
+    text: "Student dashboard, mentor workspace, instructor blockers, operations case and SLA view, next-best-action, analytics warehouse.",
     icon: Network,
   },
   {
     label: "Experiences",
-    text: "Study plan, support outreach, assessment-readiness, AI assistant, mentor coaching prompts.",
+    text: "Reliable access, study plan, support outreach, escalations, assessment-readiness, AI assistant, mentor coaching prompts.",
     icon: Sparkles,
   },
 ];
@@ -105,7 +105,7 @@ const reasons = [
   },
   {
     title: "Many roles need many read models.",
-    text: "Student, mentor, instructor, evaluator, program leader, and AI experiences can each get the projection they need from one event stream.",
+    text: "Student, mentor, instructor, evaluator, enrollment staff, financial-aid staff, program leader, and AI experiences can each get the projection they need from one event stream.",
   },
   {
     title: "Trust and audit are part of the model.",
@@ -124,6 +124,9 @@ const governance = [
   "Audit logs for data access and AI recommendations",
   "Data minimization in AI prompts",
   "Human-in-the-loop for high-impact decisions",
+  "No queue without an accountable owner",
+  "SLA timers and escalations for open cases",
+  "Availability and login-success SLOs at the student front door",
   "Clear line between AI recommendation and official academic decision",
   "Retention by data category",
 ];
@@ -171,7 +174,7 @@ const jsonLd = {
   "@type": "TechArticle",
   headline: "The Unified Student Object",
   description:
-    "A BMOZI Technical reference architecture for competency-based personalized learning using event sourcing, governed AI, and human-in-the-loop oversight.",
+    "A BMOZI Technical reference architecture for competency-based personalized learning, operational accountability, reliable access, governed AI, and human-in-the-loop oversight.",
   author: {
     "@type": "Organization",
     name: "BMOZI",
@@ -233,17 +236,20 @@ export default function UnifiedStudentObjectPage() {
                 A proven Unified Customer Object pattern mapped onto
                 competency-based, personalized learning.
               </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                {["Event sourced", "Governed AI", "Human accountable"].map(
-                  (item) => (
-                    <div
-                      key={item}
-                      className="border border-white/12 bg-white/[0.045] p-4 font-mono text-xs uppercase text-white backdrop-blur"
-                    >
-                      {item}
-                    </div>
-                  ),
-                )}
+              <div className="mt-8 grid gap-3 sm:grid-cols-4">
+                {[
+                  "Event sourced",
+                  "Reliable access",
+                  "Governed AI",
+                  "Human accountable",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="border border-white/12 bg-white/[0.045] p-4 font-mono text-xs uppercase text-white backdrop-blur"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -280,13 +286,47 @@ export default function UnifiedStudentObjectPage() {
                 </strong>{" "}
                 A Unified Student Object answers the same for a student:
                 learning progress, competency mastery, mentor interactions,
-                support, engagement, goals, and risk.
+                enrollment records, financial-aid status, support cases,
+                access reliability, goals, and risk.
               </p>
               <p className="mt-5 text-lg leading-8 text-black/70">
                 The result is personalized pacing, proactive mentor outreach,
-                and AI coaching, with human-in-the-loop control on anything
-                high-impact.
+                administrative accountability, routed escalation, reliable
+                access, and AI coaching, with human-in-the-loop control on
+                anything high-impact.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-white/10">
+          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                  Updated architecture picture
+                </p>
+                <h2 className="mt-4 max-w-4xl font-display text-5xl font-black leading-none text-white">
+                  One timeline for learning, operations, access, and
+                  accountability.
+                </h2>
+              </div>
+              <p className="max-w-md leading-7 text-[var(--soft)]">
+                The USO is not only a learning-journey engine. It also carries
+                administrative lifecycle events, login reliability signals,
+                case ownership, SLA timers, escalation, audit, and human
+                guardrails.
+              </p>
+            </div>
+            <div className="overflow-hidden border border-white/12 bg-white/[0.035]">
+              <Image
+                src="/brand/unified-student-object-case-study.png"
+                alt="Unified Student Object architecture diagram showing student access reliability, learning and operational event lanes, operations case and SLA projections, administrative bounded contexts, governed AI escalation, audit, and human oversight"
+                width={1672}
+                height={941}
+                sizes="(min-width: 1280px) 1216px, calc(100vw - 40px)"
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </section>
@@ -306,7 +346,8 @@ export default function UnifiedStudentObjectPage() {
               <p className="max-w-md leading-7 text-[var(--soft)]">
                 The point is not a perfect schema. It is a domain model that
                 starts from events, bounded contexts, and the jobs each role
-                needs to do.
+                needs to do, including administrative staff who own cases and
+                service levels.
               </p>
             </div>
 
@@ -375,8 +416,8 @@ export default function UnifiedStudentObjectPage() {
             <blockquote className="mt-8 border-l-2 border-[var(--signal)] bg-white/[0.035] p-6 text-lg leading-8 text-white">
               “Event storming is how I&apos;d start the student-personalization
               work. Before anyone designs a schema, you put mentors, faculty,
-              product, and engineering in a room and map the domain events on a
-              timeline.”
+              enrollment, records, financial aid, support, product, and
+              engineering in a room and map the domain events on a timeline.”
             </blockquote>
           </div>
         </section>
@@ -427,8 +468,8 @@ export default function UnifiedStudentObjectPage() {
                 “I wouldn&apos;t personalize by dumping every student signal into
                 an LLM. The Unified Student Object exposes governed projections
                 and scoped tools. AI assists mentors and students, but policy,
-                permissions, audit, and human accountability stay in the
-                platform.”
+                permissions, audit, case ownership, and human accountability
+                stay in the platform.”
               </blockquote>
             </div>
             <div className="grid gap-3">

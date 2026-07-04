@@ -1,0 +1,354 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">Unified Student Object reference architecture</title>
+  <desc id="desc">Event-sourced Unified Student Object diagram showing student access reliability, learning and operational event lanes, projections, governed AI, escalation, human guardrails, and audit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1672" y2="941" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071019"/>
+      <stop offset=".5" stop-color="#0a0d11"/>
+      <stop offset="1" stop-color="#141018"/>
+    </linearGradient>
+    <linearGradient id="core" x1="382" y1="300" x2="1288" y2="552" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102646"/>
+      <stop offset=".48" stop-color="#111923"/>
+      <stop offset="1" stop-color="#2b1025"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="246" y1="447" x2="1388" y2="447" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19d6c5" stop-opacity=".12"/>
+      <stop offset=".5" stop-color="#f2b84b" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff4fd8" stop-opacity=".14"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <marker id="cyanArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#19d6c5"/>
+    </marker>
+    <marker id="pinkArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#ff4fd8"/>
+    </marker>
+    <marker id="amberArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#f2b84b"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:72px;font-weight:900;fill:#f4f7f9;letter-spacing:-2px}
+      .subtitle{font-family:Arial,sans-serif;font-size:32px;font-weight:800;fill:#ff4fd8}
+      .eyebrow{font-family:monospace;font-size:15px;font-weight:800;letter-spacing:.9px;text-transform:uppercase}
+      .label{font-family:Arial,sans-serif;font-size:14px;font-weight:800;fill:#fff}
+      .small{font-family:Arial,sans-serif;font-size:13px;font-weight:600;fill:#d6e1e7}
+      .tiny{font-family:Arial,sans-serif;font-size:11px;font-weight:600;fill:#a9b8c1}
+      .mono{font-family:monospace;font-size:12px;font-weight:700;fill:#d6e1e7}
+      .cyan{fill:#19d6c5}.pink{fill:#ff4fd8}.amber{fill:#f2b84b}.muted{fill:#8ea0aa}
+      .panel{fill:rgba(14,22,31,.83);stroke:rgba(25,214,197,.68);stroke-width:1.4}
+      .panelPink{fill:rgba(28,14,25,.84);stroke:rgba(255,79,216,.76);stroke-width:1.4}
+      .panelAmber{fill:rgba(29,20,9,.86);stroke:rgba(242,184,75,.74);stroke-width:1.4}
+      .card{fill:rgba(255,255,255,.055);stroke:rgba(255,255,255,.22);stroke-width:1}
+      .tileLearning{fill:rgba(25,214,197,.12);stroke:#19d6c5;stroke-width:1.2}
+      .tileOps{fill:rgba(242,184,75,.14);stroke:#f2b84b;stroke-width:1.2}
+      .tileRisk{fill:rgba(255,79,216,.16);stroke:#ff4fd8;stroke-width:1.2}
+    </style>
+  </defs>
+
+  <rect width="1672" height="941" fill="url(#bg)"/>
+  <path d="M0 640C290 536 478 724 738 612C1012 494 1198 662 1672 520" fill="none" stroke="#19d6c5" stroke-opacity=".08" stroke-width="2"/>
+  <path d="M0 770C300 666 526 862 802 730C1045 614 1302 779 1672 655" fill="none" stroke="#ff4fd8" stroke-opacity=".08" stroke-width="2"/>
+  <g opacity=".14">
+    <path d="M230 170H1450M230 222H1450M230 274H1450M230 326H1450M230 378H1450M230 430H1450M230 482H1450M230 534H1450M230 586H1450M230 638H1450M230 690H1450M230 742H1450" stroke="#2aa9ff" stroke-width="1"/>
+    <path d="M270 140V775M340 140V775M410 140V775M480 140V775M550 140V775M620 140V775M690 140V775M760 140V775M830 140V775M900 140V775M970 140V775M1040 140V775M1110 140V775M1180 140V775M1250 140V775M1320 140V775M1390 140V775" stroke="#2aa9ff" stroke-width="1"/>
+  </g>
+
+  <text x="836" y="76" text-anchor="middle" class="title">Unified Student Object</text>
+  <text x="836" y="121" text-anchor="middle" class="subtitle">Learning + Operations + Reliable Access</text>
+
+  <!-- Student access and reliability plane -->
+  <g filter="url(#soft)">
+    <rect x="362" y="143" width="948" height="72" rx="10" class="panel"/>
+    <text x="836" y="165" text-anchor="middle" class="eyebrow cyan">Student Access &amp; Reliability Plane</text>
+    <g>
+      <rect x="390" y="176" width="204" height="26" rx="5" class="card"/>
+      <text x="492" y="194" text-anchor="middle" class="mono">Resilient Auth / SSO</text>
+      <rect x="612" y="176" width="228" height="26" rx="5" class="card"/>
+      <text x="726" y="194" text-anchor="middle" class="mono">Login-Success SLOs</text>
+      <rect x="858" y="176" width="236" height="26" rx="5" class="card"/>
+      <text x="976" y="194" text-anchor="middle" class="mono">Real-User Monitoring</text>
+      <rect x="1112" y="176" width="170" height="26" rx="5" class="card"/>
+      <text x="1197" y="194" text-anchor="middle" class="mono">Graceful Degradation</text>
+    </g>
+  </g>
+  <path d="M492 215V274" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <text x="509" y="251" class="mono cyan">auth.login.failed</text>
+
+  <!-- Left bounded contexts -->
+  <g filter="url(#soft)">
+    <rect x="14" y="62" width="286" height="623" rx="12" class="panel"/>
+    <text x="157" y="91" text-anchor="middle" class="eyebrow cyan">Source Systems</text>
+    <text x="157" y="111" text-anchor="middle" class="eyebrow cyan">&amp; Bounded Contexts</text>
+    <g transform="translate(34 128)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Academic Programs</text>
+      <text x="69" y="43" class="tiny">Competencies, courses</text>
+      <text x="69" y="59" class="tiny">assessments</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">▰</text>
+    </g>
+    <g transform="translate(34 216)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Enrollment &amp; Records</text>
+      <text x="69" y="43" class="tiny">Applications, documents</text>
+      <text x="69" y="59" class="tiny">UEH, start dates, credits</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#f2b84b">▤</text>
+    </g>
+    <g transform="translate(34 304)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Financial Aid &amp; Funding</text>
+      <text x="69" y="43" class="tiny">Aid status, billing</text>
+      <text x="69" y="59" class="tiny">employer funding</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#f2b84b">$</text>
+    </g>
+    <g transform="translate(34 392)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Student Success</text>
+      <text x="69" y="43" class="tiny">Mentors, check-ins</text>
+      <text x="69" y="59" class="tiny">interventions</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">◌</text>
+    </g>
+    <g transform="translate(34 480)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Support Services</text>
+      <text x="69" y="43" class="tiny">Cases, resources</text>
+      <text x="69" y="59" class="tiny">referrals</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">☎</text>
+    </g>
+    <g transform="translate(34 568)">
+      <rect width="196" height="74" rx="7" class="card"/>
+      <text x="69" y="24" class="label">Engagement &amp; Goals</text>
+      <text x="69" y="43" class="tiny">Activity, plans</text>
+      <text x="69" y="59" class="tiny">career goals</text>
+      <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">⌁</text>
+    </g>
+  </g>
+
+  <!-- Projections row -->
+  <g filter="url(#soft)">
+    <rect x="414" y="222" width="872" height="100" rx="9" class="panel"/>
+    <text x="850" y="244" text-anchor="middle" class="eyebrow cyan">Projections (Read Models)</text>
+    <g transform="translate(433 259)">
+      <rect width="145" height="48" rx="6" class="card"/><text x="72" y="20" text-anchor="middle" class="label">Student View</text><text x="72" y="37" text-anchor="middle" class="tiny">status + next step</text>
+    </g>
+    <g transform="translate(588 259)">
+      <rect width="145" height="48" rx="6" class="card"/><text x="72" y="20" text-anchor="middle" class="label">Mentor View</text><text x="72" y="37" text-anchor="middle" class="tiny">cohort momentum</text>
+    </g>
+    <g transform="translate(743 259)">
+      <rect width="145" height="48" rx="6" class="card"/><text x="72" y="20" text-anchor="middle" class="label">Instructor View</text><text x="72" y="37" text-anchor="middle" class="tiny">blockers + gaps</text>
+    </g>
+    <g transform="translate(898 259)">
+      <rect width="158" height="48" rx="6" class="card"/><text x="79" y="20" text-anchor="middle" class="label">Ops / Case &amp; SLA</text><text x="79" y="37" text-anchor="middle" class="tiny">owner + timer</text>
+    </g>
+    <g transform="translate(1066 259)">
+      <rect width="96" height="48" rx="6" class="card"/><text x="48" y="20" text-anchor="middle" class="label">Analytics</text><text x="48" y="37" text-anchor="middle" class="tiny">risk + SLOs</text>
+    </g>
+    <g transform="translate(1172 259)">
+      <rect width="96" height="48" rx="6" class="card"/><text x="48" y="20" text-anchor="middle" class="label">AI NBA</text><text x="48" y="37" text-anchor="middle" class="tiny">nudges</text>
+    </g>
+  </g>
+
+  <!-- Center event store -->
+  <g filter="url(#soft)">
+    <path d="M378 363L406 329H1258L1286 363V544L1258 578H406L378 544Z" fill="url(#core)" stroke="#9a7cff" stroke-opacity=".9" stroke-width="1.4"/>
+    <path d="M286 444H1388" stroke="url(#stream)" stroke-width="36" filter="url(#glow)"/>
+    <text x="836" y="356" text-anchor="middle" class="eyebrow cyan">Unified Student Object</text>
+    <text x="836" y="382" text-anchor="middle" class="label">Append-only event store: one timeline, all of the student&apos;s reality</text>
+    <text x="420" y="416" class="eyebrow cyan">Learning Journey Events</text>
+    <text x="420" y="500" class="eyebrow amber">Operational / Lifecycle Events</text>
+
+    <g transform="translate(414 424)">
+      <rect width="130" height="58" rx="7" class="tileLearning"/>
+      <text x="65" y="22" text-anchor="middle" class="label">Course Started</text>
+      <text x="65" y="42" text-anchor="middle" class="tiny">09:15 AM</text>
+    </g>
+    <g transform="translate(556 424)">
+      <rect width="150" height="58" rx="7" class="tileLearning"/>
+      <text x="75" y="22" text-anchor="middle" class="label">Competency Mastered</text>
+      <text x="75" y="42" text-anchor="middle" class="tiny">10:42 AM</text>
+    </g>
+    <g transform="translate(718 424)">
+      <rect width="140" height="58" rx="7" class="tileLearning"/>
+      <text x="70" y="22" text-anchor="middle" class="label">Assessment Attempt</text>
+      <text x="70" y="42" text-anchor="middle" class="tiny">11:03 AM</text>
+    </g>
+    <g transform="translate(870 424)">
+      <rect width="136" height="58" rx="7" class="tileLearning"/>
+      <text x="68" y="22" text-anchor="middle" class="label">Mentor Check-In</text>
+      <text x="68" y="42" text-anchor="middle" class="tiny">11:47 AM</text>
+    </g>
+    <g transform="translate(1018 424)">
+      <rect width="124" height="58" rx="7" class="tileRisk"/>
+      <text x="62" y="22" text-anchor="middle" class="label">Momentum Drop</text>
+      <text x="62" y="42" text-anchor="middle" class="tiny">03:31 PM</text>
+    </g>
+    <g transform="translate(1154 424)">
+      <rect width="98" height="58" rx="7" class="tileLearning"/>
+      <text x="49" y="22" text-anchor="middle" class="label">Goal Update</text>
+      <text x="49" y="42" text-anchor="middle" class="tiny">04:05 PM</text>
+    </g>
+
+    <g transform="translate(414 508)">
+      <rect width="132" height="58" rx="7" class="tileOps"/>
+      <text x="66" y="22" text-anchor="middle" class="label">Document Received</text>
+      <text x="66" y="42" text-anchor="middle" class="tiny">records</text>
+    </g>
+    <g transform="translate(558 508)">
+      <rect width="142" height="58" rx="7" class="tileOps"/>
+      <text x="71" y="22" text-anchor="middle" class="label">Application Submitted</text>
+      <text x="71" y="42" text-anchor="middle" class="tiny">enrollment</text>
+    </g>
+    <g transform="translate(712 508)">
+      <rect width="134" height="58" rx="7" class="tileOps"/>
+      <text x="67" y="22" text-anchor="middle" class="label">Start Date Changed</text>
+      <text x="67" y="42" text-anchor="middle" class="tiny">records</text>
+    </g>
+    <g transform="translate(858 508)">
+      <rect width="132" height="58" rx="7" class="tileOps"/>
+      <text x="66" y="22" text-anchor="middle" class="label">Aid Status Changed</text>
+      <text x="66" y="42" text-anchor="middle" class="tiny">funding</text>
+    </g>
+    <g transform="translate(1002 508)">
+      <rect width="118" height="58" rx="7" class="tileOps"/>
+      <text x="59" y="22" text-anchor="middle" class="label">Case Assigned</text>
+      <text x="59" y="42" text-anchor="middle" class="tiny">owner set</text>
+    </g>
+    <g transform="translate(1132 508)">
+      <rect width="120" height="58" rx="7" class="tileRisk"/>
+      <text x="60" y="22" text-anchor="middle" class="label">SLA Breached</text>
+      <text x="60" y="42" text-anchor="middle" class="tiny">escalate</text>
+    </g>
+    <text x="836" y="604" text-anchor="middle" class="eyebrow muted">Append Only Event Store</text>
+  </g>
+
+  <!-- flow lines -->
+  <path d="M230 164C282 164 278 381 378 381" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <path d="M230 252C306 252 300 528 378 528" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M230 340C318 340 306 537 378 537" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M230 428C306 428 304 457 378 457" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <path d="M230 516C318 516 300 548 378 548" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M230 604C292 604 300 455 378 455" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <text x="287" y="400" class="eyebrow cyan">events in</text>
+
+  <path d="M504 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
+  <path d="M660 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
+  <path d="M815 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
+  <path d="M977 329V322" stroke="#f2b84b" stroke-width="3" marker-end="url(#amberArrow)"/>
+  <path d="M1114 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
+  <path d="M1220 329V322" stroke="#ff4fd8" stroke-width="3" marker-end="url(#pinkArrow)"/>
+
+  <!-- Right actions and guardrails -->
+  <g filter="url(#soft)">
+    <rect x="1382" y="62" width="272" height="388" rx="12" class="panelPink"/>
+    <text x="1518" y="91" text-anchor="middle" class="eyebrow pink">AI Tools &amp; Actions</text>
+    <text x="1518" y="111" text-anchor="middle" class="eyebrow pink">(Governed)</text>
+    <g transform="translate(1412 128)">
+      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Content Recommender</text><text x="70" y="42" class="tiny">curated</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">▭</text>
+    </g>
+    <g transform="translate(1412 200)">
+      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Practice Generator</text><text x="70" y="42" class="tiny">adaptive</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">⌘</text>
+    </g>
+    <g transform="translate(1412 272)">
+      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Coach Copilot</text><text x="70" y="42" class="tiny">suggest</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">□</text>
+    </g>
+    <g transform="translate(1412 344)">
+      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Outreach Orchestrator</text><text x="70" y="42" class="tiny">nudge</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#ff9be8">↗</text>
+    </g>
+    <g transform="translate(1412 416)">
+      <rect width="218" height="58" rx="7" class="card"/><text x="70" y="24" class="label">Escalation Orchestrator</text><text x="70" y="42" class="tiny">SLA breach routed</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#f2b84b">!</text>
+    </g>
+  </g>
+  <path d="M1286 432H1370" stroke="#ff4fd8" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#pinkArrow)"/>
+  <path d="M1286 546C1338 546 1330 444 1402 444" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <text x="1300" y="405" class="eyebrow pink">events out</text>
+
+  <g filter="url(#soft)">
+    <rect x="1382" y="494" width="272" height="154" rx="12" class="panelPink"/>
+    <text x="1518" y="524" text-anchor="middle" class="eyebrow pink">Human-in-the-Loop</text>
+    <text x="1518" y="544" text-anchor="middle" class="eyebrow pink">Guardrails</text>
+    <text x="1418" y="575" class="small">• High-impact decisions</text>
+    <text x="1418" y="598" class="small">• Sensitive interventions</text>
+    <text x="1418" y="621" class="small">• No queue without owner</text>
+    <text x="1418" y="644" class="small">• Escalations</text>
+  </g>
+
+  <!-- Governance and platform -->
+  <g filter="url(#soft)">
+    <rect x="316" y="625" width="1032" height="88" rx="10" class="panel"/>
+    <text x="832" y="650" text-anchor="middle" class="eyebrow cyan">Identity &amp; Governance Fabric</text>
+    <g transform="translate(350 667)"><rect width="154" height="30" rx="6" class="card"/><text x="77" y="20" text-anchor="middle" class="mono">Identity &amp; Access</text></g>
+    <g transform="translate(516 667)"><rect width="168" height="30" rx="6" class="card"/><text x="84" y="20" text-anchor="middle" class="mono">Consent &amp; Preferences</text></g>
+    <g transform="translate(696 667)"><rect width="150" height="30" rx="6" class="card"/><text x="75" y="20" text-anchor="middle" class="mono">Policy / RBAC</text></g>
+    <g transform="translate(858 667)"><rect width="158" height="30" rx="6" class="card"/><text x="79" y="20" text-anchor="middle" class="mono">Data Lineage</text></g>
+    <g transform="translate(1028 667)"><rect width="156" height="30" rx="6" class="card"/><text x="78" y="20" text-anchor="middle" class="mono">Privacy by Design</text></g>
+    <g transform="translate(1196 667)"><rect width="122" height="30" rx="6" class="card"/><text x="61" y="20" text-anchor="middle" class="mono">Audit</text></g>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="140" y="732" width="448" height="104" rx="12" class="panel"/>
+    <text x="364" y="758" text-anchor="middle" class="eyebrow cyan">Integration &amp; Adapter Layer</text>
+    <text x="364" y="779" text-anchor="middle" class="tiny">Anti-corruption adapters: LMS, SIS/ERP, assessment, CRM, financial aid, communications</text>
+    <g transform="translate(162 796)"><rect width="56" height="28" rx="5" class="card"/><text x="28" y="19" text-anchor="middle" class="mono">LMS</text></g>
+    <g transform="translate(232 796)"><rect width="64" height="28" rx="5" class="card"/><text x="32" y="19" text-anchor="middle" class="mono">SIS</text></g>
+    <g transform="translate(310 796)"><rect width="96" height="28" rx="5" class="card"/><text x="48" y="19" text-anchor="middle" class="mono">Assessment</text></g>
+    <g transform="translate(420 796)"><rect width="58" height="28" rx="5" class="card"/><text x="29" y="19" text-anchor="middle" class="mono">CRM</text></g>
+    <g transform="translate(492 796)"><rect width="68" height="28" rx="5" class="card"/><text x="34" y="19" text-anchor="middle" class="mono">Aid</text></g>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="614" y="732" width="276" height="104" rx="12" class="panel"/>
+    <text x="752" y="758" text-anchor="middle" class="eyebrow cyan">Event Streaming Platform</text>
+    <text x="686" y="796" font-size="38" fill="#fff">Kafka</text>
+    <text x="768" y="787" class="tiny">• Durable events</text>
+    <text x="768" y="806" class="tiny">• Replay &amp; reprocess</text>
+    <text x="768" y="825" class="tiny">• Schema governance</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="916" y="732" width="458" height="104" rx="12" class="panel"/>
+    <text x="1145" y="758" text-anchor="middle" class="eyebrow cyan">Projections &amp; Services (Independently Evolvable)</text>
+    <g transform="translate(938 796)"><rect width="76" height="28" rx="5" class="card"/><text x="38" y="19" text-anchor="middle" class="mono">Schedule</text></g>
+    <g transform="translate(1028 796)"><rect width="72" height="28" rx="5" class="card"/><text x="36" y="19" text-anchor="middle" class="mono">Progress</text></g>
+    <g transform="translate(1114 796)"><rect width="96" height="28" rx="5" class="card"/><text x="48" y="19" text-anchor="middle" class="mono">Case/SLA</text></g>
+    <g transform="translate(1224 796)"><rect width="78" height="28" rx="5" class="card"/><text x="39" y="19" text-anchor="middle" class="mono">Analytics</text></g>
+    <g transform="translate(1316 796)"><rect width="36" height="28" rx="5" class="card"/><text x="18" y="19" text-anchor="middle" class="mono">AI</text></g>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="1398" y="722" width="254" height="116" rx="12" class="panelAmber"/>
+    <text x="1525" y="752" text-anchor="middle" class="eyebrow amber">Audit Trail (Immutable)</text>
+    <text x="1440" y="785" class="small">• Who changed what</text>
+    <text x="1440" y="808" class="small">• When and why</text>
+    <text x="1440" y="831" class="small">• Case owner + result</text>
+  </g>
+
+  <!-- Bottom thesis banner -->
+  <g filter="url(#soft)">
+    <rect x="282" y="867" width="1328" height="58" rx="9" fill="rgba(9,15,23,.9)" stroke="rgba(242,184,75,.58)" stroke-width="1.2"/>
+    <text x="356" y="902" class="eyebrow cyan">Event Sourced Truth</text>
+    <text x="538" y="902" class="eyebrow muted">→</text>
+    <text x="588" y="902" class="eyebrow cyan">Projection Flexibility</text>
+    <text x="808" y="902" class="eyebrow muted">→</text>
+    <text x="858" y="902" class="eyebrow amber">Reliable Access &amp; Ownership</text>
+    <text x="1132" y="902" class="eyebrow muted">→</text>
+    <text x="1182" y="902" class="eyebrow pink">Governed AI</text>
+    <text x="1325" y="902" class="eyebrow muted">→</text>
+    <text x="1375" y="902" class="eyebrow amber">Human Oversight &amp; Trust</text>
+  </g>
+
+  <g transform="translate(20 861)">
+    <path d="M5 10H42C56 10 66 18 66 31C66 39 61 45 53 49C64 53 70 61 70 73C70 88 58 96 42 96H5L14 87V19L5 10ZM25 28V45H42C50 45 55 41 55 36C55 31 49 28 42 28H25ZM25 60V78H44C52 78 58 74 58 68C58 63 52 60 44 60H25Z" fill="#f4f7f9"/>
+    <path d="M15 51H47L42 58H15V51Z" fill="#ff4fd8"/>
+    <text x="88" y="42" font-family="Arial" font-size="33" font-weight="800" fill="#f4f7f9" letter-spacing="4">BMOZI</text>
+    <text x="90" y="76" font-family="Arial" font-size="18" font-weight="800" fill="#19d6c5" letter-spacing="8">TECHNICAL</text>
+  </g>
+</svg>

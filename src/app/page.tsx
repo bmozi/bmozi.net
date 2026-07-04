@@ -454,7 +454,8 @@ export default function Home() {
               <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--soft)]">
                 A reference architecture applying a production Unified Customer
                 Object pattern to competency-based, personalized learning: an
-                event-sourced student timeline, governed AI, and human
+                event-sourced student timeline that carries learning and
+                operational reality, reliable access, governed AI, and human
                 accountability, rooted in SOA principles: contracts, loose
                 coupling, reuse, and governance.
               </p>
@@ -473,7 +474,7 @@ export default function Home() {
             >
               <Image
                 src="/brand/unified-student-object-case-study.png"
-                alt="Unified Student Object architecture diagram showing event-sourced student timeline, projections, governed AI, and human oversight"
+                alt="Unified Student Object architecture diagram showing reliable student access, learning and operational event lanes, operations SLA projections, governed AI, escalation, audit, and human oversight"
                 width={1672}
                 height={941}
                 sizes="(min-width: 1024px) 48vw, 100vw"
