@@ -279,13 +279,13 @@
   <text x="1300" y="405" class="eyebrow pink">events out</text>
 
   <g filter="url(#soft)">
-    <rect x="1382" y="510" width="272" height="154" rx="12" class="panelPink"/>
+    <rect x="1382" y="510" width="272" height="172" rx="12" class="panelPink"/>
     <text x="1518" y="540" text-anchor="middle" class="eyebrow pink">Human-in-the-Loop</text>
     <text x="1518" y="560" text-anchor="middle" class="eyebrow pink">Guardrails</text>
-    <text x="1418" y="591" class="small">• High-impact decisions</text>
-    <text x="1418" y="614" class="small">• Sensitive interventions</text>
-    <text x="1418" y="637" class="small">• No queue without owner</text>
-    <text x="1418" y="660" class="small">• Escalations</text>
+    <text x="1418" y="596" class="small">• High-impact decisions</text>
+    <text x="1418" y="620" class="small">• Sensitive interventions</text>
+    <text x="1418" y="644" class="small">• No queue without owner</text>
+    <text x="1418" y="668" class="small">• Escalations</text>
   </g>
 
   <!-- Governance and platform -->
