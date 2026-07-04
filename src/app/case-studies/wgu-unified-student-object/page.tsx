@@ -117,6 +117,49 @@ const reasons = [
   },
 ];
 
+const stakeholderValue = [
+  {
+    stakeholder: "Students",
+    value:
+      "A clearer path through enrollment, aid, courses, support, and login issues without repeating context across every handoff.",
+  },
+  {
+    stakeholder: "Mentors and success teams",
+    value:
+      "One reliable view of momentum, blockers, prior outreach, open cases, and the next accountable action.",
+  },
+  {
+    stakeholder: "Instructors and evaluators",
+    value:
+      "Cleaner signals on readiness, assessment attempts, competency gaps, and where academic help should be focused.",
+  },
+  {
+    stakeholder: "Enrollment and records",
+    value:
+      "Document, UEH, start-date, and transfer-credit events become visible lifecycle facts instead of hidden queue work.",
+  },
+  {
+    stakeholder: "Financial aid and funding",
+    value:
+      "Aid-status changes, employer funding, and billing friction become part of the student risk picture before they derail progress.",
+  },
+  {
+    stakeholder: "Support services",
+    value:
+      "Cases have owners, SLA timers, escalation paths, and an audit trail, so operational breakdowns are measurable and routable.",
+  },
+  {
+    stakeholder: "Academic and product leaders",
+    value:
+      "Program, pacing, access, support, and lifecycle trends can be compared through projections without forcing one team’s schema on everyone.",
+  },
+  {
+    stakeholder: "Platform, security, and governance",
+    value:
+      "Domain-owned events, RBAC, consent, lineage, audit, and scoped AI tools create control without blocking useful personalization.",
+  },
+];
+
 const governance = [
   "Role-based access by relationship to the student",
   "Field-level permissions for sensitive data",
@@ -295,6 +338,41 @@ export default function UnifiedStudentObjectPage() {
                 access, and AI coaching, with human-in-the-loop control on
                 anything high-impact.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-white/10">
+          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                  Stakeholder value
+                </p>
+                <h2 className="mt-4 max-w-4xl font-display text-5xl font-black leading-none text-white">
+                  The same timeline creates different wins for each role.
+                </h2>
+              </div>
+              <p className="max-w-md leading-7 text-[var(--soft)]">
+                A USO is not valuable because every team sees the same screen.
+                It is valuable because each stakeholder gets a trustworthy
+                projection from the same governed operational truth.
+              </p>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+              {stakeholderValue.map((item) => (
+                <article
+                  key={item.stakeholder}
+                  className="min-h-56 border border-white/12 bg-white/[0.035] p-5"
+                >
+                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                    {item.stakeholder}
+                  </p>
+                  <p className="mt-5 text-sm leading-6 text-[var(--soft)]">
+                    {item.value}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
