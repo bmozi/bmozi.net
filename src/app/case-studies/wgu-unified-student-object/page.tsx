@@ -195,8 +195,8 @@ const talkTracks = [
     text: "The same UCO pattern maps directly to WGU as a Unified Student Object: an event-sourced student timeline projected into student, mentor, instructor, and analytics views, with governed AI for next-best-action and human-in-the-loop control on anything high-impact.",
   },
   {
-    label: "Sentinel MCP proof",
-    text: "Sentinel is the AI trust layer and owner of governed vendor integrations. Sentinel MCP exposes those capabilities to AI agents as scoped tools; agents never get vendor keys. Each tool call can become a durable governed command with policy validation, audit events, dead-letter handling, and replay.",
+    label: "Agent Mesh / Sentinel MCP",
+    text: "The Agent Mesh can coordinate support, operations, and next-best actions, but it should act through governed tools. Sentinel MCP is the controlled interface: scoped access, policy checks, audit events, and human escalation instead of raw credentials.",
   },
   {
     label: "Mesh of meshes vision",
@@ -658,38 +658,44 @@ export default function UnifiedStudentObjectPage() {
         </section>
 
         <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_1fr]">
-            <div>
-              <p className="font-mono text-xs uppercase text-[var(--magenta)]">
-                Architecture talk track
+          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+                  Architecture talk track
+                </p>
+                <h2 className="mt-4 max-w-4xl font-display text-5xl font-black leading-none">
+                  Say it in systems, then translate it into outcomes.
+                </h2>
+              </div>
+              <p className="max-w-md leading-7 text-black/70">
+                Foundation, governed agent capability, then adoption path: the
+                order mirrors how the architecture becomes real.
               </p>
-              <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                Say it in systems, then translate it into outcomes.
-              </h2>
             </div>
-            <div className="space-y-4">
+            <div className="grid gap-4 lg:grid-cols-3">
               {[
                 {
-                  icon: BrainCircuit,
-                  title: "Sentinel MCP",
-                  text: "Sentinel is the AI trust layer and owner of governed vendor integrations. MCP exposes those capabilities as scoped tools, so agents never get vendor keys.",
+                  icon: ShieldCheck,
+                  title: "Unified Student Object pattern",
+                  text: "First, create the trusted student picture: learning progress, enrollment, records, aid, cases, access events, and support history projected from one governed event timeline.",
                 },
                 {
-                  icon: ShieldCheck,
-                  title: "UCO platform pattern",
-                  text: "A metadata-driven platform engine plus an event-sourced operational core. Vendors sit behind anti-corruption adapters with reconciliation.",
+                  icon: BrainCircuit,
+                  title: "Agent Mesh / Sentinel MCP",
+                  text: "Then let agents use that context safely. Sentinel MCP gives the Agent Mesh scoped tools, policy checks, audit trails, and human escalation instead of direct system access.",
                 },
                 {
                   icon: Network,
-                  title: "Adoption",
-                  text: "Make the platform the path of least resistance: paved roads, self-serve templates, one lighthouse team, measurable wins, and incremental migration.",
+                  title: "Adoption path",
+                  text: "Finally, make it real through one useful workflow, measurable wins, paved roads, templates, self-service patterns, and incremental adapters instead of a big-bang rewrite.",
                 },
               ].map((item) => {
                 const Icon = item.icon;
                 return (
                   <article
                     key={item.title}
-                    className="border border-black/10 bg-white p-5"
+                    className="border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
                   >
                     <Icon
                       className="mb-5 text-[var(--magenta)]"
