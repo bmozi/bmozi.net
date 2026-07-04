@@ -20,12 +20,12 @@ import { BrandLockup } from "@/components/brand-lockup";
 export const metadata: Metadata = {
   title: "Unified Student Object Case Study",
   description:
-    "A BMOZI Technical case study mapping a production Unified Customer Object pattern onto competency-based learning, operational accountability, and reliable student access.",
+    "A John Briggs enterprise architecture case study mapping a production Unified Customer Object pattern onto competency-based learning, operational accountability, and reliable student access.",
   alternates: {
     canonical: "/case-studies/wgu-unified-student-object",
   },
   openGraph: {
-    title: "Unified Student Object | BMOZI Technical",
+    title: "Unified Student Object | John Briggs",
     description:
       "A reference architecture for event-sourced student personalization, administrative lifecycle events, reliable access, governed AI, and human-in-the-loop support.",
     images: ["/brand/unified-student-object-case-study.png"],
@@ -148,7 +148,7 @@ const meshReceipts = [
 
 const talkTracks = [
   {
-    label: "30-second WGU application",
+    label: "30-second architecture brief",
     text: "The same UCO pattern maps directly to WGU as a Unified Student Object: an event-sourced student timeline projected into student, mentor, instructor, and analytics views, with governed AI for next-best-action and human-in-the-loop control on anything high-impact.",
   },
   {
@@ -157,7 +157,7 @@ const talkTracks = [
   },
   {
     label: "Mesh of meshes vision",
-    text: "WGU appears to be exploring mesh-of-meshes thinking. My contribution is a discussion thesis: service mesh, data mesh, and the emerging agent mesh need a thin governance and identity fabric at the seams.",
+    text: "Mesh-of-meshes thinking becomes practical when service mesh, data mesh, and the emerging agent mesh share a thin governance and identity fabric at the seams.",
   },
   {
     label: "Architecture communication",
@@ -174,14 +174,14 @@ const jsonLd = {
   "@type": "TechArticle",
   headline: "The Unified Student Object",
   description:
-    "A BMOZI Technical reference architecture for competency-based personalized learning, operational accountability, reliable access, governed AI, and human-in-the-loop oversight.",
+    "A John Briggs enterprise architecture reference for competency-based personalized learning, operational accountability, reliable access, governed AI, and human-in-the-loop oversight.",
   author: {
-    "@type": "Organization",
-    name: "BMOZI",
+    "@type": "Person",
+    name: "John Briggs",
   },
   publisher: {
-    "@type": "Organization",
-    name: "BMOZI",
+    "@type": "Person",
+    name: "John Briggs",
   },
   url: "https://bmozi.net/case-studies/wgu-unified-student-object",
 };
@@ -227,7 +227,7 @@ export default function UnifiedStudentObjectPage() {
             <div className="max-w-4xl">
               <p className="inline-flex items-center gap-2 border border-white/15 bg-black/25 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
                 <GraduationCap size={16} aria-hidden="true" />
-                Pillar 3 / reference architecture portfolio
+                Enterprise architecture reference
               </p>
               <h1 className="mt-6 font-display text-[clamp(3rem,9vw,7.6rem)] font-black leading-[0.9] text-white">
                 The Unified Student Object
@@ -255,12 +255,12 @@ export default function UnifiedStudentObjectPage() {
 
             <aside className="border border-[var(--signal)] bg-[rgba(11,15,19,0.82)] p-5 backdrop-blur-xl">
               <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                Honest framing
+                Reference framing
               </p>
               <p className="mt-4 text-lg leading-8 text-white">
-                This is not a claim to know WGU&apos;s internal systems. It is a
-                reference architecture: take a production Unified Customer
-                Object pattern and reason it onto a competency-based,
+                This is a public reference architecture, not a representation
+                of WGU internal systems. It takes a production Unified Customer
+                Object pattern and reasons it onto a competency-based,
                 personalized-learning domain.
               </p>
             </aside>
@@ -500,10 +500,10 @@ export default function UnifiedStudentObjectPage() {
                 Exploration, grounded in receipts.
               </h2>
               <p className="mt-6 leading-7 text-[var(--soft)]">
-                This is not a claim to originate WGU&apos;s mesh-of-meshes
-                thinking or to know internal plans. It is a learning thesis and
-                partnership proposal: take an emerging idea, reason about the
-                seams, and show how governed AI patterns could make it real.
+                This is a public architecture thesis, not a representation of
+                internal plans. It takes an emerging idea, reasons about the
+                seams, and shows how governed AI patterns could make it
+                operational.
               </p>
               <Link
                 href="/case-studies/wgu-governance-identity-fabric"
@@ -548,16 +548,15 @@ export default function UnifiedStudentObjectPage() {
             <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                  Interview-ready language
+                  Architecture language
                 </p>
                 <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
                   Vision plus receipts, not buzzwords.
                 </h2>
               </div>
               <p className="max-w-md leading-7 text-[var(--soft)]">
-                These are the concise explanations that connect the reference
-                architecture to enterprise leadership, AI governance, and
-                adoption.
+                These concise explanations connect the reference architecture
+                to enterprise leadership, AI governance, and adoption.
               </p>
             </div>
             <div className="grid gap-4 lg:grid-cols-5">
@@ -631,7 +630,9 @@ export default function UnifiedStudentObjectPage() {
         <section className="bg-[var(--signal)] text-[var(--ink)]">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="font-mono text-xs uppercase">BMOZI Technical</p>
+              <p className="font-mono text-xs uppercase">
+                John Briggs / Enterprise Architect
+              </p>
               <h2 className="mt-4 font-display text-5xl font-black leading-none">
                 Enterprise architecture with working proof.
               </h2>
