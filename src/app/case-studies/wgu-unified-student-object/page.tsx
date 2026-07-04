@@ -262,20 +262,22 @@ export default function UnifiedStudentObjectPage() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,13,17,0.9)_0%,rgba(10,13,17,0.5)_38%,rgba(10,13,17,0.08)_100%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,13,17,0.55)_0%,rgba(10,13,17,0)_46%,rgba(10,13,17,0.22)_100%)]" />
+            <div className="absolute inset-0 bg-[rgba(10,13,17,0.08)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_24%_62%,rgba(10,13,17,0.94)_0%,rgba(10,13,17,0.88)_28%,rgba(10,13,17,0.5)_48%,rgba(10,13,17,0.16)_68%,rgba(10,13,17,0)_88%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,13,17,0.96)_0%,rgba(10,13,17,0.9)_27%,rgba(10,13,17,0.5)_43%,rgba(10,13,17,0.16)_63%,rgba(10,13,17,0.02)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,13,17,0.38)_0%,rgba(10,13,17,0.16)_30%,rgba(10,13,17,0.02)_62%,rgba(10,13,17,0.12)_100%)]" />
           </div>
 
           <div className="mx-auto grid min-h-[calc(100svh-73px)] max-w-7xl items-end gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1fr_0.78fr]">
             <div className="max-w-4xl">
-              <p className="inline-flex items-center gap-2 border border-white/15 bg-black/25 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
+              <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
                 <GraduationCap size={16} aria-hidden="true" />
                 Enterprise architecture reference
               </p>
-              <h1 className="mt-6 font-display text-[clamp(3rem,9vw,7.6rem)] font-black leading-[0.9] text-white">
+              <h1 className="mt-6 font-display text-[clamp(3rem,9vw,7.6rem)] font-black leading-[0.9] text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.72)]">
                 The Unified Student Object
               </h1>
-              <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
+              <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)] drop-shadow-[0_4px_18px_rgba(0,0,0,0.72)]">
                 A proven Unified Customer Object pattern mapped onto
                 competency-based, personalized learning.
               </p>
@@ -288,7 +290,7 @@ export default function UnifiedStudentObjectPage() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="border border-white/12 bg-white/[0.045] p-4 font-mono text-xs uppercase text-white backdrop-blur"
+                    className="border border-white/18 bg-black/40 p-4 font-mono text-xs uppercase text-white backdrop-blur-md"
                   >
                     {item}
                   </div>
