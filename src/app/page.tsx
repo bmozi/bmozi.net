@@ -81,6 +81,15 @@ const enterpriseProjects = [
     result:
       "An event-sourced Unified Customer Object on Kafka with projections, anti-corruption adapters, and reconciliation patterns for independent service evolution.",
   },
+  {
+    title: "Covenant Path",
+    kind: "Shipped production app",
+    status: "In production",
+    tags: ["AI", "Delivery", "Product"],
+    result:
+      "A shipped, cross-platform application (260k+ lines) built solo with the AI-assisted delivery model above — the working proof that governed AI-assisted engineering ships real production software. Read the build story on bmozi.com.",
+    href: "https://bmozi.com/press",
+  },
 ];
 
 const labProjects = [
@@ -188,7 +197,7 @@ const jsonLd = {
     "@type": "Person",
     name: "John Briggs",
   },
-  sameAs: ["https://bmozi.com", "https://github.com/bmozi"],
+  sameAs: ["https://bmozi.com", "https://bmozi.org", "https://github.com/bmozi"],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "business inquiries",

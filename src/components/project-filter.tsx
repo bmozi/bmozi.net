@@ -9,6 +9,7 @@ type Project = {
   status: string;
   tags: string[];
   result: string;
+  href?: string;
 };
 
 type ProjectFilterProps = {
@@ -54,42 +55,58 @@ export function ProjectFilter({ projects }: ProjectFilterProps) {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {visible.map((project) => (
-          <article
-            key={project.title}
-            className="group min-h-80 border border-white/12 bg-[linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.025))] p-6 transition-colors hover:border-[var(--signal)]"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                  {project.kind}
-                </p>
-                <h3 className="mt-4 font-display text-3xl font-bold leading-tight text-white">
-                  {project.title}
-                </h3>
+        {visible.map((project) => {
+          const cardClassName =
+            "group min-h-80 border border-white/12 bg-[linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.025))] p-6 transition-colors hover:border-[var(--signal)]";
+          const inner = (
+            <>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                    {project.kind}
+                  </p>
+                  <h3 className="mt-4 font-display text-3xl font-bold leading-tight text-white">
+                    {project.title}
+                  </h3>
+                </div>
+                <ArrowUpRight
+                  className="text-[var(--muted)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[var(--signal)]"
+                  size={24}
+                  aria-hidden="true"
+                />
               </div>
-              <ArrowUpRight
-                className="text-[var(--muted)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[var(--signal)]"
-                size={24}
-                aria-hidden="true"
-              />
-            </div>
-            <p className="mt-8 leading-7 text-[var(--soft)]">{project.result}</p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              <span className="border border-[var(--magenta)] px-2 py-1 font-mono text-xs text-[var(--magenta)]">
-                {project.status}
-              </span>
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="border border-white/10 px-2 py-1 font-mono text-xs text-[var(--muted)]"
-                >
-                  {tag}
+              <p className="mt-8 leading-7 text-[var(--soft)]">{project.result}</p>
+              <div className="mt-8 flex flex-wrap gap-2">
+                <span className="border border-[var(--magenta)] px-2 py-1 font-mono text-xs text-[var(--magenta)]">
+                  {project.status}
                 </span>
-              ))}
-            </div>
-          </article>
-        ))}
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-white/10 px-2 py-1 font-mono text-xs text-[var(--muted)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </>
+          );
+          return project.href ? (
+            <a
+              key={project.title}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cardClassName}
+            >
+              {inner}
+            </a>
+          ) : (
+            <article key={project.title} className={cardClassName}>
+              {inner}
+            </article>
+          );
+        })}
       </div>
     </div>
   );
