@@ -243,7 +243,8 @@
   <path d="M230 428C306 428 304 457 378 457" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
   <path d="M230 516C318 516 300 548 378 548" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
   <path d="M230 604C292 604 300 455 378 455" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
-  <text x="287" y="400" class="eyebrow cyan">events in</text>
+  <rect x="300" y="383" width="82" height="28" rx="5" fill="#071019" opacity=".82"/>
+  <text x="312" y="402" class="eyebrow cyan">events in</text>
 
   <path d="M504 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
   <path d="M660 329V322" stroke="#19d6c5" stroke-width="3" marker-end="url(#cyanArrow)"/>
@@ -254,7 +255,7 @@
 
   <!-- Right actions and guardrails -->
   <g filter="url(#soft)">
-    <rect x="1382" y="62" width="272" height="388" rx="12" class="panelPink"/>
+    <rect x="1382" y="62" width="272" height="428" rx="12" class="panelPink"/>
     <text x="1518" y="91" text-anchor="middle" class="eyebrow pink">AI Tools &amp; Actions</text>
     <text x="1518" y="111" text-anchor="middle" class="eyebrow pink">(Governed)</text>
     <g transform="translate(1412 128)">
@@ -273,18 +274,18 @@
       <rect width="218" height="58" rx="7" class="card"/><text x="124" y="19" text-anchor="middle" class="label">Escalation</text><text x="124" y="35" text-anchor="middle" class="label">Orchestrator</text><text x="124" y="50" text-anchor="middle" class="tiny">SLA breach routed</text><text x="30" y="39" text-anchor="middle" font-size="30" fill="#f2b84b">!</text>
     </g>
   </g>
-  <path d="M1286 432H1370" stroke="#ff4fd8" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#pinkArrow)"/>
+  <path d="M1286 432C1324 432 1328 374 1370 374" fill="none" stroke="#ff4fd8" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#pinkArrow)"/>
   <path d="M1286 546C1338 546 1330 444 1402 444" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
   <text x="1300" y="405" class="eyebrow pink">events out</text>
 
   <g filter="url(#soft)">
-    <rect x="1382" y="494" width="272" height="154" rx="12" class="panelPink"/>
-    <text x="1518" y="524" text-anchor="middle" class="eyebrow pink">Human-in-the-Loop</text>
-    <text x="1518" y="544" text-anchor="middle" class="eyebrow pink">Guardrails</text>
-    <text x="1418" y="575" class="small">• High-impact decisions</text>
-    <text x="1418" y="598" class="small">• Sensitive interventions</text>
-    <text x="1418" y="621" class="small">• No queue without owner</text>
-    <text x="1418" y="644" class="small">• Escalations</text>
+    <rect x="1382" y="510" width="272" height="154" rx="12" class="panelPink"/>
+    <text x="1518" y="540" text-anchor="middle" class="eyebrow pink">Human-in-the-Loop</text>
+    <text x="1518" y="560" text-anchor="middle" class="eyebrow pink">Guardrails</text>
+    <text x="1418" y="591" class="small">• High-impact decisions</text>
+    <text x="1418" y="614" class="small">• Sensitive interventions</text>
+    <text x="1418" y="637" class="small">• No queue without owner</text>
+    <text x="1418" y="660" class="small">• Escalations</text>
   </g>
 
   <!-- Governance and platform -->
@@ -300,14 +301,15 @@
   </g>
 
   <g filter="url(#soft)">
-    <rect x="140" y="732" width="448" height="104" rx="12" class="panel"/>
+    <rect x="140" y="724" width="448" height="122" rx="12" class="panel"/>
     <text x="364" y="758" text-anchor="middle" class="eyebrow cyan">Integration &amp; Adapter Layer</text>
-    <text x="364" y="779" text-anchor="middle" class="tiny">Anti-corruption adapters: LMS, SIS/ERP, assessment, CRM, financial aid, communications</text>
-    <g transform="translate(162 796)"><rect width="56" height="28" rx="5" class="card"/><text x="28" y="19" text-anchor="middle" class="mono">LMS</text></g>
-    <g transform="translate(232 796)"><rect width="64" height="28" rx="5" class="card"/><text x="32" y="19" text-anchor="middle" class="mono">SIS</text></g>
-    <g transform="translate(310 796)"><rect width="96" height="28" rx="5" class="card"/><text x="48" y="19" text-anchor="middle" class="mono">Assessment</text></g>
-    <g transform="translate(420 796)"><rect width="58" height="28" rx="5" class="card"/><text x="29" y="19" text-anchor="middle" class="mono">CRM</text></g>
-    <g transform="translate(492 796)"><rect width="68" height="28" rx="5" class="card"/><text x="34" y="19" text-anchor="middle" class="mono">Aid</text></g>
+    <text x="364" y="778" text-anchor="middle" class="tiny">Anti-corruption adapters</text>
+    <text x="364" y="794" text-anchor="middle" class="tiny">LMS, SIS/ERP, assessment, CRM, financial aid, communications</text>
+    <g transform="translate(162 808)"><rect width="56" height="28" rx="5" class="card"/><text x="28" y="19" text-anchor="middle" class="mono">LMS</text></g>
+    <g transform="translate(232 808)"><rect width="64" height="28" rx="5" class="card"/><text x="32" y="19" text-anchor="middle" class="mono">SIS</text></g>
+    <g transform="translate(310 808)"><rect width="96" height="28" rx="5" class="card"/><text x="48" y="19" text-anchor="middle" class="mono">Assessment</text></g>
+    <g transform="translate(420 808)"><rect width="58" height="28" rx="5" class="card"/><text x="29" y="19" text-anchor="middle" class="mono">CRM</text></g>
+    <g transform="translate(492 808)"><rect width="68" height="28" rx="5" class="card"/><text x="34" y="19" text-anchor="middle" class="mono">Aid</text></g>
   </g>
 
   <g filter="url(#soft)">
@@ -351,10 +353,8 @@
     <text x="1375" y="902" class="eyebrow amber">Human Oversight &amp; Trust</text>
   </g>
 
-  <g transform="translate(20 861)">
-    <path d="M5 10H42C56 10 66 18 66 31C66 39 61 45 53 49C64 53 70 61 70 73C70 88 58 96 42 96H5L14 87V19L5 10ZM25 28V45H42C50 45 55 41 55 36C55 31 49 28 42 28H25ZM25 60V78H44C52 78 58 74 58 68C58 63 52 60 44 60H25Z" fill="#f4f7f9"/>
-    <path d="M15 51H47L42 58H15V51Z" fill="#ff4fd8"/>
-    <text x="88" y="42" font-family="Arial" font-size="33" font-weight="800" fill="#f4f7f9" letter-spacing="4">BMOZI</text>
-    <text x="90" y="76" font-family="Arial" font-size="18" font-weight="800" fill="#19d6c5" letter-spacing="8">TECHNICAL</text>
+  <g transform="translate(24 874)">
+    <text x="0" y="0" font-family="Arial,sans-serif" font-size="30" font-weight="900" fill="#f4f7f9" letter-spacing="1.8">John Briggs</text>
+    <text x="2" y="28" font-family="monospace" font-size="13" font-weight="800" fill="#19d6c5" letter-spacing="1.4">ENTERPRISE ARCHITECT</text>
   </g>
 </svg>
