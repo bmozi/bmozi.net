@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
   <title id="title">BMOZI Technical mark</title>
-  <desc id="desc">A custom angular B mark with a single magenta signal cut for BMOZI Technical.</desc>
+  <desc id="desc">A custom angular B mark with a single magenta signal bus and terminal node for BMOZI Technical.</desc>
   <rect width="256" height="256" fill="#0A0D11"/>
   <path
     fill="#F4F7F9"
     fill-rule="evenodd"
     d="M49 34H158L205 59V116L183 137L216 157V214L185 242H49L72 219V57L49 34ZM101 76V116H154L176 103V89L155 76H101ZM101 155V201H159L188 185V171L159 155H101Z"
   />
-  <path fill="#FF4FD8" d="M73 128H141L128 143H73V128Z"/>
+  <path fill="#FF4FD8" d="M73 126H151L137 143H73V126Z"/>
+  <rect x="151" y="126" width="18" height="17" fill="#FF4FD8"/>
+  <rect x="173" y="130" width="11" height="9" fill="#FF4FD8"/>
 </svg>
