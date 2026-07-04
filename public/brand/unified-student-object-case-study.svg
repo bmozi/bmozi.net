@@ -90,42 +90,42 @@
     <text x="157" y="91" text-anchor="middle" class="eyebrow cyan">Source Systems</text>
     <text x="157" y="111" text-anchor="middle" class="eyebrow cyan">&amp; Bounded Contexts</text>
     <g transform="translate(34 128)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Academic Programs</text>
       <text x="69" y="43" class="tiny">Competencies, courses</text>
       <text x="69" y="59" class="tiny">assessments</text>
       <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">▰</text>
     </g>
     <g transform="translate(34 216)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Enrollment &amp; Records</text>
       <text x="69" y="43" class="tiny">Applications, documents</text>
       <text x="69" y="59" class="tiny">UEH, start dates, credits</text>
       <text x="28" y="46" text-anchor="middle" font-size="34" fill="#f2b84b">▤</text>
     </g>
     <g transform="translate(34 304)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Financial Aid &amp; Funding</text>
       <text x="69" y="43" class="tiny">Aid status, billing</text>
       <text x="69" y="59" class="tiny">employer funding</text>
       <text x="28" y="46" text-anchor="middle" font-size="34" fill="#f2b84b">$</text>
     </g>
     <g transform="translate(34 392)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Student Success</text>
       <text x="69" y="43" class="tiny">Mentors, check-ins</text>
       <text x="69" y="59" class="tiny">interventions</text>
       <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">◌</text>
     </g>
     <g transform="translate(34 480)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Support Services</text>
       <text x="69" y="43" class="tiny">Cases, resources</text>
       <text x="69" y="59" class="tiny">referrals</text>
       <text x="28" y="46" text-anchor="middle" font-size="34" fill="#dbe7ec">☎</text>
     </g>
     <g transform="translate(34 568)">
-      <rect width="196" height="74" rx="7" class="card"/>
+      <rect width="226" height="74" rx="7" class="card"/>
       <text x="69" y="24" class="label">Engagement &amp; Goals</text>
       <text x="69" y="43" class="tiny">Activity, plans</text>
       <text x="69" y="59" class="tiny">career goals</text>
@@ -237,12 +237,12 @@
   </g>
 
   <!-- flow lines -->
-  <path d="M230 164C282 164 278 381 378 381" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
-  <path d="M230 252C306 252 300 528 378 528" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
-  <path d="M230 340C318 340 306 537 378 537" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
-  <path d="M230 428C306 428 304 457 378 457" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
-  <path d="M230 516C318 516 300 548 378 548" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
-  <path d="M230 604C292 604 300 455 378 455" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <path d="M260 164C296 164 290 381 378 381" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <path d="M260 252C314 252 306 528 378 528" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M260 340C324 340 312 537 378 537" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M260 428C314 428 308 457 378 457" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
+  <path d="M260 516C324 516 308 548 378 548" fill="none" stroke="#f2b84b" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#amberArrow)"/>
+  <path d="M260 604C304 604 308 455 378 455" fill="none" stroke="#19d6c5" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#cyanArrow)"/>
   <rect x="300" y="383" width="82" height="28" rx="5" fill="#071019" opacity=".82"/>
   <text x="312" y="402" class="eyebrow cyan">events in</text>
 
@@ -332,7 +332,7 @@
   </g>
 
   <g filter="url(#soft)">
-    <rect x="1398" y="722" width="254" height="116" rx="12" class="panelAmber"/>
+    <rect x="1398" y="722" width="254" height="132" rx="12" class="panelAmber"/>
     <text x="1525" y="752" text-anchor="middle" class="eyebrow amber">Audit Trail (Immutable)</text>
     <text x="1440" y="785" class="small">• Who changed what</text>
     <text x="1440" y="808" class="small">• When and why</text>
@@ -353,7 +353,7 @@
     <text x="1375" y="902" class="eyebrow amber">Human Oversight &amp; Trust</text>
   </g>
 
-  <g transform="translate(24 874)">
+  <g transform="translate(24 900)">
     <text x="0" y="0" font-family="Arial,sans-serif" font-size="30" font-weight="900" fill="#f4f7f9" letter-spacing="1.8">John Briggs</text>
     <text x="2" y="28" font-family="monospace" font-size="13" font-weight="800" fill="#19d6c5" letter-spacing="1.4">ENTERPRISE ARCHITECT</text>
   </g>
