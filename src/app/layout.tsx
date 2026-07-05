@@ -50,6 +50,19 @@ export const metadata: Metadata = {
     description:
       "A founder-led technical studio building trustworthy AI workflows, integration architecture, product interfaces, and deployable proof systems.",
   },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      "max-image-preview": "none",
+      "max-snippet": 0,
+      "max-video-preview": 0,
+    },
+  },
   icons: {
     icon: [
       { url: "/brand/bmozi-technical-mark.svg", type: "image/svg+xml" },
