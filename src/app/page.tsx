@@ -234,6 +234,9 @@ export default function Home() {
               >
                 case study
               </a>
+              <a className="transition-colors hover:text-white" href="/wgu">
+                wgu hub
+              </a>
               <a className="transition-colors hover:text-white" href="#contact">
                 contact
               </a>
