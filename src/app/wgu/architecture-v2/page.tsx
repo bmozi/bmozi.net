@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Network } from "lucide-react";
+import { ArrowLeft, Network, ShieldCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { Slice1Diagram, V2TargetDiagram } from "./diagrams";
 
 export const metadata: Metadata = {
   title: "Architecture v2 — The Revised Target",
@@ -58,6 +59,59 @@ const decisions = [
     rule: "Login-success SLOs, real-user monitoring, and graceful degradation are architecture, not operations afterthought.",
     detail:
       "The most common student complaint is access. Availability at the student front door outranks internal elegance in every trade-off, and the SLO dashboard is reviewed like a Key Result.",
+  },
+];
+
+const defenseMap = [
+  {
+    objection: "Event sourcing collapses under schema evolution.",
+    answer:
+      "Only one bounded context is event-sourced — the competency ledger, with a small, domain-stable, versioned vocabulary. Every other system stays CRUD with history tables. The blast radius of event versioning is one team, not the enterprise.",
+  },
+  {
+    objection: "Append-only violates FERPA/GDPR erasure rights.",
+    answer:
+      "PII never enters the ledger — it is referenced, not embedded. Erasure is a row delete in the reference store. The Timeline product is a rebuildable projection, not a record, so it simply re-projects without the erased subject.",
+  },
+  {
+    objection: "Eventual consistency breaks student UX and agent actions.",
+    answer:
+      "By decree of layer 04: anything a student or agent acts on reads through to the system of record — read-your-writes. Projections carry context and history; they are never the command path.",
+  },
+  {
+    objection: "Kafka is not a database.",
+    answer:
+      "Agreed — and v2 never treats it as one. The backbone is circulation: rebuildable transport. Operational truth lives in the systems of record; analytical truth lands in the lakehouse.",
+  },
+  {
+    objection: "Data mesh fails organizationally almost everywhere.",
+    answer:
+      "There is no federated-governance revolution here. Data products with contracts and named owners run on one central platform; federation applies only where regulators genuinely demand separate stewardship.",
+  },
+  {
+    objection: "You're building a shadow SIS.",
+    answer:
+      "The SIS remains the sole legal record. The Timeline is a projection product with lineage back to sources — there is no second truth to reconcile, because only one thing is ever truth.",
+  },
+  {
+    objection: "Agent platforms are premature and prompt injection is unsolved.",
+    answer:
+      "One gateway, scoped tools, per-action authorization, human-in-the-loop on anything consequential — agents treated as injectable by default with the lethal trifecta structurally broken. The mesh is deferred until a second production agent earns it.",
+  },
+  {
+    objection: "An identity fabric is a multi-year PKI program in disguise.",
+    answer:
+      "Managed workload identity instead of self-run infrastructure, one policy engine instead of two, a thin control plane with local enforcement. The fabric governs the seams and is forbidden from becoming a platform.",
+  },
+  {
+    objection: "No peer institution runs anything like this.",
+    answer:
+      "Look again: sovereign SoRs + integration backbone + engagement layer + selective builds is exactly the proven mega-university skeleton. The only invention is the competency ledger — the one asset no SIS vendor sells to a competency-based university.",
+  },
+  {
+    objection: "A history table gets you 80% of event sourcing for 5% of the cost.",
+    answer:
+      "Correct — which is why every system of record uses exactly that. The ledger's replay and temporal queries are the 20% CBE actually needs: efficacy research, accreditation audit, and what-did-we-know-when accountability.",
   },
 ];
 
@@ -187,6 +241,29 @@ export default function ArchitectureV2Page() {
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                The target picture
+              </p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                One diagram, every verdict visible.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-[var(--soft)]">
+              Sovereign records, circulation not truth, one event-sourced
+              ledger, one flagship timeline product, one agent front door, one
+              thin governing layer — the review, drawn.
+            </p>
+          </div>
+          <div className="overflow-hidden border border-white/12 bg-white/[0.02]">
+            <V2TargetDiagram />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <p className="font-mono text-xs uppercase text-[var(--signal)]">
             The eight decisions
           </p>
@@ -260,6 +337,48 @@ export default function ArchitectureV2Page() {
         </div>
       </section>
 
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--magenta)]">
+                <ShieldCheck size={15} aria-hidden="true" />
+                The defense map
+              </p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                Every objection, answered by design — not by debate.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-[var(--soft)]">
+              The ten strongest critiques from the adversarial review, each
+              neutralized structurally. Bring the skeptic; the architecture
+              answers before I do.
+            </p>
+          </div>
+          <div className="grid gap-3 lg:grid-cols-2">
+            {defenseMap.map((item, index) => (
+              <article
+                key={item.objection}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-white/40">
+                  Objection {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="mt-2 border-l-2 border-[var(--magenta)] pl-4 text-base font-semibold leading-7 text-white">
+                  &ldquo;{item.objection}&rdquo;
+                </p>
+                <p className="mt-3 font-mono text-xs uppercase text-[var(--signal)]">
+                  Answered by design
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[var(--soft)]">
+                  {item.answer}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -275,6 +394,15 @@ export default function ArchitectureV2Page() {
               Every slice names the leadership principles it serves and the
               measurement that separates a result from a story.
             </p>
+          </div>
+          <div className="mb-10 overflow-hidden border border-white/12 bg-white/[0.02]">
+            <div className="border-b border-white/10 px-5 py-4">
+              <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                Slice 1, drawn — the lighthouse thread (Days 61–90 · Sep 18 –
+                Oct 17, 2026)
+              </p>
+            </div>
+            <Slice1Diagram />
           </div>
           <div className="space-y-4">
             {roadmap.map((item) => (
