@@ -38,6 +38,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# owner gate credentials (local only)
+.owner-login
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
