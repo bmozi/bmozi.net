@@ -115,6 +115,104 @@ const defenseMap = [
   },
 ];
 
+const postures = [
+  {
+    tag: "API-first",
+    line: "Every capability is a contract, not a screen.",
+  },
+  {
+    tag: "Event-driven",
+    line: "Every state change is a fact, not a side effect.",
+  },
+  {
+    tag: "AI-native",
+    line: "Every contract and fact is machine-legible by design — so agents are first-class consumers, not a bolt-on.",
+  },
+];
+
+const machineLegibleCriteria = [
+  {
+    name: "Schema-registered & versioned",
+    test: "Is there a published schema in a registry, with an explicit version and a compatibility rule?",
+    detail:
+      "Every event and API payload is typed (JSON Schema / Avro / Protobuf) and lives in a registry. No untyped blobs, no “we'll document it later.” A consumer — human or model — can validate before it acts.",
+  },
+  {
+    name: "Semantically named",
+    test: "Do fields carry stable, documented meaning — not position, not overloaded strings?",
+    detail:
+      "masteryAttainedAt, not field7. Closed, documented enumerations (status is one of packaging, awarded, disbursed) — not a magic integer a model has to guess at.",
+  },
+  {
+    name: "Self-describing & addressable",
+    test: "Does the fact carry its own type, source, time, subject, and correlation/purpose ID — and can every entity be resolved by a stable URI?",
+    detail:
+      "A fact explains itself out of context. Interpreting it needs no tribal knowledge and no side lookup table.",
+  },
+  {
+    name: "Grounded with lineage",
+    test: "Do references resolve to a system of record, with provenance — no dangling IDs?",
+    detail:
+      "PII by reference, and the reference resolves. An agent can trace any claim back to its source — which is what makes its output auditable rather than merely plausible.",
+  },
+  {
+    name: "Discoverable",
+    test: "Is it in a catalog with an owner, SLA, description, and worked examples?",
+    detail:
+      "If an engineer or an agent cannot find it and learn to use it without asking a person, it is machine-legible only in theory.",
+  },
+  {
+    name: "Access-scoped & auditable",
+    test: "Does machine-readable authorization travel with it — who may read, who may act, what is PII?",
+    detail:
+      "The gateway enforces scope from metadata, not from a human reading a wiki. Every read and action is logged against a purpose ID.",
+  },
+  {
+    name: "Deterministically actionable",
+    test: "Are actions exposed as typed tools with declared inputs, preconditions, effects, and idempotency keys?",
+    detail:
+      "An agent can call request_missing_document safely; a human can review exactly what it did. Described without side effects, executed idempotently.",
+  },
+];
+
+const legibleFact = [
+  {
+    field: "type",
+    value: "financial_aid.status.changed · v2",
+    note: "registered, versioned schema",
+  },
+  {
+    field: "occurredAt",
+    value: "2026-09-22T14:03:11Z",
+    note: "the fact timestamps itself",
+  },
+  {
+    field: "subject",
+    value: "urn:wgu:student:8f2c… (resolvable)",
+    note: "PII by reference; resolves to the SIS",
+  },
+  {
+    field: "transition",
+    value: "packaging → disbursed",
+    note: "closed, documented enumeration",
+  },
+  {
+    field: "source",
+    value: "SIS · system of record",
+    note: "lineage and provenance",
+  },
+  {
+    field: "correlationId · purposeId",
+    value: "propagated end to end",
+    note: "why the data may be used",
+  },
+  {
+    field: "scope",
+    value: "read: student-self, mentor, finance-ops",
+    note: "authorization travels with the fact",
+  },
+];
+
 const survived = [
   "Domain events with explicit contracts",
   "Data products with named owners",
@@ -241,6 +339,40 @@ export default function ArchitectureV2Page() {
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--signal)]">
+            The engineering posture
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            How I build, in three lines.
+          </h2>
+          <p className="mt-5 max-w-3xl leading-7 text-[var(--soft)]">
+            Read it top to bottom as a dependency chain: clean contracts and
+            honest facts are what earn the third line. AI-native is a
+            consequence of the first two — not a claim bolted on beside them.
+          </p>
+          <div className="mt-8 space-y-3">
+            {postures.map((posture, index) => (
+              <article
+                key={posture.tag}
+                className="grid gap-3 border border-white/12 bg-white/[0.035] p-6 md:grid-cols-[0.3fr_1fr] md:items-center"
+              >
+                <p className="inline-flex items-baseline gap-3 font-display text-2xl font-black text-white">
+                  <span className="font-mono text-sm text-[var(--amber)]">
+                    0{index + 1}
+                  </span>
+                  {posture.tag}
+                </p>
+                <p className="text-lg leading-7 text-[var(--soft)]">
+                  {posture.line}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <p className="font-mono text-xs uppercase text-[var(--signal)]">
@@ -288,6 +420,115 @@ export default function ArchitectureV2Page() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="machine-legible" className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                The AI-native line, made concrete
+              </p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                What “machine-legible by design” actually means.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-[var(--soft)]">
+              “AI-native” is diluted to near-meaninglessness. Here it earns the
+              word: seven properties every contract and event must have before
+              an agent is allowed to depend on it. Miss one and the agent is
+              guessing — which is how bolt-ons are born.
+            </p>
+          </div>
+
+          <div className="grid gap-3 lg:grid-cols-2">
+            {machineLegibleCriteria.map((item, index) => (
+              <article
+                key={item.name}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-white/40">
+                  Criterion {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-2 font-display text-xl font-black leading-tight text-white">
+                  {item.name}
+                </h3>
+                <p className="mt-3 border-l-2 border-[var(--signal)] pl-4 text-sm font-semibold leading-6 text-white/90">
+                  {item.test}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {item.detail}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="overflow-hidden border border-white/12 bg-black/40">
+              <div className="border-b border-white/10 px-5 py-3">
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  One fact, drawn legibly — financial_aid.status.changed
+                </p>
+              </div>
+              <div className="divide-y divide-white/5">
+                {legibleFact.map((row) => (
+                  <div
+                    key={row.field}
+                    className="grid gap-1 px-5 py-3 sm:grid-cols-[0.9fr_1.1fr] sm:gap-4"
+                  >
+                    <p className="font-mono text-xs text-[var(--signal)]">
+                      {row.field}
+                    </p>
+                    <div>
+                      <p className="font-mono text-sm text-white">
+                        {row.value}
+                      </p>
+                      <p className="mt-0.5 text-xs leading-5 text-white/45">
+                        {row.note}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <div className="border border-[var(--magenta)]/30 bg-[var(--magenta)]/[0.06] p-5">
+                <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+                  The bolt-on version
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  A nightly CSV, or status=3 scraped off a screen. The model has
+                  to guess what changed, for whom, when, and whether it may even
+                  look — so a human hand-writes a bespoke integration for every
+                  agent, forever. That is AI-enabled: intelligence stapled to a
+                  system built for people clicking buttons.
+                </p>
+              </div>
+              <div className="border border-[var(--signal)]/30 bg-[var(--signal)]/[0.06] p-5">
+                <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                  Why it makes agents first-class
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  Because the fact passes all seven tests, the coach copilot can
+                  read it through the gateway, explain the change to the student
+                  in plain language, and — if scope allows — call the typed
+                  action request_missing_document with an idempotency key and a
+                  human in the loop. No new integration. Any authorized agent
+                  consumes it the day it ships.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-3xl text-sm leading-6 text-white/50">
+            That is the whole claim: agents are first-class consumers because
+            the contracts and facts were legible before any agent existed. Layer
+            02 and the competency ledger produce the legibility; the governed
+            gateway of layer 06 enforces the scope. AI-native is simply what
+            API-first and event-driven add up to.
+          </p>
         </div>
       </section>
 
