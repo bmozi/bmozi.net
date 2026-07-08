@@ -242,13 +242,28 @@ export default function UnifiedStudentObjectPage() {
             <Link href="/" className="group inline-flex items-center gap-3">
               <BrandLockup markClassName="h-9 w-9" textClassName="text-lg" />
             </Link>
-            <Link
-              href="/"
-              className="inline-flex h-10 items-center gap-2 border border-white/15 px-4 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)]"
-            >
-              <ArrowLeft size={15} aria-hidden="true" />
-              Home
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link
+                href="/wgu"
+                className="inline-flex h-10 items-center gap-2 border border-[var(--signal)] px-4 font-mono text-xs text-[var(--signal)] transition-colors hover:bg-[var(--signal)] hover:text-[var(--ink)]"
+              >
+                WGU Hub
+              </Link>
+              <Link
+                href="/wgu/architecture-v2"
+                className="hidden h-10 items-center gap-2 border border-white/15 px-4 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:inline-flex"
+              >
+                v2
+                <ArrowRight size={15} aria-hidden="true" />
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex h-10 items-center gap-2 border border-white/15 px-4 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)]"
+              >
+                <ArrowLeft size={15} aria-hidden="true" />
+                Home
+              </Link>
+            </div>
           </nav>
         </header>
 
