@@ -3,10 +3,15 @@ import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
+  BookOpenText,
+  Braces,
   CalendarClock,
   ClipboardCheck,
   Compass,
+  FileCheck2,
   FlaskConical,
+  Hammer,
+  Sparkles,
   GraduationCap,
   Landmark,
   MessageSquareWarning,
@@ -14,6 +19,8 @@ import {
   Scale,
   ShieldCheck,
   Swords,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 
@@ -85,8 +92,64 @@ const areas = [
     href: "/wgu/architecture-v2",
     icon: Network,
     label: "Architecture v2",
-    title: "The revised target architecture",
-    text: "What survives the review, what changes, and the ground-up v2: systems of record respected, events as circulation, one governed timeline product, contained AI.",
+    title: "The target architecture",
+    text: "Nine decisions, drawn and defended: systems of record respected, events as circulation, one governed timeline product, contained AI. Direction set, adoption sequenced.",
+  },
+  {
+    href: "/wgu/personalization",
+    icon: Sparkles,
+    label: "Personalization",
+    title: "Where recommendations actually come from",
+    text: "The decisioning loop on top of the substrate: governed signals, next-best-action, experimentation with holdouts, learning-science validation, governed actuation.",
+  },
+  {
+    href: "/wgu/adr-timeline-buy-vs-build",
+    icon: FileCheck2,
+    label: "ADR-001",
+    title: "Buy the engagement layer, build the CBE core",
+    text: "The buy-vs-build decision record: Salesforce as engagement backbone and identity spine, the competency ledger as ours — with the eight-rule Salesforce operating playbook.",
+  },
+  {
+    href: "/wgu/ground-up",
+    icon: Hammer,
+    label: "Build Strategy",
+    title: "Ground-up, done right",
+    text: "Greenfield architecture without the big-bang graveyard: chosen ground, cohort-based strangler cutover, the records workstream, and decommission criteria.",
+  },
+  {
+    href: "/wgu/engineering-standards",
+    icon: Braces,
+    label: "Standards",
+    title: "The paved road, specified",
+    text: "The event envelope, 49-event catalog, contract-registry rules, API standards, and the accreditation-grade Competency Ledger data model with its transcript projection.",
+  },
+  {
+    href: "/wgu/operating-model",
+    icon: Users,
+    label: "Operating Model",
+    title: "Capabilities, teams, and risk",
+    text: "The business capability map with build/buy postures, the four-team topology, the decision cadence, and a living risk register with owners and tripwires.",
+  },
+  {
+    href: "/wgu/business-case",
+    icon: TrendingUp,
+    label: "Business Case",
+    title: "Persistence economics",
+    text: "What one point of persistence is worth (~$15M and ~1,900 lives), what each failure mode costs, slice-level ROI, and the fund-slices-not-programs narrative.",
+  },
+  {
+    href: "/wgu/trust-pack",
+    icon: ShieldCheck,
+    label: "Trust Pack",
+    title: "Trust as numbers with consequences",
+    text: "The SLO catalog with error-budget policy, the FERPA purpose taxonomy, relationship-based access, data classification, and the five AI action tiers — each explained in plain language.",
+  },
+  {
+    href: "/wgu/glossary",
+    icon: BookOpenText,
+    label: "Glossary",
+    title: "Plain language for the whole room",
+    text: "Every load-bearing term defined for the person who has never seen the acronym — SIS to CQRS, competency units to strangler figs.",
   },
 ];
 
@@ -182,7 +245,7 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Nine connected areas, one line of reasoning.
+                Seventeen connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">

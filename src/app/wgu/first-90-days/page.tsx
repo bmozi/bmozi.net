@@ -35,7 +35,8 @@ const phases: Phase[] = [
     activities: [
       "1:1s with every architect and with leaders across the student-lifecycle departments — mostly listening.",
       "Trace two or three real journeys end to end (enrollment, document/evaluation processing, financial aid) and document every handoff and failure point.",
-      "Inventory current systems, data ownership, integration points, and known reliability pain (auth/login, outages).",
+      "Run the seam audit: for each traced failure mode, determine whether the workflow ran through the CRM, around it, or died between systems — the tools were present when the complaints happened, so the diagnosis must name the seam, not the tool.",
+      "Inventory current systems, data ownership, integration points, and known reliability pain (auth/login, outages) — including verifying the current SIS estate and whether the ground-up mandate includes the academic record itself, which decides whether the records workstream is a side effort or the center of the transformation.",
       "Stand up a lightweight voice-of-the-student evidence log the team can keep adding to.",
     ],
     good: [
@@ -57,7 +58,7 @@ const phases: Phase[] = [
     ],
     activities: [
       "Facilitate working sessions to refine and adopt the seven guardrails: no black holes, nothing silent, no dropped handoffs, one truth, stays up, proactive, amplify mentors.",
-      "Bring the student-timeline target state as a strong hypothesis — pressure-tested against Days 1–30 reality through event storming, carried in to reconcile, not to impose. The adversarial review and v2 come with it.",
+      "Bring the student-timeline target state pressure-tested against Days 1–30 reality through event storming — the adversarial review, v2, and ADR-001 come with it, armed with the seam-audit evidence: if the failures ran around the CRM, the seams argument is proven internally, not just from public reviews.",
       "Close the two known gaps: define access-layer availability and login-success SLOs, and make administrative lifecycle events first-class with owner projections.",
       "Start an ADR practice so choices and trade-offs are written down and visible.",
       "Identify the first end-to-end thread worth proving — candidate: document intake → tracked status → student-visible state.",

@@ -28,7 +28,7 @@ const decisions = [
     layer: "03 · One event-sourced context: the competency ledger",
     rule: "Competency attempts, assessment results, masteries, and interventions form an append-only ledger — the single context where temporal semantics pay rent.",
     detail:
-      "PII lives outside the ledger by reference, keeping erasure trivial and the ledger replayable for efficacy research, accreditation audit, and what-did-we-know-when questions. This is the genuinely novel CBE asset no vendor sells.",
+      "PII lives outside the ledger by reference, keeping erasure trivial and the ledger replayable for efficacy research, accreditation audit, and what-did-we-know-when questions. This is the genuinely novel CBE asset no vendor sells — and it carries more weight than its size: a transcript is a projection of this ledger, which makes it the embryo of a possible academic-record succession (see the SIS verdict on the Ground-Up page).",
   },
   {
     layer: "04 · The Student Timeline as a governed product",
@@ -59,6 +59,12 @@ const decisions = [
     rule: "Login-success SLOs, real-user monitoring, and graceful degradation are architecture, not operations afterthought.",
     detail:
       "The most common student complaint is access. Availability at the student front door outranks internal elegance in every trade-off, and the SLO dashboard is reviewed like a Key Result.",
+  },
+  {
+    layer: "09 · Personalization is a decisioning loop, not a byproduct",
+    rule: "The timeline, ledger, and skills graph are the substrate; an explicit decisioning layer — models, experimentation, learning-science validation — is where recommendations actually come from.",
+    detail:
+      "Next-best-action models read governed signals and write governed actions through the agent gateway; every intervention runs inside an experimentation framework with holdouts and guardrail metrics, validated with learning-science partners before scale. No recommendation ships that cannot name its evidence.",
   },
 ];
 
@@ -112,6 +118,21 @@ const defenseMap = [
     objection: "A history table gets you 80% of event sourcing for 5% of the cost.",
     answer:
       "Correct — which is why every system of record uses exactly that. The ledger's replay and temporal queries are the 20% CBE actually needs: efficacy research, accreditation audit, and what-did-we-know-when accountability.",
+  },
+  {
+    objection: "Salesforce Data Cloud gives you 70% of the Student Timeline off the shelf.",
+    answer:
+      "Taken seriously enough to get its own decision record: a buy-vs-build ADR scores Data Cloud, full build, and a hybrid on cost, lock-in, and CBE fit — including the identity-resolution/MDM dependency the timeline quietly requires. Buy where the vendor is strong; build only the CBE core no vendor sells.",
+  },
+  {
+    objection: "Where does the recommendation actually come from? A substrate isn't personalization.",
+    answer:
+      "Decision 09 and the personalization layer: an explicit decisioning loop — next-best-action models over governed signals, an experimentation framework with holdouts, learning-science validation — acting only through the governed agent gateway. The timeline feeds it; it doesn't pretend to be it.",
+  },
+  {
+    objection: "A better CRM rollout would fix the student complaints without any of this.",
+    answer:
+      "History already ran that experiment: a mature, deeply invested CRM was fully in operation during the very period the complaints describe. The failures live at the seams — records workflows, aid processing, auth, cross-department handoffs — where no single tool can see. Governed lifecycle events, owner/SLA semantics, and one identity across systems are the fix a tool cannot be.",
   },
 ];
 
@@ -261,8 +282,8 @@ const roadmap = [
   },
   {
     phase: "Slice 2 · The competency ledger",
-    text: "Event-source the assessment/competency context with PII by reference. Replayable efficacy queries and accreditation-grade audit become possible. This is the invention slice — the CBE asset nobody sells.",
-    lps: "Create & Innovate · Integrity · Aim True",
+    text: "Event-source the assessment/competency context with PII by reference. Replayable efficacy queries and accreditation-grade audit become possible. This is the invention slice — the CBE asset nobody sells — and the most strategically loaded slice on the board: the ledger began as 'the one place event sourcing pays rent' and became the seed of a possible SIS succession. A transcript is a projection of this ledger; if the ground-up mandate reaches the academic record, this slice is where the new record of mastery is born. Build it accreditation-grade from day one.",
+    lps: "Create & Innovate · Integrity · Aim True · Imagine Boldly",
   },
   {
     phase: "Slice 3 · The governed agent gateway",
@@ -317,7 +338,7 @@ export default function ArchitectureV2Page() {
             >
               adversarial review
             </Link>
-            : eight decisions, built from the ground up on documented industry
+            : nine decisions, built from the ground up on documented industry
             evidence, scoped to the full{" "}
             <Link
               href="/wgu/system-boundary"
@@ -334,6 +355,26 @@ export default function ArchitectureV2Page() {
             </Link>
             .
           </p>
+          <div className="mt-8 border border-[var(--amber)] bg-black/40 p-5">
+            <p className="font-mono text-xs uppercase text-[var(--amber)]">
+              Direction: set · Adoption: sequenced
+            </p>
+            <p className="mt-3 max-w-4xl text-base leading-7 text-white/90">
+              This is the target architecture. The Days 31–60 working sessions
+              of the{" "}
+              <Link
+                href="/wgu/first-90-days"
+                className="text-[var(--signal)] underline underline-offset-4"
+              >
+                90-day plan
+              </Link>{" "}
+              exist to make the team co-owners and to refine details against
+              current-state findings — not to reopen the direction. It walks
+              into every room with its prosecution attached, because a
+              direction that has already survived the strongest opposing case
+              is how transformation is led: decisively, with receipts.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -397,7 +438,7 @@ export default function ArchitectureV2Page() {
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <p className="font-mono text-xs uppercase text-[var(--signal)]">
-            The eight decisions
+            The nine decisions
           </p>
           <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
             The v2 target, layer by layer.

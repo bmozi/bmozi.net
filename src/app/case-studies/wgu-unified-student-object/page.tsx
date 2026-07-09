@@ -413,14 +413,14 @@ export default function UnifiedStudentObjectPage() {
                 guardrails.
               </p>
             </div>
-            <div className="overflow-hidden border border-white/12 bg-white/[0.035]">
+            <div className="overflow-x-auto border border-white/12 bg-white/[0.035]">
               <Image
                 src="/brand/unified-student-object-case-study.png"
                 alt="Unified Student Object architecture diagram showing student access reliability, learning and operational event lanes, operations case and SLA projections, administrative bounded contexts, governed AI escalation, audit, and human oversight"
                 width={1672}
                 height={941}
                 sizes="(min-width: 1280px) 1216px, calc(100vw - 40px)"
-                className="h-auto w-full"
+                className="h-auto w-full min-w-[920px] max-w-none lg:min-w-0"
               />
             </div>
           </div>

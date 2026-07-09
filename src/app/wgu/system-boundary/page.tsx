@@ -104,6 +104,25 @@ const lifecycle = [
   },
 ];
 
+const estateSignals = [
+  {
+    title: "Salesforce — the engagement backbone",
+    text: "A published Salesforce.org case study (the \"virtual social campus\") documents WGU on Salesforce years back, supporting the student journey enrollment-through-graduation. Current engineering job postings describe the scale of the investment: 300+ flows, 2,000+ Apex classes, serving 150K+ students, with dedicated Salesforce engineering roles.",
+  },
+  {
+    title: "Databricks — the lakehouse",
+    text: "A public Databricks customer story: 80+ TB consolidated into a Delta Lake lakehouse, overnight processing cut from 10+ hours to 3–4, explicitly positioned for \"10x growth.\"",
+  },
+  {
+    title: "Confluent / Kafka — event-driven direction",
+    text: "A posted Enterprise Architect role for event-driven architecture and Kafka ($157K–$243K) calling out Confluent certification and streaming data governance; engineer postings require Confluent Kafka, Apache Camel, and change data capture alongside AWS, Terraform, and Kubernetes.",
+  },
+  {
+    title: "Genesys & ServiceNow — the operational edges",
+    text: "Public customer stories cover the contact-center platform (Genesys) and IT service management (ServiceNow) — the channels where students experience the seams most directly.",
+  },
+];
+
 const contexts = [
   {
     domain: "Enrollment & Records",
@@ -287,6 +306,109 @@ export default function SystemBoundaryPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+            Two systems, two truths
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            The SIS keeps the record. The CRM keeps the relationship.
+          </h2>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="border border-white/12 bg-white/[0.035] p-6">
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                A concrete way to hold the difference
+              </p>
+              <p className="mt-4 text-lg leading-8 text-white/90">
+                When a start date was silently deleted in the complaints, that
+                change happened in — or failed to sync from — the SIS-side
+                world: the registrar&apos;s system, historically a heavily
+                configured Ellucian Banner bent to fit competency-based
+                education. When a counselor &ldquo;sent a generic scripted
+                email with no follow-up,&rdquo; that interaction lived in
+                Salesforce, the CRM. The fragmented-truth complaint —
+                different answers every call — is precisely what happens when
+                those two systems, plus aid and the LMS, don&apos;t share one
+                identity and one event stream.
+              </p>
+              <p className="mt-4 text-lg font-semibold leading-8 text-[var(--signal)]">
+                That is the seams argument in one sentence.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="border border-[var(--amber)]/60 bg-black/30 p-5">
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  Caveat 1 · verify, don&apos;t assume
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  The Banner evidence is historical (the Christensen Institute
+                  research is from years back). What runs today — and whether
+                  the ground-up mandate includes the academic record itself —
+                  is a Days 1–30 question. If the SIS is in scope, the records
+                  workstream becomes the center of the transformation, not a
+                  side workstream.
+                </p>
+              </div>
+              <div className="border border-[var(--amber)]/60 bg-black/30 p-5">
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  Caveat 2 · vendors blur this line
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  Salesforce sells &ldquo;Education Cloud&rdquo; ambitiously,
+                  but almost no institution uses Salesforce as its actual
+                  system of academic record. Marketing claims about
+                  &ldquo;student 360&rdquo; are not statements about legal
+                  truth — the boundary in ADR-001 exists precisely because of
+                  this blur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                Estate signals · public record
+              </p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                The platform estate, from published sources.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-[var(--soft)]">
+              Vendor case studies and job postings sketch the estate the
+              architecture must work with — and they carry a decisive
+              historical fact: these tools were all in operation while the
+              student complaints accumulated. The gap was never the tools; it
+              was the seams between them.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {estateSignals.map((item) => (
+              <article
+                key={item.title}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  {item.title}
+                </p>
+                <p className="mt-4 text-sm leading-6 text-[var(--soft)]">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 max-w-3xl text-sm leading-6 text-white/50">
+            All from public vendor case studies and job postings as of July
+            2026 — the full argument lives in ADR-001 and the adversarial
+            review.
+          </p>
         </div>
       </section>
 

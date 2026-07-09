@@ -406,15 +406,17 @@ export default function GovernanceIdentityFabricPage() {
                 up, federates whole meshes into a mesh of meshes. It is fractal.
               </p>
             </div>
-            <figure className="overflow-hidden border border-white/12 bg-[rgba(10,13,17,0.6)]">
-              <Image
-                src="/brand/mesh-of-meshes-fabric.png"
-                alt="Three meshes — service, data, and agent — sharing one governance grammar, with the Unified Student Object as the shared data product and the governance and identity fabric governing the seams."
-                width={1720}
-                height={968}
-                sizes="(min-width: 1024px) 80vw, 100vw"
-                className="h-auto w-full"
-              />
+            <figure className="border border-white/12 bg-[rgba(10,13,17,0.6)]">
+              <div className="overflow-x-auto">
+                <Image
+                  src="/brand/mesh-of-meshes-fabric.png"
+                  alt="Three meshes — service, data, and agent — sharing one governance grammar, with the Unified Student Object as the shared data product and the governance and identity fabric governing the seams."
+                  width={1720}
+                  height={968}
+                  sizes="(min-width: 1024px) 80vw, 100vw"
+                  className="h-auto w-full min-w-[920px] max-w-none lg:min-w-0"
+                />
+              </div>
               <figcaption className="border-t border-white/10 px-5 py-3 font-mono text-xs uppercase text-[var(--soft)]">
                 Three meshes, one grammar · the USO is the anchor data product ·
                 the fabric governs the seams
