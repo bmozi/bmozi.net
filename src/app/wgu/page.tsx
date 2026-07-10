@@ -5,6 +5,8 @@ import {
   ArrowRight,
   BookOpenText,
   Braces,
+  BrainCircuit,
+  Calculator,
   CalendarClock,
   ClipboardCheck,
   Compass,
@@ -16,6 +18,8 @@ import {
   Landmark,
   MessageSquareWarning,
   Network,
+  Presentation,
+  Siren,
   Scale,
   ShieldCheck,
   Swords,
@@ -138,11 +142,39 @@ const areas = [
     text: "What one point of persistence is worth (~$15M and ~1,900 lives), what each failure mode costs, slice-level ROI, and the fund-slices-not-programs narrative.",
   },
   {
+    href: "/wgu/ai-native",
+    icon: BrainCircuit,
+    label: "AI-Native",
+    title: "AI-first by design, with a test to prove it",
+    text: "Five bolted-on vs. native contrasts, the seven marks of AI-native design with addresses in the architecture, descriptions as infrastructure, and per-domain readiness checks.",
+  },
+  {
     href: "/wgu/trust-pack",
     icon: ShieldCheck,
     label: "Trust Pack",
     title: "Trust as numbers with consequences",
     text: "The SLO catalog with error-budget policy, the FERPA purpose taxonomy, relationship-based access, data classification, and the five AI action tiers — each explained in plain language.",
+  },
+  {
+    href: "/wgu/scale-math",
+    icon: Calculator,
+    label: "Scale Math",
+    title: "Somebody did the arithmetic",
+    text: "Events/day at 190K students, storage growth, 20-minute replays, <$2/student/term — every number with its math shown and its assumption stated.",
+  },
+  {
+    href: "/wgu/ops-reality",
+    icon: Siren,
+    label: "Ops Reality",
+    title: "Designing for the bad day",
+    text: "Five failure runbooks, the Slice-1 definition of done with its ten-minute demo script, and the agent-gateway threat model.",
+  },
+  {
+    href: "/wgu/pitch",
+    icon: Presentation,
+    label: "Pitch Kit",
+    title: "One page, ten slides, ten minutes",
+    text: "The executive delivery vehicle: the one-page argument and the downloadable deck — plus pointers to the running reference implementation behind every claim.",
   },
   {
     href: "/wgu/glossary",
@@ -245,7 +277,7 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Seventeen connected areas, one line of reasoning.
+                Twenty-one connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">
