@@ -10,7 +10,9 @@ import {
   CalendarClock,
   ClipboardCheck,
   Compass,
+  Download,
   FileCheck2,
+  FileText,
   FlaskConical,
   Hammer,
   Sparkles,
@@ -19,9 +21,11 @@ import {
   MessageSquareWarning,
   Network,
   Presentation,
+  Route,
   Siren,
   Scale,
   ShieldCheck,
+  Split,
   Swords,
   TrendingUp,
   Users,
@@ -36,6 +40,34 @@ export const metadata: Metadata = {
 };
 
 const areas = [
+  {
+    href: "/wgu/student-continuity-fabric",
+    icon: Route,
+    label: "Invention",
+    title: "The Student Continuity Fabric",
+    text: "The named category: a governed event, identity, timeline, and action layer that prevents online students from disappearing between systems.",
+  },
+  {
+    href: "/wgu/why-novel",
+    icon: Split,
+    label: "Novelty",
+    title: "Why this is not another tool",
+    text: "Salesforce, SIS, lakehouse, ServiceNow, and Genesys all still matter. The invention governs the seams between them and gives students continuity.",
+  },
+  {
+    href: "/wgu/evaluation-rubric",
+    icon: ClipboardCheck,
+    label: "Rubric",
+    title: "The Student Continuity test",
+    text: "A vendor-neutral scoring model: no silent changes, named owner, student-visible lifecycle, replayable audit, AI authorization, SoR clarity, and cost per student per term.",
+  },
+  {
+    href: "/wgu/whitepaper",
+    icon: FileText,
+    label: "Whitepaper",
+    title: "The public reference artifact",
+    text: "A downloadable PDF packaging the category, failure modes, proof slice, trust model, scale math, adoption path, and evidence ledger.",
+  },
   {
     href: "/wgu/leadership-principles",
     icon: Compass,
@@ -226,20 +258,37 @@ export default function WguHubPage() {
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Scale size={16} aria-hidden="true" />
-            Enterprise architecture · working hub
+            Named invention · protected working hub
           </p>
           <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.6rem,7vw,5.6rem)] font-black leading-[0.92] text-white">
-            Where my WGU architecture thinking lives, grows, and gets
-            challenged.
+            The Student Continuity Fabric: make it impossible for students to
+            disappear between systems.
           </h1>
           <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            The principal mission of Western Governors University is to improve
-            quality and expand access to post-secondary education — competency-
-            based, independent of time or place, credible to academic
-            institutions and employers. This hub holds the leadership
-            principles, the researched system boundary, the platform theses,
-            and the adversarial reviews that keep them honest.
+            This hub now packages the work as a named invention with proof: a
+            governed event, identity, timeline, and action layer for online
+            institutions. The deeper architecture still lives here, but the
+            front door is the student pain it solves — black holes, silent
+            changes, ownerless queues, fragmented truth, unreliable access, and
+            unsafe AI action.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/wgu/student-continuity-fabric"
+              className="inline-flex h-12 items-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+            >
+              Open the invention
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <a
+              href="/wgu/student-continuity-fabric-reference-architecture.pdf"
+              className="inline-flex h-12 items-center gap-2 border border-white/20 px-5 font-mono text-sm font-bold text-white transition-colors hover:border-[var(--signal)] hover:text-[var(--signal)]"
+              download
+            >
+              <Download size={16} aria-hidden="true" />
+              Download whitepaper
+            </a>
+          </div>
         </div>
       </section>
 
@@ -277,14 +326,13 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Twenty-one connected areas, one line of reasoning.
+                Twenty-five connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">
-              Principles set the standard, the boundary sets the scope, the
-              student voice sets the priorities, the theses propose, the
-              review prosecutes, v2 earns the build — and the 90-day plan puts
-              it on the calendar.
+              The category names the pain, the proof slice makes it legible,
+              the rubric makes it testable, the whitepaper makes it portable,
+              and the deep architecture shows the work behind the claim.
             </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">

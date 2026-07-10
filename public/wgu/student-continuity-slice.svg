@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="760" viewBox="0 0 1800 760" role="img" aria-labelledby="title desc">
+  <title id="title">Student Continuity Fabric proof slice</title>
+  <desc id="desc">A six-step continuity path from document intake to audited resolution.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbfd"/>
+      <stop offset="100%" stop-color="#dce9ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#0a0d11" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="760" fill="#0a0d11"/>
+  <rect x="60" y="60" width="1680" height="640" fill="url(#paper)" stroke="#19d6c5" stroke-width="4"/>
+  <text x="118" y="135" fill="#0a0d11" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">Proof slice: close the document black hole</text>
+  <text x="122" y="182" fill="#47616c" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700">No silence. No ownerless queue. No unaudited action.</text>
+  <line x1="260" y1="390" x2="1540" y2="390" stroke="#0a0d11" stroke-width="10" stroke-linecap="round"/>
+  <line x1="260" y1="390" x2="1540" y2="390" stroke="#19d6c5" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <g font-family="Inter, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(120 270)">
+      <rect width="235" height="230" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="118" cy="78" r="34" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="118" y="89" text-anchor="middle" fill="#0a0d11" font-size="34" font-weight="800">1</text>
+      <text x="118" y="142" text-anchor="middle" fill="#0a0d11" font-size="28" font-weight="800">Intake</text>
+      <text x="118" y="179" text-anchor="middle" fill="#47616c" font-size="20">Transcript or</text>
+      <text x="118" y="205" text-anchor="middle" fill="#47616c" font-size="20">document received</text>
+    </g>
+    <g transform="translate(410 270)">
+      <rect width="235" height="230" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="118" cy="78" r="34" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="118" y="89" text-anchor="middle" fill="#0a0d11" font-size="34" font-weight="800">2</text>
+      <text x="118" y="142" text-anchor="middle" fill="#0a0d11" font-size="28" font-weight="800">Status</text>
+      <text x="118" y="179" text-anchor="middle" fill="#47616c" font-size="20">Student sees</text>
+      <text x="118" y="205" text-anchor="middle" fill="#47616c" font-size="20">where it is</text>
+    </g>
+    <g transform="translate(700 270)">
+      <rect width="235" height="230" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="118" cy="78" r="34" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="118" y="89" text-anchor="middle" fill="#0a0d11" font-size="34" font-weight="800">3</text>
+      <text x="118" y="142" text-anchor="middle" fill="#0a0d11" font-size="28" font-weight="800">Owner</text>
+      <text x="118" y="179" text-anchor="middle" fill="#47616c" font-size="20">Named person</text>
+      <text x="118" y="205" text-anchor="middle" fill="#47616c" font-size="20">or team accountable</text>
+    </g>
+    <g transform="translate(990 270)">
+      <rect width="235" height="230" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="118" cy="78" r="34" fill="#ff4fd8" stroke="#0a0d11" stroke-width="3"/>
+      <text x="118" y="89" text-anchor="middle" fill="#0a0d11" font-size="34" font-weight="800">4</text>
+      <text x="118" y="142" text-anchor="middle" fill="#0a0d11" font-size="28" font-weight="800">SLA</text>
+      <text x="118" y="179" text-anchor="middle" fill="#47616c" font-size="20">Clock starts</text>
+      <text x="118" y="205" text-anchor="middle" fill="#47616c" font-size="20">and is visible</text>
+    </g>
+    <g transform="translate(1280 270)">
+      <rect width="235" height="230" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="118" cy="78" r="34" fill="#f2b84b" stroke="#0a0d11" stroke-width="3"/>
+      <text x="118" y="89" text-anchor="middle" fill="#0a0d11" font-size="34" font-weight="800">5</text>
+      <text x="118" y="142" text-anchor="middle" fill="#0a0d11" font-size="28" font-weight="800">Escalate</text>
+      <text x="118" y="179" text-anchor="middle" fill="#47616c" font-size="20">Aging work moves</text>
+      <text x="118" y="205" text-anchor="middle" fill="#47616c" font-size="20">before trust decays</text>
+    </g>
+  </g>
+  <g transform="translate(520 555)">
+    <rect width="760" height="70" fill="#0a0d11"/>
+    <text x="380" y="45" text-anchor="middle" fill="#19d6c5" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700">Every state change writes to the replayable audit trail</text>
+  </g>
+</svg>
+

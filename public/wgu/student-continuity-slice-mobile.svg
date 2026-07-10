@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1100" viewBox="0 0 760 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile Student Continuity Fabric proof slice</title>
+  <desc id="desc">A vertical six-step continuity path from document intake to audited resolution.</desc>
+  <rect width="760" height="1100" fill="#0a0d11"/>
+  <rect x="34" y="34" width="692" height="1032" fill="#edf6f9" stroke="#19d6c5" stroke-width="5"/>
+  <text x="72" y="102" fill="#0a0d11" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Proof slice</text>
+  <text x="72" y="146" fill="#0a0d11" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Close the document black hole</text>
+  <text x="74" y="184" fill="#47616c" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700">No silence. No ownerless queue.</text>
+  <line x1="380" y1="258" x2="380" y2="862" stroke="#0a0d11" stroke-width="9" stroke-linecap="round"/>
+  <line x1="380" y1="258" x2="380" y2="862" stroke="#19d6c5" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(92 225)">
+      <rect width="576" height="106" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="56" cy="53" r="31" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="56" y="64" text-anchor="middle" fill="#0a0d11" font-size="30" font-weight="800">1</text>
+      <text x="112" y="47" fill="#0a0d11" font-size="30" font-weight="800">Intake</text>
+      <text x="112" y="78" fill="#47616c" font-size="21">Transcript or document received</text>
+    </g>
+    <g transform="translate(92 355)">
+      <rect width="576" height="106" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="56" cy="53" r="31" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="56" y="64" text-anchor="middle" fill="#0a0d11" font-size="30" font-weight="800">2</text>
+      <text x="112" y="47" fill="#0a0d11" font-size="30" font-weight="800">Status</text>
+      <text x="112" y="78" fill="#47616c" font-size="21">Student sees where it is</text>
+    </g>
+    <g transform="translate(92 485)">
+      <rect width="576" height="106" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="56" cy="53" r="31" fill="#19d6c5" stroke="#0a0d11" stroke-width="3"/>
+      <text x="56" y="64" text-anchor="middle" fill="#0a0d11" font-size="30" font-weight="800">3</text>
+      <text x="112" y="47" fill="#0a0d11" font-size="30" font-weight="800">Owner</text>
+      <text x="112" y="78" fill="#47616c" font-size="21">Named team accountable</text>
+    </g>
+    <g transform="translate(92 615)">
+      <rect width="576" height="106" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="56" cy="53" r="31" fill="#ff4fd8" stroke="#0a0d11" stroke-width="3"/>
+      <text x="56" y="64" text-anchor="middle" fill="#0a0d11" font-size="30" font-weight="800">4</text>
+      <text x="112" y="47" fill="#0a0d11" font-size="30" font-weight="800">SLA</text>
+      <text x="112" y="78" fill="#47616c" font-size="21">Visible clock and threshold</text>
+    </g>
+    <g transform="translate(92 745)">
+      <rect width="576" height="106" fill="#ffffff" stroke="#0a0d11" stroke-width="3"/>
+      <circle cx="56" cy="53" r="31" fill="#f2b84b" stroke="#0a0d11" stroke-width="3"/>
+      <text x="56" y="64" text-anchor="middle" fill="#0a0d11" font-size="30" font-weight="800">5</text>
+      <text x="112" y="47" fill="#0a0d11" font-size="30" font-weight="800">Escalate</text>
+      <text x="112" y="78" fill="#47616c" font-size="21">Aging work moves before trust decays</text>
+    </g>
+  </g>
+  <rect x="92" y="908" width="576" height="88" fill="#0a0d11"/>
+  <text x="380" y="944" text-anchor="middle" fill="#19d6c5" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700">Every state change writes</text>
+  <text x="380" y="974" text-anchor="middle" fill="#19d6c5" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700">to the replayable audit trail</text>
+</svg>
+
