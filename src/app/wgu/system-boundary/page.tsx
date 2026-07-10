@@ -123,6 +123,58 @@ const estateSignals = [
   },
 ];
 
+const evidenceLedger = [
+  {
+    claim: "Institution scale",
+    confidence: "High · published annual report",
+    source: "WGU FY25 annual report and school one-pagers",
+    href: "https://www.wgu.edu/blog/outcomes-that-endure-wgus-fy-2025-annual-report2509.html",
+    note: "192,613 enrolled students, 59,358 degrees conferred, and 390K+ alumni are public FY25 figures. These are safe sizing anchors, not internal forecasts.",
+  },
+  {
+    claim: "Salesforce estate",
+    confidence: "High · live job-market signal",
+    source: "WGU Salesforce engineering postings",
+    href: "https://wgu.wd5.myworkdayjobs.com/en-US/External/job/Senior-Software-Engineer---Salesforce_JR-025416",
+    note: "Current postings describe 300+ flows, 2,000+ Apex classes, Banner, ServiceNow, Kafka, and a large student-lifecycle Salesforce footprint. Treat as a current public signal while the posting remains live.",
+  },
+  {
+    claim: "Lakehouse scale",
+    confidence: "High · vendor customer story, older",
+    source: "Databricks WGU customer story",
+    href: "https://www.databricks.com/customers/western-governors-university",
+    note: "The 80+ TB lakehouse and 10+ hour to 3-4 hour overnight processing improvement are public, but date from an older story. Use them to infer platform maturity, not exact 2026 capacity.",
+  },
+  {
+    claim: "Contact-center edge",
+    confidence: "High · vendor customer story",
+    source: "Genesys WGU customer story",
+    href: "https://www.genesys.com/customer-stories/western-governors-university",
+    note: "Genesys documents WGU's Genesys Cloud platform and Salesforce integration. This supports the seam argument: the student experience crosses CRM, contact center, and service workflows.",
+  },
+  {
+    claim: "Service-management edge",
+    confidence: "High · vendor customer story",
+    source: "ServiceNow WGU customer story",
+    href: "https://www.servicenow.com/customers/western-governors-university.html",
+    note: "ServiceNow publishes WGU metrics including 140+ custom applications, 334 service catalog items, and 5K+ knowledge articles. It is a strong operations-estate signal, not proof of every student-facing workflow.",
+  },
+  {
+    claim: "Skills infrastructure",
+    confidence: "High · standards ecosystem source",
+    source: "Credential Engine / Open Skills Network",
+    href: "https://credentialengine.org/resources/open-skills-and-rich-skill-descriptors-ctdl-enables-connections-and-collaboration/",
+    note: "Public Credential Engine material describes WGU's skills library of 13,000+ Rich Skill Descriptors. The 2025 OSMT/RSD transition reinforces the architecture's skills-graph premise.",
+  },
+];
+
+const unknowns = [
+  "Current system-of-record ownership by domain: Banner appears in current job postings, but Days 1-30 must verify what is legal truth today for enrollment, records, aid, and assessment.",
+  "Event volume baselines: public sizing proves the order of magnitude; real topic volume, peak shape, retention, and replay throughput must replace assumptions before production funding.",
+  "Salesforce boundary health: public postings prove scale; only internal review can determine which flows are business-critical, duplicated, dead, or seam debt.",
+  "Student-complaint attribution: public reviews identify failure modes; journey tracing must prove whether each failure ran through CRM, around CRM, or died between systems.",
+];
+
 const contexts = [
   {
     domain: "Enrollment & Records",
@@ -243,6 +295,67 @@ export default function SystemBoundaryPage() {
             public catalog as of July 2026 and cross-list across schools; the
             institutional catalog remains authoritative.
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--signal)]">
+                Evidence ledger · confidence before conviction
+              </p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                What is public, what is inferred, and what must be verified.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-[var(--soft)]">
+              The adversarial standard: every load-bearing fact gets a source
+              type and a confidence level. Public evidence is enough to frame
+              the architecture; it is not enough to skip discovery.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {evidenceLedger.map((item) => (
+              <article
+                key={item.claim}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  {item.confidence}
+                </p>
+                <h3 className="mt-3 font-display text-xl font-black text-white">
+                  {item.claim}
+                </h3>
+                <a
+                  href={item.href}
+                  className="mt-2 inline-flex font-mono text-xs text-[var(--signal)] underline underline-offset-4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.source}
+                </a>
+                <p className="mt-4 text-sm leading-6 text-[var(--soft)]">
+                  {item.note}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 border border-[var(--amber)]/60 bg-black/30 p-6">
+            <p className="font-mono text-xs uppercase text-[var(--amber)]">
+              Discovery tests that can overturn this architecture
+            </p>
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              {unknowns.map((item) => (
+                <p
+                  key={item}
+                  className="border-l-2 border-[var(--amber)]/70 pl-4 text-sm leading-6 text-white/80"
+                >
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

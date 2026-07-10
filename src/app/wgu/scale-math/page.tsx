@@ -84,6 +84,29 @@ const conclusions = [
   "Every number here is falsifiable on purpose: Days 1–30 baselines replace assumptions, and any figure off by more than 2× triggers a re-sequencing review. An envelope that can't be wrong proves nothing.",
 ];
 
+const redTeamTests = [
+  {
+    test: "Peak shape is wrong",
+    failure:
+      "If evening or term-start peaks exceed the 10x assumption by more than 2x, projection SLOs move from capacity planning to product sequencing: Slice 1 narrows to fewer event classes until partitioning and consumer lag are proven.",
+  },
+  {
+    test: "Replay throughput is fantasy",
+    failure:
+      "If real ledger verification is below 50K events/sec on representative hardware, full replays become a maintenance-window operation and every projection must support per-student and per-cohort rebuild first.",
+  },
+  {
+    test: "Consumption pricing escapes",
+    failure:
+      "If Data Cloud, API gateway, or LLM costs exceed the <$2/student/term platform envelope, the architecture does not get bigger; it gets stricter: cache governed context, batch identity resolution, and move model calls behind budgeted action tiers.",
+  },
+  {
+    test: "The lakehouse is not the analytical SoR",
+    failure:
+      "If discovery finds a different analytical truth platform or fragmented data estate, the materialization pattern survives but the roadmap changes: establish analytical ownership before scaling personalization.",
+  },
+];
+
 export default function ScaleMathPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -183,6 +206,23 @@ export default function ScaleMathPage() {
                 <p key={c} className="text-base leading-7 text-white/90">
                   {c}
                 </p>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 border border-[var(--amber)]/60 bg-black/30 p-6 sm:p-8">
+            <p className="font-mono text-xs uppercase text-[var(--amber)]">
+              Red-team tests — what would force re-sequencing
+            </p>
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              {redTeamTests.map((item) => (
+                <article key={item.test} className="border-l-2 border-[var(--amber)]/70 pl-4">
+                  <h3 className="font-display text-lg font-black text-white">
+                    {item.test}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[var(--soft)]">
+                    {item.failure}
+                  </p>
+                </article>
               ))}
             </div>
           </div>
