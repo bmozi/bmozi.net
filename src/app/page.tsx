@@ -15,6 +15,7 @@ import {
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { BrandLockup } from "@/components/brand-lockup";
 import { ProjectFilter } from "@/components/project-filter";
 import { SignalField } from "@/components/signal-field";
@@ -237,6 +238,9 @@ export default function Home() {
               <a className="transition-colors hover:text-white" href="/wgu">
                 wgu hub
               </a>
+              <Link className="transition-colors hover:text-white" href="/blog">
+                writing
+              </Link>
               <a className="transition-colors hover:text-white" href="#contact">
                 contact
               </a>
