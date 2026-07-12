@@ -41,7 +41,10 @@ export async function proxy(request: NextRequest) {
     });
   }
 
-  if (publicPathPattern.test(request.nextUrl.pathname)) {
+  if (
+    request.nextUrl.pathname === "/" ||
+    publicPathPattern.test(request.nextUrl.pathname)
+  ) {
     return noIndexResponse(NextResponse.next());
   }
 

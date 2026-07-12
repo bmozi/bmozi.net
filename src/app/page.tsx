@@ -1,199 +1,79 @@
 import {
-  ArrowUpRight,
+  ArrowRight,
   BadgeCheck,
-  Blocks,
-  Braces,
-  Code2,
-  Cpu,
+  BrainCircuit,
+  DoorOpen,
+  Eye,
   Globe2,
-  GraduationCap,
   Layers3,
+  LockKeyhole,
   Mail,
-  Radar,
-  Sparkles,
-  TerminalSquare,
-  Workflow,
+  Network,
+  ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandLockup } from "@/components/brand-lockup";
-import { ProjectFilter } from "@/components/project-filter";
 import { SignalField } from "@/components/signal-field";
 
-const capabilities = [
+const northStar = [
   {
-    name: "Product interfaces",
-    text: "Dashboards, portals, apps, and decision surfaces that let teams operate complex systems without needing to understand every backend detail.",
+    title: "Make complexity usable",
+    text: "Turn tangled operations into clear product surfaces, explicit contracts, and decisions people can actually make.",
     icon: Layers3,
   },
   {
-    name: "Trustworthy AI workflows",
-    text: "Agents, retrieval, scoped tools, eval loops, and human review paths that make AI useful without handing it blind authority.",
-    icon: Cpu,
+    title: "Make AI accountable",
+    text: "Connect AI to real work through scoped tools, review paths, audit trails, and human authority where it matters.",
+    icon: BrainCircuit,
   },
   {
-    name: "Integration architecture",
-    text: "SOA-rooted contracts, events, adapters, APIs, and unified objects that let systems change without breaking the business.",
-    icon: Workflow,
-  },
-  {
-    name: "Reference systems",
-    text: "Working prototypes, case studies, architecture portfolios, and deployable proof that leaders can evaluate before committing spend.",
-    icon: Sparkles,
+    title: "Make proof inspectable",
+    text: "Ship diagrams, prototypes, reference systems, tests, and written reasoning so architecture can be evaluated by behavior.",
+    icon: BadgeCheck,
   },
 ];
 
-const proofPoints = [
-  ["In Production", "Sentinel, Merlin, UCO-pattern services"],
-  ["Contracts", "Explicit service, tool, and data boundaries"],
-  ["Guardrails", "Policy, audit, review, and human accountability"],
-  ["SOA Roots", "From contracts to the agent mesh"],
+const practice = [
+  ["Product interfaces", "Portals, dashboards, workflows, and decision surfaces for complex teams."],
+  ["Trustworthy AI systems", "Agents, retrieval, tool gateways, evaluations, and human-in-the-loop controls."],
+  ["Integration architecture", "APIs, events, adapters, unified objects, contracts, and source-of-truth boundaries."],
+  ["Reference implementations", "Working proof that lets leaders and engineers inspect the idea before scaling it."],
 ];
 
-const proofAccentColors = [
-  "var(--signal)",
-  "var(--amber)",
-  "var(--magenta)",
-  "var(--soft)",
+const principles = [
+  "Contracts before coupling",
+  "Evidence before confidence",
+  "Human authority before automation",
+  "Readable systems before clever systems",
+  "Production proof before theater",
 ];
 
-const enterpriseProjects = [
+const privateLinks = [
   {
-    title: "Sentinel",
-    kind: "Trust system",
-    status: "Flagship",
-    tags: ["AI", "APIs", "MCP", "Governance"],
-    result:
-      "An API gatekeeper and AI trust layer that turns integrations into scoped, audited tools, with a companion MCP server and a path toward an MCP fleet.",
+    href: "/access?next=/wgu",
+    label: "WGU architecture hub",
+    text: "Student Continuity Fabric, architecture v2, trust pack, scale math, operating model.",
   },
   {
-    title: "Merlin Software Factory",
-    kind: "AI delivery system",
-    status: "Operating model",
-    tags: ["AI", "Automation", "Governance", "Delivery"],
-    result:
-      "A governed software-production workflow for AI-assisted engineering: standards, review paths, context discipline, and repeatable delivery habits.",
+    href: "/access?next=/blog",
+    label: "Writing room",
+    text: "The Seams series, technical essays, reference shelf, field documents, and study guide.",
   },
   {
-    title: "Event-Sourced UCO Services",
-    kind: "Event-sourced operations core",
-    status: "Production pattern",
-    tags: ["EDA", "Kafka", "SOA", "Data"],
-    result:
-      "An event-sourced Unified Customer Object on Kafka with projections, anti-corruption adapters, and reconciliation patterns for independent service evolution.",
-  },
-  {
-    title: "Covenant Path",
-    kind: "Shipped production app",
-    status: "In production",
-    tags: ["AI", "Delivery", "Product"],
-    result:
-      "A shipped, cross-platform application (260k+ lines) built solo with the AI-assisted delivery model above — the working proof that governed AI-assisted engineering ships real production software. Read the build story on bmozi.com.",
-    href: "https://bmozi.com/press",
-  },
-];
-
-const labProjects = [
-  {
-    title: "Fiction Forge",
-    kind: "AI workspace",
-    status: "Build track",
-    tags: ["AI", "Editor", "Workflow"],
-    result:
-      "A structured authoring environment for project memory, generation control, and draft iteration.",
-  },
-  {
-    title: "Resonance Frequency Lab",
-    kind: "Interactive research lab",
-    status: "Prototype",
-    tags: ["Audio", "Visualization", "Web app"],
-    result:
-      "A browser-native exploration space for sound patterns, timing, harmonic relationships, and generative visual feedback.",
-  },
-];
-
-const sentinelCapabilities = [
-  [
-    "API gatekeeper",
-    "Scoped access, explicit service contracts, and audited integration boundaries.",
-  ],
-  [
-    "Companion MCP server",
-    "Operational capabilities exposed to agents as governed tools, not raw vendor credentials.",
-  ],
-  [
-    "MCP fleet pattern",
-    "A path for multiple domain servers with shared policy, identity, observability, and replay discipline.",
-  ],
-];
-
-const soaLineage = [
-  [
-    "SOA",
-    "The intellectual ancestor: standardized contracts, loose coupling, reusable and discoverable services, and governance.",
-  ],
-  ["Microservices", "Kept the principles and removed the ESB center of gravity."],
-  [
-    "Event-driven",
-    "Added temporal decoupling, replay, and better separation between producers and consumers.",
-  ],
-  [
-    "API-first",
-    "Treats APIs and events as products with catalogs, ownership, lifecycle discipline, and clear consumers.",
-  ],
-  [
-    "Agent mesh",
-    "The emerging next rung: governed agents, scoped tools, identity, policy, audit, and operational boundaries.",
-  ],
-];
-
-const operatingModes = [
-  "Start with the business decision the system needs to support, then work backward into the interface, data, contracts, and controls.",
-  "Use SOA principles as the foundation: explicit contracts, loose coupling, reuse, discoverability, and governance.",
-  "Build AI into bounded workflows with auditable tools, policy checks, and human accountability for high-impact decisions.",
-  "Ship the proof all the way to production infrastructure so architecture can be judged by working behavior, not diagrams alone.",
-];
-
-const buyerOutcomes = [
-  {
-    icon: Blocks,
-    title: "Less integration chaos",
-    text: "A clear operating model for how systems talk, where truth lives, and which contracts teams can safely build against.",
-  },
-  {
-    icon: TerminalSquare,
-    title: "Safer AI adoption",
-    text: "AI connected to real work through scoped tools, audit trails, review gates, and policies leaders can explain.",
-  },
-  {
-    icon: Braces,
-    title: "Working proof faster",
-    text: "A deployable product surface, reference architecture, or prototype that turns strategy into something people can inspect and use.",
-  },
-];
-
-const executiveSummary = [
-  {
-    title: "The problem",
-    text: "Modern teams are adopting AI on top of fragmented, point-to-point APIs, data, and vendor systems, with governance bolted on after the fact.",
-  },
-  {
-    title: "The approach",
-    text: "Build the product surface and the trust layer together: API-first, event-driven, and AI-enabled, with contracts, an event backbone, scoped tools, audit, and human review.",
-  },
-  {
-    title: "The proof",
-    text: "Sentinel, the Merlin software factory, and the event-sourced Unified Customer Object on Kafka show the operating model in production, judged by working behavior and merged-PR cadence under full quality gates.",
+    href: "/access?next=/blog/reference",
+    label: "Reference shelf",
+    text: "Charter, curriculum, canon, field kit, baseline, guild plan, and prosecution record.",
   },
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "BMOZI",
+  name: "BMOZI Technical",
   url: "https://bmozi.net",
   description:
-    "BMOZI builds governed digital systems: product interfaces, AI workflows, integration architecture, and deployable reference systems.",
+    "BMOZI Technical is a governed systems studio for product interfaces, trustworthy AI workflows, integration architecture, and deployable reference systems.",
   founder: {
     "@type": "Person",
     name: "John Briggs",
@@ -214,44 +94,35 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
-        <header className="sticky top-0 z-40 border-b border-white/10 bg-[rgba(10,13,17,0.78)] backdrop-blur-xl">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-8 sm:py-4">
+        <header className="sticky top-0 z-40 border-b border-white/10 bg-[rgba(10,13,17,0.82)] backdrop-blur-xl">
+          <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
             <a href="#top" className="group flex items-center gap-3">
               <BrandLockup
-                markClassName="h-8 w-8 sm:h-10 sm:w-10"
+                markClassName="h-9 w-9 sm:h-10 sm:w-10"
                 textClassName="text-base sm:text-lg"
               />
             </a>
             <div className="hidden items-center gap-6 font-mono text-xs text-[var(--muted)] md:flex">
-              <a className="transition-colors hover:text-white" href="#systems">
-                systems
+              <a className="transition-colors hover:text-white" href="#mission">
+                mission
               </a>
-              <a className="transition-colors hover:text-white" href="#work">
-                work
+              <a className="transition-colors hover:text-white" href="#practice">
+                practice
               </a>
-              <a
-                className="transition-colors hover:text-white"
-                href="/case-studies/wgu-unified-student-object"
-              >
-                case study
+              <a className="transition-colors hover:text-white" href="#workspace">
+                workspace
               </a>
-              <a className="transition-colors hover:text-white" href="/wgu">
-                wgu hub
-              </a>
-              <Link className="transition-colors hover:text-white" href="/blog">
-                writing
-              </Link>
               <a className="transition-colors hover:text-white" href="#contact">
                 contact
               </a>
             </div>
-            <a
-              href="mailto:hello@bmozi.com?subject=BMOZI%20technical%20project"
-              className="inline-flex h-9 items-center gap-2 border border-white/15 px-3 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:h-10 sm:px-4"
+            <Link
+              href="/access?next=/wgu"
+              className="inline-flex h-10 items-center gap-2 border border-white/15 px-3 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:px-4"
             >
-              <Mail size={15} aria-hidden="true" />
-              Start
-            </a>
+              <LockKeyhole size={15} aria-hidden="true" />
+              Enter
+            </Link>
           </nav>
         </header>
 
@@ -259,148 +130,96 @@ export default function Home() {
           id="top"
           className="relative isolate overflow-hidden border-b border-white/10"
         >
-          <SignalField />
-          <div className="mx-auto grid max-w-7xl items-start gap-4 px-4 pb-6 pt-6 sm:gap-8 sm:px-8 sm:pb-10 sm:pt-10 lg:grid-cols-[1fr_1fr] lg:py-10 xl:grid-cols-[0.96fr_1.04fr]">
-            <div className="relative z-10 max-w-4xl">
-              <p className="mb-4 inline-flex items-center gap-2 border border-white/15 bg-black/20 px-2 py-1.5 font-mono text-[0.58rem] uppercase text-[var(--signal)] backdrop-blur sm:mb-5 sm:px-3 sm:py-2 sm:text-xs">
-                <Radar size={15} aria-hidden="true" />
-                AI-enabled architecture and product systems
+          <div className="hidden sm:block">
+            <SignalField />
+          </div>
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div className="relative z-10">
+              <p className="inline-flex items-center gap-2 border border-white/15 bg-black/25 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
+                <Network size={16} aria-hidden="true" />
+                BMOZI Technical · governed systems studio
               </p>
-              <h1 className="font-display text-[clamp(2.05rem,10.5vw,3.05rem)] font-black leading-[0.9] text-white sm:text-[clamp(3rem,6.4vw,4.8rem)] 2xl:text-[clamp(4.8rem,8vw,7.2rem)]">
-                BMOZI turns architecture into governed software.
+              <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.55rem,7.2vw,6.5rem)] font-black leading-[0.9] text-white">
+                Build systems that earn trust when the work gets real.
               </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--soft)] sm:mt-5 sm:text-xl sm:leading-8">
-                Founded by John Briggs, BMOZI builds the visible product layer
-                and the hidden operating layer behind it: interfaces, AI
-                workflows, integration contracts, and production-ready proof.
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--soft)] sm:text-xl">
+                BMOZI Technical is the engineering and architecture arm of
+                BMOZI: a place for product interfaces, trustworthy AI,
+                integration architecture, and deployable proof systems. The
+                north star is simple: make complex work usable, accountable,
+                and inspectable.
               </p>
-              <div className="mt-5 grid grid-cols-[1fr_auto] gap-2 sm:mt-7 sm:flex sm:flex-row sm:gap-3">
-                <a
-                  href="#work"
-                  className="inline-flex h-10 items-center justify-center gap-2 bg-[var(--signal)] px-3 font-mono text-[0.68rem] font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5 sm:h-12 sm:px-5 sm:text-sm"
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/access?next=/wgu"
+                  className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
                 >
-                  View system work
-                  <ArrowUpRight size={17} aria-hidden="true" />
-                </a>
+                  Enter private workspace
+                  <ArrowRight size={17} aria-hidden="true" />
+                </Link>
                 <a
-                  href="https://github.com/bmozi"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-10 items-center justify-center gap-2 border border-white/15 px-3 font-mono text-[0.68rem] text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:h-12 sm:px-5 sm:text-sm"
+                  href="#mission"
+                  className="inline-flex h-12 items-center justify-center gap-2 border border-white/15 px-5 font-mono text-sm text-white transition-colors hover:border-white/35 hover:bg-white/10"
                 >
-                  <Code2 size={17} aria-hidden="true" />
-                  GitHub
+                  <Eye size={17} aria-hidden="true" />
+                  Read the north star
                 </a>
               </div>
             </div>
 
-            <aside className="relative z-10 grid gap-3">
-              <div className="group overflow-hidden border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 shadow-[0_30px_140px_rgba(25,214,197,0.13)] backdrop-blur-xl sm:p-3">
-                <Image
-                  src="/wgu/visuals/home-governed-systems-hero.webp"
-                  alt="Abstract governed software architecture with event streams, policy gates, and product interfaces"
-                  width={1800}
-                  height={1013}
-                  priority
-                  unoptimized
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                />
-                <div className="flex items-center justify-between gap-3 border-x border-b border-white/10 bg-black/35 px-3 py-3 sm:px-4">
-                  <BrandLockup
-                    markClassName="h-9 w-9"
-                    textClassName="text-lg"
-                  />
-                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-[var(--muted)]">
-                    Governed systems studio
+            <figure className="relative z-10 overflow-hidden border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 shadow-[0_30px_140px_rgba(25,214,197,0.13)] backdrop-blur-xl sm:p-3">
+              <Image
+                src="/brand/bmozi-technical-home-hero.webp"
+                alt="Abstract governed software architecture with event streams, policy gates, and product interfaces"
+                width={1800}
+                height={1013}
+                priority
+                unoptimized
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption className="grid gap-3 border-x border-b border-white/10 bg-black/35 px-4 py-4 sm:grid-cols-[1fr_auto] sm:items-center">
+                <div>
+                  <p className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                    North star
+                  </p>
+                  <p className="mt-1 font-display text-xl font-black leading-tight text-white">
+                    Governed software for consequential work.
                   </p>
                 </div>
-              </div>
-              <div className="grid auto-rows-fr grid-cols-2 gap-2 border border-white/12 bg-[rgba(11,15,19,0.62)] p-2 backdrop-blur-xl sm:gap-4 sm:p-4">
-                {proofPoints.map(([value, label], index) => (
-                  <div
-                    key={label}
-                    className="group relative flex min-h-24 min-w-0 flex-col justify-between overflow-hidden border border-white/10 bg-white/[0.025] p-3 transition-colors hover:border-white/20 hover:bg-white/[0.045] sm:min-h-36 sm:p-5"
-                  >
-                    <span
-                      className="mb-4 block h-0.5 w-9 shrink-0 transition-transform group-hover:scale-x-125 sm:mb-6 sm:w-11"
-                      style={{ backgroundColor: proofAccentColors[index] }}
-                      aria-hidden="true"
-                    />
-                    <div>
-                      <p className="max-w-[9rem] text-balance font-display text-[clamp(1.05rem,4.4vw,1.24rem)] font-black leading-[1.02] text-white sm:max-w-none sm:text-[clamp(1.3rem,1.7vw,1.62rem)]">
-                        {value}
-                      </p>
-                      <p className="mt-4 break-words font-mono text-[0.58rem] leading-snug text-[var(--muted)] sm:text-[0.72rem]">
-                        {label}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </aside>
+                <div className="inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
+                  <ShieldCheck size={15} aria-hidden="true" />
+                  private workspace gated
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
-        <section id="summary" className="scroll-mt-24 border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-            <div>
-              <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                Executive summary
-              </p>
-              <h2 className="mt-4 max-w-lg font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Governed AI adoption needs working systems, not slideware.
-              </h2>
-            </div>
-            <div className="grid gap-3 md:grid-cols-3">
-              {executiveSummary.map((item) => (
-                <article
-                  key={item.title}
-                  className="border border-white/12 bg-white/[0.035] p-5"
-                >
-                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                    {item.title}
-                  </p>
-                  <p className="mt-5 leading-7 text-[var(--soft)]">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="systems" className="border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.7fr_1.3fr]">
+        <section id="mission" className="border-b border-white/10">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.68fr_1.32fr]">
             <div>
               <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                Capability map
+                North star mission
               </p>
-              <h2 className="mt-4 max-w-xl font-display text-5xl font-black leading-none text-white">
-                What BMOZI truly builds.
+              <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                Help serious teams move from architecture intent to trusted
+                operating reality.
               </h2>
-              <p className="mt-5 max-w-md leading-7 text-[var(--soft)]">
-                The website is only the surface. The deeper work is making
-                complicated operations usable, governable, and ready for AI.
-              </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {capabilities.map((item) => {
+            <div className="grid gap-4 md:grid-cols-3">
+              {northStar.map((item) => {
                 const Icon = item.icon;
                 return (
                   <article
-                    key={item.name}
-                    className="group min-h-56 border border-white/12 bg-white/[0.035] p-6 transition-colors hover:border-[var(--signal)] hover:bg-white/[0.055]"
+                    key={item.title}
+                    className="border border-white/12 bg-white/[0.035] p-5"
                   >
-                    <Icon
-                      className="mb-9 text-[var(--signal)] transition-transform group-hover:scale-110"
-                      size={28}
-                      aria-hidden="true"
-                    />
-                    <h3 className="font-display text-2xl font-bold text-white">
-                      {item.name}
+                    <Icon className="text-[var(--signal)]" size={25} />
+                    <h3 className="mt-8 font-display text-2xl font-black leading-tight text-white">
+                      {item.title}
                     </h3>
-                    <p className="mt-4 leading-7 text-[var(--soft)]">
+                    <p className="mt-4 text-sm leading-6 text-[var(--soft)]">
                       {item.text}
                     </p>
                   </article>
@@ -410,50 +229,43 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
-          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
-            <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-              <div>
-                <p className="font-mono text-xs uppercase text-[var(--magenta)]">
-                  Service surface
-                </p>
-                <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                  From SOA principles to AI-enabled software people can actually
-                  use.
-                </h2>
-                <p className="mt-6 max-w-xl leading-7 text-black/70">
-                  The constant is governance and clear contracts. BMOZI carries
-                  that line from SOA into APIs, events, AI tools, and the
-                  emerging agent mesh without losing the operating discipline
-                  that makes systems trustworthy.
-                </p>
-              </div>
-              <div className="grid gap-3">
-                {operatingModes.map((mode) => (
-                  <div
-                    key={mode}
-                    className="flex gap-4 border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
-                  >
-                    <BadgeCheck
-                      className="mt-1 shrink-0 text-[var(--magenta)]"
-                      size={19}
-                      aria-hidden="true"
-                    />
-                    <p className="text-base leading-7">{mode}</p>
-                  </div>
-                ))}
-              </div>
+        <section
+          id="practice"
+          className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]"
+        >
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_1fr]">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+                What BMOZI Technical is about
+              </p>
+              <h2 className="mt-4 font-display text-4xl font-black leading-none sm:text-5xl">
+                The studio sits where product, architecture, AI, and operations
+                meet.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-black/70">
+                It is not a slide factory. It is a working-systems practice:
+                name the boundary, design the contract, build the proof, test
+                the risk, and make the result usable by the people who carry
+                the work.
+              </p>
             </div>
-            <div className="mt-10 grid gap-3 md:grid-cols-5">
-              {soaLineage.map(([name, text]) => (
+            <div className="grid gap-3">
+              {practice.map(([title, text]) => (
                 <article
-                  key={name}
-                  className="border border-black/10 bg-white p-4"
+                  key={title}
+                  className="flex gap-4 border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
                 >
-                  <p className="font-mono text-xs uppercase text-[var(--magenta)]">
-                    {name}
-                  </p>
-                  <p className="mt-4 text-sm leading-6 text-black/70">{text}</p>
+                  <BadgeCheck
+                    className="mt-1 shrink-0 text-[var(--magenta)]"
+                    size={19}
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <h3 className="font-display text-xl font-black">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-black/70">
+                      {text}
+                    </p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -461,154 +273,84 @@ export default function Home() {
         </section>
 
         <section className="border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <div>
-              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--signal)]">
-                <GraduationCap size={16} aria-hidden="true" />
-                Featured architecture case study
-              </p>
-              <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
-                The Unified Student Object.
-              </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--soft)]">
-                A reference architecture applying a production Unified Customer
-                Object pattern to competency-based, personalized learning: an
-                event-sourced student timeline that carries learning and
-                operational reality, reliable access, governed AI, and human
-                accountability, rooted in SOA principles: contracts, loose
-                coupling, reuse, and governance.
-              </p>
-              <a
-                href="/case-studies/wgu-unified-student-object"
-                className="mt-8 inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
-              >
-                Read the case study
-                <ArrowUpRight size={17} aria-hidden="true" />
-              </a>
-            </div>
-            <a
-              href="/case-studies/wgu-unified-student-object"
-              className="group block overflow-hidden border border-white/12 bg-white/[0.035]"
-              aria-label="Read the Unified Student Object case study"
-            >
-              <Image
-                src="/brand/unified-student-object-case-study.png"
-                alt="Unified Student Object architecture diagram showing reliable student access, learning and operational event lanes, operations SLA projections, governed AI, escalation, audit, and human oversight"
-                width={1672}
-                height={941}
-                sizes="(min-width: 1024px) 48vw, 100vw"
-                className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.025]"
-              />
-            </a>
-          </div>
-        </section>
-
-        <section id="work" className="border-b border-white/10">
-          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
-            <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                  Portfolio signals
+                  Operating stance
                 </p>
-                <h2 className="mt-4 font-display text-5xl font-black leading-none text-white">
-                  Flagship enterprise systems first.
+                <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                  A technical practice with clear rules.
                 </h2>
               </div>
               <p className="max-w-md leading-7 text-[var(--soft)]">
-                Sentinel, Merlin, and UCO-pattern services carry the enterprise
-                story: API governance, AI-assisted delivery, and event-sourced
-                operating truth. Labs sit below as range, not the center of
-                gravity.
+                These are the habits behind the private workspace: practical
+                enough to ship, strict enough to trust.
               </p>
             </div>
-            <div className="mb-6 border border-[var(--signal)]/35 bg-[linear-gradient(135deg,rgba(25,214,197,0.13),rgba(255,255,255,0.025))] p-5 sm:p-7">
-              <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-                <div>
-                  <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                    Sentinel trust system
+            <div className="grid gap-3 md:grid-cols-5">
+              {principles.map((principle, index) => (
+                <article
+                  key={principle}
+                  className="flex min-h-36 flex-col justify-between border border-white/12 bg-white/[0.035] p-4"
+                >
+                  <p className="font-mono text-xs text-[var(--amber)]">
+                    {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-4 font-display text-4xl font-black leading-none text-white">
-                    The gatekeeper for governed API and AI access.
-                  </h3>
-                </div>
-                <p className="max-w-2xl leading-7 text-[var(--soft)] lg:justify-self-end">
-                  Sentinel is the clearest expression of the BMOZI pattern:
-                  protect the enterprise boundary, turn APIs into controlled
-                  capabilities, and let agents work through scoped MCP tools
-                  with policy, audit, and accountability built in.
-                </p>
-              </div>
-              <div className="mt-7 grid gap-3 md:grid-cols-3">
-                {sentinelCapabilities.map(([name, text]) => (
-                  <div key={name} className="border border-white/10 p-4">
-                    <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                      {name}
-                    </p>
-                    <p className="mt-4 text-sm leading-6 text-[var(--soft)]">
-                      {text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <ProjectFilter projects={enterpriseProjects} />
-            <div className="mt-10 border-t border-white/10 pt-8">
-              <div className="mb-5 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-                <div>
-                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                    Also building
+                  <p className="mt-8 font-display text-xl font-black leading-tight text-white">
+                    {principle}
                   </p>
-                  <h3 className="mt-3 font-display text-3xl font-bold text-white">
-                    Labs and creative systems.
-                  </h3>
-                </div>
-                <p className="max-w-lg text-sm leading-6 text-[var(--muted)]">
-                  These projects show range in AI workspaces, interaction
-                  design, and experimental interfaces without competing with the
-                  enterprise systems above.
-                </p>
-              </div>
-              <div className="grid gap-3 md:grid-cols-2">
-                {labProjects.map((project) => (
-                  <article
-                    key={project.title}
-                    className="border border-white/10 bg-white/[0.025] p-5"
-                  >
-                    <p className="font-mono text-xs uppercase text-[var(--amber)]">
-                      {project.kind}
-                    </p>
-                    <h4 className="mt-3 font-display text-2xl font-bold text-white">
-                      {project.title}
-                    </h4>
-                    <p className="mt-4 leading-7 text-[var(--soft)]">
-                      {project.result}
-                    </p>
-                  </article>
-                ))}
-              </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl gap-4 px-5 py-20 sm:px-8 lg:grid-cols-3">
-            {buyerOutcomes.map((item) => {
-              const Icon = item.icon;
-              return (
-                <article
-                  key={item.title}
-                  className="border border-white/12 bg-white/[0.035] p-6"
+        <section id="workspace" className="border-b border-white/10">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--amber)]">
+                <LockKeyhole size={15} aria-hidden="true" />
+                Private by default
+              </p>
+              <h2 className="mt-4 font-display text-4xl font-black leading-none text-white sm:text-5xl">
+                The public page is the lobby. The workbench is gated.
+              </h2>
+              <p className="mt-5 leading-7 text-[var(--soft)]">
+                The deeper workspace contains active architecture thinking,
+                reference documents, diagrams, and invention packaging. It is
+                intentionally behind authentication while it matures.
+              </p>
+            </div>
+            <div className="grid gap-3 lg:grid-cols-3">
+              {privateLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group flex min-h-64 flex-col border border-white/12 bg-white/[0.035] p-5 transition-colors hover:border-[var(--signal)]"
                 >
-                  <Icon size={25} className="text-[var(--amber)]" aria-hidden />
-                  <h3 className="mt-10 font-display text-3xl font-bold text-white">
-                    {item.title}
+                  <DoorOpen
+                    className="text-[var(--signal)]"
+                    size={24}
+                    aria-hidden="true"
+                  />
+                  <h3 className="mt-8 font-display text-2xl font-black leading-tight text-white">
+                    {item.label}
                   </h3>
-                  <p className="mt-4 leading-7 text-[var(--soft)]">
+                  <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
                     {item.text}
                   </p>
-                </article>
-              );
-            })}
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 font-mono text-xs text-[var(--signal)]">
+                    Authenticate
+                    <ArrowRight
+                      size={14}
+                      aria-hidden="true"
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -616,10 +358,10 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <p className="font-mono text-xs uppercase">
-                Founder: John Briggs
+                Founder-led · John Briggs
               </p>
               <h2 className="mt-4 font-display text-5xl font-black leading-none">
-                Turn architecture into software your teams can trust.
+                Make the system worthy of the mission.
               </h2>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
@@ -633,20 +375,11 @@ export default function Home() {
                 BMOZI.com
               </a>
               <a
-                href="mailto:hello@bmozi.com?subject=BMOZI%20technical%20project"
+                href="mailto:hello@bmozi.com?subject=BMOZI%20Technical"
                 className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--ink)] px-5 font-mono text-sm font-bold text-white"
               >
                 <Mail size={17} aria-hidden="true" />
                 hello@bmozi.com
-              </a>
-              <a
-                href="https://github.com/bmozi"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 border border-[var(--ink)] px-5 font-mono text-sm font-bold"
-              >
-                <Code2 size={17} aria-hidden="true" />
-                GitHub
               </a>
             </div>
           </div>
@@ -658,13 +391,10 @@ export default function Home() {
                   textClassName="text-3xl"
                 />
               </div>
-              <a
-                href="/api/signal"
-                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase text-[var(--ink)]/70 transition-colors hover:text-[var(--ink)]"
-              >
-                <Globe2 size={15} aria-hidden="true" />
-                Machine-readable profile
-              </a>
+              <p className="max-w-xl font-mono text-xs leading-5 text-[var(--ink)]/70">
+                Everything beyond this front door is a protected working space:
+                no public index, no public crawl, no casual browsing.
+              </p>
             </div>
           </div>
         </section>
