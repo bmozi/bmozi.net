@@ -1,0 +1,145 @@
+export type WorkspaceItem = {
+  href: string;
+  label: string;
+  description: string;
+};
+
+export type WorkspaceGroup = {
+  id: string;
+  title: string;
+  eyebrow: string;
+  description: string;
+  href: string;
+  items: WorkspaceItem[];
+};
+
+export const workspaceGroups: WorkspaceGroup[] = [
+  {
+    id: "architecture",
+    title: "Architecture lab",
+    eyebrow: "Invention and proof",
+    description:
+      "The continuity architecture, operating model, trust pack, scale math, and executive-ready proof artifacts.",
+    href: "/wgu",
+    items: [
+      {
+        href: "/wgu/student-continuity-fabric",
+        label: "Student Continuity Fabric",
+        description: "Named invention, category frame, and proof slice.",
+      },
+      {
+        href: "/wgu/architecture-v2",
+        label: "Target architecture",
+        description: "Systems, events, timelines, governance, and AI action.",
+      },
+      {
+        href: "/wgu/whitepaper",
+        label: "Whitepaper",
+        description: "Reference architecture packaged as a portable artifact.",
+      },
+      {
+        href: "/wgu/trust-pack",
+        label: "Trust pack",
+        description: "FERPA purposes, access tiers, SLOs, and audit posture.",
+      },
+      {
+        href: "/wgu/scale-math",
+        label: "Scale math",
+        description: "Volumes, storage, replay, cost, and operational arithmetic.",
+      },
+      {
+        href: "/wgu/operating-model",
+        label: "Operating model",
+        description: "Capability map, team topology, cadence, and risk register.",
+      },
+    ],
+  },
+  {
+    id: "writing",
+    title: "Writing room",
+    eyebrow: "Series and essays",
+    description:
+      "The private mirror of the article series, technical essays, plain-language explainers, and architectural judgment work.",
+    href: "/blog",
+    items: [
+      {
+        href: "/blog/the-seams",
+        label: "The Seams",
+        description: "The flagship series on system seams over tool thinking.",
+      },
+      {
+        href: "/blog/getting-it-right",
+        label: "Getting It Right",
+        description: "Implementation-depth essays with tests and corrections.",
+      },
+      {
+        href: "/blog/seams-for-everyone",
+        label: "Seams for Everyone",
+        description: "Plain-language versions of the core architecture ideas.",
+      },
+      {
+        href: "/blog/architects-mind",
+        label: "The Architect's Mind",
+        description: "Judgment, decision pacing, and senior technical practice.",
+      },
+    ],
+  },
+  {
+    id: "reference",
+    title: "Reference shelf",
+    eyebrow: "Continuity library",
+    description:
+      "The field documents, study materials, prosecution record, and reusable operating references behind the work.",
+    href: "/blog/reference",
+    items: [
+      {
+        href: "/blog/reference/06-field-kit",
+        label: "Field kit",
+        description: "Reusable interview, evidence, and seam-audit materials.",
+      },
+      {
+        href: "/blog/reference/07-day-zero-baseline",
+        label: "Day-zero baseline",
+        description: "Calibration record before the solution is allowed to win.",
+      },
+      {
+        href: "/blog/reference/08-build-the-guild",
+        label: "Build the guild",
+        description: "How the architecture practice scales beyond one person.",
+      },
+      {
+        href: "/blog/reference/09-study-guide",
+        label: "Study guide",
+        description: "The compact learning path for the whole body of work.",
+      },
+      {
+        href: "/blog/reference/10-program-prosecution",
+        label: "Program prosecution",
+        description: "Adversarial review record and correction path.",
+      },
+    ],
+  },
+];
+
+export const evidenceLinks: WorkspaceItem[] = [
+  {
+    href: "/case-studies/wgu-unified-student-object",
+    label: "Unified Student Object",
+    description: "Original thesis and student timeline pattern.",
+  },
+  {
+    href: "/case-studies/wgu-governance-identity-fabric",
+    label: "Governance and Identity Fabric",
+    description: "The trust layer behind the mesh of systems.",
+  },
+  {
+    href: "/wgu/evaluation-rubric",
+    label: "Evaluation rubric",
+    description: "The vendor-neutral continuity test.",
+  },
+  {
+    href: "/wgu/pitch",
+    label: "Pitch kit",
+    description: "One-page argument, ten-slide path, and executive briefing.",
+  },
+];

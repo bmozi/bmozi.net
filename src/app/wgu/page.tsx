@@ -242,15 +242,15 @@ export default function WguHubPage() {
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
       <header className="border-b border-white/10 bg-[rgba(10,13,17,0.86)]">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-          <Link href="/" className="group inline-flex items-center gap-3">
+          <Link href="/workspace" className="group inline-flex items-center gap-3">
             <BrandLockup markClassName="h-9 w-9" textClassName="text-lg" />
           </Link>
           <Link
-            href="/"
+            href="/workspace"
             className="inline-flex h-10 items-center gap-2 border border-white/15 px-4 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)]"
           >
             <ArrowLeft size={15} aria-hidden="true" />
-            Home
+            Workspace
           </Link>
         </nav>
       </header>

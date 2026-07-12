@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
+import { WorkspaceShell } from "@/components/workspace-shell";
 import "./globals.css";
 
 const inter = Inter({
@@ -90,7 +91,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <WorkspaceShell />
+        {children}
+      </body>
     </html>
   );
 }

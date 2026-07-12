@@ -124,7 +124,7 @@ export default function First90DaysPage() {
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
       <header className="border-b border-white/10 bg-[rgba(10,13,17,0.86)]">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-          <Link href="/" className="group inline-flex items-center gap-3">
+          <Link href="/workspace" className="group inline-flex items-center gap-3">
             <BrandLockup markClassName="h-9 w-9" textClassName="text-lg" />
           </Link>
           <Link
