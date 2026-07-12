@@ -38,12 +38,12 @@ export default function BlogIndexPage() {
               The writing room · private mirror of the published series
             </p>
             <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-              Four series, one worldview. Read, review, study.
+              Four series, one reference shelf. Read, review, study.
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
               The canonical home of every article before and after it ships to
-              LinkedIn — plus the standing reference documents behind the
-              writing. Gated, like everything here.
+              LinkedIn — plus the operating library behind the work. Gated,
+              like everything here.
             </p>
           </div>
           <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.11)]">
@@ -71,7 +71,7 @@ export default function BlogIndexPage() {
                   className="grid gap-6 border-t border-white/10 pt-8 lg:grid-cols-[0.42fr_0.58fr]"
                 >
                   <Link
-                    href={`/blog/${series.slug}/${articles[0]?.slug ?? ""}`}
+                    href={`/blog/${series.slug}`}
                     className="group block overflow-hidden border border-white/12 bg-white/[0.035] transition-colors hover:border-[var(--signal)]"
                   >
                     <div className="overflow-hidden">
@@ -100,6 +100,14 @@ export default function BlogIndexPage() {
                       <p className="mt-4 border-l-2 border-white/15 pl-4 font-mono text-xs italic leading-5 text-[var(--amber)]">
                         “{series.signature}”
                       </p>
+                      <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
+                        Open shelf
+                        <ArrowRight
+                          size={14}
+                          aria-hidden="true"
+                          className="transition-transform group-hover:translate-x-1"
+                        />
+                      </span>
                     </div>
                   </Link>
 
@@ -108,8 +116,19 @@ export default function BlogIndexPage() {
                       <Link
                         key={article.slug}
                         href={`/blog/${series.slug}/${article.slug}`}
-                        className="group flex min-h-32 flex-col border border-white/12 bg-white/[0.035] p-4 transition-colors hover:border-[var(--signal)]"
+                        className="group flex min-h-32 flex-col overflow-hidden border border-white/12 bg-white/[0.035] transition-colors hover:border-[var(--signal)]"
                       >
+                        {series.slug === "reference" ? (
+                          <Image
+                            src={article.image}
+                            alt={article.imageAlt}
+                            width={900}
+                            height={506}
+                            unoptimized
+                            className="aspect-[16/7] h-auto w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-[1.025]"
+                          />
+                        ) : null}
+                        <span className="flex flex-1 flex-col p-4">
                         <span className="flex items-center justify-between gap-3 font-mono text-xs text-white/40">
                           <span>{article.isPlan ? "PLAN" : article.order}</span>
                           <span>{article.minutes} min</span>
@@ -124,6 +143,7 @@ export default function BlogIndexPage() {
                             aria-hidden="true"
                             className="transition-transform group-hover:translate-x-1"
                           />
+                        </span>
                         </span>
                       </Link>
                     ))}

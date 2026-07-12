@@ -78,8 +78,8 @@ export default async function BlogArticlePage({
           </div>
           <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.1)]">
             <Image
-              src={series.image}
-              alt={series.imageAlt}
+              src={article.image}
+              alt={article.imageAlt}
               width={1672}
               height={941}
               priority
@@ -105,6 +105,32 @@ export default async function BlogArticlePage({
             <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
               {series.signature}
             </p>
+            <div className="mt-5 border-t border-white/10 pt-4">
+              <p className="font-mono text-[0.68rem] uppercase text-white/40">
+                Shelf
+              </p>
+              <div className="mt-3 space-y-2">
+                {articles.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/blog/${seriesSlug}/${item.slug}`}
+                    className={`block border-l-2 py-1.5 pl-3 text-xs leading-5 transition-colors ${
+                      item.slug === slug
+                        ? "border-[var(--signal)] text-white"
+                        : "border-white/10 text-[var(--muted)] hover:border-[var(--signal)] hover:text-white"
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href={`/blog/${seriesSlug}`}
+                className="mt-4 inline-flex font-mono text-xs text-[var(--signal)] transition-colors hover:text-white"
+              >
+                Open series shelf
+              </Link>
+            </div>
           </div>
         </aside>
         <div className="min-w-0">

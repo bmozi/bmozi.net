@@ -63,13 +63,46 @@ export const seriesList: Series[] = [
     title: "Reference",
     signature: "Hold me to these. That's what they're for.",
     tagline:
-      "The standing documents behind the writing: the Architect's Charter and the private editorial north star.",
+      "The operating shelf behind the work: charter, curriculum, canon, field guide, field kit, baseline, guild plan, study guide, and prosecution record.",
     image: "/blog/reference-cover.webp",
     imageAlt:
       "Disciplined reference archive with binders, field cards, and technical diagrams",
     accent: "var(--magenta)",
   },
 ];
+
+const articleVisuals: Record<
+  string,
+  Record<string, { image: string; imageAlt: string }>
+> = {
+  reference: {
+    "06-field-kit": {
+      image: "/blog/reference/field-kit.webp",
+      imageAlt:
+        "Technical worktable with blank interview cards, evidence paths, and seam audit materials",
+    },
+    "07-day-zero-baseline": {
+      image: "/blog/reference/day-zero-baseline.webp",
+      imageAlt:
+        "Sealed calibration ledger with probability instruments and evidence lockbox",
+    },
+    "08-build-the-guild": {
+      image: "/blog/reference/build-the-guild.webp",
+      imageAlt:
+        "Architecture guild design clinic table with shared model, decision tokens, and review paths",
+    },
+    "09-study-guide": {
+      image: "/blog/reference/study-guide.webp",
+      imageAlt:
+        "Compact technical study surface with knowledge map, blank cards, and synthesis board",
+    },
+    "10-program-prosecution": {
+      image: "/blog/reference/program-prosecution.webp",
+      imageAlt:
+        "Architecture program model under adversarial inspection with evidence blocks, verdict markers, and correction paths",
+    },
+  },
+};
 
 export type ArticleMeta = {
   slug: string;
@@ -78,6 +111,8 @@ export type ArticleMeta = {
   isPlan: boolean;
   dek: string;
   minutes: number;
+  image: string;
+  imageAlt: string;
 };
 
 function words(markdown: string) {
@@ -108,17 +143,22 @@ function extractDek(markdown: string) {
     ) ?? "";
 
   return candidate
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/^\*|\*$/g, "")
     .replace(/\*\*/g, "")
     .replace(/\s+/g, " ");
 }
 
 export function articleBody(markdown: string) {
-  return markdown
-    .replace(/^# .*(?:\r?\n)+/, "")
-    .replace(/^\*[^*\n]+\*(?:\r?\n)+/, "")
-    .replace(/^(?:\r?\n)*---(?:\r?\n)+/, "")
-    .trimStart();
+  let body = markdown.replace(/^# .*(?:\r?\n)+/, "").trimStart();
+  const [firstLine = "", ...rest] = body.split(/\r?\n/);
+  const trimmedFirstLine = firstLine.trim();
+
+  if (trimmedFirstLine.startsWith("*") && trimmedFirstLine.endsWith("*")) {
+    body = rest.join("\n").trimStart();
+  }
+
+  return body.replace(/^---(?:\r?\n)+/, "").trimStart();
 }
 
 function seriesDir(seriesSlug: string) {
@@ -132,6 +172,7 @@ export function getSeries(slug: string): Series | undefined {
 export function getArticles(seriesSlug: string): ArticleMeta[] {
   const dir = seriesDir(seriesSlug);
   if (!fs.existsSync(dir)) return [];
+  const series = getSeries(seriesSlug);
 
   return fs
     .readdirSync(dir)
@@ -141,6 +182,7 @@ export function getArticles(seriesSlug: string): ArticleMeta[] {
       const raw = fs.readFileSync(path.join(dir, file), "utf8");
       const heading = raw.split("\n").find((l) => l.startsWith("# "));
       const slug = file.replace(/\.md$/, "");
+      const visual = articleVisuals[seriesSlug]?.[slug];
       return {
         slug,
         title: heading ? heading.replace(/^#\s+/, "") : slug,
@@ -148,6 +190,8 @@ export function getArticles(seriesSlug: string): ArticleMeta[] {
         isPlan: /series-plan/.test(slug),
         dek: extractDek(raw),
         minutes: readingMinutes(raw),
+        image: visual?.image ?? series?.image ?? "",
+        imageAlt: visual?.imageAlt ?? series?.imageAlt ?? "",
       };
     });
 }
@@ -158,6 +202,8 @@ export function getArticle(seriesSlug: string, slug: string) {
 
   const markdown = fs.readFileSync(file, "utf8");
   const heading = markdown.split("\n").find((l) => l.startsWith("# "));
+  const series = getSeries(seriesSlug);
+  const visual = articleVisuals[seriesSlug]?.[slug];
 
   return {
     slug,
@@ -166,6 +212,8 @@ export function getArticle(seriesSlug: string, slug: string) {
     body: articleBody(markdown),
     dek: extractDek(markdown),
     minutes: readingMinutes(markdown),
+    image: visual?.image ?? series?.image ?? "",
+    imageAlt: visual?.imageAlt ?? series?.imageAlt ?? "",
   };
 }
 
