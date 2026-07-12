@@ -125,6 +125,41 @@ export const workspaceGroups: WorkspaceGroup[] = [
       },
     ],
   },
+  {
+    id: "practice",
+    title: "Practice Lab",
+    eyebrow: "Role mastery",
+    description:
+      "Executive briefs, stakeholder maps, operating cadence, governance, portfolio choices, cases, rehearsals, and bench-building.",
+    href: "/wgu/practice-lab",
+    items: [
+      {
+        href: "/wgu/practice-lab/executive-briefing-room",
+        label: "Executive Briefing Room",
+        description: "Translate architecture into mission, money, risk, and timing.",
+      },
+      {
+        href: "/wgu/practice-lab/stakeholder-atlas",
+        label: "Stakeholder Atlas",
+        description: "Map currencies, fears, trust moves, and influence paths.",
+      },
+      {
+        href: "/wgu/practice-lab/architects-operating-system",
+        label: "Architect's Operating System",
+        description: "Run the week, decision journal, prediction log, and feedback loops.",
+      },
+      {
+        href: "/wgu/practice-lab/governance-without-tollbooths",
+        label: "Governance Without Tollbooths",
+        description: "Clarify decision rights without turning architecture into a gate.",
+      },
+      {
+        href: "/wgu/practice-lab/influence-rehearsals",
+        label: "Influence Rehearsals",
+        description: "Practice the rooms before they happen.",
+      },
+    ],
+  },
 ];
 
 export const evidenceLinks: WorkspaceItem[] = [

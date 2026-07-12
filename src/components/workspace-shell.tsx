@@ -33,6 +33,7 @@ const groupIcons = {
   architecture: FlaskConical,
   writing: BookOpenText,
   reference: FileStack,
+  practice: BriefcaseBusiness,
 };
 
 function isExcluded(pathname: string) {

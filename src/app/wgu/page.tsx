@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookOpenText,
   Braces,
+  BriefcaseBusiness,
   BrainCircuit,
   Calculator,
   CalendarClock,
@@ -103,6 +104,13 @@ const areas = [
     label: "First 90 Days",
     title: "The listen-first plan, on the calendar",
     text: "Listen & Diagnose, Frame & Align, Prove & Sequence — anchored to real dates from July 20, 2026, with success criteria and student-centered metrics.",
+  },
+  {
+    href: "/wgu/practice-lab",
+    icon: BriefcaseBusiness,
+    label: "Practice Lab",
+    title: "The role-mastery rehearsal floor",
+    text: "Executive briefs, stakeholder maps, operating cadence, governance without tollbooths, portfolio choices, cases, influence rehearsals, and bench-building.",
   },
   {
     href: "/case-studies/wgu-unified-student-object",
@@ -355,7 +363,7 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Twenty-five connected areas, one line of reasoning.
+                Twenty-six connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">

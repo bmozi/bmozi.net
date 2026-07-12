@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   ArrowRight,
   BookOpenText,
+  BriefcaseBusiness,
   FileStack,
   FlaskConical,
   LayoutDashboard,
@@ -28,6 +29,7 @@ const groupIcons = {
   architecture: FlaskConical,
   writing: BookOpenText,
   reference: FileStack,
+  practice: BriefcaseBusiness,
 };
 
 const fastLanes = [
@@ -45,6 +47,11 @@ const fastLanes = [
     href: "/wgu/architecture-v2",
     label: "Inspect the architecture",
     text: "Review the target-state diagram and decision set.",
+  },
+  {
+    href: "/wgu/practice-lab",
+    label: "Practice the role",
+    text: "Rehearse briefs, stakeholders, governance, and influence.",
   },
 ];
 
@@ -70,7 +77,7 @@ export default function WorkspacePage() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {fastLanes.map((lane) => (
                 <Link
                   key={lane.href}
@@ -128,16 +135,17 @@ export default function WorkspacePage() {
                 Main work areas
               </p>
               <h2 className="mt-3 font-display text-4xl font-black leading-none sm:text-5xl">
-                Three doors, one body of work.
+                Four doors, one body of work.
               </h2>
             </div>
             <p className="max-w-xl leading-7 text-black/65">
               The workspace groups the material by how you use it: build the
-              architecture, shape the writing, or pull from the reference shelf.
+              architecture, shape the writing, pull from the reference shelf,
+              or practice the role.
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
             {workspaceGroups.map((group) => {
               const Icon = groupIcons[group.id as keyof typeof groupIcons];
               return (
