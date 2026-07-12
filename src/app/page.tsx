@@ -51,9 +51,9 @@ const principles = [
 
 const privateLinks = [
   {
-    href: "/access?next=/wgu",
-    label: "WGU architecture hub",
-    text: "Student Continuity Fabric, architecture v2, trust pack, scale math, operating model.",
+    href: "/access?next=/workspace",
+    label: "Architecture lab",
+    text: "Continuity fabric, target architecture, trust pack, scale math, and operating model.",
   },
   {
     href: "/access?next=/blog",
@@ -117,7 +117,7 @@ export default function Home() {
               </a>
             </div>
             <Link
-              href="/access?next=/wgu"
+              href="/access?next=/workspace"
               className="inline-flex h-10 items-center gap-2 border border-white/15 px-3 font-mono text-xs text-white transition-colors hover:border-[var(--signal)] hover:bg-[var(--signal)] hover:text-[var(--ink)] sm:px-4"
             >
               <LockKeyhole size={15} aria-hidden="true" />
@@ -151,7 +151,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/access?next=/wgu"
+                  href="/access?next=/workspace"
                   className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
                 >
                   Enter private workspace
