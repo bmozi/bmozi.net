@@ -114,7 +114,7 @@ export function WorkspaceShell() {
               />
               All work
             </summary>
-            <div className="fixed left-3 right-3 top-44 grid max-h-[68vh] gap-3 overflow-auto border border-white/12 bg-[#0c1118] p-3 shadow-[0_26px_80px_rgba(0,0,0,0.55)] sm:absolute sm:left-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[min(42rem,calc(100vw-1.5rem))] sm:grid-cols-2 sm:overflow-visible">
+            <div className="fixed left-3 right-3 top-44 z-50 grid max-h-[calc(100vh-12rem)] gap-3 overflow-y-auto overscroll-contain border border-white/12 bg-[#0c1118] p-3 shadow-[0_26px_80px_rgba(0,0,0,0.55)] sm:absolute sm:left-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[min(42rem,calc(100vw-1.5rem))] sm:max-h-[calc(100vh-6rem)] sm:grid-cols-2">
               {[...workspaceGroups.flatMap((group) => group.items), ...evidenceLinks].map(
                 (item) => (
                   <Link
