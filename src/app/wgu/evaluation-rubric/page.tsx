@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ClipboardCheck, Download } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
@@ -105,7 +106,18 @@ export default function EvaluationRubricPage() {
               Download whitepaper
             </a>
           </div>
-          <aside className="border border-white/12 bg-white/[0.035] p-6">
+          <aside className="overflow-hidden border border-white/12 bg-white/[0.035]">
+            <Image
+              src="/wgu/visuals/evaluation-evidence-ledger.webp"
+              alt="Abstract evidence ledger and neutral evaluation panels for student continuity scoring"
+              width={1800}
+              height={1013}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="h-auto w-full"
+            />
+            <div className="border-t border-white/10 p-6">
             <p className="font-mono text-xs uppercase text-[var(--amber)]">
               Scoring
             </p>
@@ -123,6 +135,7 @@ export default function EvaluationRubricPage() {
               A credible platform should score 18+ out of 21 for the first
               proof slice before broader AI automation is trusted.
             </p>
+            </div>
           </aside>
         </div>
       </section>
@@ -203,4 +216,3 @@ export default function EvaluationRubricPage() {
     </main>
   );
 }
-

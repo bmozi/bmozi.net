@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, MessageSquareWarning } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
@@ -101,22 +102,36 @@ export default function VoiceOfTheStudentPage() {
       </header>
 
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
-            <MessageSquareWarning size={16} aria-hidden="true" />
-            Voice of the student · Student Obsessed, operationalized
-          </p>
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-            Almost none of the complaints are about the teaching.
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            They are about the system around it: black-hole submissions,
-            ownerless queues, silent state changes, fragmented answers, fragile
-            login. Each pattern below is paraphrased and anonymized from public
-            reviews, named as a failure mode, and answered structurally —
-            because empathy that doesn&apos;t change the architecture is just
-            sympathy.
-          </p>
+        <div className="mx-auto grid max-w-7xl gap-9 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
+              <MessageSquareWarning size={16} aria-hidden="true" />
+              Voice of the student · Student Obsessed, operationalized
+            </p>
+            <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
+              Almost none of the complaints are about the teaching.
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
+              They are about the system around it: black-hole submissions,
+              ownerless queues, silent state changes, fragmented answers, fragile
+              login. Each pattern below is paraphrased and anonymized from public
+              reviews, named as a failure mode, and answered structurally —
+              because empathy that doesn&apos;t change the architecture is just
+              sympathy.
+            </p>
+          </div>
+          <figure className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_120px_rgba(25,214,197,0.12)]">
+            <Image
+              src="/wgu/visuals/student-voice-continuity.webp"
+              alt="Abstract fragmented student support signals converging into one accountable continuity timeline"
+              width={1800}
+              height={1013}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              className="h-auto w-full"
+            />
+          </figure>
         </div>
       </section>
 

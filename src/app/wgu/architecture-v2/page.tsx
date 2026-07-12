@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Network, ShieldCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
@@ -321,59 +322,77 @@ export default function ArchitectureV2Page() {
       </header>
 
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
-            <Network size={16} aria-hidden="true" />
-            Architecture v2 · post-review target
-          </p>
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-            Bolder where it counts. Humbler where the industry paid the
-            tuition.
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            This is the architecture that survives the{" "}
-            <Link
-              href="/wgu/adversarial-review"
-              className="text-[var(--signal)] underline underline-offset-4"
-            >
-              adversarial review
-            </Link>
-            : nine decisions, built from the ground up on documented industry
-            evidence, scoped to the full{" "}
-            <Link
-              href="/wgu/system-boundary"
-              className="text-[var(--signal)] underline underline-offset-4"
-            >
-              system boundary
-            </Link>
-            , and accountable to the{" "}
-            <Link
-              href="/wgu/leadership-principles"
-              className="text-[var(--signal)] underline underline-offset-4"
-            >
-              leadership principles
-            </Link>
-            .
-          </p>
-          <div className="mt-8 border border-[var(--amber)] bg-black/40 p-5">
-            <p className="font-mono text-xs uppercase text-[var(--amber)]">
-              Direction: set · Adoption: sequenced
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div>
+            <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
+              <Network size={16} aria-hidden="true" />
+              Architecture v2 · post-review target
             </p>
-            <p className="mt-3 max-w-4xl text-base leading-7 text-white/90">
-              This is the target architecture. The Days 31–60 working sessions
-              of the{" "}
+            <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
+              Bolder where it counts. Humbler where the industry paid the
+              tuition.
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
+              This is the architecture that survives the{" "}
               <Link
-                href="/wgu/first-90-days"
+                href="/wgu/adversarial-review"
                 className="text-[var(--signal)] underline underline-offset-4"
               >
-                90-day plan
-              </Link>{" "}
-              exist to make the team co-owners and to refine details against
-              current-state findings — not to reopen the direction. It walks
-              into every room with its prosecution attached, because a
-              direction that has already survived the strongest opposing case
-              is how transformation is led: decisively, with receipts.
+                adversarial review
+              </Link>
+              : nine decisions, built from the ground up on documented industry
+              evidence, scoped to the full{" "}
+              <Link
+                href="/wgu/system-boundary"
+                className="text-[var(--signal)] underline underline-offset-4"
+              >
+                system boundary
+              </Link>
+              , and accountable to the{" "}
+              <Link
+                href="/wgu/leadership-principles"
+                className="text-[var(--signal)] underline underline-offset-4"
+              >
+                leadership principles
+              </Link>
+              .
             </p>
+            <div className="mt-8 border border-[var(--amber)] bg-black/40 p-5">
+              <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                Direction: set · Adoption: sequenced
+              </p>
+              <p className="mt-3 max-w-4xl text-base leading-7 text-white/90">
+                This is the target architecture. The Days 31–60 working sessions
+                of the{" "}
+                <Link
+                  href="/wgu/first-90-days"
+                  className="text-[var(--signal)] underline underline-offset-4"
+                >
+                  90-day plan
+                </Link>{" "}
+                exist to make the team co-owners and to refine details against
+                current-state findings — not to reopen the direction. It walks
+                into every room with its prosecution attached, because a
+                direction that has already survived the strongest opposing case
+                is how transformation is led: decisively, with receipts.
+              </p>
+            </div>
+          </div>
+          <div className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_120px_rgba(25,214,197,0.12)]">
+            <Image
+              src="/wgu/visuals/architecture-system-model.webp"
+              alt="Abstract technical model of sovereign systems connected by a governed event backbone and policy layer"
+              width={1800}
+              height={1013}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="h-auto w-full"
+            />
+            <div className="border-t border-white/10 px-4 py-3 font-mono text-[0.68rem] uppercase text-[var(--muted)]">
+              Visual metaphor only. Exact architecture is rendered below as
+              readable page markup.
+            </div>
           </div>
         </div>
       </section>
@@ -661,7 +680,7 @@ export default function ArchitectureV2Page() {
         </div>
       </section>
 
-      <section>
+      <section id="roadmap" className="scroll-mt-20">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>

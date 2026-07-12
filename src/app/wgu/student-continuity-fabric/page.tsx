@@ -142,24 +142,16 @@ export default function StudentContinuityFabricPage() {
               </Link>
             </div>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.12)]">
+          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] shadow-[12px_12px_0_rgba(25,214,197,0.12)]">
             <Image
-              src="/wgu/student-continuity-slice.png"
-              alt="Proof slice showing intake, student status, named owner, SLA timer, escalation, and audit trail"
+              src="/wgu/visuals/student-continuity-fabric-hero.webp"
+              alt="Abstract continuity thread crossing governed institutional systems without gaps"
               width={1800}
-              height={760}
+              height={1013}
               priority
               unoptimized
-              className="hidden h-auto w-full md:block"
-            />
-            <Image
-              src="/wgu/student-continuity-slice-mobile.png"
-              alt="Vertical proof slice showing intake, student status, named owner, SLA timer, escalation, and audit trail"
-              width={760}
-              height={1100}
-              priority
-              unoptimized
-              className="h-auto w-full md:hidden"
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="h-auto w-full"
             />
           </figure>
         </div>
@@ -243,6 +235,17 @@ export default function StudentContinuityFabricPage() {
             The proof is not a deck. It is a document black hole closing in
             front of the room.
           </h2>
+          <figure className="mt-8 overflow-hidden border border-black/10 bg-white p-2 shadow-[10px_10px_0_rgba(12,17,22,0.08)]">
+            <Image
+              src="/wgu/visuals/proof-slice-document-intake.webp"
+              alt="Abstract document intake lifecycle moving through status, owner, timer, escalation, and audit checkpoints"
+              width={1800}
+              height={1013}
+              unoptimized
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+          </figure>
           <div className="mt-8 grid gap-3 md:grid-cols-3">
             {[
               {

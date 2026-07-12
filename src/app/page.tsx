@@ -294,17 +294,29 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="relative z-10 grid gap-3 border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 backdrop-blur-xl sm:p-5">
-              <div className="hidden border border-white/10 bg-black/30 p-4 lg:block">
-                <BrandLockup
-                  markClassName="h-20 w-20"
-                  textClassName="text-[2.35rem]"
+            <aside className="relative z-10 grid gap-3">
+              <div className="group overflow-hidden border border-white/12 bg-[rgba(11,15,19,0.72)] p-2 shadow-[0_30px_140px_rgba(25,214,197,0.13)] backdrop-blur-xl sm:p-3">
+                <Image
+                  src="/wgu/visuals/home-governed-systems-hero.webp"
+                  alt="Abstract governed software architecture with event streams, policy gates, and product interfaces"
+                  width={1800}
+                  height={1013}
+                  priority
+                  unoptimized
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                 />
-                <p className="mt-4 whitespace-nowrap border-t border-white/10 pt-4 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-[var(--muted)]">
-                  Founder-led technical studio
-                </p>
+                <div className="flex items-center justify-between gap-3 border-x border-b border-white/10 bg-black/35 px-3 py-3 sm:px-4">
+                  <BrandLockup
+                    markClassName="h-9 w-9"
+                    textClassName="text-lg"
+                  />
+                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                    Governed systems studio
+                  </p>
+                </div>
               </div>
-              <div className="grid auto-rows-fr grid-cols-2 gap-2 sm:gap-4">
+              <div className="grid auto-rows-fr grid-cols-2 gap-2 border border-white/12 bg-[rgba(11,15,19,0.62)] p-2 backdrop-blur-xl sm:gap-4 sm:p-4">
                 {proofPoints.map(([value, label], index) => (
                   <div
                     key={label}

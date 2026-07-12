@@ -5,355 +5,239 @@
 
 const ink = "#0a0d11";
 const paper = "#e8eef2";
-const soft = "#bac6ce";
 const signal = "#19d6c5";
 const magenta = "#ff4fd8";
 const amber = "#f2b84b";
-const boxFill = "rgba(255,255,255,0.04)";
-const boxStroke = "rgba(255,255,255,0.18)";
-
-type BoxProps = {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-  title: string;
-  lines?: string[];
-  accent?: string;
-  dashed?: boolean;
-};
-
-function Box({ x, y, w, h, title, lines = [], accent = signal, dashed }: BoxProps) {
-  return (
-    <g>
-      <rect
-        x={x}
-        y={y}
-        width={w}
-        height={h}
-        fill={boxFill}
-        stroke={boxStroke}
-        strokeWidth={1}
-        strokeDasharray={dashed ? "5 4" : undefined}
-      />
-      <rect x={x} y={y} width={4} height={h} fill={accent} opacity={0.9} />
-      <text
-        x={x + 14}
-        y={y + 22}
-        fill={paper}
-        fontSize={14}
-        fontWeight={700}
-        fontFamily="var(--font-space-grotesk), sans-serif"
-      >
-        {title}
-      </text>
-      {lines.map((line, i) => (
-        <text
-          key={line}
-          x={x + 14}
-          y={y + 42 + i * 16}
-          fill={soft}
-          fontSize={11.5}
-          fontFamily="var(--font-ibm-plex-mono), monospace"
-        >
-          {line}
-        </text>
-      ))}
-    </g>
-  );
-}
-
-function Band({
-  x,
-  y,
-  w,
-  h,
-  title,
-  subtitle,
-  accent,
-}: {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-  title: string;
-  subtitle: string;
-  accent: string;
-}) {
-  return (
-    <g>
-      <rect
-        x={x}
-        y={y}
-        width={w}
-        height={h}
-        fill={boxFill}
-        stroke={accent}
-        strokeWidth={1.2}
-      />
-      <text
-        x={x + w / 2}
-        y={y + 24}
-        fill={accent}
-        fontSize={14}
-        fontWeight={700}
-        textAnchor="middle"
-        fontFamily="var(--font-space-grotesk), sans-serif"
-      >
-        {title}
-      </text>
-      <text
-        x={x + w / 2}
-        y={y + 44}
-        fill={soft}
-        fontSize={11.5}
-        textAnchor="middle"
-        fontFamily="var(--font-ibm-plex-mono), monospace"
-      >
-        {subtitle}
-      </text>
-    </g>
-  );
-}
-
-function Arrow({
-  x1,
-  y1,
-  x2,
-  y2,
-  color = soft,
-  dashed,
-  label,
-  labelDx = 8,
-  labelDy = -6,
-}: {
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
-  color?: string;
-  dashed?: boolean;
-  label?: string;
-  labelDx?: number;
-  labelDy?: number;
-}) {
-  return (
-    <g>
-      <line
-        x1={x1}
-        y1={y1}
-        x2={x2}
-        y2={y2}
-        stroke={color}
-        strokeWidth={1.4}
-        strokeDasharray={dashed ? "6 4" : undefined}
-        markerEnd="url(#v2arrow)"
-      />
-      {label ? (
-        <text
-          x={(x1 + x2) / 2 + labelDx}
-          y={(y1 + y2) / 2 + labelDy}
-          fill={color}
-          fontSize={10.5}
-          fontFamily="var(--font-ibm-plex-mono), monospace"
-        >
-          {label}
-        </text>
-      ) : null}
-    </g>
-  );
-}
 
 export function V2TargetDiagram() {
+  const experiences = [
+    ["Student App", "journey status · submissions", "live SoR reads"],
+    ["Mentor Workspace", "cohort momentum", "commitments visible"],
+    ["Instructor View", "blockers", "readiness"],
+    ["Ops Console", "cases", "owners · SLA timers"],
+    ["Front Door", "resilient SSO", "login SLO · RUM"],
+  ];
+
+  const records = [
+    ["SIS", "legal student record", "enrollment · records", "outbox / CDC"],
+    ["CRM", "engagement record", "interactions · cases", "outbox / CDC"],
+    ["LMS / Courseware", "learning delivery", "Caliper-shaped events", "outbox / CDC"],
+    ["Aid & Finance", "aid packaging · billing", "aid.status.changed", "outbox / CDC"],
+    [
+      "Competency Ledger",
+      "the one event-sourced context",
+      "attempts · masteries · interventions",
+      "append-only · PII by reference",
+    ],
+  ];
+
+  const products = [
+    [
+      "Student Timeline Product",
+      "Flagship governed projection of the whole journey. Role-scoped views expose lifecycle events, owners, SLA timers, escalation, and context for humans and agents.",
+    ],
+    [
+      "Domain Data Products",
+      "Enrollment, aid, learning, and support products with explicit contracts, named owners, SLAs, and federation only where regulation demands it.",
+    ],
+    [
+      "Lakehouse",
+      "Analytical system of record for lineage, efficacy research, accreditation, and grounded retrieval over governed data.",
+    ],
+  ];
+
+  const Card = ({
+    title,
+    lines,
+    accent = "border-l-[var(--signal)]",
+  }: {
+    title: string;
+    lines: string[];
+    accent?: string;
+  }) => (
+    <article
+      className={`min-h-28 border border-white/12 bg-white/[0.035] p-4 ${accent}`}
+    >
+      <h3 className="font-display text-lg font-black leading-tight text-white">
+        {title}
+      </h3>
+      <div className="mt-3 space-y-1 font-mono text-[0.72rem] leading-5 text-[var(--soft)]">
+        {lines.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
+      </div>
+    </article>
+  );
+
   return (
-    <svg
-      viewBox="0 0 1400 1010"
+    <div
       role="img"
       aria-label="Architecture v2 target diagram: experiences and front door on top; sovereign systems of record publishing intent-shaped events via outbox and CDC onto an event backbone that is circulation, not truth; one event-sourced competency ledger with PII by reference; the Student Timeline as a governed data product with role-scoped views; the lakehouse as analytical truth; a single governed agent gateway; and a thin identity and policy layer spanning everything, with read-your-writes paths for anything a student acts on."
-      className="h-auto w-full"
+      className="space-y-5 bg-[var(--ink)] p-4 sm:p-6 lg:p-8"
     >
-      <defs>
-        <marker
-          id="v2arrow"
-          viewBox="0 0 10 10"
-          refX="9"
-          refY="5"
-          markerWidth="7"
-          markerHeight="7"
-          orient="auto-start-reverse"
-        >
-          <path d="M 0 0 L 10 5 L 0 10 z" fill={soft} />
-        </marker>
-      </defs>
+      <div className="flex flex-wrap gap-2 font-mono text-[0.68rem] uppercase text-white/55">
+        <span className="border border-[var(--amber)]/45 px-2 py-1 text-[var(--amber)]">
+          Amber = authority / command paths
+        </span>
+        <span className="border border-[var(--signal)]/45 px-2 py-1 text-[var(--signal)]">
+          Teal = projected context
+        </span>
+        <span className="border border-[var(--magenta)]/45 px-2 py-1 text-[var(--magenta)]">
+          Magenta = policy / agent boundary
+        </span>
+      </div>
 
-      <rect x={0} y={0} width={1400} height={1010} fill={ink} />
+      <section>
+        <p className="mb-3 font-mono text-xs uppercase text-[var(--amber)]">
+          Experiences · read-your-writes for anything a student acts on
+        </p>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+          {experiences.map(([title, ...lines], index) => (
+            <Card
+              key={title}
+              title={title}
+              lines={lines}
+              accent={
+                index === experiences.length - 1
+                  ? "border-l-[var(--magenta)]"
+                  : "border-l-[var(--signal)]"
+              }
+            />
+          ))}
+        </div>
+      </section>
 
-      {/* Row A: experiences + front door */}
-      <text x={24} y={30} fill={amber} fontSize={12} fontFamily="var(--font-ibm-plex-mono), monospace">
-        EXPERIENCES · READ-YOUR-WRITES FOR ANYTHING A STUDENT ACTS ON
-      </text>
-      <Box x={24} y={44} w={250} h={78} title="Student App" lines={["journey status · submissions", "acts on live SoR state"]} accent={signal} />
-      <Box x={290} y={44} w={250} h={78} title="Mentor Workspace" lines={["cohort momentum · context", "commitments visible"]} accent={signal} />
-      <Box x={556} y={44} w={250} h={78} title="Instructor View" lines={["blockers · readiness"]} accent={signal} />
-      <Box x={822} y={44} w={250} h={78} title="Ops Console" lines={["cases · owners · SLA timers"]} accent={signal} />
-      <Box
-        x={1088}
-        y={44}
-        w={288}
-        h={78}
-        title="Front Door"
-        lines={["resilient SSO · login SLO", "RUM · graceful degradation"]}
-        accent={magenta}
-      />
+      <div className="grid gap-3 lg:grid-cols-[1fr_0.82fr]">
+        <div className="border border-[var(--amber)]/55 bg-[rgba(242,184,75,0.08)] p-4">
+          <p className="font-display text-xl font-black text-white">
+            Student actions read live system-of-record state.
+          </p>
+          <p className="mt-2 text-sm leading-6 text-[var(--soft)]">
+            Projections provide journey context, but submissions, status
+            changes, aid movement, and consequential actions read through to the
+            sovereign source before the student or agent acts.
+          </p>
+        </div>
+        <div className="border border-[var(--signal)]/55 bg-[rgba(25,214,197,0.08)] p-4">
+          <p className="font-display text-xl font-black text-white">
+            Timeline views carry context, not command authority.
+          </p>
+          <p className="mt-2 text-sm leading-6 text-[var(--soft)]">
+            The flagship product makes lifecycle, owner, SLA, and escalation
+            state visible without becoming a shadow record.
+          </p>
+        </div>
+      </div>
 
-      {/* Row B: systems of record + competency ledger */}
-      <text x={24} y={190} fill={amber} fontSize={12} fontFamily="var(--font-ibm-plex-mono), monospace">
-        SOVEREIGN SYSTEMS OF RECORD · CRUD + HISTORY · OUTBOX/CDC AT EVERY SEAM
-      </text>
-      <Box x={24} y={204} w={236} h={96} title="SIS" lines={["legal student record", "enrollment · records", "→ outbox / CDC"]} accent={amber} />
-      <Box x={276} y={204} w={236} h={96} title="CRM" lines={["engagement record", "interactions · cases", "→ outbox / CDC"]} accent={amber} />
-      <Box x={528} y={204} w={236} h={96} title="LMS / Courseware" lines={["learning delivery", "Caliper-shaped events", "→ outbox / CDC"]} accent={amber} />
-      <Box x={780} y={204} w={236} h={96} title="Aid & Finance" lines={["aid packaging · billing", "aid.status.changed", "→ outbox / CDC"]} accent={amber} />
-      <Box
-        x={1064}
-        y={204}
-        w={312}
-        h={96}
-        title="Competency Ledger"
-        lines={["the ONE event-sourced context", "attempts · masteries · interventions", "append-only · PII by reference"]}
-        accent={magenta}
-      />
+      <section>
+        <p className="mb-3 font-mono text-xs uppercase text-[var(--amber)]">
+          Sovereign systems of record · CRUD + history · outbox/CDC at every seam
+        </p>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+          {records.map(([title, ...lines], index) => (
+            <Card
+              key={title}
+              title={title}
+              lines={lines}
+              accent={
+                index === records.length - 1
+                  ? "border-l-[var(--magenta)]"
+                  : "border-l-[var(--amber)]"
+              }
+            />
+          ))}
+        </div>
+      </section>
 
-      {/* arrows SoR -> bus */}
-      <Arrow x1={142} y1={300} x2={142} y2={356} />
-      <Arrow x1={394} y1={300} x2={394} y2={356} />
-      <Arrow x1={646} y1={300} x2={646} y2={356} />
-      <Arrow x1={898} y1={300} x2={898} y2={356} />
-      <Arrow x1={1220} y1={300} x2={1220} y2={356} label="ledger events" labelDx={-150} labelDy={30} />
+      <section className="border border-[var(--signal)] bg-[rgba(25,214,197,0.06)] p-5 text-center">
+        <p className="font-display text-2xl font-black text-[var(--signal)]">
+          Event Backbone — circulation, not truth
+        </p>
+        <p className="mx-auto mt-2 max-w-5xl font-mono text-xs leading-6 text-[var(--soft)]">
+          intent-shaped domain events · document.received · case.assigned ·
+          startdate.changed · competency.mastered · replayable transport ·
+          rebuildable from sources
+        </p>
+      </section>
 
-      {/* Row C: event backbone */}
-      <Band
-        x={24}
-        y={358}
-        w={1352}
-        h={58}
-        title="Event Backbone — circulation, not truth"
-        subtitle="intent-shaped domain events · document.received · case.assigned · startdate.changed · competency.mastered · replayable transport, rebuildable from sources"
-        accent={signal}
-      />
+      <section>
+        <p className="mb-3 font-mono text-xs uppercase text-[var(--amber)]">
+          Governed data products · contracts · named owners · one central platform
+        </p>
+        <div className="grid gap-3 lg:grid-cols-[1.15fr_0.9fr_0.9fr]">
+          {products.map(([title, text]) => (
+            <article
+              key={title}
+              className="border border-white/12 border-l-[var(--signal)] bg-white/[0.035] p-5"
+            >
+              <h3 className="font-display text-xl font-black leading-tight text-white">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                {text}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      {/* arrows bus -> products */}
-      <Arrow x1={300} y1={416} x2={300} y2={470} />
-      <Arrow x1={800} y1={416} x2={800} y2={470} />
-      <Arrow x1={1180} y1={416} x2={1180} y2={470} />
+      <section className="grid gap-3 lg:grid-cols-[0.75fr_1.5fr_0.75fr] lg:items-stretch">
+        <div className="border border-[var(--signal)]/45 bg-[rgba(25,214,197,0.06)] p-4">
+          <p className="font-mono text-xs uppercase text-[var(--signal)]">
+            governed context
+          </p>
+          <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+            Timeline and product context is passed down to tools as bounded
+            evidence, never as blanket authority.
+          </p>
+        </div>
+        <div className="border border-[var(--magenta)] bg-[rgba(255,79,216,0.06)] p-5">
+          <h3 className="font-display text-2xl font-black text-white">
+            Governed Agent Gateway — one front door for AI action
+          </h3>
+          <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+            Scoped tools, never raw credentials. Per-action authorization,
+            delegated authority with purpose, human review on consequential or
+            irreversible actions, and full audit for who acted, on whose
+            authority, against which data, why, and with what result.
+          </p>
+          <p className="mt-4 border-t border-white/10 pt-4 font-mono text-xs text-[var(--amber)]">
+            Commands route back to the system of record. They never write to
+            the log or the timeline as if either were truth.
+          </p>
+        </div>
+        <div className="border border-[var(--signal)]/45 bg-[rgba(25,214,197,0.06)] p-4">
+          <p className="font-mono text-xs uppercase text-[var(--signal)]">
+            grounded retrieval
+          </p>
+          <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+            Analytical claims ground in governed lakehouse data with lineage and
+            purpose-aware access controls.
+          </p>
+        </div>
+      </section>
 
-      {/* Row D: products */}
-      <text x={24} y={462} fill={amber} fontSize={12} fontFamily="var(--font-ibm-plex-mono), monospace">
-        GOVERNED DATA PRODUCTS · CONTRACTS · NAMED OWNERS · ONE CENTRAL PLATFORM
-      </text>
-      <Box
-        x={24}
-        y={472}
-        w={552}
-        h={118}
-        title="Student Timeline Product  ★ flagship"
-        lines={[
-          "near-real-time projection of the whole journey",
-          "role-scoped views: student · mentor · instructor · ops",
-          "lifecycle events first-class: owner · SLA · escalation",
-          "context for humans and agents — never the command path",
-        ]}
-        accent={signal}
-      />
-      <Box
-        x={600}
-        y={472}
-        w={368}
-        h={118}
-        title="Domain Data Products"
-        lines={[
-          "enrollment · aid · learning · support",
-          "explicit contracts + SLAs",
-          "federated governance only where",
-          "regulation demands it",
-        ]}
-        accent={signal}
-      />
-      <Box
-        x={992}
-        y={472}
-        w={384}
-        h={118}
-        title="Lakehouse"
-        lines={[
-          "analytical system of record",
-          "open table format · lineage",
-          "efficacy research · accreditation",
-          "grounding for AI over governed data",
-        ]}
-        accent={signal}
-      />
+      <section className="border border-[var(--magenta)] bg-[rgba(255,79,216,0.055)] p-5 text-center">
+        <p className="font-display text-xl font-black text-[var(--magenta)]">
+          Thin Identity & Policy Layer — governs the seams, and nothing else
+        </p>
+        <p className="mx-auto mt-2 max-w-5xl font-mono text-xs leading-6 text-[var(--soft)]">
+          managed workload identity · one policy engine · central authoring ·
+          local enforcement · one correlation and purpose ID end to end ·
+          immutable audit
+        </p>
+      </section>
 
-      {/* read paths from experiences */}
-      <Arrow x1={149} y1={122} x2={149} y2={200} color={amber} label="read-your-writes" labelDx={10} labelDy={4} />
-      <Arrow x1={415} y1={122} x2={300} y2={470} color={signal} dashed label="timeline views" labelDx={-114} labelDy={-150} />
-
-      {/* Row E: agent gateway */}
-      <Arrow x1={300} y1={590} x2={300} y2={648} dashed color={signal} label="governed context" labelDx={10} labelDy={4} />
-      <Arrow x1={1180} y1={590} x2={1180} y2={648} dashed color={signal} label="grounded retrieval" labelDx={10} labelDy={4} />
-
-      <Box
-        x={24}
-        y={650}
-        w={1352}
-        h={108}
-        title="Governed Agent Gateway — the ONE front door for AI action"
-        lines={[
-          "scoped tools, never raw credentials · per-action authorization · on-behalf-of delegation with purpose · human-in-the-loop on anything consequential or irreversible",
-          "agents treated as prompt-injectable by default: capability scoping · blast-radius limits · private data, untrusted input and exfiltration paths kept structurally apart",
-          "every action audited: who · on whose authority · to which data · why · result        →  a second production agent is what earns the mesh",
-        ]}
-        accent={magenta}
-      />
-
-      {/* command path from gateway back to SoRs */}
-      <Arrow x1={700} y1={650} x2={700} y2={598} color={amber} />
-      <Arrow x1={700} y1={598} x2={700} y2={420} color={amber} />
-      <Arrow x1={700} y1={420} x2={700} y2={304} color={amber} label="commands → SoR (never the log)" labelDx={12} labelDy={-88} />
-
-      {/* Row F: identity & policy */}
-      <Band
-        x={24}
-        y={790}
-        w={1352}
-        h={58}
-        title="Thin Identity & Policy Layer — governs the seams, and nothing else"
-        subtitle="managed workload identity · one policy engine, authored centrally, enforced locally · one correlation + purpose ID end to end · immutable audit"
-        accent={magenta}
-      />
-
-      {/* Row G: SLO strip */}
-      <Band
-        x={24}
-        y={872}
-        w={1352}
-        h={58}
-        title="Reliability is architecture"
-        subtitle="login-success SLO · availability + latency error budgets · real-user monitoring · graceful degradation — reviewed like a Key Result"
-        accent={amber}
-      />
-
-      <text
-        x={24}
-        y={972}
-        fill="rgba(255,255,255,0.45)"
-        fontSize={11}
-        fontFamily="var(--font-ibm-plex-mono), monospace"
-      >
-        solid amber = authoritative / command paths · dashed teal = projected context paths · truth lives in the systems of record (operational) and the
-        lakehouse (analytical); the backbone and timeline are rebuildable
-      </text>
-    </svg>
+      <section className="border border-[var(--amber)] bg-[rgba(242,184,75,0.055)] p-5 text-center">
+        <p className="font-display text-xl font-black text-[var(--amber)]">
+          Reliability is architecture
+        </p>
+        <p className="mx-auto mt-2 max-w-5xl font-mono text-xs leading-6 text-[var(--soft)]">
+          login-success SLO · availability and latency error budgets · real-user
+          monitoring · graceful degradation · reviewed like a Key Result
+        </p>
+      </section>
+    </div>
   );
 }
 

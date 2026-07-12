@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -255,39 +256,62 @@ export default function WguHubPage() {
       </header>
 
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-          <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
-            <Scale size={16} aria-hidden="true" />
-            Named invention · protected working hub
-          </p>
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.6rem,7vw,5.6rem)] font-black leading-[0.92] text-white">
-            The Student Continuity Fabric: make it impossible for students to
-            disappear between systems.
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            This hub now packages the work as a named invention with proof: a
-            governed event, identity, timeline, and action layer for online
-            institutions. The deeper architecture still lives here, but the
-            front door is the student pain it solves — black holes, silent
-            changes, ownerless queues, fragmented truth, unreliable access, and
-            unsafe AI action.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/wgu/student-continuity-fabric"
-              className="inline-flex h-12 items-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
-            >
-              Open the invention
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-            <a
-              href="/wgu/student-continuity-fabric-reference-architecture.pdf"
-              className="inline-flex h-12 items-center gap-2 border border-white/20 px-5 font-mono text-sm font-bold text-white transition-colors hover:border-[var(--signal)] hover:text-[var(--signal)]"
-              download
-            >
-              <Download size={16} aria-hidden="true" />
-              Download whitepaper
-            </a>
+        <div className="mx-auto grid max-w-7xl gap-9 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
+              <Scale size={16} aria-hidden="true" />
+              Named invention · protected working hub
+            </p>
+            <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.6rem,7vw,5.6rem)] font-black leading-[0.92] text-white">
+              The Student Continuity Fabric: make it impossible for students to
+              disappear between systems.
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
+              This hub now packages the work as a named invention with proof: a
+              governed event, identity, timeline, and action layer for online
+              institutions. The deeper architecture still lives here, but the
+              front door is the student pain it solves — black holes, silent
+              changes, ownerless queues, fragmented truth, unreliable access, and
+              unsafe AI action.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/wgu/student-continuity-fabric"
+                className="inline-flex h-12 items-center gap-2 bg-[var(--signal)] px-5 font-mono text-sm font-bold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+              >
+                Open the invention
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+              <a
+                href="/wgu/student-continuity-fabric-reference-architecture.pdf"
+                className="inline-flex h-12 items-center gap-2 border border-white/20 px-5 font-mono text-sm font-bold text-white transition-colors hover:border-[var(--signal)] hover:text-[var(--signal)]"
+                download
+              >
+                <Download size={16} aria-hidden="true" />
+                Download whitepaper
+              </a>
+            </div>
+          </div>
+          <div className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_140px_rgba(25,214,197,0.13)]">
+            <Image
+              src="/wgu/visuals/student-continuity-fabric-hero.webp"
+              alt="Abstract student continuity thread crossing governed institutional systems without gaps"
+              width={1800}
+              height={1013}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="h-auto w-full"
+            />
+            <div className="grid grid-cols-3 border-t border-white/10 font-mono text-[0.62rem] uppercase text-[var(--muted)]">
+              <span className="border-r border-white/10 px-3 py-3">
+                no black holes
+              </span>
+              <span className="border-r border-white/10 px-3 py-3">
+                named owners
+              </span>
+              <span className="px-3 py-3">audited action</span>
+            </div>
           </div>
         </div>
       </section>
@@ -362,20 +386,32 @@ export default function WguHubPage() {
                 </span>
               </Link>
             ))}
-            <div className="flex min-h-56 flex-col border border-dashed border-white/20 bg-transparent p-5">
-              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--soft)]">
+            <Link
+              href="/wgu/architecture-v2#roadmap"
+              className="group flex min-h-56 flex-col border border-white/12 bg-white/[0.035] p-5 transition-colors hover:border-[var(--signal)]"
+            >
+              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--amber)]">
                 <FlaskConical size={15} aria-hidden="true" />
-                Next
+                Living Roadmap
               </p>
-              <h3 className="mt-4 font-display text-2xl font-black leading-tight text-white/70">
-                Living roadmap
+              <h3 className="mt-4 font-display text-2xl font-black leading-tight text-white">
+                Proven in slices, principled at every step
               </h3>
               <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
-                ADRs, lighthouse-slice results, and domain deep-dives land here
-                as the thinking matures. This hub is append-only in spirit:
-                nothing is deleted, everything is revised in the open.
+                The dated slices with their Leadership Principles, Slice 1
+                drawn as a sequence, and ADR-001 already decided. Append-only
+                in spirit: nothing deleted, everything revised in the open —
+                slice results land here as they ship.
               </p>
-            </div>
+              <span className="mt-auto inline-flex items-center gap-2 pt-4 font-mono text-xs text-[var(--signal)]">
+                Open
+                <ArrowRight
+                  size={14}
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
