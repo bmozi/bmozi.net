@@ -8,6 +8,7 @@ import {
   Clock3,
   FileText,
   Fingerprint,
+  GaugeCircle,
   GitBranch,
   LockKeyhole,
   Route,
@@ -48,6 +49,11 @@ const components = [
     icon: ShieldCheck,
     title: "Competency ledger",
     text: "The event-sourced academic-progress substrate: durable enough for accreditation and precise enough for personalization.",
+  },
+  {
+    icon: GaugeCircle,
+    title: "Decision layer",
+    text: "Experimentation, progressive rollout, dynamic configuration, and impact measurement treated as one governed institutional learning loop.",
   },
   {
     icon: LockKeyhole,
@@ -126,6 +132,11 @@ export default function StudentContinuityFabricPage() {
               not to replace CRM, SIS, data, or support platforms. Its job is
               to govern the seams where students lose trust.
             </p>
+            <p className="mt-5 max-w-3xl border-l-2 border-[var(--signal)] pl-4 font-mono text-sm leading-7 text-[var(--signal)]">
+              Program banner: ship with speed, safety, and evidence. Speed
+              comes from progressive rollout, safety from governed gates, and
+              evidence from replayable measurement.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/wgu/whitepaper"
@@ -144,8 +155,8 @@ export default function StudentContinuityFabricPage() {
           </div>
           <figure className="overflow-hidden border border-white/12 bg-white/[0.03] shadow-[12px_12px_0_rgba(25,214,197,0.12)]">
             <Image
-              src="/wgu/visuals/student-continuity-fabric-hero.webp"
-              alt="Abstract continuity thread crossing governed institutional systems without gaps"
+              src="/wgu/visuals/scf-speed-safety-evidence.webp"
+              alt="Continuous student journey thread passing through rollout lanes, policy gates, and evidence ledgers"
               width={1800}
               height={1013}
               priority
@@ -193,7 +204,7 @@ export default function StudentContinuityFabricPage() {
                 The components
               </p>
               <h2 className="mt-4 font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Six mechanisms, one continuity promise.
+                Seven mechanisms, one continuity promise.
               </h2>
               <div className="mt-6 flex flex-wrap gap-2">
                 {promises.map((promise) => (

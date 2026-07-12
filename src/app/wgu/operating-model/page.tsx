@@ -60,6 +60,12 @@ const capabilities = [
     posture: "Build thin, run well",
   },
   {
+    tier: "The decision layer",
+    caps: "Experimentation with holdouts · Progressive rollout (slices, cohorts) · Dynamic configuration & action tiers · Impact measurement with paired outcome + guardrail metrics",
+    home: "One named owner — the institutional learning loop, productized (spans decisioning service, backbone, lakehouse)",
+    posture: "Build the loop, buy the plumbing — this is how we ship with speed, safety, and evidence",
+  },
+  {
     tier: "Governance & trust",
     caps: "Policy-as-code · Consent & FERPA purpose · Audit · SLOs · AI guardrails",
     home: "Identity & policy layer, enforced locally everywhere",

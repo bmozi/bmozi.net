@@ -40,8 +40,8 @@ const referenceGroups = [
   {
     title: "Evidence & Prosecution",
     description:
-      "The record of hostile review, verdicts, fixes, and the habit of revising in the open.",
-    slugs: ["10-program-prosecution"],
+      "The record of hostile review, verdicts, fixes, decision discipline, and the habit of revising in the open.",
+    slugs: ["10-program-prosecution", "11-the-decision-layer"],
   },
 ];
 

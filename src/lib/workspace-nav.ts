@@ -117,6 +117,12 @@ export const workspaceGroups: WorkspaceGroup[] = [
         label: "Program prosecution",
         description: "Adversarial review record and correction path.",
       },
+      {
+        href: "/blog/reference/11-the-decision-layer",
+        label: "Decision layer",
+        description:
+          "Experimentation, rollout, configuration, and impact measurement as one governed learning loop.",
+      },
     ],
   },
 ];

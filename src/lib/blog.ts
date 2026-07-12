@@ -101,6 +101,11 @@ const articleVisuals: Record<
       imageAlt:
         "Architecture program model under adversarial inspection with evidence blocks, verdict markers, and correction paths",
     },
+    "11-the-decision-layer": {
+      image: "/blog/reference/decision-layer.webp",
+      imageAlt:
+        "Governed decision layer with rollout lanes, policy gates, continuity thread, and evidence signals",
+    },
   },
 };
 

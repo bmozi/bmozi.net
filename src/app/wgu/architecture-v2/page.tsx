@@ -326,11 +326,11 @@ export default function ArchitectureV2Page() {
           <div>
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <Network size={16} aria-hidden="true" />
-              Architecture v2 · post-review target
+              Architecture v2 · post-review target · bolder where it counts,
+              humbler where the industry paid the tuition
             </p>
             <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-              Bolder where it counts. Humbler where the industry paid the
-              tuition.
+              Ship with speed, safety, and evidence.
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
               This is the architecture that survives the{" "}

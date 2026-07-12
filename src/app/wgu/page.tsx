@@ -274,6 +274,11 @@ export default function WguHubPage() {
               changes, ownerless queues, fragmented truth, unreliable access, and
               unsafe AI action.
             </p>
+            <p className="mt-5 max-w-3xl border-l-2 border-[var(--signal)] pl-4 font-mono text-sm leading-7 text-[var(--signal)]">
+              What: the Student Continuity Fabric. How: ship with speed,
+              safety, and evidence. Why: pathways to opportunity — no student
+              lost in a seam.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/wgu/student-continuity-fabric"
