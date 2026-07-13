@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Layers3, Split } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
@@ -65,20 +66,34 @@ export default function WhyNovelPage() {
       </header>
 
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
-            <Split size={16} aria-hidden="true" />
-            Novelty wedge · govern the seams
-          </p>
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.5rem,6.6vw,5.2rem)] font-black leading-[0.92] text-white">
-            This is not another CRM, SIS, lakehouse, queue, or dashboard.
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            Those systems are necessary. The invention is the governed layer
-            between them: the place where a student&apos;s lifecycle remains
-            coherent even when ownership, data, workflow, and AI action span
-            multiple platforms.
-          </p>
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
+              <Split size={16} aria-hidden="true" />
+              Novelty wedge · govern the seams
+            </p>
+            <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.5rem,6.6vw,5.2rem)] font-black leading-[0.92] text-white">
+              This is not another CRM, SIS, lakehouse, queue, or dashboard.
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
+              Those systems are necessary. The invention is the governed layer
+              between them: the place where a student&apos;s lifecycle remains
+              coherent even when ownership, data, workflow, and AI action span
+              multiple platforms.
+            </p>
+          </div>
+          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] shadow-[12px_12px_0_rgba(25,214,197,0.12)]">
+            <Image
+              src="/wgu/visuals/why-novel-fabric-layer.webp"
+              alt="A governed continuity layer woven between separate institutional systems without replacing them"
+              width={1800}
+              height={1013}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="aspect-[16/9] h-auto w-full object-cover"
+            />
+          </figure>
         </div>
       </section>
 
@@ -162,9 +177,29 @@ export default function WhyNovelPage() {
               </p>
             </Link>
           </div>
+          <div className="mt-10 border border-[var(--magenta)] bg-white/[0.03] p-6">
+            <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+              This page is advocacy. The trial is separate.
+            </p>
+            <p className="mt-3 max-w-4xl text-base leading-7 text-white/90">
+              These comparisons face the easy opponents. The hard ones —
+              adaptive case management, ServiceNow configured well, Temporal,
+              airline IROPS, and the charge that this is &ldquo;just
+              event-driven case management with better manners&rdquo; — get
+              full steelman treatment on the{" "}
+              <Link
+                href="/wgu/prior-art"
+                className="text-[var(--signal)] underline underline-offset-4"
+              >
+                prior-art page
+              </Link>
+              , with honest verdicts on what is known, what is
+              novel-in-combination, and the two claims that are genuinely new.
+              The novelty case is stronger after that trial, not weaker.
+            </p>
+          </div>
         </div>
       </section>
     </main>
   );
 }
-

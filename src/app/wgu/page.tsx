@@ -57,6 +57,13 @@ const areas = [
     text: "Salesforce, SIS, lakehouse, ServiceNow, and Genesys all still matter. The invention governs the seams between them and gives students continuity.",
   },
   {
+    href: "/wgu/prior-art",
+    icon: Scale,
+    label: "Prior Art",
+    title: "The invention claim on trial",
+    text: "Adaptive case management, Salesforce, ServiceNow, airline IROPS, workflow orchestration, and higher-ed platforms steelmanned before the honest novelty verdict.",
+  },
+  {
     href: "/wgu/evaluation-rubric",
     icon: ClipboardCheck,
     label: "Rubric",
@@ -363,7 +370,7 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Twenty-six connected areas, one line of reasoning.
+                Twenty-seven connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">

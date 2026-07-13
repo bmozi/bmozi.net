@@ -63,6 +63,42 @@ const scoring = [
   "3 = enforced, monitored, and student-visible where appropriate",
 ];
 
+const scoreBands = [
+  {
+    range: "0-7",
+    label: "Do not trust",
+    text: "The stack is still manual, local, or invisible at the seams.",
+    width: "33%",
+  },
+  {
+    range: "8-14",
+    label: "Pilot only",
+    text: "Enough structure exists to test, but not enough to scale or automate.",
+    width: "67%",
+  },
+  {
+    range: "15-17",
+    label: "Proof-slice ready",
+    text: "Run a bounded slice with guardrails, holdouts, and direct student evidence.",
+    width: "81%",
+  },
+  {
+    range: "18-21",
+    label: "Scale candidate",
+    text: "The platform can expand if the paired outcome and guardrail metrics hold.",
+    width: "100%",
+  },
+];
+
+const evidenceFlow = [
+  "Material change",
+  "Event envelope",
+  "Owner + SLA",
+  "Student-visible state",
+  "Replayable audit",
+  "Fund / pause / stop",
+];
+
 export default function EvaluationRubricPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -177,6 +213,87 @@ export default function EvaluationRubricPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.48fr_0.52fr]">
+          <div>
+            <p className="font-mono text-xs uppercase text-[var(--signal)]">
+              Score interpretation
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-black leading-none text-white sm:text-5xl">
+              Twenty-one points, one decision rule.
+            </h2>
+            <p className="mt-5 leading-7 text-[var(--soft)]">
+              The score is not a beauty contest. It decides what the institution
+              is allowed to do next: do not trust, pilot only, prove a bounded
+              slice, or scale with evidence.
+            </p>
+          </div>
+          <div className="grid gap-3">
+            {scoreBands.map((band) => (
+              <article
+                key={band.range}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <h3 className="font-display text-2xl font-black leading-tight text-white">
+                    {band.label}
+                  </h3>
+                  <span className="font-mono text-sm font-bold text-[var(--amber)]">
+                    {band.range} / 21
+                  </span>
+                </div>
+                <div className="mt-4 h-3 border border-white/12 bg-black/35">
+                  <div
+                    className="h-full bg-[linear-gradient(90deg,var(--magenta),var(--amber),var(--signal))]"
+                    style={{ width: band.width }}
+                  />
+                </div>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {band.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--amber)]">
+            Evidence flow
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            A strong score means the same fact survives the whole journey.
+          </h2>
+          <div className="mt-8 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
+            {evidenceFlow.map((step, index) => (
+              <div
+                key={step}
+                className="relative border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-[var(--signal)]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="mt-8 font-display text-xl font-black leading-tight text-white">
+                  {step}
+                </p>
+                {index < evidenceFlow.length - 1 ? (
+                  <span className="absolute right-4 top-5 hidden font-mono text-lg text-[var(--amber)] xl:block">
+                    →
+                  </span>
+                ) : null}
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 max-w-3xl text-sm leading-6 text-[var(--soft)]">
+            If any step is missing, the score should fall. A platform cannot
+            claim continuity if a student-affecting change cannot be traced from
+            mutation to owner, student-visible status, replayable audit, and the
+            investment decision that follows.
+          </p>
         </div>
       </section>
 
