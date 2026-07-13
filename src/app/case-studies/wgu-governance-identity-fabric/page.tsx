@@ -222,6 +222,7 @@ export default function GovernanceIdentityFabricPage() {
               alt=""
               fill
               priority
+              unoptimized
               sizes="100vw"
               className="object-cover"
             />

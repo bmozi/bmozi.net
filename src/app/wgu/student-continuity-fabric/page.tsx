@@ -160,6 +160,7 @@ export default function StudentContinuityFabricPage() {
               width={1800}
               height={1013}
               priority
+              unoptimized
               sizes="(min-width: 1024px) 52vw, 100vw"
               className="h-auto w-full"
             />

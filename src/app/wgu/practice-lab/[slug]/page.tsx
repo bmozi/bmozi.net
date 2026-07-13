@@ -97,6 +97,7 @@ export default async function PracticeLabDetailPage({
           alt={page.imageAlt}
           fill
           priority
+          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

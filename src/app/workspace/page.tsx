@@ -64,6 +64,7 @@ export default function WorkspacePage() {
           alt="Governed technical systems map with connected product interfaces and policy gates"
           fill
           priority
+          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

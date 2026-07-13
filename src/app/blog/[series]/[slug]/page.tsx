@@ -64,6 +64,7 @@ export default async function BlogArticlePage({
           alt={article.imageAlt}
           fill
           priority
+          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

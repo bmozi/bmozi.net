@@ -36,6 +36,7 @@ export default function BlogIndexPage() {
           alt="Dark technical writing desk with system maps, notes, and architectural diagrams"
           fill
           priority
+          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
