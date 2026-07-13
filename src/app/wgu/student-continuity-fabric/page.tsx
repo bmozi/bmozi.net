@@ -160,7 +160,6 @@ export default function StudentContinuityFabricPage() {
               width={1800}
               height={1013}
               priority
-              unoptimized
               sizes="(min-width: 1024px) 52vw, 100vw"
               className="h-auto w-full"
             />
@@ -252,7 +251,6 @@ export default function StudentContinuityFabricPage() {
               alt="Abstract document intake lifecycle moving through status, owner, timer, escalation, and audit checkpoints"
               width={1800}
               height={1013}
-              unoptimized
               sizes="100vw"
               className="h-auto w-full"
             />

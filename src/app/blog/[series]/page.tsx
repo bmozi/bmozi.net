@@ -125,7 +125,6 @@ export default async function BlogSeriesPage({
           alt={series.imageAlt}
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
@@ -178,8 +177,8 @@ export default async function BlogSeriesPage({
               alt={featured.imageAlt}
               width={1672}
               height={941}
-              unoptimized
               loading="eager"
+              sizes="(min-width: 1024px) 58vw, 100vw"
               className="aspect-[16/9] h-auto w-full border border-black/10 object-cover shadow-[10px_10px_0_rgba(12,17,22,0.08)]"
             />
           </div>
@@ -221,7 +220,7 @@ export default async function BlogSeriesPage({
                           alt={article.imageAlt}
                           width={900}
                           height={506}
-                          unoptimized
+                          sizes="(min-width: 1280px) 30vw, (min-width: 768px) 50vw, 100vw"
                           className="aspect-[16/8] h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                         />
                         <span className="flex flex-1 flex-col p-5">

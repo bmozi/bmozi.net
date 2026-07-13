@@ -174,7 +174,6 @@ export default function Home() {
                 width={1800}
                 height={1013}
                 priority
-                unoptimized
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="aspect-[16/10] w-full object-cover"
               />

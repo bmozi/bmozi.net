@@ -10,7 +10,10 @@ const crawlerPattern =
   /(gptbot|chatgpt-user|oai-searchbot|claudebot|anthropic-ai|perplexitybot|ccbot|bytespider|applebot|applebot-extended|google-extended|googlebot|googleother|google-inspectiontool|bingbot|bingpreview|duckduckbot|baiduspider|yandexbot|amazonbot|facebookbot|facebookexternalhit|meta-externalagent|diffbot|semrushbot|ahrefsbot|mj12bot|dotbot|petalbot|scrapy|crawler|spider|scraper|bot\b)/i;
 
 const publicPathPattern =
-  /^\/(?:access|api\/access|_next\/|brand\/|favicon\.ico|favicon-32x32\.png|apple-touch-icon\.png|icon-192\.png|icon-512\.png|manifest\.webmanifest|robots\.txt|sitemap\.xml)/;
+  /^\/(?:access|api\/access|_next\/static\/|brand\/|favicon\.ico|favicon-32x32\.png|apple-touch-icon\.png|icon-192\.png|icon-512\.png|manifest\.webmanifest|robots\.txt|sitemap\.xml)/;
+
+const publicOptimizedImagePattern =
+  /^\/(?:brand\/|favicon\.ico|favicon-32x32\.png|apple-touch-icon\.png|icon-192\.png|icon-512\.png)/;
 
 function noIndexResponse(response: NextResponse) {
   response.headers.set("x-robots-tag", NO_INDEX_VALUE);
@@ -28,6 +31,16 @@ function redirectToAccess(request: NextRequest) {
   return noIndexResponse(NextResponse.redirect(destination));
 }
 
+function isPublicOptimizedImage(request: NextRequest) {
+  if (request.nextUrl.pathname !== "/_next/image") {
+    return false;
+  }
+
+  const source = request.nextUrl.searchParams.get("url") ?? "";
+
+  return publicOptimizedImagePattern.test(source);
+}
+
 export async function proxy(request: NextRequest) {
   const userAgent = request.headers.get("user-agent") ?? "";
 
@@ -43,7 +56,8 @@ export async function proxy(request: NextRequest) {
 
   if (
     request.nextUrl.pathname === "/" ||
-    publicPathPattern.test(request.nextUrl.pathname)
+    publicPathPattern.test(request.nextUrl.pathname) ||
+    isPublicOptimizedImage(request)
   ) {
     return noIndexResponse(NextResponse.next());
   }

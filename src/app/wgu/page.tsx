@@ -297,7 +297,6 @@ export default function WguHubPage() {
           alt="Abstract student continuity thread crossing governed institutional systems without gaps"
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

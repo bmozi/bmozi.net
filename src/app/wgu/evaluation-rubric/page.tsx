@@ -123,7 +123,6 @@ export default function EvaluationRubricPage() {
           alt="Abstract evidence ledger and neutral evaluation panels for student continuity scoring"
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

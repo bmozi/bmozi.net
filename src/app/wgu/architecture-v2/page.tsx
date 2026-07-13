@@ -327,7 +327,6 @@ export default function ArchitectureV2Page() {
           alt="Abstract technical model of sovereign systems connected by a governed event backbone and policy layer"
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

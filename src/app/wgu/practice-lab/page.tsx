@@ -88,7 +88,6 @@ export default function PracticeLabPage() {
           alt="Enterprise architecture practice system with executive room, stakeholder map, decision ledger, and portfolio board connected by luminous threads"
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

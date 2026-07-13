@@ -58,72 +58,62 @@ const fastLanes = [
 export default function WorkspacePage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-[96rem] gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
-          <div className="flex flex-col justify-between border border-white/12 bg-white/[0.035] p-6 shadow-[0_30px_110px_rgba(0,0,0,0.22)] sm:p-8">
-            <div>
-              <p className="inline-flex items-center gap-2 border border-[var(--signal)]/35 bg-[var(--signal)]/10 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
-                <LayoutDashboard size={16} aria-hidden="true" />
-                Private workspace
-              </p>
-              <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,6vw,5.4rem)] font-black leading-[0.92] text-white">
-                Everything in one protected workbench.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--soft)]">
-                This is the authenticated home base for BMOZI Technical work:
-                architecture, writing, reference documents, evidence, and
-                invention packaging. Use it as the private map instead of
-                returning to the public lobby.
-              </p>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              {fastLanes.map((lane) => (
-                <Link
-                  key={lane.href}
-                  href={lane.href}
-                  className="group flex min-h-36 flex-col justify-between border border-white/12 bg-black/20 p-4 transition-colors hover:border-[var(--signal)]"
-                >
-                  <span className="font-display text-lg font-black leading-tight text-white">
-                    {lane.label}
-                  </span>
-                  <span className="mt-4 text-xs leading-5 text-[var(--muted)]">
-                    {lane.text}
-                  </span>
-                  <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
-                    Go
-                    <ArrowRight
-                      size={14}
-                      aria-hidden="true"
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </span>
-                </Link>
-              ))}
-            </div>
+      <section className="relative isolate min-h-[720px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/brand/bmozi-technical-home-hero.webp"
+          alt="Governed technical systems map with connected product interfaces and policy gates"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.8)_48%,rgba(10,13,17,0.34)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(25,214,197,0.24),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[720px] max-w-[96rem] flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
+            <p className="inline-flex items-center gap-2 border border-[var(--signal)]/35 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)] backdrop-blur">
+              <LayoutDashboard size={16} aria-hidden="true" />
+              Private workspace
+            </p>
+            <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,6vw,5.4rem)] font-black leading-[0.92] text-white">
+              Everything in one protected workbench.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--soft)]">
+              This is the authenticated home base for BMOZI Technical work:
+              architecture, writing, reference documents, evidence, and
+              invention packaging. Use it as the private map instead of
+              returning to the public lobby.
+            </p>
+            <p className="mt-5 inline-flex items-center gap-2 border border-white/15 bg-black/45 px-4 py-3 font-mono text-xs uppercase text-[var(--muted)] backdrop-blur">
+              <LockKeyhole size={14} aria-hidden="true" />
+              Private map · no public index · authenticated
+            </p>
           </div>
 
-          <figure className="overflow-hidden border border-white/12 bg-[#0d1219] p-2">
-            <Image
-              src="/brand/bmozi-technical-home-hero.webp"
-              alt="Governed technical systems map with connected product interfaces and policy gates"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 54vw, 100vw"
-              className="aspect-[16/10] h-full w-full object-cover"
-            />
-            <figcaption className="grid gap-3 border-x border-b border-white/10 bg-black/40 px-4 py-4 sm:grid-cols-[1fr_auto] sm:items-center">
-              <p className="font-mono text-xs uppercase text-[var(--muted)]">
-                Private map · no public index · no casual browsing
-              </p>
-              <span className="inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
-                <LockKeyhole size={14} aria-hidden="true" />
-                authenticated
-              </span>
-            </figcaption>
-          </figure>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {fastLanes.map((lane) => (
+              <Link
+                key={lane.href}
+                href={lane.href}
+                className="group flex min-h-36 flex-col justify-between border border-white/15 bg-black/45 p-4 backdrop-blur transition-colors hover:border-[var(--signal)]"
+              >
+                <span className="font-display text-lg font-black leading-tight text-white">
+                  {lane.label}
+                </span>
+                <span className="mt-4 text-xs leading-5 text-[var(--muted)]">
+                  {lane.text}
+                </span>
+                <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
+                  Go
+                  <ArrowRight
+                    size={14}
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -127,7 +127,6 @@ export default function VoiceOfTheStudentPage() {
               width={1800}
               height={1013}
               priority
-              unoptimized
               sizes="(min-width: 1024px) 54vw, 100vw"
               className="h-auto w-full"
             />

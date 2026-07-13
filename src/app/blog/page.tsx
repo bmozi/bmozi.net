@@ -30,9 +30,19 @@ export default function BlogIndexPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[660px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/blog/writing-room-hero.webp"
+          alt="Dark technical writing desk with system maps, notes, and architectural diagrams"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.8)_48%,rgba(10,13,17,0.38)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(25,214,197,0.22),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[660px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <BookOpen size={16} aria-hidden="true" />
               The writing room · private mirror of the published series
@@ -46,17 +56,6 @@ export default function BlogIndexPage() {
               like everything here.
             </p>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.11)]">
-            <Image
-              src="/blog/writing-room-hero.webp"
-              alt="Dark technical writing desk with system maps, notes, and architectural diagrams"
-              width={1672}
-              height={941}
-              priority
-              unoptimized
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-          </figure>
         </div>
       </section>
 
@@ -80,7 +79,7 @@ export default function BlogIndexPage() {
                         alt={series.imageAlt}
                         width={1672}
                         height={941}
-                        unoptimized
+                        sizes="(min-width: 1280px) 40vw, (min-width: 1024px) 42vw, 100vw"
                         className="aspect-[16/9] h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                       />
                     </div>
@@ -124,7 +123,7 @@ export default function BlogIndexPage() {
                             alt={article.imageAlt}
                             width={900}
                             height={506}
-                            unoptimized
+                            sizes="(min-width: 1024px) 29vw, (min-width: 768px) 50vw, 100vw"
                             className="aspect-[16/7] h-auto w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-[1.025]"
                           />
                         ) : null}

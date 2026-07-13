@@ -150,7 +150,6 @@ export default function PriorArtPage() {
           alt="Prior-art evidence panels testing a central Student Continuity Fabric claim"
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
