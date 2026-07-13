@@ -76,6 +76,31 @@ const articleVisuals: Record<
   Record<string, { image: string; imageAlt: string }>
 > = {
   reference: {
+    "01-the-architects-charter": {
+      image: "/blog/reference/architects-charter.webp",
+      imageAlt:
+        "Signed architecture charter on a technical workbench with principle markers and governance instruments",
+    },
+    "02-editorial-north-star": {
+      image: "/blog/reference/editorial-north-star.webp",
+      imageAlt:
+        "Editorial north-star compass guiding storyboard cards and architecture diagrams across a dark worktable",
+    },
+    "03-ea-mastery-curriculum": {
+      image: "/blog/reference/ea-mastery-curriculum.webp",
+      imageAlt:
+        "Enterprise architecture mastery map with six learning stations around a central system model",
+    },
+    "04-reading-canon": {
+      image: "/blog/reference/reading-canon.webp",
+      imageAlt:
+        "Architecture reading canon table where books, tabs, and diagrams form a layered synthesis model",
+    },
+    "05-field-guide": {
+      image: "/blog/reference/field-guide.webp",
+      imageAlt:
+        "Enterprise architecture field guide table with stakeholder pins, seam traces, and diagnostic cards",
+    },
     "06-field-kit": {
       image: "/blog/reference/field-kit.webp",
       imageAlt:
@@ -105,6 +130,11 @@ const articleVisuals: Record<
       image: "/blog/reference/decision-layer.webp",
       imageAlt:
         "Governed decision layer with rollout lanes, policy gates, continuity thread, and evidence signals",
+    },
+    "12-provenance-record": {
+      image: "/blog/reference/provenance-record.webp",
+      imageAlt:
+        "Tamper-evident provenance ledger with linked evidence packets, hash blocks, and revision trails",
     },
   },
 };

@@ -252,6 +252,27 @@ const commitments = [
   },
 ];
 
+const caseStudyLineage = [
+  {
+    href: "/case-studies/wgu-unified-student-object",
+    label: "Original thesis",
+    title: "Unified Student Object",
+    text: "The v1 case study: one event-sourced student timeline projected into governed, role-specific views.",
+  },
+  {
+    href: "/case-studies/wgu-governance-identity-fabric",
+    label: "Bridge thesis",
+    title: "Governance & Identity Fabric",
+    text: "The mesh-of-meshes layer: identity, delegation, policy, lineage, and trusted action across boundaries.",
+  },
+  {
+    href: "/wgu/architecture-v2",
+    label: "Current target",
+    title: "Architecture v2",
+    text: "The revised target architecture: ship with speed, safety, and evidence after adversarial review.",
+  },
+];
+
 export default function WguHubPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -270,9 +291,20 @@ export default function WguHubPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-9 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[720px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/wgu/visuals/student-continuity-fabric-hero.webp"
+          alt="Abstract student continuity thread crossing governed institutional systems without gaps"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.96)_0%,rgba(10,13,17,0.78)_44%,rgba(10,13,17,0.36)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_22%,rgba(25,214,197,0.25),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[720px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <Scale size={16} aria-hidden="true" />
               Named invention · protected working hub
@@ -312,26 +344,61 @@ export default function WguHubPage() {
               </a>
             </div>
           </div>
-          <div className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_140px_rgba(25,214,197,0.13)]">
-            <Image
-              src="/wgu/visuals/student-continuity-fabric-hero.webp"
-              alt="Abstract student continuity thread crossing governed institutional systems without gaps"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="h-auto w-full"
-            />
-            <div className="grid grid-cols-3 border-t border-white/10 font-mono text-[0.62rem] uppercase text-[var(--muted)]">
-              <span className="border-r border-white/10 px-3 py-3">
-                no black holes
-              </span>
-              <span className="border-r border-white/10 px-3 py-3">
-                named owners
-              </span>
-              <span className="px-3 py-3">audited action</span>
+          <div className="mt-12 grid max-w-3xl grid-cols-3 border border-white/15 bg-black/45 font-mono text-[0.62rem] uppercase text-[var(--muted)] backdrop-blur">
+            <span className="border-r border-white/10 px-3 py-3">
+              no black holes
+            </span>
+            <span className="border-r border-white/10 px-3 py-3">
+              named owners
+            </span>
+            <span className="px-3 py-3">audited action</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                Case-study lineage
+              </p>
+              <h2 className="mt-3 max-w-4xl font-display text-3xl font-black leading-tight text-white sm:text-4xl">
+                The old case studies did not disappear. They became the trail
+                into v2.
+              </h2>
             </div>
+            <p className="max-w-md text-sm leading-6 text-[var(--soft)]">
+              Use this strip when you want the evolution: original timeline
+              thesis, governance fabric thesis, current architecture target.
+            </p>
+          </div>
+          <div className="mt-7 grid gap-3 md:grid-cols-3">
+            {caseStudyLineage.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group border border-white/12 bg-white/[0.035] p-5 transition-colors hover:border-[var(--signal)]"
+              >
+                <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                  {item.label}
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-black leading-tight text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {item.text}
+                </p>
+                <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs text-[var(--signal)]">
+                  Open
+                  <ArrowRight
+                    size={14}
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

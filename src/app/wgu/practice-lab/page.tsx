@@ -82,9 +82,20 @@ export default function PracticeLabPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[700px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/wgu/practice-lab/practice-lab-hero.webp"
+          alt="Enterprise architecture practice system with executive room, stakeholder map, decision ledger, and portfolio board connected by luminous threads"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.78)_48%,rgba(10,13,17,0.34)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_18%,rgba(25,214,197,0.22),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[700px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <Scale size={16} aria-hidden="true" />
               Practice Lab · role mastery and influence
@@ -120,18 +131,6 @@ export default function PracticeLabPage() {
               </Link>
             </div>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] shadow-[12px_12px_0_rgba(25,214,197,0.12)]">
-            <Image
-              src="/wgu/practice-lab/practice-lab-hero.webp"
-              alt="Enterprise architecture practice system with executive room, stakeholder map, decision ledger, and portfolio board connected by luminous threads"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-          </figure>
         </div>
       </section>
 

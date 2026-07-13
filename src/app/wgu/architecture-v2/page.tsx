@@ -321,9 +321,20 @@ export default function ArchitectureV2Page() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[720px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/wgu/visuals/architecture-system-model.webp"
+          alt="Abstract technical model of sovereign systems connected by a governed event backbone and policy layer"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.8)_46%,rgba(10,13,17,0.36)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(25,214,197,0.24),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[720px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <Network size={16} aria-hidden="true" />
               Architecture v2 · post-review target · bolder where it counts,
@@ -378,21 +389,9 @@ export default function ArchitectureV2Page() {
               </p>
             </div>
           </div>
-          <div className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_120px_rgba(25,214,197,0.12)]">
-            <Image
-              src="/wgu/visuals/architecture-system-model.webp"
-              alt="Abstract technical model of sovereign systems connected by a governed event backbone and policy layer"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="h-auto w-full"
-            />
-            <div className="border-t border-white/10 px-4 py-3 font-mono text-[0.68rem] uppercase text-[var(--muted)]">
-              Visual metaphor only. Exact architecture is rendered below as
-              readable page markup.
-            </div>
+          <div className="mt-12 max-w-3xl border border-white/15 bg-black/45 px-4 py-3 font-mono text-[0.68rem] uppercase text-[var(--muted)] backdrop-blur">
+            Visual metaphor only. Exact architecture is rendered below as
+            readable page markup.
           </div>
         </div>
       </section>

@@ -58,9 +58,20 @@ export default async function BlogArticlePage({
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-white/10">
+        <Image
+          src={article.image}
+          alt={article.imageAlt}
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.82)_50%,rgba(10,13,17,0.4)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(255,79,216,0.18),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[620px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p
               className="font-mono text-xs uppercase"
               style={{ color: series.accent }}
@@ -76,17 +87,6 @@ export default async function BlogArticlePage({
               </p>
             ) : null}
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.1)]">
-            <Image
-              src={article.image}
-              alt={article.imageAlt}
-              width={1672}
-              height={941}
-              priority
-              unoptimized
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-          </figure>
         </div>
       </section>
 

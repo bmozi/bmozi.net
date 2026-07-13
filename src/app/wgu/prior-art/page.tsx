@@ -144,9 +144,20 @@ export default function PriorArtPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[700px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/wgu/visuals/prior-art-trial.webp"
+          alt="Prior-art evidence panels testing a central Student Continuity Fabric claim"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.78)_50%,rgba(10,13,17,0.34)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_18%,rgba(255,79,216,0.24),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[700px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--magenta)]">
               <Scale size={16} aria-hidden="true" />
               Prior art · the fabric on trial · researched July 2026
@@ -169,23 +180,11 @@ export default function PriorArtPage() {
               has already survived this page.
             </p>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] shadow-[12px_12px_0_rgba(255,79,216,0.12)]">
-            <Image
-              src="/wgu/visuals/prior-art-trial.webp"
-              alt="Prior-art evidence panels testing a central Student Continuity Fabric claim"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-            <div className="grid grid-cols-3 border-t border-white/10 font-mono text-[0.62rem] uppercase text-[var(--muted)]">
-              <span className="border-r border-white/10 px-3 py-3">known parts</span>
-              <span className="border-r border-white/10 px-3 py-3">novel binding</span>
-              <span className="px-3 py-3">domain transplant</span>
-            </div>
-          </figure>
+          <div className="mt-12 grid max-w-3xl grid-cols-3 border border-white/15 bg-black/45 font-mono text-[0.62rem] uppercase text-[var(--muted)] backdrop-blur">
+            <span className="border-r border-white/10 px-3 py-3">known parts</span>
+            <span className="border-r border-white/10 px-3 py-3">novel binding</span>
+            <span className="px-3 py-3">domain transplant</span>
+          </div>
         </div>
       </section>
 

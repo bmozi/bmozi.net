@@ -41,7 +41,11 @@ const referenceGroups = [
     title: "Evidence & Prosecution",
     description:
       "The record of hostile review, verdicts, fixes, decision discipline, and the habit of revising in the open.",
-    slugs: ["10-program-prosecution", "11-the-decision-layer"],
+    slugs: [
+      "10-program-prosecution",
+      "11-the-decision-layer",
+      "12-provenance-record",
+    ],
   },
 ];
 
@@ -115,9 +119,20 @@ export default async function BlogSeriesPage({
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-white/10">
+        <Image
+          src={series.image}
+          alt={series.imageAlt}
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.8)_48%,rgba(10,13,17,0.38)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(25,214,197,0.2),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[620px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <LibraryBig size={16} aria-hidden="true" />
               {series.title} · {articles.length} pieces
@@ -134,17 +149,6 @@ export default async function BlogSeriesPage({
               “{series.signature}”
             </p>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.03] p-2 shadow-[12px_12px_0_rgba(25,214,197,0.11)]">
-            <Image
-              src={series.image}
-              alt={series.imageAlt}
-              width={1672}
-              height={941}
-              priority
-              unoptimized
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-          </figure>
         </div>
       </section>
 

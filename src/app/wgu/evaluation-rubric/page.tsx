@@ -117,9 +117,20 @@ export default function EvaluationRubricPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
+      <section className="relative isolate min-h-[720px] overflow-hidden border-b border-white/10">
+        <Image
+          src="/wgu/visuals/evaluation-evidence-ledger.webp"
+          alt="Abstract evidence ledger and neutral evaluation panels for student continuity scoring"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.82)_48%,rgba(10,13,17,0.4)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_20%,rgba(242,184,75,0.24),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-[720px] max-w-7xl flex-col justify-end px-5 py-14 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <ClipboardCheck size={16} aria-hidden="true" />
               Vendor-neutral evaluation rubric
@@ -142,37 +153,20 @@ export default function EvaluationRubricPage() {
               Download whitepaper
             </a>
           </div>
-          <aside className="overflow-hidden border border-white/12 bg-white/[0.035]">
-            <Image
-              src="/wgu/visuals/evaluation-evidence-ledger.webp"
-              alt="Abstract evidence ledger and neutral evaluation panels for student continuity scoring"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="h-auto w-full"
-            />
-            <div className="border-t border-white/10 p-6">
-            <p className="font-mono text-xs uppercase text-[var(--amber)]">
-              Scoring
-            </p>
-            <ul className="mt-5 space-y-3">
-              {scoring.map((line) => (
-                <li
-                  key={line}
-                  className="border border-white/10 bg-black/25 p-4 text-sm leading-6 text-[var(--soft)]"
-                >
-                  {line}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 text-sm leading-6 text-white/80">
-              A credible platform should score 18+ out of 21 for the first
-              proof slice before broader AI automation is trusted.
-            </p>
-            </div>
-          </aside>
+          <div className="mt-12 grid max-w-5xl gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {scoring.map((line) => (
+              <div
+                key={line}
+                className="border border-white/15 bg-black/45 p-4 text-sm leading-6 text-[var(--soft)] backdrop-blur"
+              >
+                {line}
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 max-w-3xl text-sm leading-6 text-white/80">
+            A credible platform should score 18+ out of 21 for the first proof
+            slice before broader AI automation is trusted.
+          </p>
         </div>
       </section>
 
