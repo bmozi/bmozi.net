@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ClipboardCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "Student System Architecture Priorities — Seven Guardrails",
@@ -167,8 +168,13 @@ export default function StudentSystemPrioritiesPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/student-system-priorities-hero.webp"
+        imageAlt="Student system priority map with continuity paths, proof markers, and operational guardrails."
+        accent="signal"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <ClipboardCheck size={16} aria-hidden="true" />
             Architecture priorities · the new student system
@@ -185,7 +191,7 @@ export default function StudentSystemPrioritiesPage() {
             test is the question every design must answer.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">

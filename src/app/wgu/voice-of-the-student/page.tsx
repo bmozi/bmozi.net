@@ -101,9 +101,20 @@ export default function VoiceOfTheStudentPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-9 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
+      <section className="relative isolate min-h-0 overflow-hidden sm:min-h-[680px] border-b border-white/10">
+        <Image
+          src="/wgu/visuals/student-voice-continuity.webp"
+          alt="Abstract fragmented student support signals converging into one accountable continuity timeline"
+          fill
+          priority
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,13,17,0.97)_0%,rgba(10,13,17,0.8)_48%,rgba(10,13,17,0.34)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(255,79,216,0.2),transparent_28rem)]" />
+        <div className="mx-auto flex min-h-0 max-w-7xl sm:min-h-[680px] flex-col justify-end px-5 py-12 sm:px-8 sm:py-20">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
               <MessageSquareWarning size={16} aria-hidden="true" />
               Voice of the student · Student Obsessed, operationalized
@@ -120,18 +131,6 @@ export default function VoiceOfTheStudentPage() {
               sympathy.
             </p>
           </div>
-          <figure className="overflow-hidden border border-white/12 bg-white/[0.035] shadow-[0_30px_120px_rgba(25,214,197,0.12)]">
-            <Image
-              src="/wgu/visuals/student-voice-continuity.webp"
-              alt="Abstract fragmented student support signals converging into one accountable continuity timeline"
-              width={1800}
-              height={1013}
-              priority
-              unoptimized
-              sizes="(min-width: 1024px) 54vw, 100vw"
-              className="h-auto w-full"
-            />
-          </figure>
         </div>
       </section>
 

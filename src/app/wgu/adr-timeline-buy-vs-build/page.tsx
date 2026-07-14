@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, FileCheck2 } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "ADR-001: Student Timeline — Buy, Build, or Hybrid",
@@ -146,8 +147,13 @@ export default function AdrTimelinePage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/adr-buy-build-hero.webp"
+        imageAlt="Abstract buy-versus-build decision timeline with governed evidence checkpoints."
+        accent="amber"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <FileCheck2 size={16} aria-hidden="true" />
             ADR-001 · Status: Accepted (direction) · July 2026
@@ -165,7 +171,7 @@ export default function AdrTimelinePage() {
             ledger, the CBE timeline semantics, and the decisioning loop.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">

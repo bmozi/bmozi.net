@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Hammer } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "Ground-Up, Done Right — The Build Strategy",
@@ -88,8 +89,13 @@ export default function GroundUpPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/ground-up-hero.webp"
+        imageAlt="Ground-up architecture assembly with foundational rails, evidence flow, and governed system layers."
+        accent="signal"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Hammer size={16} aria-hidden="true" />
             Build strategy · the ground-up mandate
@@ -106,7 +112,7 @@ export default function GroundUpPage() {
             visible finish line.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

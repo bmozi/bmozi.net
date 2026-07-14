@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "The Personalization Layer — Where Recommendations Come From",
@@ -80,8 +81,13 @@ export default function PersonalizationPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/personalization-hero.webp"
+        imageAlt="Personalization decision loop with governed signals, holdouts, rollout paths, and guardrails."
+        accent="signal"
+        minHeight="min-h-[680px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Sparkles size={16} aria-hidden="true" />
             Personalization layer · Decision 09, in full
@@ -96,6 +102,38 @@ export default function PersonalizationPage() {
             stages, each owned, each measured, closing on one question — did
             this student persist and progress because of what we did?
           </p>
+        </div>
+      </WguImmersiveHero>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--signal)]">
+            Decision loop
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            Recommendations become accountable only when the loop closes.
+          </h2>
+          <div className="mt-8 grid gap-3 lg:grid-cols-6">
+            {loop.map((item, index) => (
+              <article
+                key={item.step}
+                className="relative border border-white/12 bg-black/25 p-4"
+              >
+                <p className="font-mono text-[0.7rem] uppercase text-[var(--amber)]">
+                  {item.step}
+                </p>
+                <h3 className="mt-3 font-display text-lg font-black leading-tight text-white">
+                  {item.title}
+                </h3>
+                <div className="mt-5 h-1 bg-white/10">
+                  <div
+                    className="h-full bg-[var(--signal)]"
+                    style={{ width: `${((index + 1) / loop.length) * 100}%` }}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

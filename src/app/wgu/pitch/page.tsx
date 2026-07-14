@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Download, Presentation } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "The Pitch Kit — One Page, Ten Slides, Ten Minutes",
@@ -37,6 +38,25 @@ const onePager = [
   },
 ];
 
+const pitchPath = [
+  {
+    label: "One Page",
+    text: "The executive argument without the supporting library.",
+  },
+  {
+    label: "Ten Slides",
+    text: "The room-ready sequence for decision makers.",
+  },
+  {
+    label: "Ten Minutes",
+    text: "The time box that forces only the strongest claims.",
+  },
+  {
+    label: "Proof Links",
+    text: "Every claim points back to a page, number, or passing test.",
+  },
+];
+
 export default function PitchPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -55,8 +75,13 @@ export default function PitchPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/pitch-hero.webp"
+        imageAlt="Executive pitch path moving from invention to proof to decision through abstract evidence artifacts."
+        accent="amber"
+        minHeight="min-h-[680px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Presentation size={16} aria-hidden="true" />
             The pitch kit · the ten-minute vehicle
@@ -78,6 +103,35 @@ export default function PitchPage() {
             <Download size={16} aria-hidden="true" />
             Download the deck (.pptx, 10 slides, speaker notes included)
           </a>
+        </div>
+      </WguImmersiveHero>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--amber)]">
+            Delivery path
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            The depth collapses into a boardroom sequence.
+          </h2>
+          <div className="mt-8 grid gap-3 md:grid-cols-4">
+            {pitchPath.map((item, index) => (
+              <article
+                key={item.label}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-white/40">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-black text-white">
+                  {item.label}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

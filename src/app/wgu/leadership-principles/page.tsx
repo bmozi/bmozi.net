@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Compass } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "WGU Leadership Principles as Architecture Practice",
@@ -164,8 +165,13 @@ export default function LeadershipPrinciplesPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/leadership-principles-hero.webp"
+        imageAlt="Leadership operating principles represented as navigation points, evidence routes, and decision markers."
+        accent="amber"
+        minHeight="min-h-[680px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Compass size={16} aria-hidden="true" />
             Leadership principles · architecture practice
@@ -181,7 +187,7 @@ export default function LeadershipPrinciplesPage() {
             it serves.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section>
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

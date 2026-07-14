@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Landmark } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "WGU System Boundary — Programs, Scale, and Domains",
@@ -228,8 +229,13 @@ export default function SystemBoundaryPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/system-boundary-hero.webp"
+        imageAlt="System boundary map separating sovereign records, governed events, and controlled integration zones."
+        accent="signal"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Landmark size={16} aria-hidden="true" />
             System boundary · researched July 2026
@@ -260,7 +266,7 @@ export default function SystemBoundaryPage() {
             ))}
           </div>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

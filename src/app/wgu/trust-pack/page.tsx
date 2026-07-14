@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "The Trust Pack — SLOs, FERPA Purposes, Access, and AI Action Tiers",
@@ -219,8 +220,13 @@ export default function TrustPackPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/trust-pack-hero.webp"
+        imageAlt="Trust pack evidence ledger with control proofs, risk gates, and audit-ready artifacts."
+        accent="signal"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <ShieldCheck size={16} aria-hidden="true" />
             The trust pack · the operational spine of governed trust
@@ -236,7 +242,7 @@ export default function TrustPackPage() {
             together.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Beaker, Braces, LockKeyhole } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "Private Implementation Memo — Student Continuity Fabric",
@@ -195,6 +196,25 @@ const proofTests = [
   "Cost model reports event, storage, replay, and support cost per student per term.",
 ];
 
+const implementationMap = [
+  {
+    label: "Continuity Timeline",
+    text: "Lifecycle events with student-visible state, owner, source, SLA, and consequence.",
+  },
+  {
+    label: "Competency Ledger",
+    text: "Append-only mastery facts that cannot be rewritten by operational workflow.",
+  },
+  {
+    label: "Policy Gate",
+    text: "Authorization, purpose, consent, and action tier checks before any actuation.",
+  },
+  {
+    label: "Evidence Hash",
+    text: "Correlation proof that ties decisions to inputs without exposing restricted content.",
+  },
+];
+
 export default function PrivateImplementationMemoPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -213,8 +233,13 @@ export default function PrivateImplementationMemoPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/private-implementation-memo-hero.webp"
+        imageAlt="Secure private implementation memo with split ledgers, sealed evidence, and protected correlation paths."
+        accent="magenta"
+        minHeight="min-h-[700px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-[var(--magenta)] bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--magenta)]">
             <LockKeyhole size={16} aria-hidden="true" />
             Private easter egg · pre-disclosure memo
@@ -233,7 +258,7 @@ export default function PrivateImplementationMemoPage() {
             from public navigation unless the IP strategy changes.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
@@ -251,6 +276,36 @@ export default function PrivateImplementationMemoPage() {
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-black/70">
                   {claim.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+            Implementation map
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            The invention lives in the controlled relationship between four
+            stores of truth.
+          </h2>
+          <div className="mt-8 grid gap-3 lg:grid-cols-4">
+            {implementationMap.map((item, index) => (
+              <article
+                key={item.label}
+                className="border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-[var(--amber)]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-xl font-black text-white">
+                  {item.label}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {item.text}
                 </p>
               </article>
             ))}
@@ -379,4 +434,3 @@ export default function PrivateImplementationMemoPage() {
     </main>
   );
 }
-

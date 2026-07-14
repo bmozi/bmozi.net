@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Download, FileText } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "Student Continuity Fabric Whitepaper",
@@ -38,7 +39,12 @@ export default function WhitepaperPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/whitepaper-hero.webp"
+        imageAlt="Sealed whitepaper folio with architecture plates, evidence tokens, and governed system model."
+        accent="amber"
+        minHeight="min-h-[680px]"
+      >
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
@@ -79,7 +85,7 @@ export default function WhitepaperPage() {
             </ul>
           </aside>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section>
         <div className="mx-auto grid max-w-7xl gap-4 px-5 py-16 sm:px-8 lg:grid-cols-3">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calculator } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "The Scale Math — Capacity, Storage, and Cost, Computed",
@@ -78,6 +79,29 @@ const volume = [
   },
 ];
 
+const capacityChain = [
+  {
+    label: "Events",
+    value: "~5.3M/day",
+    note: "Learning plus lifecycle traffic after generous peak shaping.",
+  },
+  {
+    label: "Backbone",
+    value: "~600/sec peak",
+    note: "Comfortably below ordinary managed streaming limits.",
+  },
+  {
+    label: "Storage",
+    value: "~12 TB/year",
+    note: "Replicated before compression; ledger permanence is smaller.",
+  },
+  {
+    label: "Unit Cost",
+    value: "< $2/term",
+    note: "The platform envelope that ADR-001 protects.",
+  },
+];
+
 const conclusions = [
   "This is small data by modern standards. The architecture's challenge was never throughput — it is governance, semantics, and seams, exactly where the design spends its effort.",
   "The expensive risks are priced elsewhere: consumption-billed services (identity resolution, LLM inference) carry the cost tripwires in ADR-001 and the risk register — not the backbone.",
@@ -125,8 +149,13 @@ export default function ScaleMathPage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/scale-math-hero.webp"
+        imageAlt="Capacity and cost model with symbolic throughput, storage, replay, and unit economics indicators."
+        accent="amber"
+        minHeight="min-h-[680px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Calculator size={16} aria-hidden="true" />
             The scale math · somebody did the arithmetic
@@ -141,7 +170,7 @@ export default function ScaleMathPage() {
             stated, so any number can be checked, challenged, and corrected.
           </p>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
@@ -156,6 +185,38 @@ export default function ScaleMathPage() {
               >
                 {a}
               </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-xs uppercase text-[var(--signal)]">
+            Capacity envelope
+          </p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+            The load path fits in four checks.
+          </h2>
+          <div className="mt-8 grid gap-3 lg:grid-cols-4">
+            {capacityChain.map((item, index) => (
+              <article
+                key={item.label}
+                className="relative border border-white/12 bg-white/[0.035] p-5"
+              >
+                <p className="font-mono text-xs text-white/40">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-4 font-display text-2xl font-black text-white">
+                  {item.label}
+                </h3>
+                <p className="mt-2 font-mono text-lg font-bold text-[var(--amber)]">
+                  {item.value}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                  {item.note}
+                </p>
+              </article>
             ))}
           </div>
         </div>

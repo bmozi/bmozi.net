@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, TrendingUp } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
   title: "The Business Case — Persistence Economics and the Funding Narrative",
@@ -116,8 +117,13 @@ export default function BusinessCasePage() {
         </nav>
       </header>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <WguImmersiveHero
+        imageSrc="/wgu/visuals/business-case-hero.webp"
+        imageAlt="Enterprise value model with continuity flows, retained-student signals, and decision evidence."
+        accent="amber"
+        minHeight="min-h-[680px]"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <TrendingUp size={16} aria-hidden="true" />
             The business case · persistence economics
@@ -150,7 +156,7 @@ export default function BusinessCasePage() {
             ))}
           </div>
         </div>
-      </section>
+      </WguImmersiveHero>
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
