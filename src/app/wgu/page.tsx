@@ -85,6 +85,13 @@ const areas = [
     text: "All fourteen WGU Leadership Principles, each translated into concrete enterprise-architecture behavior. Every task and plan in this hub traces back to these.",
   },
   {
+    href: "/wgu/risk-driven-architecture",
+    icon: FlaskConical,
+    label: "Method",
+    title: "Risk-driven architecture",
+    text: "A plain-language method for doing just enough architecture: size the diagrams, ADRs, proofs, and reviews to the risks that can hurt students.",
+  },
+  {
     href: "/wgu/system-boundary",
     icon: Landmark,
     label: "System Boundary",
@@ -437,7 +444,7 @@ export default function WguHubPage() {
                 The hub
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Twenty-seven connected areas, one line of reasoning.
+                Twenty-eight connected areas, one line of reasoning.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">
