@@ -441,6 +441,72 @@ export default function TrustPackPage() {
               ))}
             </div>
           </div>
+
+          <div className="mt-8 border border-[var(--signal)] bg-black/30 p-6 sm:p-8">
+            <p className="font-mono text-xs uppercase text-[var(--signal)]">
+              Agent memory is a student record — the tier the field forgot
+            </p>
+            <p className="mt-4 max-w-4xl text-base leading-7 text-white/90">
+              The action tiers above govern what an agent may <em>do</em>.
+              They say nothing yet about what an agent may <em>remember</em> —
+              and the research just named that silence. A 2026 survey of
+              always-on agents (arXiv 2606.30306), coding 435 works, found the
+              field concentrates on <em>accumulating and retrieving</em> state
+              while neglecting <em>governing, recovering, and relinquishing</em>{" "}
+              it. That is the seams thesis wearing agent clothes: capability
+              outrunning governance, again. Turned on this fabric honestly,
+              it exposes our own thin spot — we govern agent actions
+              thoroughly; agent memory as a governed surface was
+              underspecified. So the principle is now explicit:
+            </p>
+            <p className="mt-4 max-w-4xl border-l-2 border-[var(--signal)] pl-5 text-lg font-semibold leading-8 text-white">
+              An agent&apos;s persistent memory about a student is an
+              education record, and every rule of this fabric applies to it.
+            </p>
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              <p className="border-l-2 border-white/15 pl-4 text-sm leading-6 text-[var(--soft)]">
+                <strong className="text-white">Purpose limitation.</strong> If
+                a coach copilot remembers across sessions that a student
+                disclosed a family crisis, that memory carries a FERPA purpose
+                tag like any record — readable for student-support, never
+                repurposed for research or marketing without re-authorization.
+              </p>
+              <p className="border-l-2 border-white/15 pl-4 text-sm leading-6 text-[var(--soft)]">
+                <strong className="text-white">Retention and erasure.</strong>{" "}
+                Memories carry retention classes by sensitivity; a student&apos;s
+                erasure request reaches agent memory the same way it reaches
+                the reference store — PII by reference extends to what agents
+                remember, so forgetting is a row operation, not a model
+                mystery.
+              </p>
+              <p className="border-l-2 border-white/15 pl-4 text-sm leading-6 text-[var(--soft)]">
+                <strong className="text-white">
+                  Write-audit and poisoning defense.
+                </strong>{" "}
+                Memory writes are enveloped events — actor, source,
+                correlation — so a poisoned memory (planted via student-visible
+                content) is traceable to its origin and revocable by replay,
+                exactly like any other corrupted projection.
+              </p>
+              <p className="border-l-2 border-white/15 pl-4 text-sm leading-6 text-[var(--soft)]">
+                <strong className="text-white">Leakage checks.</strong> What an
+                agent remembers about one student must be structurally unable
+                to surface to another — relationship-based access applies to
+                recall, not just to records. Memory retrieval inherits the
+                caller&apos;s limits, per the delegation rule above.
+              </p>
+            </div>
+            <p className="mt-5 max-w-4xl text-sm leading-6 text-[var(--soft)]">
+              No education event standard or ed-tech platform states this
+              principle today — which makes it, alongside purpose-on-the-wire,
+              one of the fabric&apos;s genuinely early claims. One footnote
+              worth savoring: the same survey shipped an evaluation protocol
+              (AOEP-v0) alongside its taxonomy — the ship-an-instrument move,
+              practiced in the wild within days of this hub writing it down.
+              Watch whether the protocol travels further than the survey. Our
+              wager, and our own rubric, say it will.
+            </p>
+          </div>
           <p className="mt-10 max-w-3xl text-sm leading-6 text-white/50">
             Targets and taxonomies are the proposal carried into the Days
             31–60 ratification; numbers tighten as real-user baselines arrive.

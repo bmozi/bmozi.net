@@ -24,126 +24,126 @@ const principles: Principle[] = [
     essence:
       "Keep the mission core to every decision; think long term; steward WGU's mission, resources, and organization; know the Key Results and own your contribution.",
     practice:
-      "Every architecture decision record opens with the mission linkage and the Key Result it moves. Long-lived assets — contracts, identity, the student record — are designed for decades, not sprints.",
+      "Runs as the mission-gate loop — link, sign, cut: every decision record opens by naming the mission linkage and the Key Result it moves; work that cannot name its linkage doesn't get a signature; each quarter, roadmap items whose linkage has gone stale are cut, out loud. Long-lived assets — contracts, identity, the student record — are designed for decades, not sprints.",
     applied:
-      "The system-boundary page exists because of this principle: you cannot steward what you have not mapped. Roadmap items with no Key-Result linkage are cut.",
+      "The system-boundary page exists because you cannot steward what you have not mapped; the ADR template opens with mission linkage; and the pitch's ask ends with 'hold me to the numbers' — the gate, applied to its own author first.",
   },
   {
     name: "Student Obsessed",
     essence:
       "Every human is a student; every decision starts with them; impact is measured in lives changed, delivering the WGU promise every day.",
     practice:
-      "Architecture reviews start from student failure modes, not system diagrams. Reliability at the student front door (login-success SLOs, graceful degradation) outranks internal elegance.",
+      "Runs as the complaint loop — hear, name, answer, measure: read complaints as system outputs, not service anecdotes; name the failure mode behind each; answer it structurally so the story becomes impossible, not apologized for; measure the leak closed. Reliability at the student front door outranks internal elegance in every trade-off.",
     applied:
-      "The Voice of the Student page maps real complaint patterns to structural answers, and drove operational lifecycle events into the platform thesis as first-class citizens.",
+      "The loop's full circuit is on the record: public reviews became the Voice of the Student page, its five failure modes became the seven guardrails, the guardrails became the fabric, and Slice 1 closes the first leak with a black-hole rate the student can feel.",
   },
   {
     name: "Advance Equity",
     essence:
       "Revere the inherent worth of every individual; make opportunity work for everyone; value pluralism; advance unity in diversity.",
     practice:
-      "Personalization and risk models are audited for disparate impact. Accessibility, low-bandwidth paths, and device diversity are architectural requirements, not enhancements.",
+      "Runs as the paired-metric loop — outcome AND guardrail, or no launch: every experiment, model, and nudge ships with its outcome metric and its equity guardrail (subgroup impact, opt-out rates, appeal paths) evaluated together; disparate impact fails the launch review, never waits for the postmortem. Accessibility and low-bandwidth paths are requirements, not enhancements.",
     applied:
-      "Governed-AI guardrails require that any student-facing model decision is explainable and appealable — no silent algorithmic gatekeeping on a pathway to opportunity.",
+      "The decision layer's standing policy — 'the outcome moved AND the guardrails held' — is this loop as law; the personalization stage gates and the Tier-4 wall (no algorithmic gatekeeping of consequential decisions) enforce it structurally.",
   },
   {
     name: "Integrity",
     essence:
       "Deliver on commitments; do what is right even when no one is watching; uncompromised integrity in all circumstances.",
     practice:
-      "Immutable audit trails — who changed what, when, why, with what result — are part of the model, not an afterthought. Commitments made to students survive staff changes because they are recorded.",
+      "Runs as the nothing-silent loop — actor, reason, notice, append: every material change carries who, why, and notification at the gate; history is extended, never rewritten; and the rule applies to the author before it applies to any system. Commitments made to students survive staff changes because they are recorded.",
     applied:
-      "The adversarial review is this principle applied to my own work: the strongest case against the thesis is published next to the thesis.",
+      "The provenance record freezes the pre-Day-1 corpus with verifiable dates; the program prosecution published eleven convictions against this program on its own site; corrections across the hub are appended, never scrubbed. Honesty with no witness required.",
   },
   {
     name: "Sound Judgment",
     essence:
       "Make the right choices a lot: critical thinking, data-driven insight, collaborative reasoning, good instincts; own decisions and adjust effectively.",
     practice:
-      "Decisions are framed as reversible or irreversible and paced accordingly. Contested bets are named, scored against evidence, and revisited on a schedule.",
+      "Runs as the calibration loop — claim, probability, seal, grade, post-mortem: significant judgments get explicit probabilities, sealed before outcomes; resolved predictions are graded; high-confidence misses get a written post-mortem of what was over-trusted. Decisions are paced by reversibility, and contested bets are revisited on a schedule.",
     applied:
-      "Architecture v2 exists because the evidence demanded adjustment: four bets were stress-tested, two were restructured, and the record of why is public in this hub.",
+      "The Day-0 baseline seals 28+ probability-tagged beliefs to be graded at Day 30 and Day 90; the Monday check-in collects the grades; v2 itself is the loop's product — four bets stress-tested, two restructured, the record public.",
   },
   {
     name: "One-by-One",
     essence:
       "Solve for the individual; advance outcomes one student at a time; enable all, exclude none.",
     practice:
-      "The unit of design is one student's timeline, one case with one owner, one SLA — never an aggregate dashboard that hides the individual stuck inside it.",
+      "Runs as the oldest-item loop — past the median, to the person: dashboards report medians, so deliberately pull the oldest item in the queue, trace that one person's journey end to end, and fix the class of failure their story reveals. The unit of design is one timeline, one case, one owner, one clock — never an aggregate that hides the individual stuck inside it.",
     applied:
-      "No queue without an accountable owner is a hub-wide invariant. Projections must answer 'what is true for this student right now', not just cohort trends.",
+      "The Days 1–30 journey traces are this loop as fieldwork; cohort cutover exists so no individual student is ever stranded by a migration; and 'no queue without an owner' is the invariant that makes the oldest item impossible to hide.",
   },
   {
     name: "Align & Commit",
     essence:
       "Consider interdependencies; synchronize with the right roles and teams; respect the decision owner; commit to and communicate decisions as your own.",
     practice:
-      "Contracts and schemas are agreed at the seams before code. ADRs name the decision owner and the consulted parties. Once decided, the architecture speaks with one voice.",
+      "Runs as the disagree-commit loop — voice fully, decide once, carry it, reopen in writing: full honest position before the decision, at full strength; the named owner decides; afterward the decision is carried without daylight, as your own; new evidence reopens it through the same written door it came in — never through quiet non-compliance. Contracts are agreed at the seams before code.",
     applied:
-      "The v2 target deliberately aligns with the platform estate that already exists — CRM, lakehouse, streaming backbone — instead of routing around teams that own them.",
+      "Charter commitments four and five are this loop signed in public; the Days 31–60 sessions are built on it — the team ratifies with a named owner per decision, and the v2 target aligns with the estate teams already own rather than routing around them.",
   },
   {
     name: "Earn Trust",
     essence:
       "Do your job; listen genuinely, speak directly, engage respectfully; examine your strongest convictions with humility; earn your reputation daily.",
     practice:
-      "Adoption is earned, never mandated: paved roads, lighthouse slices, and measurable wins before expansion. Publishing the prosecution of my own thesis is the humility test.",
+      "Runs as the prosecution loop — propose, prosecute, verdict, publish, repeat: anything significant arrives with the strongest case against it, researched and steelmanned; every charge gets an honest verdict including the losses; the prosecution is published beside the design; and the trial reruns on a schedule with harder opponents. Adoption is earned, never mandated.",
     applied:
-      "The mesh-of-meshes review examines my strongest conviction — the event-sourced USO — with the strongest opposing evidence I could find, and concedes what it must.",
+      "The loop has run four times on this site alone: the mesh-of-meshes review, the program prosecution (eleven convictions, fixes owned), the prior-art trial of the fabric itself, and the standing quarterly self-prosecution. The room trusts what has already survived its own opposition.",
   },
   {
     name: "Inspire & Develop",
     essence:
       "Inspire others to do their best work; recognize contributions; everyone is a leader; expand individual and collective positive influence.",
     practice:
-      "Architecture is taught, not decreed: diagrams, ADRs, event-storming sessions, and mentoring make the reasoning reproducible by others.",
+      "Runs as the serve-first loop — ask, move, report, teach: every 1:1 ends with 'what's in your way that someone like me could move?'; one thing gets moved; the result gets reported back; and the reasoning behind every decision is taught — diagrams, ADRs, katas — until it is reproducible without its author. Credit flows outward by name.",
     applied:
-      "This hub is itself the artifact: a worked example of thesis, evidence, prosecution, and revision that any engineer can follow and challenge.",
+      "The field kit hard-codes the closing question into every conversation; the guild's ladder measures growth by demonstrated evidence and its success by how little the founder is needed; three article series exist at three altitudes so everyone gets a rung.",
   },
   {
     name: "Learning",
     essence:
       "Insatiably curious; invite inquiry, seek feedback, listen to understand; expect perpetual growth; benchmark against the best; learn from mistakes.",
     practice:
-      "Benchmark against the best: peer institutions, industry retrospectives, and post-mortems feed every review. Being wrong in public, precisely, is the fastest way to get right.",
+      "Learning runs here as a named operational loop — encounter, verify, prosecute, absorb, claim: encounter new evidence anywhere; verify it before commenting; prosecute it against this corpus (and this corpus against it); absorb what survives into the pages, in the open; and claim early what the verification earned. Benchmark against the best; being wrong in public, precisely, is the fastest way to get right.",
     applied:
-      "The research behind this hub deliberately sought the failure literature — event-sourcing retrospectives, data-mesh post-mortems, agentic-AI incident reports — not just the advocacy.",
+      "The loop has a timestamped worked example: an agent-state survey (arXiv 2606.30306) crossed the feed, was verified against arXiv, exposed a real gap — agent memory as an ungoverned surface — and within the hour became the trust pack's 'agent memory is a student record' tier, a reading-canon entry with honest evidence tiers, and an early claim registered before the sector says it. Encounter to claim, one sitting, revised in the open.",
   },
   {
     name: "Imagine Boldly",
     essence:
       "Think long term and without constraint while never compromising mission and Key Results; respectfully challenge convention; push to think big.",
     practice:
-      "Keep a genuine north star that is ahead of industry consensus — governed agents acting safely on one student timeline — while sequencing the path in provable slices.",
+      "Runs as the horizon-hold loop — fix the picture, revise the path: the ten-year north star stays fixed and ahead of industry consensus; the path to it is re-derived from evidence every quarter; and no tactical defeat is ever allowed to be read as a verdict on the ambition. Bold pictures die of a thousand path-detail arguments — separate the two explicitly, every time.",
     applied:
-      "The mesh-of-meshes fabric remains the bold ten-year picture. The review changed the path and the center of gravity, not the ambition.",
+      "The mesh-of-meshes fabric survived its own prosecution as the horizon while v2 completely rebuilt the path beneath it; the roadmap's final entry is titled 'the bold picture, intact' — the loop, printed.",
   },
   {
     name: "Create & Innovate",
     essence:
       "Expect fresh thinking; look for ideas everywhere; bias for the future by leveraging the best of the past and sloughing off the rest; be comfortable being first.",
     practice:
-      "Invent where the domain is genuinely unserved — competency-based-education semantics, governed agent action — and adopt standards everywhere else.",
+      "Runs as the ground-choosing loop — ask, verdict, slough: for each capability, ask 'does anyone sell this to our business model?'; buy the commodity proudly, build the genuinely unserved, and slough off what evidence has killed — including your own prior inventions. Look for ideas everywhere: the fabric borrowed from healthcare's purpose-of-use and aviation's manifests without embarrassment.",
     applied:
-      "v2 sloughs off the parts industry evidence killed (enterprise-wide event sourcing as truth) and keeps the genuinely novel part: a governed, replayable competency ledger.",
+      "ADR-001 is the loop as a decision record; the prior-art trial ran the loop against the fabric itself — 'known' claims conceded proudly, two genuinely novel claims kept; enterprise-wide event sourcing was this author's own idea, sloughed by his own evidence.",
   },
   {
     name: "Urgency",
     essence:
       "Speed matters; decide at a pace relative to risk; respond to challenges in a timely manner; time is the scarcest resource.",
     practice:
-      "Reversible decisions ship this week; irreversible ones get the full review. Lighthouse slices are scoped to prove value in one term, not one fiscal year.",
+      "Runs as the pacing loop — classify, then move at the class's speed: every decision is tagged reversible or irreversible first; reversible ships this week without ceremony, irreversible gets the full trial without apology; and the shedding order — what gets dropped under load, in what sequence — is published before the load arrives, so speed degrades gracefully instead of collapsing silently.",
     applied:
-      "The v2 roadmap's first slice is deliberately small — one seam, one policy, one measurable student outcome — so learning starts now.",
+      "Slice 1 is scoped to prove value in one term, not one fiscal year; the program prosecution's time-insolvency conviction produced a published shedding order with a never-shed core — urgency with a survival plan.",
   },
   {
     name: "Deliver Results",
     essence:
       "Performance excellence; never confuse activity with outcomes; allocate effort to what matters most; continually raise the bar.",
     practice:
-      "Every architecture initiative carries a student-outcome metric and an operational metric. Diagrams that never become running, measured systems are activity, not results.",
+      "Runs as the proof loop — name the proof, measure against a counterfactual, retire what can't demonstrate: every initiative names, in advance, the measurement that separates a result from a story; effects are claimed only against holdouts or baselines, never borrowed from trends; and anything that only produces activity — a ritual, a report, an initiative — is retired publicly at the quarterly review.",
     applied:
-      "Hub convention: each thesis page ends with what would prove it — the measurement that separates a result from a story.",
+      "Every thesis page ends with what would prove it; the business case's law is 'attribution or it didn't happen'; and the guild charter includes its own retirement rule for rituals that stop changing decisions — the proof loop, aimed at ourselves.",
   },
 ];
 

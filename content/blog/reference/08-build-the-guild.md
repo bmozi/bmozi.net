@@ -37,7 +37,16 @@ Every significant ADR gets a reviewer from *outside* the authoring team, drawn f
 
 ## The teaching spine (reuse, don't rewrite)
 
-The material already exists in three altitudes; the guild gets the internal editions. *Seams for Everyone* becomes the shared-vocabulary track for partners outside engineering — registrar's office, enrollment, support leadership are invited to those sessions explicitly (a guild that only architects attend is the erosion pattern with snacks). *Getting It Right* becomes the practitioner study track, one pattern per month, paired with the reference implementation as lab material — read it, then break it, then fix it. *The Architect's Mind* seeds the senior circle — quarterly evening sessions for the handful carrying decision weight, where the material is judgment and the format is honest war stories against the essays. And the glossary is the guild's first shared artifact to *own and edit* — transferring stewardship of the vocabulary is the first act of making the guild theirs, not mine.
+The material already exists in four altitudes; the guild gets the internal editions.
+The fourth is *Harnessing the Horse*: as AI-assisted engineering becomes every team's
+daily reality, the book's Harness Framework (Scope, Prove, Enforce, Communicate)
+becomes the guild's agentic-engineering track — the manuscript's exercises and the
+companion repo's checklists, prompts, and anti-pattern catalog are ready-made Kata
+Night material, and the delegation filter (what to hand the agent vs. what judgment
+keeps) pairs naturally with the trust pack's action tiers: the same governance
+instinct at personal and institutional scale. One sequencing note: this track ships
+in its ten-minute brief form first (see the talk kit) and goes deep only where teams
+pull — a book-length track nobody asked for is the ivory tower with a reading list. *Seams for Everyone* becomes the shared-vocabulary track for partners outside engineering — registrar's office, enrollment, support leadership are invited to those sessions explicitly (a guild that only architects attend is the erosion pattern with snacks). *Getting It Right* becomes the practitioner study track, one pattern per month, paired with the reference implementation as lab material — read it, then break it, then fix it. *The Architect's Mind* seeds the senior circle — quarterly evening sessions for the handful carrying decision weight, where the material is judgment and the format is honest war stories against the essays. And the glossary is the guild's first shared artifact to *own and edit* — transferring stewardship of the vocabulary is the first act of making the guild theirs, not mine.
 
 ## Growth architecture (One-by-One, for architects)
 

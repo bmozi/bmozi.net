@@ -81,7 +81,7 @@ So the curriculum inverts the certification industry. Frameworks appear here onl
 - **Evaluative depth over breadth.** The goal isn't knowing every technology; it's the depth to interrogate any vendor or team claim — about consistency, replication, latency, cost — and detect when the answer is marketing (Kleppmann-grade reading, applied).
 - **Review as craft.** Design reviews where your questions teach: not "why didn't you use X" but "what happens when this input arrives twice?" The quality of your questions is the visible tip of your technical iceberg, and it's what engineers gossip about.
 
-**Evidence of mastery:** engineers voluntarily bringing you designs early; your quarterly artifact repos; a review question of yours that changed a design, retold by someone else.
+**Evidence of mastery:** engineers voluntarily bringing you designs early; your quarterly artifact repos; a review question of yours that changed a design, retold by someone else. The standing receipt for this domain is *Harnessing the Horse* — a twenty-chapter manuscript on production agentic engineering (the Harness Framework: Scope, Prove, Enforce, Communicate) — and the practice obligation it creates: the author of "code is the receipt, clarity is the product" must visibly live that discipline in every AI-assisted artifact he ships, because nothing erodes credibility faster than a book your own repos contradict.
 
 **Adversarial self-audit:** when did an engineer last correct you on a technical point — and did they learn that correcting you is rewarded? If it's been months, you've either ossified or become unsafe to correct. Both are failures.
 
@@ -106,6 +106,8 @@ So the curriculum inverts the certification industry. Frameworks appear here onl
 ## Domain 6 · Feedback Manufacturing (the meta-domain)
 
 **Mastery means:** you have built, for yourself and your organization, the feedback loops the profession naturally lacks — so learning compounds instead of accumulating as anecdote.
+
+**The standing loop, named:** *encounter → verify → prosecute → absorb → claim.* New evidence — a paper, a vendor launch, a failure report — gets verified before comment, prosecuted against the corpus (and the corpus against it), absorbed into the pages in the open where it survives, and converted into an early claim where the verification earned one. This is the Learning principle at operational tempo, and it is the loop every other cadence below feeds. A week in which nothing ran this loop is a week spent maintaining positions instead of improving them.
 
 **The system (this is the curriculum's engine):**
 - **Daily**, ~5 minutes: any significant judgment made → one line in the decision journal, probability attached if resolvable.

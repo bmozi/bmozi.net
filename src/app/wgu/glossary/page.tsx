@@ -192,6 +192,12 @@ const groups: { group: string; terms: Term[] }[] = [
           "A short written record of a significant decision: the context, the options considered, the choice, and its consequences — so the reasoning survives the meeting. ADR-001 on this site is the buy-vs-build decision.",
       },
       {
+        term: "Seam",
+        short: "Where two things meet and neither is in charge of the meeting",
+        plain:
+          "The load-bearing word of this whole body of work. A seam is any place two systems, teams, or parties connect — and like the stitching on a stuffed animal, it's where things fall out: nothing gets lost inside a system, it gets lost between them. Seams are necessary, not bad — they're where you cut so pieces can be owned and replaced separately. The sin is leaving them UNGOVERNED. A governed seam has four things crossing it: a shared identity (both sides agree who this person is), events (each side — and the person affected — learns what happened, structurally), an owner (a human accountable for the journey across, not just the territory on each side), and measurement of the crossing itself. The same pattern repeats at every scale: between systems, between teams, between human and AI, between claims and evidence. One question finds an ungoverned seam anywhere: where do two things meet with no owner, no shared truth, and no notification?",
+      },
+      {
         term: "Bounded context",
         short: "A domain with one owner of truth",
         plain:

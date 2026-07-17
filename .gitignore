@@ -40,6 +40,7 @@ yarn-error.log*
 
 # owner gate credentials (local only)
 .owner-login
+.codex-login
 
 # typescript
 *.tsbuildinfo

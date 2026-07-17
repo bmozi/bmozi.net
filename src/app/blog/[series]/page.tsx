@@ -47,6 +47,12 @@ const referenceGroups = [
       "12-provenance-record",
     ],
   },
+  {
+    title: "WGU Readiness",
+    description:
+      "The talk track and first-contact kit for carrying the governed-seams argument into the WGU room.",
+    slugs: ["13-the-harness-in-ten-minutes", "14-introduction-kit"],
+  },
 ];
 
 export function generateStaticParams() {

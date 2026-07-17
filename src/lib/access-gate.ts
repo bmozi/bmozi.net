@@ -16,7 +16,7 @@ type SessionPayload = {
 const textEncoder = new TextEncoder();
 const textDecoder = new TextDecoder();
 
-function getGateCredentials(): GateCredentials | null {
+function getPrimaryGateCredentials(): GateCredentials | null {
   const username = process.env.BMOZI_GATE_USER;
   const password = process.env.BMOZI_GATE_PASSWORD;
 
@@ -25,6 +25,51 @@ function getGateCredentials(): GateCredentials | null {
   }
 
   return { username, password };
+}
+
+function parseExtraGateCredentials() {
+  const raw = process.env.BMOZI_GATE_EXTRA_USERS;
+
+  if (!raw) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return [];
+    }
+
+    return Object.entries(parsed)
+      .filter(
+        (entry): entry is [string, string] =>
+          typeof entry[0] === "string" && typeof entry[1] === "string",
+      )
+      .filter(([username, password]) => username.length > 0 && password.length > 0)
+      .map(([username, password]) => ({ username, password }));
+  } catch {
+    return [];
+  }
+}
+
+function getCodexGateCredentials(): GateCredentials[] {
+  const password = process.env.BMOZI_GATE_CODEX_PASSWORD;
+
+  return password ? [{ username: "codex", password }] : [];
+}
+
+function getGateCredentials() {
+  const primary = getPrimaryGateCredentials();
+  const extra = [...getCodexGateCredentials(), ...parseExtraGateCredentials()];
+
+  return primary ? [primary, ...extra] : extra;
+}
+
+function findGateCredentials(username: string) {
+  return getGateCredentials().find((credentials) =>
+    constantTimeEqual(username, credentials.username),
+  );
 }
 
 function constantTimeEqual(left: string, right: string) {
@@ -113,7 +158,7 @@ function sessionSecret(credentials: GateCredentials) {
 }
 
 export function verifyCredentials(username: string, password: string) {
-  const credentials = getGateCredentials();
+  const credentials = findGateCredentials(username);
 
   if (!credentials) {
     return false;
@@ -126,7 +171,7 @@ export function verifyCredentials(username: string, password: string) {
 }
 
 export async function createAccessToken(username: string) {
-  const credentials = getGateCredentials();
+  const credentials = findGateCredentials(username);
 
   if (!credentials) {
     return null;
@@ -142,9 +187,7 @@ export async function createAccessToken(username: string) {
 }
 
 export async function verifyAccessToken(token?: string) {
-  const credentials = getGateCredentials();
-
-  if (!credentials || !token) {
+  if (!token) {
     return false;
   }
 
@@ -160,12 +203,15 @@ export async function verifyAccessToken(token?: string) {
     return false;
   }
 
+  const credentials = findGateCredentials(parsed.u);
+
+  if (!credentials) {
+    return false;
+  }
+
   const expectedSignature = await sign(payload, sessionSecret(credentials));
 
-  return (
-    constantTimeEqual(suppliedSignature, expectedSignature) &&
-    constantTimeEqual(parsed.u, credentials.username)
-  );
+  return constantTimeEqual(suppliedSignature, expectedSignature);
 }
 
 export function verifyBasicAuthorization(authorization: string | null) {

@@ -63,7 +63,7 @@ export const seriesList: Series[] = [
     title: "Reference",
     signature: "Hold me to these. That's what they're for.",
     tagline:
-      "The operating shelf behind the work: charter, curriculum, canon, field guide, field kit, baseline, guild plan, study guide, and prosecution record.",
+      "The operating shelf behind the work: charter, mastery system, field kit, guild plan, study guide, prosecution record, decision discipline, provenance, and WGU readiness.",
     image: "/blog/reference-cover.webp",
     imageAlt:
       "Disciplined reference archive with binders, field cards, and technical diagrams",
