@@ -12,8 +12,8 @@ const referenceGroups = [
   {
     title: "Foundations",
     description:
-      "The commitments and editorial rules that make the body of work accountable.",
-    slugs: ["01-the-architects-charter", "02-editorial-north-star"],
+      "The commitments, editorial rules, and reproducible method that make the body of work accountable.",
+    slugs: ["01-the-architects-charter", "02-editorial-north-star", "16-the-method"],
   },
   {
     title: "Mastery System",
@@ -52,6 +52,12 @@ const referenceGroups = [
     description:
       "The talk track and first-contact kit for carrying the governed-seams argument into the WGU room.",
     slugs: ["13-the-harness-in-ten-minutes", "14-introduction-kit"],
+  },
+  {
+    title: "Standing the Test of Time",
+    description:
+      "The corpus prosecuted against the live agentic-engineering frontier — where it holds, where it needs extension, where it is at risk — plus the durable north-star principles.",
+    slugs: ["15-agentic-gap-analysis", "17-ai-security-seams"],
   },
 ];
 

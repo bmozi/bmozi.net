@@ -61,7 +61,7 @@ const opponents: Opponent[] = [
     steelman:
       "The 'event-driven case management with better manners' charge, steelmanned: Camunda runs months-long cases with SLA tracking and escalating human tasks; Temporal's durable execution replays every workflow's full history — arguably a stronger 'nothing is ever lost' guarantee than the fabric specifies; CloudEvents standardizes the envelope; correlation IDs are table stakes. An engineer could build most of the fabric on this stack in a quarter.",
     departs:
-      "CloudEvents has no actor, no on-behalf-of, no purpose — and no enforcement semantics for custom extensions. Temporal's history is operational plumbing, not a governed academic record. The case subject doesn't exist in these tools' models. The only mature purpose-on-the-wire precedent anywhere is healthcare: FHIR AuditEvent's purposeOfUse. Education has nothing like it.",
+      "CloudEvents has no actor, no on-behalf-of, no purpose — and no enforcement semantics for custom extensions. Temporal's history is operational plumbing, not a governed academic record. The case subject doesn't exist in these tools' models. The only mature purpose-on-the-wire precedent anywhere is healthcare: FHIR AuditEvent's purposeOfUse. Education's nearest analog — SIF/A4L's lightly-adopted, declarative Privacy Obligation Document — is not per-transaction assertion; nothing mainstream is.",
     verdict: "NOVEL-IN-COMBINATION",
     note: "The mechanics are known and we should say so proudly — boring, proven parts are a feature. The binding is the claim.",
   },
@@ -84,12 +84,12 @@ const survives = [
   },
   {
     claim: "Transcript as a projection of the governed ledger",
-    text: "Blockcerts and CLR issue verifiable end artifacts; Temporal replays operational history. Nobody found makes the institution's operative academic record an event-sourced, hash-chained, PII-by-reference ledger whose projections include the transcript itself. Event-sourcing practitioners will call it an obvious application; registrars will call it radical. The strongest architecture-level claim the fabric has.",
+    text: "Blockcerts and CLR issue verifiable end artifacts; Temporal replays operational history. Nobody found makes the institution's operative academic record an event-sourced, tamper-evident, PII-by-reference ledger whose projections include the transcript itself. Mechanism updated per the agentic gap analysis: the integrity substrate is a Merkle transparency log with signed tree heads and witnesses (the Sigstore/Trillian, RFC 6962 lineage) rather than a bare hash chain — a chain proves edits, a witnessed log also defeats split-view; and the portable record layer is W3C Verifiable Credentials 2.0 / Open Badges 3.0 with Bitstring Status List revocation, which is where EdTech standards actually converged in 2025. Event-sourcing practitioners will call it an obvious application; registrars will call it radical. The strongest architecture-level claim the fabric has.",
     tier: "NOVEL-IN-COMBINATION",
   },
   {
     claim: "FERPA purpose-of-use on the wire, in education",
-    text: "Healthcare solved purpose-in-the-event (FHIR AuditEvent purposeOfUse, ATNA lineage); GDPR research explored it. No education event standard — Caliper, Ed-Fi, OneRoster — carries purpose, delegation, or accountability on the wire. Claimed precisely: the first transplant of healthcare's purpose-of-use discipline into the education event layer. A transplant, not an invention — and it survives scrutiny stated that way.",
+    text: "Healthcare solved purpose-in-the-event (FHIR AuditEvent purposeOfUse — renamed .authorization in R5/R6 — plus Consent.provision.purpose and security labels, all bound to one HL7 value set). Claimed in its narrow, defensible form: education has no widely-deployed, requester-asserted, per-transaction purpose-of-use primitive equivalent to the FHIR/XACML model — Caliper, Ed-Fi, OneRoster, LTI carry none. Steelman conceded up front: SIF/A4L's Privacy Obligation Document does define machine-readable purpose lists and a dataPrivacyMarker on the wire, but it is declarative, contract-bound-by-token, lightly adopted, and architecturally weaker than per-transaction assertion — which is exactly why the transplant is still additive. Nor has agent authorization covered it: MCP auth is scope/resource only, and the OAuth agent drafts carry identity and task, not purpose. A transplant, not an invention — and it survives scrutiny stated that way.",
     tier: "NOVEL IN DOMAIN",
   },
   {
@@ -102,7 +102,7 @@ const survives = [
 const conceded = [
   "Durable IDs, lifecycle states, named owners, SLA clocks, auto-escalation — ITSM/CSM/ACM, fifteen-plus years old.",
   "Actor + reason audit on record changes — field history and change management, everywhere.",
-  "Event envelopes and correlation — CloudEvents; on-behalf-of delegation — OAuth token exchange.",
+  "Event envelopes and correlation — CloudEvents with W3C traceparent; delegation chains — OAuth token exchange (RFC 8693 act/may_act), with attenuating agent-token drafts already at the IETF. The envelope's on-behalf-of is therefore a chain, not a field, and authorization-grade delegation rides a signed token, never unsigned metadata.",
   "Subject-visible case status as a pattern — USCIS case tracker, airline self-service, Navigate360 To-Dos.",
   "'No one lost between handoffs' as a network guarantee — closed-loop referral systems, IROPS manifests.",
   "Per-action AI authorization with tiered, registered tools — arguably novel in 2024; commoditizing fast by mid-2026 (ServiceNow AI Control Tower + Action Fabric, Salesforce Agent Fabric, NIST agent-standards work). We no longer lead with this claim.",

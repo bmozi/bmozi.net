@@ -11,7 +11,7 @@
 
 **Publication opens with Part 0 — "What Is a Seam?"** (file 00a): written after the series was complete, it turned out to be the foundation the whole arc stands on — the definition, the four crossings of a governed seam, the symptom list and trace method for finding one, and the five-scale generalization. It publishes FIRST, and every later piece may assume its vocabulary.
 
-From there the series moves from *recognition* (you have this problem) → *principles* (here's the thinking that fixes it) → *practices* (here's what to do Monday) → *transformation* (here's how it scales to an organization). Each article stands alone, but the sequence builds one worldview: stop thinking in tools, start thinking in systems — and govern the seams. (Specials 11–13 — the instrument, the transitions, the org chart — slot after the main arc; file 14 is a pointer to Part 0, kept per the nothing-deleted rule.)
+From there the series moves from *recognition* (you have this problem) → *principles* (here's the thinking that fixes it) → *practices* (here's what to do Monday) → *transformation* (here's how it scales to an organization). Each article stands alone, but the sequence builds one worldview: stop thinking in tools, start thinking in systems — and govern the seams. (Specials 11–13 — the instrument, the transitions, the org chart — slot after the main arc; file 14 is a pointer to Part 0, kept per the nothing-deleted rule; specials 15–16 — the seam AI review can't cross, and the delegation seam — extend the canon to the agentic frontier, and 16 adds a fifth question to the four crossings: *can this authority be attenuated and revoked mid-flight?*)
 
 ---
 

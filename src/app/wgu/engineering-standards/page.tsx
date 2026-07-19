@@ -149,7 +149,7 @@ const projections = [
 ];
 
 const ledgerGuarantees = [
-  "Append-only with hash-chaining: each event carries the hash of its predecessor — tampering is mathematically evident, which is what accreditation-grade means.",
+  "Append-only in a Merkle transparency log: hash-linked events under periodically signed tree heads with independent witnesses (the RFC 6962 / Sigstore-Trillian lineage). A bare chain proves edits; a witnessed log also defeats split-view — presenting different histories to different auditors — which is what accreditation-grade actually requires. Build on transparency-log tooling, never a proprietary ledger database: AWS retired QLDB in 2025.",
   "Corrections are events: record.amended cites what it corrects and why. History is never rewritten; it is extended. The audit story survives any dispute.",
   "PII by reference: the ledger knows universal IDs and facts of mastery, never names. Erasure requests touch the reference store; the chain stays intact.",
   "Snapshots every N events per student for fast rebuilds; a full projection rebuild is a scheduled, tested operation — not an emergency procedure.",

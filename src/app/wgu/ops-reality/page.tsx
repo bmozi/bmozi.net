@@ -101,7 +101,7 @@ const threats = [
     threat: "Audit-trail tampering",
     vector: "Covering tracks after misuse by editing history.",
     control:
-      "The ledger's hash chain makes tampering mathematically evident (run the verify() test yourself); operational audit logs are append-only with retention locks. The reference implementation demonstrates detection in its final test.",
+      "The ledger's Merkle transparency log makes tampering mathematically evident, and signed tree heads with independent witnesses defeat split-view — showing one history to the registrar and another to the auditor (the reference implementation's hash-linked verify() test demonstrates edit detection; witnessing is the production-grade upgrade). Operational audit logs are append-only with retention locks.",
   },
 ];
 

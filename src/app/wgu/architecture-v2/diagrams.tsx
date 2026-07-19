@@ -72,7 +72,7 @@ export function V2TargetDiagram() {
   return (
     <div
       role="img"
-      aria-label="Architecture v2 target diagram: experiences and front door on top; sovereign systems of record publishing intent-shaped events via outbox and CDC onto an event backbone that is circulation, not truth; one event-sourced competency ledger with PII by reference; the Student Timeline as a governed data product with role-scoped views; the lakehouse as analytical truth; a single governed agent gateway; and a thin identity and policy layer spanning everything, with read-your-writes paths for anything a student acts on."
+      aria-label="Architecture v2 target diagram: experiences and front door on top; sovereign systems of record publishing intent-shaped events via outbox and CDC onto an event backbone that is circulation, not truth; one event-sourced competency ledger with PII by reference; the Student Timeline as a governed data product with role-scoped views; the lakehouse as analytical truth; a governed agent policy plane, federation-ready; and a thin identity and policy layer spanning everything, with read-your-writes paths for anything a student acts on."
       className="space-y-5 bg-[var(--ink)] p-4 sm:p-6 lg:p-8"
     >
       <div className="flex flex-wrap gap-2 font-mono text-[0.68rem] uppercase text-white/55">
@@ -193,7 +193,7 @@ export function V2TargetDiagram() {
         </div>
         <div className="border border-[var(--magenta)] bg-[rgba(255,79,216,0.06)] p-5">
           <h3 className="font-display text-2xl font-black text-white">
-            Governed Agent Gateway — one front door for AI action
+            Governed Agent Policy Plane — one front door for AI action, federation-ready
           </h3>
           <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
             Scoped tools, never raw credentials. Per-action authorization,

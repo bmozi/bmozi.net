@@ -198,6 +198,24 @@ const groups: { group: string; terms: Term[] }[] = [
           "The load-bearing word of this whole body of work. A seam is any place two systems, teams, or parties connect — and like the stitching on a stuffed animal, it's where things fall out: nothing gets lost inside a system, it gets lost between them. Seams are necessary, not bad — they're where you cut so pieces can be owned and replaced separately. The sin is leaving them UNGOVERNED. A governed seam has four things crossing it: a shared identity (both sides agree who this person is), events (each side — and the person affected — learns what happened, structurally), an owner (a human accountable for the journey across, not just the territory on each side), and measurement of the crossing itself. The same pattern repeats at every scale: between systems, between teams, between human and AI, between claims and evidence. One question finds an ungoverned seam anywhere: where do two things meet with no owner, no shared truth, and no notification?",
       },
       {
+        term: "Delegation seam",
+        short: "Where authority passes between agents and no human owns the hop",
+        plain:
+          "The newest seam in the canon, installed by agentic AI: agent A calls agent B calls tool C on behalf of a human, and the authority arriving at the final action is the accumulated residue of a chain nobody granted, owns, or measures. What falls through it isn't a document — it's authority itself. Governed by the four crossings with agent-shaped content (cryptographic identity with the full for-whom chain, delegation logged as a first-class event, a human owning the chain's ENVELOPE — the rules of what may be delegated — rather than each hop, and measurement of chain length and authority-at-terminus), plus the fifth question this seam adds: can this authority be attenuated and revoked mid-flight? Grants that only expand and can't be recalled aren't delegation; they're abdication.",
+      },
+      {
+        term: "Merkle transparency log",
+        short: "The ledger's tamper-evidence, production grade",
+        plain:
+          "How the competency ledger proves its history honest. Events are hash-linked into a Merkle tree whose head is periodically signed and shared with independent witnesses — the pattern behind Certificate Transparency and Sigstore. A bare hash chain proves nobody edited the past; a witnessed log also proves nobody is running a split-view — showing the registrar one history and the auditor another. That second guarantee is what accreditation-grade actually requires, and it's why the ledger builds on transparency-log tooling rather than a proprietary ledger database (AWS retired its own, QLDB, in 2025).",
+      },
+      {
+        term: "Confused deputy",
+        short: "A component tricked into spending its authority for someone else",
+        plain:
+          "A fifty-year-old security failure with a brand-new surface: any component holding borrowed authority can be manipulated into using it for an attacker's purpose. Agents are the most confusable deputies ever built — they take instructions from the content they process, so a poisoned document in a queue is a potential command to the deputy reading it. The defenses are structural, not hopeful: attenuated per-hop delegation (no hop inherits more than its sub-task needs), the lethal trifecta kept apart, and revocation that works mid-flight.",
+      },
+      {
         term: "Bounded context",
         short: "A domain with one owner of truth",
         plain:

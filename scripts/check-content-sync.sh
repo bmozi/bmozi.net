@@ -41,6 +41,12 @@ for pair in \
   done
 done
 
+# --- The Podium (products/conference-talks -> content/blog/talks)
+for f in "$PRODUCTS"/conference-talks/[0-9]*.md; do
+  [ -e "$f" ] || continue
+  check "$f" "$SITE/content/blog/talks/$(basename "$f")"
+done
+
 # --- Reference shelf (explicit mapping: source -> site name)
 while IFS='|' read -r src dst; do
   [ -z "$src" ] && continue
@@ -60,6 +66,9 @@ ea-mastery/08-THE-DECISION-LAYER.md|11-the-decision-layer.md
 scf-provenance/PROVENANCE.md|12-provenance-record.md
 ../harnessing-the-horse/talks/the-harness-in-ten-minutes.md|13-the-harness-in-ten-minutes.md
 ea-mastery/09-INTRODUCTION-KIT.md|14-introduction-kit.md
+ea-mastery/10-AGENTIC-GAP-ANALYSIS.md|15-agentic-gap-analysis.md
+ea-mastery/11-THE-METHOD.md|16-the-method.md
+ea-mastery/12-AI-SECURITY-SEAMS.md|17-ai-security-seams.md
 MAP
 
 if [ "$DRIFT" -eq 0 ]; then

@@ -52,7 +52,7 @@ const volume = [
   {
     metric: "Ledger storage / year",
     value: "~120 GB",
-    math: "58M events × 2 KB, hash chain included. A decade of every mastery fact at WGU fits on a laptop.",
+    math: "58M events × 2 KB, Merkle log overhead included. A decade of every mastery fact at WGU fits on a laptop.",
     verdict:
       "Permanence is cheap. Retaining the academic record forever — the transcript obligation — is a storage non-event.",
   },

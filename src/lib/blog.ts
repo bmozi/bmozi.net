@@ -59,11 +59,22 @@ export const seriesList: Series[] = [
     accent: "var(--amber)",
   },
   {
+    slug: "talks",
+    title: "The Podium",
+    signature: "Never assert on stage what the corpus can't demonstrate in writing.",
+    tagline:
+      "The conference-talk portfolio: full talk kits — scripts, one-slide summaries, and Q&A drills — each downstream of written work that survived adversarial review first.",
+    image: "/blog/reference-cover.webp",
+    imageAlt:
+      "Speaker's podium with talk kits, slide outlines, and question drill cards",
+    accent: "var(--amber)",
+  },
+  {
     slug: "reference",
     title: "Reference",
     signature: "Hold me to these. That's what they're for.",
     tagline:
-      "The operating shelf behind the work: charter, mastery system, field kit, guild plan, study guide, prosecution record, decision discipline, provenance, and WGU readiness.",
+      "The operating shelf behind the work: charter, mastery system, field kit, guild plan, study guide, prosecution record, decision discipline, provenance, WGU readiness, and agentic security.",
     image: "/blog/reference-cover.webp",
     imageAlt:
       "Disciplined reference archive with binders, field cards, and technical diagrams",

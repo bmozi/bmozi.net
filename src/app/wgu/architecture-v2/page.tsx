@@ -44,14 +44,14 @@ const decisions = [
       "Product thinking without the federated-governance revolution. Federation applies only where regulation demands it. The platform team is a product team; the catalog is curated, not a graveyard.",
   },
   {
-    layer: "06 · One governed agent gateway",
-    rule: "All AI actions flow through a single gateway: scoped tools, per-action authorization, delegation via token exchange, human-in-the-loop on anything consequential or irreversible, full audit.",
+    layer: "06 · One governed agent policy plane",
+    rule: "All AI actions flow through one policy plane per institution: scoped tools, per-action authorization, delegation as an attenuated chain via token exchange (RFC 8693 act/may_act), revocable mid-flight, human-in-the-loop on anything consequential or irreversible, full audit.",
     detail:
-      "Agents are treated as prompt-injectable by default: capability scoping, blast-radius limits, and structural separation of private data, untrusted input, and exfiltration paths. The mesh is earned when a second production agent exists.",
+      "Agents are treated as prompt-injectable by default: capability scoping, blast-radius limits, and structural separation of private data, untrusted input, and exfiltration paths. One gateway instance is the Day-1 posture; the design assumes federation — cross-org agent calls terminate at a counterparty's gateway (A2A/MCP are federated by construction), so the plane is built gateway-to-gateway-ready, with cryptographic workload identity and delegation that attenuates per hop and never merely inherits.",
   },
   {
     layer: "07 · A thin identity and policy layer",
-    rule: "Managed workload identity over self-run infrastructure; one policy engine, authored centrally, enforced locally; one correlation-and-purpose ID propagated end to end.",
+    rule: "Managed workload identity over self-run infrastructure — cryptographic, SPIFFE-style, so it federates across org boundaries; one policy engine, authored centrally, enforced locally; one correlation-and-purpose ID propagated end to end; every grant attenuable and revocable mid-flight, not merely expirable.",
     detail:
       "The fabric governs the seams and nothing else. It is bought-and-thin, not built-and-thick: no central chokepoint, no second policy language, no bespoke PKI program competing with the student roadmap for engineers.",
   },
@@ -103,7 +103,7 @@ const defenseMap = [
   {
     objection: "Agent platforms are premature and prompt injection is unsolved.",
     answer:
-      "One gateway, scoped tools, per-action authorization, human-in-the-loop on anything consequential — agents treated as injectable by default with the lethal trifecta structurally broken. The mesh is deferred until a second production agent earns it.",
+      "One policy plane, scoped tools, per-action authorization, attenuated and revocable delegation chains, human-in-the-loop on anything consequential — agents treated as injectable by default with the lethal trifecta structurally broken. The confused deputy is named and defended against, not assumed away; internal swarm topology is deferred until a second production agent earns it, but the plane is federation-ready from Day 1 because the standards already are.",
   },
   {
     objection: "An identity fabric is a multi-year PKI program in disguise.",
@@ -263,7 +263,7 @@ const changed = [
   },
   {
     was: "Agent mesh as a third platform plane",
-    now: "One governed agent gateway; mesh deferred until earned",
+    now: "One governed policy plane, federation-ready; internal swarm deferred until earned",
   },
   {
     was: "Self-run identity fabric with dual policy engines",
@@ -287,8 +287,8 @@ const roadmap = [
     lps: "Create & Innovate · Integrity · Aim True · Imagine Boldly",
   },
   {
-    phase: "Slice 3 · The governed agent gateway",
-    text: "One agent (coach copilot or outreach orchestrator) acting through scoped tools with per-action authorization, delegation, human-in-the-loop, and full audit. Measure policy correctness, latency, and student outcomes before any second agent.",
+    phase: "Slice 3 · The governed agent policy plane",
+    text: "One agent (coach copilot or outreach orchestrator) acting through scoped tools with per-action authorization, attenuated revocable delegation chains, human-in-the-loop, and full audit. Measure policy correctness, latency, and student outcomes before any second agent.",
     lps: "Sound Judgment · Earn Trust · One-by-One",
   },
   {

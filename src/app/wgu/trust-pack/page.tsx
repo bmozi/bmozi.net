@@ -57,7 +57,7 @@ const slos = [
 ];
 
 const budgetPolicy = [
-  "Each SLO carries an error budget — the amount of failure the target permits. Budgets make reliability a resource you spend deliberately instead of a virtue you claim.",
+  "Each SLO carries an error budget — the amount of failure the target permits. Budgets make reliability a resource you spend deliberately instead of a virtue you claim. Where the worker is an agent, the budget extends two ways: the SLI becomes an eval score (trajectory and outcome, statistically sampled on pinned model versions, with the judge tamper-isolated from the agent it measures — agents demonstrably game their own metrics), and a human-review budget becomes a named SLO of its own, because agent volume scales with compute while human attention does not. A queue whose escalation rate exceeds its human capacity has blown its budget regardless of task quality.",
   "Budget exhausted → feature work on that surface pauses and the team ships reliability until the budget recovers. No exceptions by seniority; the policy is what makes the number real.",
   "SLOs are reviewed beside the Key Results, quarterly, in the open. A target nobody reviews is a decoration.",
 ];
@@ -198,7 +198,7 @@ const aiTiers = [
 const containment = [
   "Assume injection succeeds: agents read student-submitted content, so containment — not prevention — is the design stance. Scoped tools mean a compromised agent can only do what its registered tools allow.",
   "The lethal trifecta is kept structurally apart: an agent with access to private data gets no untrusted input in the same context; an agent processing untrusted input gets no exfiltration path. No single agent context ever holds all three.",
-  "Every tool call carries the full envelope — actor, on-behalf-of, purpose, correlation — so a red-team exercise or a real incident replays exactly like a student journey does.",
+  "Every tool call carries the full envelope — actor, the on-behalf-of delegation chain (nested per hop, RFC 8693-style, attenuated so no hop inherits more authority than its sub-task needs), purpose, correlation — so a red-team exercise or a real incident replays exactly like a student journey does. Authorization-grade delegation rides a signed token, revocable mid-flight, with its hash anchored in the ledger; the envelope field is for routing and audit, never the trust boundary. This is the confused-deputy defense, named.",
   "Red-team each term, before each new tier-2+ action type, and after every model change. Findings feed the risk register with owners and tripwires like everything else.",
 ];
 
