@@ -118,8 +118,8 @@ export default function StudentContinuityFabricPage() {
 
       <section className="relative isolate min-h-0 overflow-hidden sm:min-h-[720px] border-b border-white/10">
         <Image
-          src="/wgu/visuals/scf-speed-safety-evidence.webp"
-          alt="Continuous student journey thread passing through rollout lanes, policy gates, and evidence ledgers"
+          src="/wgu/visuals/scf-continuity-thread-map.webp"
+          alt="Governed student continuity thread passing through institutional systems, event contracts, owner clocks, policy gates, and audit rails"
           fill
           priority
           unoptimized
@@ -193,6 +193,23 @@ export default function StudentContinuityFabricPage() {
             ))}
           </div>
         </div>
+        <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
+          <figure className="overflow-hidden border border-black/10 bg-white p-2 shadow-[10px_10px_0_rgba(12,17,22,0.08)]">
+            <Image
+              src="/wgu/visuals/scf-black-hole-closed.webp"
+              alt="Student document packets moving from an unowned black hole into a governed intake pipeline with receipt, owner, clock, escalation, and audit controls"
+              width={1800}
+              height={1013}
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+            <figcaption className="border-t border-black/10 px-4 py-4 text-sm leading-6 text-black/65">
+              The first slice should make the invisible failure visible: receipt,
+              owner, clock, escalation, and audit replacing the document black
+              hole.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="border-b border-white/10">
@@ -233,6 +250,21 @@ export default function StudentContinuityFabricPage() {
               ))}
             </div>
           </div>
+          <figure className="mt-10 overflow-hidden border border-white/12 bg-white/[0.035] p-2">
+            <Image
+              src="/wgu/visuals/scf-ai-action-gateway.webp"
+              alt="AI assistant core passing through signed delegation, purpose-bound access, human approval, tiered action gates, and audit before reaching student action tools"
+              width={1800}
+              height={1013}
+              sizes="100vw"
+              className="h-auto w-full"
+            />
+            <figcaption className="border-t border-white/10 px-4 py-4 text-sm leading-6 text-[var(--soft)]">
+              The AI action gateway is the safety boundary: scoped delegation,
+              purpose on the wire, approval tiers, typed tools, and replayable
+              audit before anything touches a student-facing action.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
