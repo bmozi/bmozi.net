@@ -147,6 +147,31 @@ const articleVisuals: Record<
       imageAlt:
         "Tamper-evident provenance ledger with linked evidence packets, hash blocks, and revision trails",
     },
+    "13-the-harness-in-ten-minutes": {
+      image: "/blog/reference/harness-in-ten-minutes.webp",
+      imageAlt:
+        "Engineering harness apparatus guiding AI-assisted code through scope, proof, enforcement, and communication gates",
+    },
+    "14-introduction-kit": {
+      image: "/blog/reference/introduction-kit.webp",
+      imageAlt:
+        "Architecture onboarding table with conversation cards, stakeholder tiles, and first-meeting artifacts",
+    },
+    "15-agentic-gap-analysis": {
+      image: "/blog/reference/agentic-gap-analysis.webp",
+      imageAlt:
+        "Architecture corpus under adversarial review against agent networks, delegation chains, and risk markers",
+    },
+    "16-the-method": {
+      image: "/blog/reference/the-method.webp",
+      imageAlt:
+        "Governed artifact pipeline moving from idea cards through review, code, sync, proof, and deployment stages",
+    },
+    "17-ai-security-seams": {
+      image: "/blog/reference/ai-security-seams.webp",
+      imageAlt:
+        "AI security operations table with quarantined hostile content, policy gates, delegation controls, and guarded data zones",
+    },
   },
 };
 
