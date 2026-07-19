@@ -41,13 +41,17 @@ The student is the tiebreaker · decisions written and inspectable · every desi
 
 Models whose only consumers were architects? Involvement experienced as a gate? Stakeholders who can't name what architecture did for them this quarter? Weeks spent at one altitude? Technology framing at money-and-mission tables? And the six-month test — count what would keep running, write it down, grow the count.
 
-## The four signatures (one per series — each is a thesis)
+## The five signatures (one per series — each is a thesis)
 
-*The tools were never the gap. The seams were.* — [The Seams](/blog). *Correct is a property you can test; everything else is hope.* — Getting It Right. *That's the whole idea; the rest is engineering.* — Seams for Everyone. *Patterns are free; judgment is earned.* — The Architect's Mind.
+*The tools were never the gap. The seams were.* — [The Seams](/blog/the-seams).
+*Correct is a property you can test; everything else is hope.* — [Getting It Right](/blog/getting-it-right).
+*That's the whole idea; the rest is engineering.* — [Seams for Everyone](/blog/seams-for-everyone).
+*Patterns are free; judgment is earned.* — [The Architect's Mind](/blog/architects-mind).
+*Never assert on stage what the corpus can't demonstrate in writing.* — [The Podium](/blog/talks).
 
 ## Where everything lives
 
-The architecture: [the WGU hub](/wgu) — 22 areas from principles to pitch kit, plus the runnable reference implementation (`products/uso-reference-implementation`, 9 passing tests). The writing: [the Writing Room](/blog) — four series plus this Reference shelf. The practice: your Monday check-in carries the plan, the loops, and one Socratic question a week. The terms: **[the Glossary](/wgu/glossary)** — the appendix to this guide and to everything above; if any word on this page isn't instantly clear, it's defined there in plain language.
+The architecture: [the WGU hub](/wgu) — 22 areas from principles to pitch kit, plus the runnable reference implementation (`products/uso-reference-implementation`, 9 passing tests). The writing: [the Writing Room](/blog) — five series plus this Reference shelf. The practice: your Monday check-in carries the plan, the loops, and one Socratic question a week. The terms: **[the Glossary](/wgu/glossary)** — the appendix to this guide and to everything above; if any word on this page isn't instantly clear, it's defined there in plain language.
 
 ---
 

@@ -8,7 +8,7 @@ import { getArticles, seriesList } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "The Writing Room — Series Library",
   description:
-    "The private mirror of the article series: The Seams, Getting It Right, Seams for Everyone, The Architect's Mind, and the standing reference documents.",
+    "The private mirror of the article and talk series: The Seams, Getting It Right, Seams for Everyone, The Architect's Mind, The Podium, and the standing reference documents.",
   alternates: { canonical: "/blog" },
 };
 
@@ -49,7 +49,7 @@ export default function BlogIndexPage() {
               The writing room · private mirror of the published series
             </p>
             <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-              Four series, one reference shelf. Read, review, study.
+              Five series, one reference shelf. Read, review, study.
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
               The canonical home of every article before and after it ships to

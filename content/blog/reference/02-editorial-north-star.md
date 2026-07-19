@@ -1,8 +1,9 @@
 # Editorial North Star — private reference (never published)
 
-Every article across all four series is written generically, but it is *checked* against
-two things before release: the mission and the fourteen Leadership Principles. This file
-is the standing correlation map. If a draft can't name its principles, it isn't ready.
+Every article or talk kit across all five series is written generically, but it is
+*checked* against two things before release: the mission and the fourteen Leadership
+Principles. This file is the standing correlation map. If a draft can't name its
+principles, it isn't ready.
 
 **The mission lens.** Improve quality and expand access to opportunity; learning
 independent of time or place; credentials credible to institutions and employers.
@@ -14,7 +15,8 @@ instead of teaching fails the mission test.
 ## Principle → where it lives in the writing
 
 **Aim True** — every series plan states its purpose and audience before its content;
-articles that drift from the arc get cut. (All four `00-series-plan.md` files.)
+articles that drift from the arc get cut. (The four `00-series-plan.md` files plus The
+Podium's `00-talk-portfolio.md`.)
 
 **Student Obsessed** — The Seams 01 (complaints as system outputs) and Architect's Mind 07
 (Systems That Process People) are this principle at full strength: the person on the
