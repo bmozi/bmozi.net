@@ -33,6 +33,7 @@ import {
   Users,
 } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
+import { WguExplorerProgress } from "@/components/wgu-explorer-progress";
 
 export const metadata: Metadata = {
   title: "WGU Enterprise Architecture Hub",
@@ -371,6 +372,7 @@ const hubTracks = [
     areas: [
       "/wgu/system-boundary",
       "/wgu/architecture-v2",
+      "/wgu/architecture-v2#roadmap",
       "/wgu/adr-timeline-buy-vs-build",
       "/wgu/ground-up",
       "/wgu/engineering-standards",
@@ -578,6 +580,30 @@ const areaTrackByHref = Object.fromEntries(
   hubTracks.flatMap((track) => track.areas.map((href) => [href, track.label])),
 ) as Record<string, string>;
 
+const areaByHref = Object.fromEntries(
+  areas.map((area) => [
+    area.href,
+    { href: area.href, label: area.label, title: area.title },
+  ]),
+) as Record<string, { href: string; label: string; title: string }>;
+
+const roadmapArea = {
+  href: "/wgu/architecture-v2#roadmap",
+  label: "Living Roadmap",
+  title: "Proven in slices, principled at every step",
+};
+
+const explorerTracks = hubTracks.map((track) => ({
+  label: track.label,
+  title: track.title,
+  text: track.text,
+  items: track.areas
+    .map((href) => (href === roadmapArea.href ? roadmapArea : areaByHref[href]))
+    .filter((item): item is { href: string; label: string; title: string } =>
+      Boolean(item),
+    ),
+}));
+
 export default function WguHubPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -660,6 +686,8 @@ export default function WguHubPage() {
           </div>
         </div>
       </section>
+
+      <WguExplorerProgress tracks={explorerTracks} />
 
       <section className="border-b border-white/10 bg-[#0d1118]">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.92fr_1.08fr]">
