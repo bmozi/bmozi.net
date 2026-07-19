@@ -277,6 +277,15 @@ const visuals: Record<string, Visual> = {
     src: "/blog/illustrations/all-dashboards-green.webp",
     alt: "Three green status dashboards on separate system islands while a document packet falls into an unowned gap between them",
   },
+  "stuffed-animal-seam": {
+    kind: "image",
+    eyebrow: "Opening Metaphor",
+    title: "Stuffing never falls out through the middle of the fabric.",
+    caption:
+      "The panels are strong. The loss happens at the stitching, which is the whole seam argument in one toy.",
+    src: "/blog/illustrations/stuffed-animal-seam.webp",
+    alt: "Friendly teddy-style stuffed toy losing fluffy stuffing and small architecture tokens from its stitched seams on a technical worktable",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

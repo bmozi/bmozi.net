@@ -12,6 +12,8 @@ A stuffed animal is made of pieces of fabric. The pieces are strong — you can 
 
 That's this entire series in one toy: your organization's pieces — the CRM, the records system, the support team, the engineering team — are mostly fine. Decades of investment made them strong. What nobody sewed properly is the stitching between them, and that is precisely where your customers, your data, and your accountability fall out. **Things don't get lost in systems. They get lost between them.**
 
+{{visual:stuffed-animal-seam}}
+
 ## Now the definition, precisely
 
 A seam is any place where two things meet and *neither one is in charge of the meeting.* Two systems that each work correctly but disagree about what "active" means. Two departments that each do their jobs but where the handoff between them belongs to no one. Two facts — the claim on the slide and the number in production — that nobody reconciles.
