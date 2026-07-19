@@ -195,9 +195,9 @@ export const wguStrategyPages = {
     headline: "Earn adoption one decision community at a time.",
     intro:
       "The architecture is cross-boundary by nature. That means adoption cannot be commanded by a diagram. Each partner needs to see their own risk, value, dignity, and decision rights in the work before they will carry it.",
-    image: "/wgu/practice-lab/stakeholder-atlas.webp",
+    image: "/wgu/visuals/engagement-strategy-hero.webp",
     imageAlt:
-      "Stakeholder influence atlas centered on student continuity and institutional trust paths",
+      "Stakeholder engagement rooms connected by trust bridges, evidence packets, listening loops, and a shared continuity fabric artifact",
     accent: "magenta",
     primaryLink: {
       href: "/wgu/practice-lab/stakeholder-atlas",
@@ -429,9 +429,9 @@ export const wguStrategyPages = {
     headline: "Academic trust fails at the seams between policy, evidence, and action.",
     intro:
       "FERPA and security are necessary, not sufficient. A student system also touches accreditation evidence, regular and substantive interaction, assessment integrity, appeals, accessibility, proctoring, state authorization, and transcript credibility.",
-    image: "/wgu/visuals/engineering-standards-hero.webp",
+    image: "/wgu/visuals/academic-integrity-regulatory-seams-hero.webp",
     imageAlt:
-      "Academic integrity control plane connecting assessments, records, policy, evidence, and accreditation review",
+      "Academic integrity evidence chamber connecting assessments, rubrics, privacy, appeals, accreditation evidence, and a tamper-evident competency ledger",
     accent: "magenta",
     primaryLink: {
       href: "/wgu/engineering-standards",
@@ -507,9 +507,9 @@ export const wguStrategyPages = {
     headline: "Optimize engineering throughput by turning discipline into equipment.",
     intro:
       "The architecture will only move at institutional speed if engineers get a better paved road. AI tools and agentic engineering can accelerate the work, but only when Scope, Prove, Enforce, and Communicate become team equipment rather than personal willpower.",
-    image: "/wgu/visuals/engineering-standards-hero.webp",
+    image: "/wgu/visuals/engineering-platform-hero.webp",
     imageAlt:
-      "Engineering platform with AI-assisted development lanes, proof gates, contract registry, and team operating controls",
+      "Engineering platform paved road with AI-assisted work lanes, proof gates, contract registry, human review controls, and harnessed delivery rails",
     accent: "signal",
     primaryLink: {
       href: "/blog/reference/13-the-harness-in-ten-minutes",
@@ -601,4 +601,3 @@ export const wguStrategyPages = {
       "Grounded in the adjacent Harnessing the Horse repository, the Harness in Ten Minutes talk, the local engineering standards page, and the agentic security gap analysis.",
   },
 } satisfies Record<string, WguStrategyPage>;
-
