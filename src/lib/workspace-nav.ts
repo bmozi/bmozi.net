@@ -43,6 +43,41 @@ export const workspaceGroups: WorkspaceGroup[] = [
         description: "FERPA purposes, access tiers, SLOs, and audit posture.",
       },
       {
+        href: "/wgu/student-evidence-protocol",
+        label: "Student evidence protocol",
+        description: "Sanctioned student voice, co-design, and evidence loops.",
+      },
+      {
+        href: "/wgu/role-experience-pack",
+        label: "Role experience pack",
+        description: "Mentor, instructor, evaluator, and support adoption surfaces.",
+      },
+      {
+        href: "/wgu/engagement-strategy",
+        label: "WGU engagement strategy",
+        description: "Stakeholder currencies, risks, trust moves, and proof artifacts.",
+      },
+      {
+        href: "/wgu/opportunity-continuity-fabric",
+        label: "Opportunity continuity",
+        description: "Competency evidence, skills, careers, alumni, and employer trust.",
+      },
+      {
+        href: "/wgu/human-connection-slos",
+        label: "Human connection SLOs",
+        description: "AI support guardrails for reachability, escalation, and trust.",
+      },
+      {
+        href: "/wgu/academic-integrity-regulatory-seams",
+        label: "Academic integrity seams",
+        description: "Regulatory, assessment, appeal, and accreditation trust seams.",
+      },
+      {
+        href: "/wgu/engineering-platform",
+        label: "Engineering platform",
+        description: "Agentic delivery, proof gates, DX SLOs, and harness discipline.",
+      },
+      {
         href: "/wgu/scale-math",
         label: "Scale math",
         description: "Volumes, storage, replay, cost, and operational arithmetic.",

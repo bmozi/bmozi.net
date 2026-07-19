@@ -5,9 +5,9 @@ import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
 
 export const metadata: Metadata = {
-  title: "WGU Leadership Principles as Architecture Practice",
+  title: "WGU Principles, Results, and Beliefs as Architecture Practice",
   description:
-    "All fourteen WGU Leadership Principles translated into enterprise-architecture behavior, with the standard every plan and task in this hub is held to.",
+    "WGU's public leadership principles, key results, and cultural beliefs translated into enterprise-architecture behavior, with a working crosswalk for this hub.",
   alternates: { canonical: "/wgu/leadership-principles" },
 };
 
@@ -17,6 +17,38 @@ type Principle = {
   practice: string;
   applied: string;
 };
+
+const frameworkGroups = [
+  {
+    title: "Leadership Principles",
+    items: [
+      "Student Obsession",
+      "Innovation",
+      "Learning",
+      "Inspire & Develop",
+      "Urgency",
+      "Courage",
+      "Ownership",
+      "Deliver Results",
+      "Integrity",
+      "Earn Trust",
+    ],
+  },
+  {
+    title: "Key Results",
+    items: ["Completion", "Return", "Equity", "One-by-One", "Advance Equity"],
+  },
+  {
+    title: "Cultural Beliefs",
+    items: [
+      "Aim True",
+      "Own It",
+      "Trust Generously",
+      "Engage Respectfully",
+      "Achieve Together",
+    ],
+  },
+];
 
 const principles: Principle[] = [
   {
@@ -174,23 +206,72 @@ export default function LeadershipPrinciplesPage() {
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-20">
           <p className="inline-flex items-center gap-2 border border-white/20 bg-black/45 px-3 py-2 font-mono text-xs uppercase text-[var(--signal)]">
             <Compass size={16} aria-hidden="true" />
-            Leadership principles · architecture practice
+            Public framework · architecture practice
           </p>
           <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] font-black leading-[0.92] text-white">
-            Fourteen principles. One standard for every plan.
+            Principles, results, and beliefs. One standard for every plan.
           </h1>
           <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--soft)]">
-            All fourteen are critical for success — none is optional. Each card
-            gives the principle&apos;s essence, what it means as enterprise-
-            architecture practice, and where it is already applied in this hub.
-            Every task, plan, and decision record here must name the principles
-            it serves.
+            WGU&apos;s public framework separates Leadership Principles, Key
+            Results, and Cultural Beliefs. This page keeps that taxonomy visible,
+            then translates the working behaviors used in this hub into
+            enterprise-architecture practice. Every task, plan, and decision
+            record here must name the framework signals it serves.
           </p>
         </div>
       </WguImmersiveHero>
 
+      <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.35fr_0.65fr]">
+          <div>
+            <p className="font-mono text-xs uppercase text-[var(--magenta)]">
+              Taxonomy correction
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-black leading-none sm:text-5xl">
+              Do not flatten the framework.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-black/70">
+              The earlier page treated the working crosswalk as fourteen
+              official Leadership Principles. The safer architecture move is to
+              keep the public categories separate, then show how the work maps
+              to them.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-3">
+            {frameworkGroups.map((group) => (
+              <article
+                key={group.title}
+                className="border border-black/10 bg-white p-5 shadow-[8px_8px_0_rgba(12,17,22,0.08)]"
+              >
+                <h2 className="font-display text-2xl font-black leading-tight">
+                  {group.title}
+                </h2>
+                <div className="mt-4 grid gap-2">
+                  {group.items.map((item) => (
+                    <p
+                      key={item}
+                      className="border border-black/10 bg-black/[0.025] px-3 py-2 font-mono text-xs"
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="mb-8 max-w-3xl">
+            <p className="font-mono text-xs uppercase text-[var(--signal)]">
+              Working architecture crosswalk
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black leading-none text-white">
+              The behaviors this hub uses to operationalize the framework.
+            </h2>
+          </div>
           <div className="grid gap-4 lg:grid-cols-2">
             {principles.map((p, index) => (
               <article
@@ -224,9 +305,10 @@ export default function LeadershipPrinciplesPage() {
             ))}
           </div>
           <p className="mt-10 max-w-3xl text-sm leading-6 text-white/50">
-            Principle essences are paraphrased from WGU&apos;s published
-            Leadership Principles for personal working reference. The practice
-            and application interpretations are my own.
+            The framework categories are drawn from WGU&apos;s public character
+            framework. The fourteen cards are this hub&apos;s working architecture
+            crosswalk: they preserve the behavior names already used throughout
+            the corpus, but they should not be read as a verbatim official list.
           </p>
         </div>
       </section>

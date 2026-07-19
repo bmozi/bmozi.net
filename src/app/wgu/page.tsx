@@ -80,9 +80,30 @@ const areas = [
   {
     href: "/wgu/leadership-principles",
     icon: Compass,
-    label: "Leadership Principles",
-    title: "Fourteen principles as architecture practice",
-    text: "All fourteen WGU Leadership Principles, each translated into concrete enterprise-architecture behavior. Every task and plan in this hub traces back to these.",
+    label: "Principles",
+    title: "Principles, results, and beliefs as practice",
+    text: "The public WGU framework kept in its categories — Leadership Principles, Key Results, Cultural Beliefs — then translated into architecture behavior.",
+  },
+  {
+    href: "/wgu/student-evidence-protocol",
+    icon: MessageSquareWarning,
+    label: "Student Evidence",
+    title: "Student co-design without policy shortcuts",
+    text: "A sanctioned evidence protocol for student voice, front-line proxy signal, journey traces, and usability findings feeding architecture decisions.",
+  },
+  {
+    href: "/wgu/role-experience-pack",
+    icon: Users,
+    label: "Role Experience",
+    title: "Mentor, instructor, and evaluator adoption",
+    text: "The first useful screen, adoption promise, and automation boundary for the roles carrying students through the WGU model.",
+  },
+  {
+    href: "/wgu/engagement-strategy",
+    icon: BriefcaseBusiness,
+    label: "Engagement",
+    title: "Earn adoption one decision community at a time",
+    text: "Registrar, financial aid, mentors, engineering, security, data, and leadership mapped by currency, fear, gift-before-ask, and proof artifact.",
   },
   {
     href: "/wgu/risk-driven-architecture",
@@ -125,6 +146,13 @@ const areas = [
     label: "Practice Lab",
     title: "The role-mastery rehearsal floor",
     text: "Executive briefs, stakeholder maps, operating cadence, governance without tollbooths, portfolio choices, cases, influence rehearsals, and bench-building.",
+  },
+  {
+    href: "/wgu/opportunity-continuity-fabric",
+    icon: Sparkles,
+    label: "Opportunity",
+    title: "Carry the record from learning to work",
+    text: "The mission extension: competency evidence, skills graph, Achievement Wallet, career pathways, alumni signal, and employer legibility.",
   },
   {
     href: "/case-studies/wgu-unified-student-object",
@@ -204,11 +232,32 @@ const areas = [
     text: "Five bolted-on vs. native contrasts, the seven marks of AI-native design with addresses in the architecture, descriptions as infrastructure, and per-domain readiness checks.",
   },
   {
+    href: "/wgu/human-connection-slos",
+    icon: BrainCircuit,
+    label: "AI Support",
+    title: "Human connection SLOs for AI student support",
+    text: "AI support that reduces friction without increasing isolation: human reachability, escalation freshness, mentor visibility, and well-being checks.",
+  },
+  {
     href: "/wgu/trust-pack",
     icon: ShieldCheck,
     label: "Trust Pack",
     title: "Trust as numbers with consequences",
     text: "The SLO catalog with error-budget policy, the FERPA purpose taxonomy, relationship-based access, data classification, and the five AI action tiers — each explained in plain language.",
+  },
+  {
+    href: "/wgu/academic-integrity-regulatory-seams",
+    icon: ShieldCheck,
+    label: "Academic Trust",
+    title: "Academic integrity and regulatory seams",
+    text: "Assessment integrity, Title IV, accreditation evidence, appeals, accessibility, and academic-record trust as explicit seam controls.",
+  },
+  {
+    href: "/wgu/engineering-platform",
+    icon: Braces,
+    label: "Engineering Platform",
+    title: "Agentic delivery with a harness",
+    text: "A platform strategy for engineer efficiency: golden paths, proof-first agentic workflows, delegation filters, DX SLOs, and Harnessing the Horse discipline.",
   },
   {
     href: "/wgu/scale-math",
@@ -247,7 +296,7 @@ const commitments = [
   },
   {
     title: "Principles govern plans",
-    text: "Each plan, task, and decision record in this hub is tagged to the Leadership Principles it serves. If a plan cannot name its principles, it is not ready.",
+    text: "Each plan, task, and decision record in this hub is tagged to the principle, key result, or cultural belief it serves. If a plan cannot name its framework signal, it is not ready.",
   },
   {
     title: "Adversarial by default",

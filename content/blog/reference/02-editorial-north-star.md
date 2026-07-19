@@ -1,9 +1,10 @@
 # Editorial North Star — private reference (never published)
 
 Every article or talk kit across all five series is written generically, but it is
-*checked* against two things before release: the mission and the fourteen Leadership
-Principles. This file is the standing correlation map. If a draft can't name its
-principles, it isn't ready.
+*checked* against two things before release: the mission and the WGU framework signals
+it exercises — Leadership Principles, Key Results, Cultural Beliefs, or this hub's
+working architecture crosswalk. This file is the standing correlation map. If a draft
+can't name its framework signals, it isn't ready.
 
 **The mission lens.** Improve quality and expand access to opportunity; learning
 independent of time or place; credentials credible to institutions and employers.
@@ -12,7 +13,7 @@ processed by the system — the reader's customer, student, patient, or applican
 must make excellent practice more accessible, not more gatekept.* Writing that shows off
 instead of teaching fails the mission test.
 
-## Principle → where it lives in the writing
+## Working crosswalk → where it lives in the writing
 
 **Aim True** — every series plan states its purpose and audience before its content;
 articles that drift from the arc get cut. (The four `00-series-plan.md` files plus The
