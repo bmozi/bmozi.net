@@ -16,6 +16,8 @@ Now walk into the other restaurant. No printer, no rail. The server leans throug
 
 Here's the thing: the shouted order and the ticket contain *exactly the same information* at the moment they're created. The difference is everything that happens after. The ticket has a place, an owner, and a visible age. The shout has none of those, so the moment it fades, the order exists only in someone's memory — and memory, on a Friday night, is where dinners go to die.
 
+{{visual:kitchen-ticket-rail}}
+
 ## In your organization…
 
 Every request that arrives by email is a shouted order.

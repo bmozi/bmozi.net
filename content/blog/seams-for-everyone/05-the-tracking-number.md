@@ -20,6 +20,8 @@ No number. No receipt. Nothing that proves the handoff happened. Your package no
 
 The whole difference between the two counters is two seconds and a strip of paper.
 
+{{visual:tracking-number}}
+
 ## In your organization…
 
 People hand your organization packages all day long — applications, claims, requests, complaints, documents you *required* them to send. The only question that matters is which counter they're standing at.

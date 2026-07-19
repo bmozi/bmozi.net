@@ -286,6 +286,78 @@ const visuals: Record<string, Visual> = {
     src: "/blog/illustrations/stuffed-animal-seam.webp",
     alt: "Friendly teddy-style stuffed toy losing fluffy stuffing and small architecture tokens from its stitched seams on a technical worktable",
   },
+  "hospital-chart": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "One chart, one patient, no arguments.",
+    caption:
+      "The safe hospital does not ask every specialist to maintain a private truth. Everyone reads and writes the same chart.",
+    src: "/blog/illustrations/hospital-chart.webp",
+    alt: "Shared hospital chart at the foot of a bed with specialist tools converging on one authoritative patient record while duplicate charts fade in the background",
+  },
+  "kitchen-ticket-rail": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "A ticket has a place, an owner, and an age.",
+    caption:
+      "The same order becomes safer when it is visible on the rail, owned by someone, and too old to hide.",
+    src: "/blog/illustrations/kitchen-ticket-rail.webp",
+    alt: "Restaurant kitchen ticket rail with ordered tickets, visible clocks, owner markers, and one stale ticket pulled into a warm spotlight",
+  },
+  "flight-recorder": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "The recorder keeps the sequence before anyone knows which second matters.",
+    caption:
+      "A replayable history is a decision made before the incident, not a reconstruction attempted after it.",
+    src: "/blog/illustrations/flight-recorder.webp",
+    alt: "Bright orange flight recorder on an investigation table emitting an ordered append-only event timeline with a blurred erased whiteboard behind it",
+  },
+  "notarys-ledger": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "The correction is a new fact, not a vanished one.",
+    caption:
+      "A trustworthy ledger preserves the error, the correction, and the relationship between them.",
+    src: "/blog/illustrations/notarys-ledger.webp",
+    alt: "Bound notary-style ledger with sewn pages, crossed-out abstract entry, and a new amendment linked back by a fine thread",
+  },
+  "tracking-number": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "A thing with a number can be delayed, but not nowhere.",
+    caption:
+      "The label changes the promise: every handoff becomes a visible event instead of a memory test.",
+    src: "/blog/illustrations/tracking-number.webp",
+    alt: "Labeled package with barcode-like marks and glowing checkpoint trail across depot, conveyor, truck, and doorstep while an unlabeled package fades in the background",
+  },
+  "hotel-key-card": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "A good key matches a relationship, not every door.",
+    caption:
+      "Scoped, expiring access is fussier than a key ring, and that fussiness is the control.",
+    src: "/blog/illustrations/hotel-key-card.webp",
+    alt: "Glowing hotel key card with expiry and revocation markers contrasted against a shadowed brass key ring on a hotel desk",
+  },
+  "interpreter-border": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "The neighbor's language should stop at the border.",
+    caption:
+      "A disciplined adapter carries meaning across the boundary without letting outside vocabulary become load-bearing inside.",
+    src: "/blog/illustrations/interpreter-border.webp",
+    alt: "Two distinct technical domains facing each other across a border table with a central interpreter station translating shapes and tokens at the boundary",
+  },
+  "smoke-detector-chirp": {
+    kind: "image",
+    eyebrow: "Everyday System",
+    title: "A safeguard must complain before it silently stops safeguarding.",
+    caption:
+      "The chirp is annoying by design because a warning you can ignore is not a warning.",
+    src: "/blog/illustrations/smoke-detector-chirp.webp",
+    alt: "Ceiling smoke detector at night emitting a visible chirp pulse and battery warning while a quiet dead detector sits in shadow",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

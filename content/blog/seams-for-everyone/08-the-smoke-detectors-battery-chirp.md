@@ -18,6 +18,8 @@ That sounds wrong at first. Surely a dead detector equals no detector? No — be
 
 The chirp exists to make that state impossible. In a chirping household, a detector can be working, or it can be loudly demanding attention. What it can never be is silently dead.
 
+{{visual:smoke-detector-chirp}}
+
 ## In your organization…
 
 You have safeguards everywhere — alerts that page someone if a system fails, backups that run nightly, reports that flag trouble. Each is a detector on the ceiling. Now ask the 3 a.m. question: *if one of them died, how would you know?*

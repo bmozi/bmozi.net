@@ -16,6 +16,8 @@ Now picture the opposite way of remembering. A whiteboard in a break room. All d
 
 Most of the time, "now" is all you need. Then something goes wrong — and the only questions worth asking are about the past. What did we believe on the 14th? What changed between Tuesday and Thursday? Who saw what, and in what order? A whiteboard can't answer. It already ate the evidence, one well-meaning erase at a time.
 
+{{visual:flight-recorder}}
+
 ## In your organization…
 
 Most business systems are whiteboards. The customer's record shows their *current* address, their *current* status, their *current* balance — with each update politely erasing the value before it. It feels tidy. It is tidy. And the day a customer says "you changed my account and I never agreed to that," tidy becomes a problem: you have the *now* and nothing else. The meeting devolves into memory against memory, and the customer's memory is angrier than yours.

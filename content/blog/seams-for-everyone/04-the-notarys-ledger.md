@@ -18,6 +18,8 @@ That's exactly the problem. *The page looks like the mistake never happened.* Wh
 
 The notary's rule, compressed: **a correction is a new fact, not a deleted one.**
 
+{{visual:notarys-ledger}}
+
 ## In your organization…
 
 Your systems are full of white-out. When a record is wrong, someone with the right access opens it, types over the old value, saves — and the page looks like the mistake never happened. The refund amount was always this amount. The approval was always granted. Was it? By whom? After what? The system has no idea; it was designed to forget.

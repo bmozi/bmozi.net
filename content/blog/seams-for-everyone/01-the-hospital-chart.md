@@ -20,6 +20,8 @@ Nobody in this scenario is lazy. Nobody is careless. Every person is diligently 
 
 Ask that hospital's staff a simple question — "is this patient allergic to penicillin?" — and the honest answer is: *it depends which chart you ask.* That sentence, in a hospital, is a lawsuit. In your company, it's Tuesday.
 
+{{visual:hospital-chart}}
+
 ## In your organization…
 
 Your customer has three charts. Probably more.

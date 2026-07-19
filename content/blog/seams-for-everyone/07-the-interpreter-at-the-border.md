@@ -18,6 +18,8 @@ Come back in ten years. Your clerks now *think* in the neighbor's units. Your le
 
 Nobody conquered you. You just skipped the interpreter, and osmosis did the rest.
 
+{{visual:interpreter-border}}
+
 ## In your organization…
 
 Every vendor system you buy speaks its own language — its own names for things, its own codes, its own odd shapes of data. That's fine; it's theirs. The question is where the translation happens.

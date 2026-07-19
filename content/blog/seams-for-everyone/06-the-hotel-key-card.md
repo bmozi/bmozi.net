@@ -24,6 +24,8 @@ Your systems talk to each other constantly, and each connection holds a key. The
 
 Most organizations, when they wire system A to system B, cut a janitor's ring: a credential that opens everything, created years ago for a project nobody remembers, that never expires, and that no one is quite sure is safe to take away — so it stays. Ask your teams how many of these exist and watch the pause. Then ask which doors those keys opened last month, and watch the longer pause. Brass doesn't log.
 
+{{visual:hotel-key-card}}
+
 The hotel's alternative is fussier and worth every bit of the fuss: every key scoped to one relationship and one purpose, dying on its own schedule, with every powerful key logging every door.
 
 ## Engineers call this…
