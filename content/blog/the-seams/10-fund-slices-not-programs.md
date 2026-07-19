@@ -32,6 +32,8 @@ If you've followed this series, you've already seen the ideal first slice. Take 
 
 Now the part that makes it a funding model rather than a pilot: **each slice carries its own evidence and buys the next one.** The slice ships with its numbers — status-visibility time, contact-volume reduction, escalation coverage — measured honestly, against a baseline or a holdout, so the effect can't be borrowed from wishful narrative. Leadership doesn't fund Phase 2 of a promise; it funds the sequel to a result. Slices that can't demonstrate an effect don't get sequels — which sounds harsh and is actually the kindest property in the model, because it kills weak ideas at slice-size instead of Program-size.
 
+{{visual:slice-funding-loop}}
+
 ## Drain, don't migrate
 
 And the cliff? The cohort principle removes it: **new work enters the new system; old work finishes where it started.** New submissions, new cases, new customers onboard onto the new thread from day one. Existing in-flight work completes on the legacy path. Nothing is migrated under pressure; the old system *drains* — workload by workload, cohort by cohort — until decommissioning is an accounting event rather than a weekend of terror.

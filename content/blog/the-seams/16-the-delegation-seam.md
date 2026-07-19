@@ -28,6 +28,8 @@ Each agent's builder can prove their agent behaved correctly: it received a requ
 
 In the classic seams of Parts 1 through 10, what fell through the gap was a customer, a document, a piece of state. Here, the thing falling through the seam is **authority itself**. That's an escalation. When a document gets lost in a seam, you have an angry customer. When authority leaks through a seam, you have an actor in your systems doing things no one decided to let it do — and every log entry says everything is fine.
 
+{{visual:delegation-chain}}
+
 ## The attack that lives here — and why it's worse than it sounds
 
 Security people have a name for the core failure, and it's fifty years old: the **confused deputy**. A deputy — any component holding authority on someone's behalf — gets tricked into using *its* authority for an attacker's purpose. The classic defense was to keep deputies few, simple, and carefully reviewed.

@@ -22,6 +22,8 @@ The organization with fragile access owns monitoring tools that could detect the
 
 Sit with the implication, because it's the whole article: **the failures happened with a world-class toolset fully in operation.** The complaints and the platforms coexisted for years. History already ran the experiment that the next purchase is supposed to settle.
 
+{{visual:dashboard-comic}}
+
 ## Why good tools can't see the gap
 
 This isn't an indictment of the tools. It's a category error about what tools can do.
@@ -38,6 +40,8 @@ The failures don't live in the tools. They live in the seams:
 - **No end-to-end measurement.** Every component reports uptime; nobody measures whether a customer can get from intent to outcome.
 
 Every tool you own operates *inside* a boundary. Every failure your customers feel happens *between* boundaries. That asymmetry is why the purchase never fixes it — and why the next purchase adds a seam of its own.
+
+{{visual:seam-four-crossings}}
 
 ## The vendor won't tell you this
 

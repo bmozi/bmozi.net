@@ -20,6 +20,8 @@ is giving this talk.
 **The change it aims for:** one data-governance lead adds a purpose field to one audit
 event stream and discovers what their access logs have been unable to answer.
 
+{{visual:purpose-on-wire}}
+
 ## Talk outline (25 min, with beats)
 
 **[0–4 · The question your logs can't answer]** Open with an incident-shaped story: a

@@ -26,6 +26,8 @@ You don't solve trust with hiring bars; you solve it with **equipment**. Smaller
 
 Notice what this reframes: the wide-role generalist the genre celebrates — the person doing researcher, designer, and PM at once — is only as safe as the equipment underneath them. Width without gates is just a bigger blast radius per person.
 
+{{visual:org-equipment}}
+
 ## The structural miss: what the middle actually did
 
 The genre's boldest claim is that middle management "exists to move information up and down," agents move information now, so the middle thins first. Half right — and the half that's wrong is expensive.

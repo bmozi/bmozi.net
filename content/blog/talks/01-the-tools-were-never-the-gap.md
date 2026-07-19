@@ -217,6 +217,8 @@ address. **The scales:** systems · teams · human-AI · claims-evidence · self
 question that finds one anywhere:** where do two things meet with no owner, no shared
 truth, and no notification?
 
+{{visual:seam-four-crossings}}
+
 ## Q&A drill — the five hardest questions, answered before they're asked
 
 **"Isn't this just integration/EAI/ESB rebranded?"** Integration moves data across the

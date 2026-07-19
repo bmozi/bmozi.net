@@ -22,6 +22,8 @@ That gap has a shape, and by now you know the shape. Two things meet — the gen
 
 Run the four crossings on it, the way we run them on everything. **Shared identity?** Yes — generator and reviewer agree on what the code is. **Events?** Yes — the pipeline fires on every change. **Owner?** Here it fails: there is no owner for *is the clarity correct*, only owners for *is the code correct*. **Measurement of the crossing itself?** Also failed: you measure test pass rates and coverage — conformance metrics, every one — and nothing measures whether the specification matched reality. Two of four crossings missing, at the newest and most expensive boundary in software. That is a textbook ungoverned seam, and "let AI review the AI" doesn't close it. It paves over it and paints the pavement green.
 
+{{visual:ai-review-intent-seam}}
+
 ## The trap inside the solution: correlated reviewers
 
 There's a second failure folded into the first, and it's the one that turns a good idea dangerous. When you let AI review AI, remember what the reviewer *is*: another generator, failing the same plausible-looking way. AI-written code fails by looking excellent — subtle, confident, wrong. An AI reviewer sharing the generator's model produces exactly the same excellence in its verdict: a confident green check on subtly wrong code, and now *no human ever looked.* You didn't add a verification layer. You added a second witness who was standing next to the first, seeing the same thing, agreeing for the same reason. Two correlated checks are not two checks. They're one check with more self-assurance.

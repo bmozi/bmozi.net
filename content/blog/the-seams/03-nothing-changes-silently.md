@@ -40,6 +40,8 @@ Here's what "nothing changes silently" means as engineering, and it's four requi
 
 **4. The customer can see their own trail.** The most underrated trust feature I know: let people see the history of their own record — what changed, when, why, and who to talk to. Organizations flinch at this ("what if they see our mistakes?"). But your mistakes are already visible; the only question is whether the customer discovers them via a transparent trail or a shocking surprise. One of those builds trust. I've watched "you can always see who changed what and why" turn skeptical customers into calm ones — not because there were fewer mistakes, but because mistakes stopped being ambushes.
 
+{{visual:silent-change-alarm}}
+
 ## The objection worth answering
 
 "That's a lot of machinery for notifications." It isn't, and here's the reframe: you're not building notification machinery. You're building an *audit spine* — attributable, reasoned, append-only change history — and notifications fall out of it as a nearly free by-product. So do a dozen other things you currently do painfully: dispute resolution, compliance evidence, debugging ("what did this record look like on Tuesday?"), and the ability to answer any customer's angriest question in one query.

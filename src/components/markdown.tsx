@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
+import { ArticleVisual } from "@/components/article-visuals";
 
 /**
  * Zero-dependency markdown renderer covering exactly the constructs used in
@@ -100,6 +101,14 @@ export function Markdown({ markdown }: { markdown: string }) {
     const line = lines[i];
 
     if (line.trim() === "") {
+      i++;
+      continue;
+    }
+
+    // article visual shortcode: {{visual:slug}}
+    const visualMatch = line.trim().match(/^\{\{visual:([a-z0-9-]+)\}\}$/);
+    if (visualMatch) {
+      blocks.push(<ArticleVisual key={key++} slug={visualMatch[1]} />);
       i++;
       continue;
     }
@@ -275,7 +284,9 @@ export function Markdown({ markdown }: { markdown: string }) {
     while (
       i < lines.length &&
       lines[i].trim() !== "" &&
-      !/^(#{1,3}\s|>|```|---+\s*$|\s*([-*]|\d+\.)\s+)/.test(lines[i]) &&
+      !/^(#{1,3}\s|>|```|---+\s*$|\s*([-*]|\d+\.)\s+|\{\{visual:[a-z0-9-]+\}\}$)/.test(
+        lines[i].trim(),
+      ) &&
       !lines[i].trim().startsWith("|")
     ) {
       buf.push(lines[i]);

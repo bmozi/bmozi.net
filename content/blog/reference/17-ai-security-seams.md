@@ -68,6 +68,8 @@ The attack shape is straightforward: a prompt-injected agent uses legitimate sta
 
 The event envelope should still carry human-readable actor, purpose, and correlation. But the policy decision cannot trust unsigned envelope text. It trusts a token, verifies audience and scope, checks purpose and relationship, and records the hash of the authority used.
 
+{{visual:delegation-chain}}
+
 ### 3. Excessive agency
 
 The core security question is not "is the model smart?" It is "what can it do when it is wrong, compromised, rushed, or overconfident?"
@@ -137,6 +139,8 @@ This is not only a data-quality problem. It is a security problem.
 - Separation between operational continuity events and official academic truth; operational workflow cannot mutate mastery.
 
 Events are circulation, not truth; but circulation can still be attacked. The system must prove that what it circulated came from the right producer, matched the right schema, and produced the same projection on replay.
+
+{{visual:event-circulation}}
 
 ### 7. Identity, account recovery, and help desk social engineering
 

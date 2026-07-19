@@ -34,6 +34,8 @@ Erasure then becomes what it always should have been: **a row delete plus a re-p
 
 Three disciplines keep the construction honest. First, the boundary needs enforcement, not convention: schema-level validation on event publication — a linter that rejects any payload field carrying names, emails, phone numbers, addresses, free text — because one team shipping `customer_note` inline quietly re-poisons the log. (Free-text fields are the classic breach: "call Mrs. Haverford about the gate code" is PII no schema saw coming; free text about people belongs in the reference store too, referenced like everything else.) Second, the reference store is now crown jewels — the one place the mapping lives — so it gets the estate's best access control, auditing, and backup discipline; you've concentrated the risk precisely so you can defend it properly. Third, backups: the reference store's backups need a retention window aligned with your erasure obligations, or a documented restore procedure that re-applies erasures after any restore — a detail that sounds pedantic until a restore quietly resurrects forty deleted people.
 
+{{visual:pii-by-reference}}
+
 ## THE TEST
 
 Erasure is a claim about *absence*, and absence is only provable by searching. So the test is an end-to-end rehearsal with a hunt at the end.

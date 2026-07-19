@@ -34,6 +34,8 @@ Concretely, the pattern is three rules:
 
 Do this, and everything from Parts 1–3 falls into place mechanically. The black-hole fix? A status view is just a consumer of `document.received` and `document.status.changed`. Nothing-changes-silently? Notification is a consumer of the same events. Fragmented truth? Every department's view is fed by the same stream from the same owners. The seams get governed by the events that cross them.
 
+{{visual:event-circulation}}
+
 ## The one place to break the rule
 
 Now the nuance that separates this from dogma: there is usually *one* domain in a business where events shouldn't just circulate truth — they should **be** the truth. It's the domain where the questions people ask are inherently historical: *what did we know at the time? what sequence led here? can we prove it?*

@@ -71,6 +71,8 @@ falling through is **authority itself**. That's an escalation. A lost document g
 an angry customer. Leaked authority gets you an actor inside your systems doing things
 no one decided to let it do — while every log entry says everything is fine.
 
+{{visual:delegation-chain}}
+
 **[Minutes 10–16 — the confused deputy, at industrial scale]**
 Security veterans in the room are already thinking of the right name, and it's fifty
 years old: the **confused deputy**. A deputy — any component holding authority on

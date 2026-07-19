@@ -36,6 +36,8 @@ The fix is one rule with four mechanical parts. The rule: **no queue without an 
 
 If you've been following the series, you'll recognize the plumbing: the submission emits `document.received`, state changes emit events with actor and reason, the status view and the escalations are all just consumers of the same stream (Part 4). None of this is exotic. It's the disciplined application of things your team already knows how to build.
 
+{{visual:queue-owner-clock}}
+
 ## "We have SLAs" — no, you have aspirations
 
 Most organizations, told this, point to their SLA documents. But look closely at what those SLAs attach to. Almost always: *response* time within one team's tool. First reply in the ticketing system. Time-to-answer in the call center.

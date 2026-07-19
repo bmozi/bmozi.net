@@ -38,6 +38,8 @@ A governed seam has exactly four things crossing it. Memorize these; they're the
 
 Identity, events, ownership, measurement. When someone shows you an integration, a reorg, or an AI deployment, ask which of the four cross each new gap it creates.
 
+{{visual:seam-four-crossings}}
+
 ## How to find one — because you can't see them, and neither can anyone else
 
 Here's the confession that should relieve you: **nobody sees seams directly. Ever.** A seam is a gap, and gaps are invisible by definition. The people who seem to "see" them have trained themselves on something else entirely — the *exhaust*. You never see wind; you see what it moves. Same here. So stop trying to spot seams and learn the symptoms instead:

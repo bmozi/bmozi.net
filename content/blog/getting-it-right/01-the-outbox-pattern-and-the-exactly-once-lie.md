@@ -52,6 +52,8 @@ Now there is no gap. Either the shipment is shipped *and* the announcement exist
 
 A separate process, the relay, polls the outbox for unpublished rows (or tails the database's change stream, which is the same idea with lower latency), publishes each to the broker, and marks it published. Notice what the relay is allowed to be: dumb, single-purpose, restartable, and — critically — *unable to cause loss*. If it crashes after publishing but before marking, it will republish on restart. That's a duplicate, and duplicates are legal under our contract. The one crime it can never commit is losing a message, because the message is sitting in the same durable database as the business fact itself.
 
+{{visual:outbox-correctness}}
+
 Two caveats that separate the working implementations from the incident reports.
 
 **Ordering is per-aggregate, not global.** Consumers usually need the events for *one* shipment, *one* account, *one* patient in order — created before dispatched before delivered. Nobody sane needs a total order across all shipments. So the relay publishes with the aggregate ID as the partition key, giving you order within each aggregate and parallelism across them. Promise global ordering and you've promised a single-threaded system; you just haven't noticed yet.

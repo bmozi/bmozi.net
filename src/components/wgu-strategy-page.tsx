@@ -54,6 +54,52 @@ export function WguStrategyPage({ page }: WguStrategyPageProps) {
         </div>
       </WguImmersiveHero>
 
+      <section className="border-b border-white/10 bg-[rgba(10,13,17,0.94)]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.28fr_0.72fr]">
+            <div>
+              <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                Operating map
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-black leading-none text-white sm:text-4xl">
+                The page as a working diagram.
+              </h2>
+              <p className="mt-5 text-sm leading-6 text-[var(--soft)]">
+                Each section becomes a decision station: read the claim, inspect
+                the evidence cards, then test the operating checks at the end.
+              </p>
+            </div>
+            <div className="overflow-x-auto pb-2">
+              <div className="grid min-w-[48rem] grid-cols-2 gap-3 lg:grid-cols-4">
+                {page.sections.slice(0, 4).map((section, sectionIndex) => (
+                  <div key={section.title} className="relative">
+                    {sectionIndex < Math.min(page.sections.length, 4) - 1 ? (
+                      <span className="absolute left-[calc(100%-0.25rem)] top-8 hidden h-px w-4 bg-white/25 lg:block" />
+                    ) : null}
+                    <article className="h-full border border-white/12 bg-white/[0.035] p-4">
+                      <div className="flex items-center gap-3">
+                        <span className="grid h-9 w-9 place-items-center border border-[var(--signal)] bg-[rgba(25,214,197,0.1)] font-mono text-xs text-[var(--signal)]">
+                          {sectionIndex + 1}
+                        </span>
+                        <p className="font-mono text-[0.68rem] uppercase leading-4 text-white/45">
+                          {section.eyebrow}
+                        </p>
+                      </div>
+                      <h3 className="mt-5 font-display text-xl font-black leading-tight text-white">
+                        {section.title}
+                      </h3>
+                      <p className="mt-4 text-xs leading-5 text-[var(--soft)]">
+                        {section.cards[0]?.title}
+                      </p>
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {page.sections.map((section, sectionIndex) => (
         <section
           key={section.title}
@@ -161,4 +207,3 @@ export function WguStrategyPage({ page }: WguStrategyPageProps) {
     </main>
   );
 }
-

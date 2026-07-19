@@ -32,6 +32,8 @@ When does a record deserve this? The same test as choosing your event-sourced do
 
 One dependency to flag: entries in a log like this often concern people, and "append-only forever" collides with privacy law head-on. The resolution — personal identifiers out of the log, by reference — is Part 8, and it's not optional.
 
+{{visual:hash-chain-ledger}}
+
 ## THE TEST
 
 A tamper-evidence system that has never detected a tamper is unproven in exactly the property it exists for. So you prove it, on a schedule, in the least dramatic way possible.

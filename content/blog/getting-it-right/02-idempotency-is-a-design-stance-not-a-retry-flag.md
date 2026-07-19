@@ -40,6 +40,8 @@ The consumer that reads `order.placed` and sends a confirmation email will, unde
 
 The rule of thumb I give review teams: trace every path from a consumed message to an external side effect, and ask what happens if this handler runs twice. If the answer involves the word "probably," it's a finding. A duplicated projection update embarrasses you. A duplicated wire transfer ends up in front of a regulator.
 
+{{visual:idempotency-boundary}}
+
 ## THE TEST
 
 You do not prove idempotency in a design review. You prove it by replaying, and you prove it continuously.
