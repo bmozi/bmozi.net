@@ -358,6 +358,44 @@ const visuals: Record<string, Visual> = {
     src: "/blog/illustrations/smoke-detector-chirp.webp",
     alt: "Ceiling smoke detector at night emitting a visible chirp pulse and battery warning while a quiet dead detector sits in shadow",
   },
+  "study-guide-recall-board": {
+    kind: "image",
+    eyebrow: "Study Artifact",
+    title: "The whole corpus, compressed into one recall board.",
+    caption:
+      "The Study Guide is not another long reference. It is the memory surface: thesis, argument, numbers, dates, mastery domains, commitments, and signatures in one sitting.",
+    src: "/blog/illustrations/study-guide-recall-board.webp",
+    alt: "Premium architecture study table with a central recall board, clustered reference cards, timeline rail, field kit, and colored evidence markers",
+  },
+  "study-guide-argument-spine": {
+    kind: "flow",
+    eyebrow: "Argument Spine",
+    title: "The ten claims reduce to one path: pain, seam, proof, trust, slice.",
+    caption:
+      "Use the one-line arguments as a traversal order. Each claim is a door into the deeper architecture, but the sequence is what makes the body of work memorable.",
+    steps: [
+      { label: "Pain", detail: "Complaints reveal structural failure modes.", tone: "magenta" },
+      { label: "Seams", detail: "Tools exist; crossings are ungoverned.", tone: "amber" },
+      { label: "Truth", detail: "Systems stay sovereign; facts circulate.", tone: "signal" },
+      { label: "Proof", detail: "Ledger, events, SLOs, and prosecution test the claim.", tone: "signal" },
+      { label: "Slices", detail: "Fund visible repairs, not abstract programs.", tone: "amber" },
+    ],
+    aside: "Memorize the movement, not just the sentences.",
+  },
+  "study-guide-90-day-loop": {
+    kind: "flow",
+    eyebrow: "Dated Plan",
+    title: "The first 90 days move from listening to proof.",
+    caption:
+      "The plan is not a generic onboarding arc. It converts field evidence into guardrails, then closes one black hole in production.",
+    steps: [
+      { label: "Listen", detail: "Jul 20-Aug 18: 1:1s, journey traces, seam audit.", tone: "signal" },
+      { label: "Frame", detail: "Aug 19-Sep 17: guardrails, v2, prosecution, ADR-001.", tone: "amber" },
+      { label: "Prove", detail: "Sep 18-Oct 17: Slice 1 live and measured.", tone: "magenta" },
+      { label: "Guild", detail: "Q2: scale only after preconditions hold.", tone: "muted" },
+    ],
+    aside: "Listen first. Align second. Prove before scaling.",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

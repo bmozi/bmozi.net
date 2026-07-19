@@ -2,6 +2,8 @@
 
 *The whole body of work, compressed for review and recall. Every section links to its depth. Terms are in the [Glossary](/wgu/glossary) — the standing appendix of ~28 plain-language definitions from SIS to strangler fig. Study this page until you can reproduce it from memory on a whiteboard; everything else is reference.*
 
+{{visual:study-guide-recall-board}}
+
 ---
 
 ## The one organizing truth
@@ -21,6 +23,8 @@
 9. **Prosecute your own architecture.** Every thesis ships with its strongest case against it; what survives is trusted, what dies deserved to. → [Adversarial Review](/wgu/adversarial-review)
 10. **Fund slices, not programs; drain, don't migrate.** Each slice closes one named leak, measures with holdouts, and buys the next; cohorts onboard to the new, the old empties by graduation. → [Business Case](/wgu/business-case), [Ground-Up](/wgu/ground-up)
 
+{{visual:study-guide-argument-spine}}
+
 ## The numbers — know the METHOD cold, hold the digits loosely
 
 One verified fact: **192,613** students (FY25 public). Everything else here is an *estimate built from public data about systems not yet seen* — memorize how each was derived, never recite the digits as facts (the program's own prosecution convicted an earlier version of this section for exactly that). **1 persistence point ≈ 1,900 students ≈ ~$15M/yr** (headcount × published tuition — replace with internal figures in Days 31–60). **~600 events/sec peak, ~20 min ledger replay, <$2/student/term** (stated assumptions on the [Scale Math](/wgu/scale-math) page — any figure off by 2× triggers re-sequencing). The SLO *targets* are commitments, not measurements: **99.9%** login success, **<60s** document-status visibility, **100%** escalation, **0** silent changes. **5 years** — reported median SIS-migration disruption [P-tier: case-based, uncited range].
@@ -28,6 +32,8 @@ One verified fact: **192,613** students (FY25 public). Everything else here is a
 ## The plan, dated
 
 **Jul 20–Aug 18 · Listen & Diagnose** — 1:1s with the [Field Kit](/blog/reference/06-field-kit), journey traces, the seam audit (through/around/between), the adaptive/technical ledger. **Aug 19–Sep 17 · Frame & Align** — team ratifies guardrails; v2 + prosecution + ADR-001 enter event-storming as the hypothesis that survived its own trial. **Sep 18–Oct 17 · Prove & Sequence** — Slice 1 live: one black hole, provably gone, measured. **Q2 · [Build the Guild](/blog/reference/08-build-the-guild)** — gated on preconditions. → [First 90 Days](/wgu/first-90-days)
+
+{{visual:study-guide-90-day-loop}}
 
 ## The mastery program, in six lines
 
