@@ -64,9 +64,9 @@ export const seriesList: Series[] = [
     signature: "Never assert on stage what the corpus can't demonstrate in writing.",
     tagline:
       "The conference-talk portfolio: full talk kits — scripts, one-slide summaries, and Q&A drills — each downstream of written work that survived adversarial review first.",
-    image: "/blog/reference-cover.webp",
+    image: "/blog/talks-cover.webp",
     imageAlt:
-      "Speaker's podium with talk kits, slide outlines, and question drill cards",
+      "Technical conference podium in front of an architecture display with talk notes, slide remotes, and diagram cards",
     accent: "var(--amber)",
   },
   {
