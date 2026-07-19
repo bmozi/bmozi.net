@@ -90,7 +90,7 @@ export default async function BlogArticlePage({
         </div>
       </section>
 
-      <article className="mx-auto grid max-w-5xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.26fr_0.74fr]">
+      <article className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[17rem_minmax(0,58rem)] lg:justify-center xl:gap-14">
         <aside className="hidden lg:block">
           <div className="sticky top-8 border border-white/12 bg-white/[0.035] p-5">
             <p
@@ -139,7 +139,7 @@ export default async function BlogArticlePage({
       </article>
 
       <nav className="border-t border-white/10">
-        <div className="mx-auto flex max-w-3xl flex-col gap-3 px-5 py-10 sm:flex-row sm:justify-between sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-10 sm:flex-row sm:justify-between sm:px-8 lg:max-w-[78rem]">
           {prev ? (
             <Link
               href={`/blog/${seriesSlug}/${prev.slug}`}
