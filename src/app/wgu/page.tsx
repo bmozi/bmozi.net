@@ -329,6 +329,255 @@ const caseStudyLineage = [
   },
 ];
 
+const hubTracks = [
+  {
+    label: "Start",
+    title: "Understand the invention",
+    text: "Category, novelty, proof, scoring, and portable reference material.",
+    image: "/wgu/visuals/scf-continuity-thread-map.webp",
+    alt: "Student continuity thread passing through governed institutional systems",
+    href: "/wgu/student-continuity-fabric",
+    areas: [
+      "/wgu/student-continuity-fabric",
+      "/wgu/why-novel",
+      "/wgu/prior-art",
+      "/wgu/evaluation-rubric",
+      "/wgu/whitepaper",
+    ],
+  },
+  {
+    label: "People",
+    title: "Student, role, and adoption signal",
+    text: "Student evidence, role experience, engagement, and practice rooms.",
+    image: "/wgu/visuals/engagement-strategy-hero.webp",
+    alt: "Decision communities connected by trust bridges and evidence packets",
+    href: "/wgu/student-evidence-protocol",
+    areas: [
+      "/wgu/leadership-principles",
+      "/wgu/student-evidence-protocol",
+      "/wgu/role-experience-pack",
+      "/wgu/engagement-strategy",
+      "/wgu/practice-lab",
+      "/wgu/voice-of-the-student",
+    ],
+  },
+  {
+    label: "Architecture",
+    title: "System shape and delivery path",
+    text: "Boundary, target model, standards, operating model, and build path.",
+    image: "/wgu/visuals/architecture-system-model.webp",
+    alt: "Target architecture model with governed systems, event paths, and policy layers",
+    href: "/wgu/architecture-v2",
+    areas: [
+      "/wgu/system-boundary",
+      "/wgu/architecture-v2",
+      "/wgu/adr-timeline-buy-vs-build",
+      "/wgu/ground-up",
+      "/wgu/engineering-standards",
+      "/wgu/operating-model",
+      "/wgu/engineering-platform",
+      "/wgu/scale-math",
+      "/wgu/ops-reality",
+    ],
+  },
+  {
+    label: "Trust",
+    title: "Risk, security, AI, and academic trust",
+    text: "Adversarial review, AI-native design, FERPA, action tiers, and integrity seams.",
+    image: "/wgu/visuals/academic-integrity-regulatory-seams-hero.webp",
+    alt: "Academic trust evidence chamber with ledgers, policy gates, and appeal paths",
+    href: "/wgu/trust-pack",
+    areas: [
+      "/wgu/risk-driven-architecture",
+      "/wgu/adversarial-review",
+      "/wgu/personalization",
+      "/wgu/ai-native",
+      "/wgu/human-connection-slos",
+      "/wgu/trust-pack",
+      "/wgu/academic-integrity-regulatory-seams",
+    ],
+  },
+  {
+    label: "Value",
+    title: "Mission, economics, and pitch",
+    text: "Opportunity continuity, priorities, first 90 days, business case, and delivery kit.",
+    image: "/wgu/visuals/business-case-hero.webp",
+    alt: "Mission and business evidence flowing through persistence and student outcome measures",
+    href: "/wgu/business-case",
+    areas: [
+      "/wgu/student-system-priorities",
+      "/wgu/first-90-days",
+      "/wgu/opportunity-continuity-fabric",
+      "/wgu/business-case",
+      "/wgu/pitch",
+    ],
+  },
+  {
+    label: "Reference",
+    title: "Source trail and plain language",
+    text: "Case-study lineage, glossary, and the roadmap into v2.",
+    image: "/wgu/visuals/glossary-hero.webp",
+    alt: "Reference shelf and plain-language map for architecture terms",
+    href: "/wgu/glossary",
+    areas: [
+      "/case-studies/wgu-unified-student-object",
+      "/case-studies/wgu-governance-identity-fabric",
+      "/wgu/glossary",
+    ],
+  },
+];
+
+const areaImages: Record<string, { image: string; alt: string }> = {
+  "/wgu/student-continuity-fabric": {
+    image: "/wgu/visuals/scf-continuity-thread-map.webp",
+    alt: "Governed student continuity thread across institutional systems",
+  },
+  "/wgu/why-novel": {
+    image: "/wgu/visuals/why-novel-fabric-layer.webp",
+    alt: "Fabric layer connecting existing platforms without replacing them",
+  },
+  "/wgu/prior-art": {
+    image: "/wgu/visuals/prior-art-trial.webp",
+    alt: "Prior-art evidence panels testing a central Student Continuity Fabric claim",
+  },
+  "/wgu/evaluation-rubric": {
+    image: "/wgu/visuals/evaluation-evidence-ledger.webp",
+    alt: "Evaluation evidence ledger with scored continuity criteria",
+  },
+  "/wgu/whitepaper": {
+    image: "/wgu/visuals/whitepaper-hero.webp",
+    alt: "Whitepaper reference artifact on a technical evidence table",
+  },
+  "/wgu/leadership-principles": {
+    image: "/wgu/visuals/leadership-principles-hero.webp",
+    alt: "Leadership principles translated into operating signals and architecture choices",
+  },
+  "/wgu/student-evidence-protocol": {
+    image: "/wgu/visuals/student-voice-continuity.webp",
+    alt: "Student voice evidence flowing into governed architecture decisions",
+  },
+  "/wgu/role-experience-pack": {
+    image: "/wgu/visuals/personalization-hero.webp",
+    alt: "Role-specific student support views connected to governed context",
+  },
+  "/wgu/engagement-strategy": {
+    image: "/wgu/visuals/engagement-strategy-hero.webp",
+    alt: "Stakeholder engagement rooms connected by trust bridges",
+  },
+  "/wgu/risk-driven-architecture": {
+    image: "/wgu/visuals/risk-driven-architecture-hero.webp",
+    alt: "Risk-driven architecture workbench with evidence and review controls",
+  },
+  "/wgu/system-boundary": {
+    image: "/wgu/visuals/system-boundary-hero.webp",
+    alt: "Institutional system boundary with learner pathways and operating domains",
+  },
+  "/wgu/voice-of-the-student": {
+    image: "/wgu/visuals/student-voice-continuity.webp",
+    alt: "Student complaint signal mapped to structural architecture answers",
+  },
+  "/wgu/student-system-priorities": {
+    image: "/wgu/visuals/student-system-priorities-hero.webp",
+    alt: "Student system priorities organized as guarded operating lanes",
+  },
+  "/wgu/first-90-days": {
+    image: "/wgu/visuals/first-90-days-hero.webp",
+    alt: "First 90 days plan arranged as a dated architecture operating calendar",
+  },
+  "/wgu/practice-lab": {
+    image: "/wgu/practice-lab/practice-lab-hero.webp",
+    alt: "Practice Lab rehearsal floor with enterprise architecture artifacts",
+  },
+  "/wgu/opportunity-continuity-fabric": {
+    image: "/wgu/visuals/system-boundary-hero.webp",
+    alt: "Lifelong learner pathway from learning record to opportunity",
+  },
+  "/case-studies/wgu-unified-student-object": {
+    image: "/brand/unified-student-object-case-study.png",
+    alt: "Unified Student Object case-study architecture diagram",
+  },
+  "/case-studies/wgu-governance-identity-fabric": {
+    image: "/brand/bmozi-ai-governance-hero.png",
+    alt: "Governance and identity fabric case-study image",
+  },
+  "/wgu/adversarial-review": {
+    image: "/wgu/visuals/adversarial-review-hero.webp",
+    alt: "Adversarial review room testing architecture claims",
+  },
+  "/wgu/architecture-v2": {
+    image: "/wgu/visuals/architecture-system-model.webp",
+    alt: "Architecture v2 target model with event and policy layers",
+  },
+  "/wgu/personalization": {
+    image: "/wgu/visuals/personalization-hero.webp",
+    alt: "Personalization decision loop with governed signals and actions",
+  },
+  "/wgu/adr-timeline-buy-vs-build": {
+    image: "/wgu/visuals/adr-buy-build-hero.webp",
+    alt: "Buy versus build decision timeline with platform boundaries",
+  },
+  "/wgu/ground-up": {
+    image: "/wgu/visuals/ground-up-hero.webp",
+    alt: "Ground-up build strategy with slices and cutover paths",
+  },
+  "/wgu/engineering-standards": {
+    image: "/wgu/visuals/engineering-standards-hero.webp",
+    alt: "Engineering standards workbench with event contracts and proof gates",
+  },
+  "/wgu/operating-model": {
+    image: "/wgu/visuals/operating-model-hero.webp",
+    alt: "Operating model with teams, capabilities, risk, and decision cadence",
+  },
+  "/wgu/business-case": {
+    image: "/wgu/visuals/business-case-hero.webp",
+    alt: "Business case evidence for persistence economics",
+  },
+  "/wgu/ai-native": {
+    image: "/wgu/visuals/ai-native-hero.webp",
+    alt: "AI-native architecture with governed actions and decision loops",
+  },
+  "/wgu/human-connection-slos": {
+    image: "/wgu/visuals/ai-native-hero.webp",
+    alt: "AI support path with human connection checkpoints",
+  },
+  "/wgu/trust-pack": {
+    image: "/wgu/visuals/trust-pack-hero.webp",
+    alt: "Trust pack with SLOs, FERPA purpose, and AI action tiers",
+  },
+  "/wgu/academic-integrity-regulatory-seams": {
+    image: "/wgu/visuals/academic-integrity-regulatory-seams-hero.webp",
+    alt: "Academic integrity evidence chamber with policy and provenance controls",
+  },
+  "/wgu/engineering-platform": {
+    image: "/wgu/visuals/engineering-platform-hero.webp",
+    alt: "Engineering platform paved road with AI-assisted work lanes",
+  },
+  "/wgu/scale-math": {
+    image: "/wgu/visuals/scale-math-hero.webp",
+    alt: "Scale math model with event volume, replay, storage, and cost signals",
+  },
+  "/wgu/ops-reality": {
+    image: "/wgu/visuals/ops-reality-hero.webp",
+    alt: "Operations reality table with incident runbooks and bad-day controls",
+  },
+  "/wgu/pitch": {
+    image: "/wgu/visuals/pitch-hero.webp",
+    alt: "Executive pitch kit with slide, proof, and reference artifacts",
+  },
+  "/wgu/glossary": {
+    image: "/wgu/visuals/glossary-hero.webp",
+    alt: "Plain-language glossary reference shelf",
+  },
+  "/wgu/architecture-v2#roadmap": {
+    image: "/wgu/visuals/first-90-days-hero.webp",
+    alt: "Roadmap slices arranged on an operating calendar",
+  },
+};
+
+const areaTrackByHref = Object.fromEntries(
+  hubTracks.flatMap((track) => track.areas.map((href) => [href, track.label])),
+) as Record<string, string>;
+
 export default function WguHubPage() {
   return (
     <main className="min-h-screen bg-[var(--ink)] text-[var(--paper)]">
@@ -413,6 +662,74 @@ export default function WguHubPage() {
       </section>
 
       <section className="border-b border-white/10 bg-[#0d1118]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.92fr_1.08fr]">
+          <div>
+            <p className="font-mono text-xs uppercase text-[var(--signal)]">
+              Visual atlas
+            </p>
+            <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
+              Six paths through the work, before the full directory.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[var(--soft)]">
+              The hub is easier to use when the work has landmarks. Start with
+              the invention, follow the people and adoption path, inspect the
+              architecture, test the trust model, then carry the value story
+              into the room.
+            </p>
+          </div>
+          <figure className="overflow-hidden border border-white/12 bg-white/[0.035] p-2">
+            <Image
+              src="/wgu/visuals/wgu-hub-visual-atlas.webp"
+              alt="Visual atlas of the WGU architecture hub with six destination clusters around a central student continuity fabric"
+              width={1800}
+              height={1013}
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              className="h-auto w-full"
+            />
+          </figure>
+          <div className="grid gap-3 lg:col-span-2 md:grid-cols-2 xl:grid-cols-3">
+            {hubTracks.map((track) => (
+              <Link
+                key={track.label}
+                href={track.href}
+                className="group grid overflow-hidden border border-white/12 bg-white/[0.035] transition-colors hover:border-[var(--signal)] sm:grid-cols-[0.44fr_0.56fr] xl:grid-cols-1"
+              >
+                <div className="relative min-h-40 overflow-hidden">
+                  <Image
+                    src={track.image}
+                    alt={track.alt}
+                    fill
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(10,13,17,0.72))]" />
+                </div>
+                <div className="flex min-h-48 flex-col p-5">
+                  <p className="font-mono text-xs uppercase text-[var(--amber)]">
+                    {track.label} · {track.areas.length} areas
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-black leading-tight text-white">
+                    {track.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                    {track.text}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 font-mono text-xs text-[var(--signal)]">
+                    Open path
+                    <ArrowRight
+                      size={14}
+                      aria-hidden="true"
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#0d1118]">
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
@@ -485,39 +802,101 @@ export default function WguHubPage() {
         </div>
       </section>
 
-      <section>
+      <section id="hub-directory">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <p className="font-mono text-xs uppercase text-[var(--signal)]">
-                The hub
+                Full visual directory
               </p>
               <h2 className="mt-4 max-w-4xl font-display text-4xl font-black leading-none text-white sm:text-5xl">
-                Twenty-eight connected areas, one line of reasoning.
+                Every area gets a visual clue and a first door.
               </h2>
             </div>
             <p className="max-w-md leading-7 text-[var(--soft)]">
-              The category names the pain, the proof slice makes it legible,
-              the rubric makes it testable, the whitepaper makes it portable,
-              and the deep architecture shows the work behind the claim.
+              Scan by image first, then label. Each card opens directly into the
+              work, so the hub can behave like a map instead of a long memo.
             </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {areas.map((area) => (
-              <Link
-                key={area.href}
-                href={area.href}
-                className="group flex min-h-56 flex-col border border-white/12 bg-white/[0.035] p-5 transition-colors hover:border-[var(--signal)]"
-              >
+            {areas.map((area) => {
+              const visual = areaImages[area.href];
+              return (
+                <Link
+                  key={area.href}
+                  href={area.href}
+                  className="group flex min-h-[25rem] flex-col overflow-hidden border border-white/12 bg-white/[0.035] transition-colors hover:border-[var(--signal)]"
+                >
+                  {visual ? (
+                    <div className="relative h-36 overflow-hidden border-b border-white/10">
+                      <Image
+                        src={visual.image}
+                        alt={visual.alt}
+                        fill
+                        sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,13,17,0.05),rgba(10,13,17,0.78))]" />
+                      <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 border border-white/15 bg-black/55 px-2.5 py-1.5 font-mono text-[0.65rem] uppercase text-[var(--signal)] backdrop-blur">
+                        <area.icon size={13} aria-hidden="true" />
+                        {areaTrackByHref[area.href] ?? "Map"}
+                      </span>
+                    </div>
+                  ) : null}
+                  <div className="flex flex-1 flex-col p-5">
+                    <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--amber)]">
+                      <area.icon size={15} aria-hidden="true" />
+                      {area.label}
+                    </p>
+                    <h3 className="mt-4 font-display text-2xl font-black leading-tight text-white">
+                      {area.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
+                      {area.text}
+                    </p>
+                    <span className="mt-auto inline-flex items-center gap-2 pt-4 font-mono text-xs text-[var(--signal)]">
+                      Open
+                      <ArrowRight
+                        size={14}
+                        aria-hidden="true"
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+            <Link
+              href="/wgu/architecture-v2#roadmap"
+              className="group flex min-h-[25rem] flex-col overflow-hidden border border-white/12 bg-white/[0.035] transition-colors hover:border-[var(--signal)]"
+            >
+              <div className="relative h-36 overflow-hidden border-b border-white/10">
+                <Image
+                  src={areaImages["/wgu/architecture-v2#roadmap"].image}
+                  alt={areaImages["/wgu/architecture-v2#roadmap"].alt}
+                  fill
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,13,17,0.05),rgba(10,13,17,0.78))]" />
+                <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 border border-white/15 bg-black/55 px-2.5 py-1.5 font-mono text-[0.65rem] uppercase text-[var(--signal)] backdrop-blur">
+                  <FlaskConical size={13} aria-hidden="true" />
+                  Roadmap
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col p-5">
                 <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--amber)]">
-                  <area.icon size={15} aria-hidden="true" />
-                  {area.label}
+                  <FlaskConical size={15} aria-hidden="true" />
+                  Living Roadmap
                 </p>
                 <h3 className="mt-4 font-display text-2xl font-black leading-tight text-white">
-                  {area.title}
+                  Proven in slices, principled at every step
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
-                  {area.text}
+                  The dated slices with their Leadership Principles, Slice 1
+                  drawn as a sequence, and ADR-001 already decided. Append-only
+                  in spirit: nothing deleted, everything revised in the open —
+                  slice results land here as they ship.
                 </p>
                 <span className="mt-auto inline-flex items-center gap-2 pt-4 font-mono text-xs text-[var(--signal)]">
                   Open
@@ -527,33 +906,7 @@ export default function WguHubPage() {
                     className="transition-transform group-hover:translate-x-1"
                   />
                 </span>
-              </Link>
-            ))}
-            <Link
-              href="/wgu/architecture-v2#roadmap"
-              className="group flex min-h-56 flex-col border border-white/12 bg-white/[0.035] p-5 transition-colors hover:border-[var(--signal)]"
-            >
-              <p className="inline-flex items-center gap-2 font-mono text-xs uppercase text-[var(--amber)]">
-                <FlaskConical size={15} aria-hidden="true" />
-                Living Roadmap
-              </p>
-              <h3 className="mt-4 font-display text-2xl font-black leading-tight text-white">
-                Proven in slices, principled at every step
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-[var(--soft)]">
-                The dated slices with their Leadership Principles, Slice 1
-                drawn as a sequence, and ADR-001 already decided. Append-only
-                in spirit: nothing deleted, everything revised in the open —
-                slice results land here as they ship.
-              </p>
-              <span className="mt-auto inline-flex items-center gap-2 pt-4 font-mono text-xs text-[var(--signal)]">
-                Open
-                <ArrowRight
-                  size={14}
-                  aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </span>
+              </div>
             </Link>
           </div>
         </div>
