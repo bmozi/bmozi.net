@@ -7,6 +7,7 @@ import {
   FlaskConical,
   LayoutDashboard,
   LogOut,
+  Presentation,
   ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
@@ -32,6 +33,7 @@ const shellExclusions = [
 const groupIcons = {
   architecture: FlaskConical,
   writing: BookOpenText,
+  talks: Presentation,
   reference: FileStack,
   practice: BriefcaseBusiness,
 };
@@ -72,7 +74,7 @@ export function WorkspaceShell() {
         </div>
 
         <nav
-          className="flex gap-2 overflow-x-auto pb-1 lg:flex-1 lg:justify-center lg:overflow-visible lg:pb-0"
+          className="flex gap-2 overflow-x-auto pb-1 lg:flex-1 lg:justify-center lg:pb-0"
           aria-label="Protected workspace"
         >
           {workspaceGroups.map((group) => {

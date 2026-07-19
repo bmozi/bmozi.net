@@ -85,6 +85,66 @@ export const workspaceGroups: WorkspaceGroup[] = [
     ],
   },
   {
+    id: "talks",
+    title: "The Podium",
+    eyebrow: "Talk kits",
+    description:
+      "The conference-talk portfolio: scripts, slide-ready arguments, Q&A drills, and podium versions of the strongest architecture ideas.",
+    href: "/blog/talks",
+    items: [
+      {
+        href: "/blog/talks/00-talk-portfolio",
+        label: "Talk portfolio",
+        description: "The full conference-track map and talk development plan.",
+      },
+      {
+        href: "/blog/talks/01-the-tools-were-never-the-gap",
+        label: "The Tools Were Never the Gap",
+        description: "The opening keynote frame for seams over tool thinking.",
+      },
+      {
+        href: "/blog/talks/02-the-seam-ai-review-cant-cross",
+        label: "The Seam AI Review Can't Cross",
+        description: "Why AI review still needs governed system evidence.",
+      },
+      {
+        href: "/blog/talks/03-the-delegation-seam",
+        label: "The Delegation Seam",
+        description: "The authority boundary that agentic systems cannot hand-wave.",
+      },
+      {
+        href: "/blog/talks/04-purpose-on-the-wire",
+        label: "Purpose on the Wire",
+        description: "Purpose-bound authorization as live system equipment.",
+      },
+      {
+        href: "/blog/talks/05-the-harness-conference-notes",
+        label: "Harness conference notes",
+        description: "The conference version of the Harness talk kit.",
+      },
+      {
+        href: "/blog/talks/06-prosecute-your-own-architecture",
+        label: "Prosecute Your Own Architecture",
+        description: "How adversarial review becomes design practice.",
+      },
+      {
+        href: "/blog/talks/07-the-org-chart-is-equipment-too",
+        label: "The Org Chart Is Equipment Too",
+        description: "Operating model design as part of the architecture.",
+      },
+      {
+        href: "/blog/talks/08-fund-slices-not-programs",
+        label: "Fund Slices, Not Programs",
+        description: "A talk on bounded proof, funding, and delivery discipline.",
+      },
+      {
+        href: "/blog/talks/09-no-queue-without-an-owner",
+        label: "No Queue Without an Owner",
+        description: "Ownership, queues, and accountability in live operations.",
+      },
+    ],
+  },
+  {
     id: "reference",
     title: "Reference shelf",
     eyebrow: "Continuity library",

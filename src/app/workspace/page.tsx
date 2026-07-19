@@ -7,6 +7,7 @@ import {
   FlaskConical,
   LayoutDashboard,
   LockKeyhole,
+  Presentation,
   SearchCheck,
   ShieldCheck,
 } from "lucide-react";
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
 const groupIcons = {
   architecture: FlaskConical,
   writing: BookOpenText,
+  talks: Presentation,
   reference: FileStack,
   practice: BriefcaseBusiness,
 };
@@ -126,17 +128,17 @@ export default function WorkspacePage() {
                 Main work areas
               </p>
               <h2 className="mt-3 font-display text-4xl font-black leading-none sm:text-5xl">
-                Four doors, one body of work.
+                Five doors, one body of work.
               </h2>
             </div>
             <p className="max-w-xl leading-7 text-black/65">
               The workspace groups the material by how you use it: build the
               architecture, shape the writing, pull from the reference shelf,
-              or practice the role.
+              package the talks, or practice the role.
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-5">
             {workspaceGroups.map((group) => {
               const Icon = groupIcons[group.id as keyof typeof groupIcons];
               return (
