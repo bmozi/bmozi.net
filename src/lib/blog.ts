@@ -173,6 +173,58 @@ const articleVisuals: Record<
         "AI security operations table with quarantined hostile content, policy gates, delegation controls, and guarded data zones",
     },
   },
+  talks: {
+    "00-talk-portfolio": {
+      image: "/blog/talks/talk-portfolio.webp",
+      imageAlt:
+        "Conference podium surrounded by architecture talk boards, slide cards, and speaking portfolio materials",
+    },
+    "01-the-tools-were-never-the-gap": {
+      image: "/blog/talks/tools-were-never-the-gap.webp",
+      imageAlt:
+        "Polished enterprise tools separated by narrow seams while an evidence thread crosses between systems",
+    },
+    "02-the-seam-ai-review-cant-cross": {
+      image: "/blog/talks/seam-ai-review-cant-cross.webp",
+      imageAlt:
+        "AI review console inspecting code and tests before a protected intent model across a bright boundary",
+    },
+    "03-the-delegation-seam": {
+      image: "/blog/talks/delegation-seam.webp",
+      imageAlt:
+        "Delegation chain carrying attenuated authority tokens through a controlled security gate to a tool endpoint",
+    },
+    "04-purpose-on-the-wire": {
+      image: "/blog/talks/purpose-on-the-wire.webp",
+      imageAlt:
+        "Data capsules moving through network wires with purpose markers enforced by policy gates",
+    },
+    "05-the-harness-conference-notes": {
+      image: "/blog/talks/harness-conference-notes.webp",
+      imageAlt:
+        "Conference podium beside an AI coding harness bench with scope, proof, enforcement, and communication gates",
+    },
+    "06-prosecute-your-own-architecture": {
+      image: "/blog/talks/prosecute-your-own-architecture.webp",
+      imageAlt:
+        "Architecture model under adversarial review with evidence trays, contradiction markers, and decision tokens",
+    },
+    "07-the-org-chart-is-equipment-too": {
+      image: "/blog/talks/org-chart-equipment.webp",
+      imageAlt:
+        "Organization chart rendered as operational equipment with calibrated modules, interface rails, and feedback gauges",
+    },
+    "08-fund-slices-not-programs": {
+      image: "/blog/talks/fund-slices-not-programs.webp",
+      imageAlt:
+        "Executive funding board with illuminated capability slices, proof markers, and staged investment tokens",
+    },
+    "09-no-queue-without-an-owner": {
+      image: "/blog/talks/no-queue-without-owner.webp",
+      imageAlt:
+        "Operations queue where each work capsule has an owner marker, timer, and escalation path",
+    },
+  },
 };
 
 export type ArticleMeta = {
