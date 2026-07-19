@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Siren } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "The Ops Reality Pack — Runbooks, Acceptance Criteria, Threat Model",
@@ -154,6 +155,20 @@ export default function OpsRealityPage() {
           </p>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Bad-day loop"
+        title="Failure handling is designed before the failure arrives."
+        caption="Ops reality connects runbook, signal, containment, recovery, and postmortem so a bad day creates evidence instead of improvisation."
+        steps={[
+          { label: "Symptom", detail: "The failure announces itself in operational language.", tone: "magenta" },
+          { label: "Contain", detail: "Protect the student-facing path first.", tone: "amber" },
+          { label: "Recover", detail: "Replay, rebuild, drain, or backfill from source facts.", tone: "signal" },
+          { label: "Prove", detail: "Acceptance criteria demonstrate behavior, not intent.", tone: "muted" },
+          { label: "Learn", detail: "Postmortem updates standards and runbooks.", tone: "signal" },
+        ]}
+        aside="A runbook is architecture under stress."
+      />
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

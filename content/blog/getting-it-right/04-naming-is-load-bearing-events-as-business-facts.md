@@ -12,6 +12,8 @@ At the second, the answer was one query. Their stream carried `scheduling.proced
 
 I used to file naming under hygiene — nice, like indented code. I now think it's load-bearing structure, and the gap between those two hospitals is why.
 
+{{visual:business-event-naming}}
+
 ## The naive version
 
 The naive event vocabulary is born innocently: someone wires change-data-capture to the database, or instruments the service layer, and events fall out shaped like what the machine saw. `row_updated`. `order_sync_v2`. `patient_upsert`. `table_7_changed`. The payload is a row diff; the name is a mechanism.

@@ -10,6 +10,8 @@ Unwinding it took a team most of a quarter — not undoing the merge record, but
 
 Every multi-system estate eventually needs an answer to the question "is this the same person?" — the customer in the e-commerce platform and the caller in the support system; the patient at two facilities; the borrower who applied twice with a new email. The answer is an identity spine: match, merge, and a universal identifier every system can share. It is some of the highest-value plumbing an organization can build, and it fails in a uniquely dangerous way, which is what this article is about.
 
+{{visual:identity-spine-map}}
+
 ## The naive version
 
 The naive build is a matching script: compare records on name, date of birth, email, phone; score similarity; above a threshold, merge automatically — typically by picking a survivor record, copying fields onto it, and deleting the loser. Tune the threshold to catch as many duplicates as possible, because duplicates are the visible pain that funded the project. Run it nightly. Declare the customer count de-duplicated.

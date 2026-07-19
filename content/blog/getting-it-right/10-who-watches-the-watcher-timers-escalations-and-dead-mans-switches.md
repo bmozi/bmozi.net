@@ -10,6 +10,8 @@ Nothing alerted. Why would it? Alerts fire when something *happens*. Nothing was
 
 This is the last article in the series, and it's about the failure mode underneath every other article's machinery. Escalations, SLA timers, the projection-lag alerts from Part 5, the verification job from Part 7, the bundle-staleness monitor from Part 9 — all of them are watchers. And a watcher's failure is uniquely invisible, because a dead watcher and a healthy quiet system look *identical* from the outside. Every other component announces its failure with errors. The watcher announces its failure with peace.
 
+{{visual:watcher-escalation-loop}}
+
 ## The naive version
 
 The naive construction is exactly what the referral system had, and it's what nearly everyone builds: a scheduled job that wakes periodically, queries for work past its deadline, and fires the escalation. Deadlines become consequences; queues can't silently rot; Part 6 of *The Seams* ("no queue without an owner") gets its enforcement machinery. All good.

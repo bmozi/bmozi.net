@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Braces } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "Engineering Standards — Events, Contracts, APIs, and the Ledger",
@@ -203,6 +204,20 @@ export default function EngineeringStandardsPage() {
           </p>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Standards map"
+        title="The paved road turns prose into enforceable contracts."
+        caption="The engineering layer is the receipt for the architecture: event envelope, registry, API rule, ledger, projection, and replay all reinforce each other."
+        steps={[
+          { label: "Envelope", detail: "Every event carries who, what, when, why, and authority.", tone: "signal" },
+          { label: "Registry", detail: "Contracts have owners, versions, and known consumers.", tone: "amber" },
+          { label: "API", detail: "Commands stay synchronous; facts circulate asynchronously.", tone: "muted" },
+          { label: "Ledger", detail: "Consequential facts become append-only evidence.", tone: "magenta" },
+          { label: "Replay", detail: "Projection rebuilds prove the standard still works.", tone: "signal" },
+        ]}
+        aside="If the standard cannot be tested, it is not yet a standard."
+      />
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

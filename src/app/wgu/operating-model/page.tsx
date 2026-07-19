@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Users } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "Operating Model — Capabilities, Teams, and Risk",
@@ -214,6 +215,20 @@ export default function OperatingModelPage() {
           </p>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Operating mechanism"
+        title="Capability, team, cadence, and risk must move together."
+        caption="The operating model is a governing loop: map the capability, assign a team home, choose the build posture, run the cadence, and keep the risk visible."
+        steps={[
+          { label: "Capability", detail: "Name the business function students depend on.", tone: "signal" },
+          { label: "Team Home", detail: "Assign end-to-end ownership instead of shared fog.", tone: "amber" },
+          { label: "Posture", detail: "Build, buy, configure, or govern the seam explicitly.", tone: "magenta" },
+          { label: "Cadence", detail: "Use decision forums that match the risk level.", tone: "muted" },
+          { label: "Risk", detail: "Keep the open threats visible until retired.", tone: "signal" },
+        ]}
+        aside="An org model is equipment when it changes flow."
+      />
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

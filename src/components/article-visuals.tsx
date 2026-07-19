@@ -396,6 +396,286 @@ const visuals: Record<string, Visual> = {
     ],
     aside: "Listen first. Align second. Prove before scaling.",
   },
+  "charter-commitment-ledger": {
+    kind: "image",
+    eyebrow: "Charter Visual",
+    title: "Promises only matter when they can be checked.",
+    caption:
+      "The charter is not a tone statement. It is a ledger of commitments: student outcome, decision record, prosecution, no-surprise conduct, evidence, credit, service, notice, and survivability.",
+    src: "/blog/illustrations/charter-commitment-ledger.webp",
+    alt: "Dark technical commitment ledger with ten inspection tokens arranged around a student-centered promise marker",
+  },
+  "charter-trust-loop": {
+    kind: "flow",
+    eyebrow: "Trust Loop",
+    title: "Trust becomes real when a promise can be caught breaking.",
+    caption:
+      "The charter creates an operating loop: commitments shape decisions, decisions produce evidence, evidence forces correction, and correction proves the charter is alive.",
+    steps: [
+      { label: "Promise", detail: "A commitment is written plainly enough to test.", tone: "signal" },
+      { label: "Decision", detail: "The promise changes a real trade-off.", tone: "amber" },
+      { label: "Evidence", detail: "The receipt is visible to people affected.", tone: "muted" },
+      { label: "Correction", detail: "A miss is acknowledged and repaired.", tone: "magenta" },
+      { label: "Absence", detail: "The practice survives without the author.", tone: "signal" },
+    ],
+    aside: "A charter nobody can use against you is decoration.",
+  },
+  "field-guide-elevator": {
+    kind: "image",
+    eyebrow: "Field Guide Visual",
+    title: "The architect is the elevator between altitude and reality.",
+    caption:
+      "The Field Guide turns the reading canon into reflex: carry executive intent down, carry engineering truth up, and translate without flattering either floor.",
+    src: "/blog/illustrations/field-guide-elevator.webp",
+    alt: "Transparent elevator shaft connecting executive strategy rooms above with engineering workbenches and systems below",
+  },
+  "field-guide-lens-stack": {
+    kind: "flow",
+    eyebrow: "Learning Stack",
+    title: "Every idea must survive breath, practice, and principle.",
+    caption:
+      "The guide is useful because each entry compresses theory into one explanation, one WGU move this week, and one leadership principle under load.",
+    steps: [
+      { label: "Breath", detail: "Explain the idea in plain language.", tone: "signal" },
+      { label: "Practice", detail: "Name the move to make this week.", tone: "amber" },
+      { label: "Principle", detail: "Tie the move to leadership behavior.", tone: "magenta" },
+      { label: "Prosecute", detail: "Retire entries that cannot carry all three.", tone: "muted" },
+    ],
+    aside: "A teaching that cannot name its principle is not finished.",
+  },
+  "field-kit-worktable": {
+    kind: "image",
+    eyebrow: "Field Kit Visual",
+    title: "Listening becomes architecture when every conversation leaves evidence.",
+    caption:
+      "The first thirty days are not impression gathering. They are a disciplined instrument for finding queues, vocabulary collisions, promises, seams, and adaptive work.",
+    src: "/blog/illustrations/field-kit-worktable.webp",
+    alt: "Architecture field kit worktable with interview cards, journey traces, seam audit tags, sorting trays, and promise ledger",
+  },
+  "field-kit-conversation-loop": {
+    kind: "flow",
+    eyebrow: "Listening Loop",
+    title: "Every conversation should produce a useful receipt.",
+    caption:
+      "The point is not to extract testimony. It is to earn trust by listening, classify the signal carefully, and return with evidence that something moved.",
+    steps: [
+      { label: "Ask", detail: "Open with the person's lived workflow.", tone: "signal" },
+      { label: "Quote", detail: "Capture the sharp words verbatim when allowed.", tone: "amber" },
+      { label: "Classify", detail: "Technical, adaptive, through, around, or between.", tone: "magenta" },
+      { label: "Promise", detail: "Name one thing you will move and by when.", tone: "muted" },
+      { label: "Return", detail: "Close the loop with the person who gave signal.", tone: "signal" },
+    ],
+    aside: "Trust is built in the follow-up.",
+  },
+  "program-prosecution-trial": {
+    kind: "image",
+    eyebrow: "Prosecution Visual",
+    title: "Put the program on trial before reality does.",
+    caption:
+      "A strong program can lose arguments in writing and become stronger because every conviction names the repair, trigger, and witness.",
+    src: "/blog/illustrations/program-prosecution-trial.webp",
+    alt: "Modern review courtroom with architecture model, evidence exhibits, objection boards, and repair blocks on the table",
+  },
+  "prosecution-verdict-loop": {
+    kind: "flow",
+    eyebrow: "Verdict Loop",
+    title: "The strongest objection becomes the repair list.",
+    caption:
+      "Prosecution is only useful when it changes the work. Each charge needs a verdict, a fix, and a trigger that makes the fix operational.",
+    steps: [
+      { label: "Charge", detail: "State the objection at full strength.", tone: "magenta" },
+      { label: "Defense", detail: "Concede what the evidence actually proves.", tone: "amber" },
+      { label: "Verdict", detail: "Acquit, convict, or partially convict.", tone: "signal" },
+      { label: "Fix", detail: "Name the patch and when it takes effect.", tone: "muted" },
+      { label: "Rerun", detail: "Try the case again with new evidence.", tone: "signal" },
+    ],
+    aside: "An unpatched conviction is theater.",
+  },
+  "method-artifact-pipeline": {
+    kind: "image",
+    eyebrow: "Method Visual",
+    title: "Every thought moves through the same governed stations.",
+    caption:
+      "The method is a repeatable pipeline: capture the claim, research it, build the artifact, prosecute it, patch it, govern the copies, and ship it to the shelf.",
+    src: "/blog/illustrations/method-artifact-pipeline.webp",
+    alt: "Seven-station technical workflow table where a captured idea becomes a researched, prosecuted, patched, governed, and published artifact",
+  },
+  "method-escalation-ladder": {
+    kind: "flow",
+    eyebrow: "Escalation Ladder",
+    title: "When unsure, move the work one rung.",
+    caption:
+      "The method prevents wandering by naming the next honest transformation: claim, evidence, artifact, prosecution, correction, teaching, then portfolio.",
+    steps: [
+      { label: "Claim", detail: "A thought becomes falsifiable.", tone: "signal" },
+      { label: "Evidence", detail: "The claim meets dated sources.", tone: "amber" },
+      { label: "Artifact", detail: "The evidence takes a usable form.", tone: "muted" },
+      { label: "Prosecution", detail: "The strongest objection gets a hearing.", tone: "magenta" },
+      { label: "Portfolio", detail: "Surviving work becomes teachable and navigable.", tone: "signal" },
+    ],
+    aside: "Resistance at a rung is evidence, not delay.",
+  },
+  "provenance-evidence-timeline": {
+    kind: "image",
+    eyebrow: "Provenance Visual",
+    title: "The record proves what was known, when, and from where.",
+    caption:
+      "A provenance record turns influence into accountable scholarship: dated claims, source tiers, open questions, and a standing practice for future updates.",
+    src: "/blog/illustrations/provenance-evidence-timeline.webp",
+    alt: "Dated evidence timeline with source documents, seals, witness pins, and luminous audit paths across an archival worktable",
+  },
+  "provenance-claim-chain": {
+    kind: "flow",
+    eyebrow: "Claim Chain",
+    title: "A claim is useful only when its lineage is visible.",
+    caption:
+      "The provenance habit keeps the site honest: claim, source, date, confidence, open question, and standing update practice travel together.",
+    steps: [
+      { label: "Claim", detail: "State only what the evidence can carry.", tone: "signal" },
+      { label: "Source", detail: "Name origin and confidence tier.", tone: "amber" },
+      { label: "Date", detail: "Record when it was known.", tone: "muted" },
+      { label: "Question", detail: "Leave counsel-facing gaps open.", tone: "magenta" },
+      { label: "Practice", detail: "Define how future changes are governed.", tone: "signal" },
+    ],
+    aside: "Evidence without lineage becomes folklore.",
+  },
+  "agentic-gap-analysis-lab": {
+    kind: "image",
+    eyebrow: "Agentic Frontier",
+    title: "Agentic pressure testing strengthens what survives.",
+    caption:
+      "The gap analysis tests the corpus against AI agents, tool authority, delegated identity, provenance, and verification moving up a level.",
+    src: "/blog/illustrations/agentic-gap-analysis-lab.webp",
+    alt: "Architecture corpus stack being tested in an agentic analysis lab with contained model nodes, risk findings, and patch artifacts",
+  },
+  "agentic-patch-list": {
+    kind: "flow",
+    eyebrow: "Patch List",
+    title: "Agentic architecture adds authority, memory, and proof to the old seams.",
+    caption:
+      "The principles hold, but the implementation has to tighten: signed delegation, governed memory, transparency logs, federated identity, and independent evals.",
+    steps: [
+      { label: "Delegate", detail: "Signed attenuated authority for every agent hop.", tone: "signal" },
+      { label: "Remember", detail: "Memory and embeddings governed as records.", tone: "amber" },
+      { label: "Witness", detail: "Transparency logs beat private hash chains.", tone: "magenta" },
+      { label: "Federate", detail: "Identity and policy survive multiple agents.", tone: "muted" },
+      { label: "Evaluate", detail: "Judges stay independent from the agent measured.", tone: "signal" },
+    ],
+    aside: "The frontier did not erase the seams; it made them more expensive to ignore.",
+  },
+  "ai-security-containment": {
+    kind: "image",
+    eyebrow: "Security Visual",
+    title: "AI changes the economics of finding what already exists.",
+    caption:
+      "The safest assumption is not that every system is breakable. It is that any real vulnerability in a valuable system is now cheaper to find and faster to weaponize.",
+    src: "/blog/illustrations/ai-security-containment.webp",
+    alt: "AI security architecture lab with student records isolated from untrusted documents, scoped tool gates, signed delegation chain, and audit replay controls",
+  },
+  "ai-security-threat-loop": {
+    kind: "flow",
+    eyebrow: "Threat Model",
+    title: "Containment beats confidence at every AI boundary.",
+    caption:
+      "The design stance is to assume prompt injection, poisoning, and tool misuse will be attempted, then make the blast radius small enough to govern.",
+    steps: [
+      { label: "Untrusted Input", detail: "Student and third-party artifacts are hostile by default.", tone: "magenta" },
+      { label: "Context Gate", detail: "Private data, tools, and exfiltration never meet together.", tone: "amber" },
+      { label: "Scoped Tool", detail: "Typed, registered, rate-limited, deny-by-default.", tone: "signal" },
+      { label: "Human Budget", detail: "Tier 3 review capacity is an SLO.", tone: "muted" },
+      { label: "Replay", detail: "Every consequential action can be audited.", tone: "signal" },
+    ],
+    aside: "The model can be clever; the architecture has to be stricter.",
+  },
+  "event-versioning-decade": {
+    kind: "flow",
+    eyebrow: "Event Evolution",
+    title: "A decade-old event should still be readable tomorrow.",
+    caption:
+      "Versioning protects consumers from producer churn: additive changes are tolerated, breaking changes publish beside old versions, and upcasters preserve replay.",
+    steps: [
+      { label: "Fact", detail: "Past-tense business event.", tone: "signal" },
+      { label: "Schema", detail: "Owned contract with version.", tone: "amber" },
+      { label: "Compat", detail: "Consumers tolerate additive fields.", tone: "muted" },
+      { label: "Sunset", detail: "Breaking versions overlap by policy.", tone: "magenta" },
+      { label: "Replay", detail: "Old history remains executable.", tone: "signal" },
+    ],
+    aside: "Never strand the archive to simplify today's deploy.",
+  },
+  "identity-spine-map": {
+    kind: "flow",
+    eyebrow: "Identity Spine",
+    title: "One person can appear in many systems without becoming many people.",
+    caption:
+      "The identity spine does not erase local records. It gives every boundary a stable person reference and a governed way to reconcile disagreements.",
+    steps: [
+      { label: "Local IDs", detail: "SIS, CRM, LMS, aid, and support records.", tone: "muted" },
+      { label: "Match", detail: "Evidence-weighted resolution, not string guessing.", tone: "amber" },
+      { label: "Spine ID", detail: "Stable universal person reference.", tone: "signal" },
+      { label: "Purpose", detail: "Access follows relationship and reason.", tone: "magenta" },
+      { label: "Audit", detail: "Merge and split decisions stay visible.", tone: "signal" },
+    ],
+    aside: "Identity is infrastructure for dignity.",
+  },
+  "policy-as-code-gate": {
+    kind: "flow",
+    eyebrow: "Policy Gate",
+    title: "Policy moves fastest when enforcement is local and the rule is shared.",
+    caption:
+      "Policy-as-code should not become a central bottleneck. Teams keep building while shared rules, tests, and decision logs keep the boundary honest.",
+    steps: [
+      { label: "Intent", detail: "Human-readable policy source.", tone: "signal" },
+      { label: "Rule", detail: "Executable check in the paved road.", tone: "amber" },
+      { label: "Local Gate", detail: "Low-latency enforcement near the action.", tone: "muted" },
+      { label: "Exception", detail: "Logged, owned, expiring decision.", tone: "magenta" },
+      { label: "Evidence", detail: "Audit proves the rule ran.", tone: "signal" },
+    ],
+    aside: "Governance should make the right thing easier to ship.",
+  },
+  "business-event-naming": {
+    kind: "flow",
+    eyebrow: "Event Naming",
+    title: "Names are load-bearing when they tell the business truth.",
+    caption:
+      "A good event name is recognizable to the domain, past tense, and durable enough that ten consumers can build on it without decoding implementation noise.",
+    steps: [
+      { label: "Domain", detail: "Registrar, aid, learning, support, or platform.", tone: "signal" },
+      { label: "Entity", detail: "The thing the business recognizes.", tone: "amber" },
+      { label: "Verb", detail: "Past-tense fact, never command.", tone: "magenta" },
+      { label: "Contract", detail: "Schema and glossary carry semantics.", tone: "muted" },
+    ],
+    aside: "If the business cannot say it, the platform should not emit it.",
+  },
+  "projection-rebuild-loop": {
+    kind: "flow",
+    eyebrow: "Projection Discipline",
+    title: "A projection is trusted because it can be rebuilt.",
+    caption:
+      "Views are cattle: disposable, replayable, and checked against the source facts before people rely on them.",
+    steps: [
+      { label: "Events", detail: "Append-only business facts.", tone: "signal" },
+      { label: "Projector", detail: "Purpose-built transformation.", tone: "amber" },
+      { label: "View", detail: "Fast, local, disposable read model.", tone: "muted" },
+      { label: "Rebuild", detail: "Routine rehearsal, not emergency craft.", tone: "magenta" },
+      { label: "Compare", detail: "Replay verifies release behavior.", tone: "signal" },
+    ],
+    aside: "Do not hand-edit a memory cache and call it truth.",
+  },
+  "watcher-escalation-loop": {
+    kind: "flow",
+    eyebrow: "Watcher Pattern",
+    title: "A timer only matters if somebody watches the watcher.",
+    caption:
+      "Escalation systems need their own failure semantics: missed heartbeat, dead-man switch, owner, and incident path.",
+    steps: [
+      { label: "Clock", detail: "The promise has an age.", tone: "amber" },
+      { label: "Watcher", detail: "The system checks the clock.", tone: "signal" },
+      { label: "Heartbeat", detail: "The watcher proves it is alive.", tone: "muted" },
+      { label: "Switch", detail: "Silence escalates independently.", tone: "magenta" },
+      { label: "Owner", detail: "A human receives the breach.", tone: "signal" },
+    ],
+    aside: "Monitoring without a monitor is another silent seam.",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

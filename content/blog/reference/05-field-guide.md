@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:field-guide-elevator}}
+
 ## The spine
 
 **The Architect Elevator (Hohpe)**
@@ -100,6 +102,8 @@
 ---
 
 ## How this fits — and the rule it obeys
+
+{{visual:field-guide-lens-stack}}
 
 The **curriculum** is rigor (domains, loops, evidence of mastery). The **canon** is judgment (what to believe, how much). This **field guide** is reflex — the breath, the Monday action, and the principles, because in this practice a lesson that can't name its principles isn't finished. Notice, reading back through, that four principles carry most of the load — Sound Judgment, Earn Trust, Learning, Align & Commit — and that's not an accident: they're the four that govern how an architect *thinks, relates, grows, and moves*. The others arrive through the work itself. When you find an entry whose principle line feels forced, that's a signal worth trusting: either the teaching doesn't belong here, or I tagged it lazily. Prosecute it at the annual review like everything else.
 

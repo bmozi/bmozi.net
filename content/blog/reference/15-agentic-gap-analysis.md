@@ -10,6 +10,8 @@ can demonstrate.***
 
 ---
 
+{{visual:agentic-gap-analysis-lab}}
+
 ## Why this exists
 
 Everything I've built assumes a world of systems, teams, and humans crossing seams. That
@@ -287,6 +289,8 @@ today's frameworks are legacy:
 ## The patch list — what changes, and where
 
 Concrete, so the corpus actually gets stronger rather than merely critiqued:
+
+{{visual:agentic-patch-list}}
 
 - **Architecture v2 / SCF pages:** replace "one agent gateway" with "one policy plane per
   org, federated to a peer-gateway mesh; federated cryptographic identity." Add

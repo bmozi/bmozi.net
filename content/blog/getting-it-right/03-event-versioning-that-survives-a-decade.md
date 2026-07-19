@@ -10,6 +10,8 @@ Then someone asked the question that should be tattooed inside every event platf
 
 Here's the thing about a published event schema that nobody tells you on day one: it is the most permanent artifact your team produces. Code gets rewritten. Databases get migrated. But an event, once published, has been *copied* — into consumers' stores, into the warehouse, into the archived stream you'll replay someday. You don't control the copies. You only control whether future readers can still understand them.
 
+{{visual:event-versioning-decade}}
+
 ## The naive version
 
 Teams treat event schemas the way they treat internal code: something you refactor when it gets ugly. Rename fields for clarity. Restructure the payload. Change a string to an enum. Then handle the fallout by coordinating: announce the change, give consumers a deadline, deploy in lockstep.

@@ -14,6 +14,8 @@ you can catch me breaking. If you do, tell me — publicly is fine — and the c
 will be mine to make and acknowledge. That exchange is not a threat to this charter;
 it is the charter working.
 
+{{visual:charter-commitment-ledger}}
+
 ## 1 · The student is the tiebreaker
 
 Every initiative I sponsor or sign will name, in writing, the student outcome it serves —
@@ -93,6 +95,8 @@ merits. If my leaving would break the architecture, then I built a dependency,
 not a capability. Everyone here is a leader; my job includes making that more true
 every quarter, until the answer to "what do we need him for?" is honestly "less than
 last year" — measured in how rarely you need me, not how often.
+
+{{visual:charter-trust-loop}}
 
 ---
 

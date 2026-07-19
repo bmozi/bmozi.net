@@ -4,11 +4,15 @@
 
 ---
 
+{{visual:field-kit-worktable}}
+
 ## Rules of conduct (read before every session)
 
 Talk less than a third of the time. You are not there to preview conclusions — people can tell when questions are auditions for answers you've already reached. Never solution in the room; "that's exactly the kind of thing I'm here to understand" is a complete sentence. Verify by saying back: "So if I heard you right…" — the correction you get is often the real finding. Always end with the servant question: *"What's in your way that someone like me could move?"* — and if you promise to move something, log it and move it. Your first thirty days of kept micro-promises are worth more than any presentation.
 
 One more: write the verbatim gems. When someone says something in words sharper than yours — "we find out about start-date changes when the student calls crying" — capture it exactly. Their words carry authority in later rooms that your paraphrase never will.
+
+{{visual:field-kit-conversation-loop}}
 
 ## The universal opening set (any role)
 

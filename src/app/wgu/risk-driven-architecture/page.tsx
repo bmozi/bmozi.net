@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "Risk-Driven Architecture Method — Just Enough for Student Continuity",
@@ -208,6 +209,20 @@ export default function RiskDrivenArchitecturePage() {
           </div>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Risk ladder"
+        title="Use more architecture only when the risk earns it."
+        caption="Risk-driven architecture keeps ceremony proportional: reversible changes get light notes; cross-system and student-affecting changes get contracts, reviews, proof slices, and ownership."
+        steps={[
+          { label: "Tiny", detail: "Reversible, local, normal team judgment.", tone: "muted" },
+          { label: "Local", detail: "One workflow needs owner, metric, and rollback.", tone: "signal" },
+          { label: "Cross-System", detail: "Contracts, compatibility, and observability required.", tone: "amber" },
+          { label: "Institutional", detail: "Records, aid, privacy, equity, or AI action needs prosecution.", tone: "magenta" },
+          { label: "Proof", detail: "Ship the smallest slice that tests the risk.", tone: "signal" },
+        ]}
+        aside="Architecture is how you avoid expensive surprise."
+      />
 
       <section className="border-b border-white/10 bg-[var(--paper)] text-[var(--ink)]">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

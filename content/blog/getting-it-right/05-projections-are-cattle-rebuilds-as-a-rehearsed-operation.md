@@ -10,6 +10,8 @@ Silence. The projection had been built once, two years earlier, by an engineer w
 
 The whole promise of deriving read models from an event log — the promise that justified the architecture — is that derived state is disposable. You can always rebuild it from the log. That sentence appears in every design doc. Almost nobody has ever actually done it.
 
+{{visual:projection-rebuild-loop}}
+
 ## The naive version
 
 The naive stance isn't a bad design; it's an untested assumption. The projection is built once, consumes events forever after, and "we can rebuild from the log" remains a belief held with the same confidence, and the same evidential basis, as "our backups are restorable."

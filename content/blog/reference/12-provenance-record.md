@@ -10,6 +10,8 @@ Day 1.***
 
 ---
 
+{{visual:provenance-evidence-timeline}}
+
 ## The timeline, evidenced
 
 **Before July 2026 — the antecedent theses.** The Unified Student Object case study and
@@ -43,6 +45,8 @@ weekly check-in created ~July 9 referencing the plan; conversation logs with the
 assistant used in production, which are dated and sequential.
 
 ## What the record establishes
+
+{{visual:provenance-claim-chain}}
 
 1. The Student Continuity Fabric — its name, claims, architecture, whitepaper,
    evaluation rubric, and reference implementation — existed in substantially complete

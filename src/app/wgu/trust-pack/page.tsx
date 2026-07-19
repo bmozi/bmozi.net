@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "The Trust Pack — SLOs, FERPA Purposes, Access, and AI Action Tiers",
@@ -243,6 +244,20 @@ export default function TrustPackPage() {
           </p>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Trust mechanism"
+        title="Each trust claim resolves into a measured control."
+        caption="The Trust Pack works because it connects student-facing promises to numbers, purpose, relationship, data class, action tier, and containment."
+        steps={[
+          { label: "Promise", detail: "The student-facing behavior WGU needs to make true.", tone: "signal" },
+          { label: "Number", detail: "The SLO or budget that makes the promise inspectable.", tone: "amber" },
+          { label: "Purpose", detail: "The FERPA reason and relationship that authorize access.", tone: "magenta" },
+          { label: "Tier", detail: "The maximum AI action allowed at this boundary.", tone: "muted" },
+          { label: "Audit", detail: "The replayable evidence when the promise is challenged.", tone: "signal" },
+        ]}
+        aside="Trust that cannot be measured becomes personality."
+      />
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

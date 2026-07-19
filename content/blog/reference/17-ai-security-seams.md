@@ -16,6 +16,8 @@ That is the design assumption that matters for WGU. AI changes the economics of 
 
 The seams thesis gets sharper under AI pressure: the model is rarely the whole failure. The failure is usually at the crossing where a model reads untrusted content, receives delegated authority, calls a tool, stores memory, emits an event, or persuades a human.
 
+{{visual:ai-security-containment}}
+
 ## What the evidence says
 
 The evidence is now strong enough to treat AI-assisted vulnerability discovery as operational reality, not speculation.
@@ -205,6 +207,8 @@ The five tightening moves are now mandatory:
 5. **Event authenticity and projection replay as security controls**, not merely data-quality controls.
 
 This is the security version of the seams thesis. AI does not break everything. It finds ungoverned seams faster.
+
+{{visual:ai-security-threat-loop}}
 
 ---
 

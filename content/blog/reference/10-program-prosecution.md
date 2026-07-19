@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:program-prosecution-trial}}
+
 ## The three charges pressed hardest, answered first
 
 **Charge 12 — "A slow-motion confidentiality incident with a weekly release cadence." VERDICT: CONVICTED IN SUBSTANTIAL PART — the gravest finding.**
@@ -13,6 +15,8 @@ Partial defense on one count: the /wgu hub is *not* public — it sits behind th
 **Charges 6 + 3 — "A confirmation engine inside an echo chamber." VERDICT: CONVICTED — the deepest finding.**
 The prosecution is right that every prior "prosecution" was written inside the same collaboration that wrote the designs, and that the field kit's note template pre-structures perception into the thesis's categories. The register could confirm what its author arrived believing, and he would call it evidence.
 **FIXES:** (1) *Pre-registered falsification criteria, sealed with the baseline before Day 1:* the seams thesis is materially wrong if a majority of traced failure stories ran THROUGH a single system's own workflow (not around/between); the field kit's classification is invalid unless at least one traced story per week genuinely resists classification (all-clean sorting = the template is leading the witness). (2) *Invert E2's success metric:* the Days 31–60 sessions succeed only if the team materially changes **three or more** of the nine v2 decisions; fewer than two changed is treated as failed elicitation — evidence the room deferred rather than engaged — never as vindication. (3) *Opposing counsel becomes human:* no future document may bear the word "prosecution" until at least one person who is neither John nor an AI has attacked it; the Days 31–60 team is the first real opposing counsel this work will ever face, and that is to be said to them in exactly those words. (4) The next prosecution of any design is written by John *alone, unaided*, before any AI involvement — the signature move, demonstrated solo (this also answers Charge 11's atrophy count).
+
+{{visual:prosecution-verdict-loop}}
 
 **Charge 2 — "The time budget is insolvent." VERDICT: CONVICTED.**
 The arithmetic holds: 12–18 hours/week of program overhead in months 1–3 is a second job, and a program with no designed degradation path collapses silently — violating the charter's ninth commitment before October.

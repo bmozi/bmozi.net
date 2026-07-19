@@ -10,6 +10,8 @@ Six months later, two numbers told the rest of the story. Their flagship API's P
 
 They had fixed the governance problem by installing a bottleneck, and the bottleneck was now the most critical single point of failure they operated. The lesson isn't "don't centralize." It's sharper: **centralize the authoring; distribute the enforcement.**
 
+{{visual:policy-as-code-gate}}
+
 ## The naive version, and the arithmetic that kills it
 
 The naive architecture equates "one source of truth" with "one server answering questions." Every access decision — can this adjuster see this claim, can this agent act for this customer — becomes a synchronous remote call: request in, allow/deny out.

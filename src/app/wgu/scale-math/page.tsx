@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Calculator } from "lucide-react";
 import { BrandLockup } from "@/components/brand-lockup";
 import { WguImmersiveHero } from "@/components/wgu-immersive-hero";
+import { WguMechanismDiagram } from "@/components/wgu-mechanism-diagram";
 
 export const metadata: Metadata = {
   title: "The Scale Math — Capacity, Storage, and Cost, Computed",
@@ -171,6 +172,20 @@ export default function ScaleMathPage() {
           </p>
         </div>
       </WguImmersiveHero>
+
+      <WguMechanismDiagram
+        eyebrow="Capacity chain"
+        title="The argument moves from assumptions to unit economics."
+        caption="The scale page is readable because each estimate shows its ingredients: student base, activity volume, storage, replay, lag, and cost per term."
+        steps={[
+          { label: "Students", detail: "Start with public enrollment and active-month assumptions.", tone: "signal" },
+          { label: "Events", detail: "Separate learning volume from operational lifecycle facts.", tone: "amber" },
+          { label: "Storage", detail: "Compute replicated backbone and ledger growth.", tone: "muted" },
+          { label: "Replay", detail: "Test rebuild time against conservative throughput.", tone: "magenta" },
+          { label: "Cost", detail: "Convert platform spend into per-student term cost.", tone: "signal" },
+        ]}
+        aside="A number without its assumption is theater."
+      />
 
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">

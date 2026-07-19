@@ -10,6 +10,8 @@ standing procedure), **Deliver Results** (nothing counts until it ships to the s
 
 ---
 
+{{visual:method-artifact-pipeline}}
+
 ## The pipeline, end to end
 
 Every piece of work here — the invention, the architecture, the articles, the talks —
@@ -61,6 +63,8 @@ escalation* — the successor question the artifact makes askable. Not "what els
 we do" but "what does this now make possible or newly necessary?"
 
 ## The escalation ladder — how "right next" gets chosen
+
+{{visual:method-escalation-ladder}}
 
 The pattern behind every next step this program has taken, generalized:
 
