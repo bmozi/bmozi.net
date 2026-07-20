@@ -4,4 +4,6 @@
 
 *This pointer remains per house rule: nothing deleted, everything revised in the open. The revision note is itself the lesson — sometimes you discover your cornerstone last, and the honest move is to carry it to the front where it belonged all along.*
 
+{{visual:seams-cornerstone-moved}}
+
 **The tools were never the gap. The seams were.**

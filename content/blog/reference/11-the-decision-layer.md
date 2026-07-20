@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:reference-decision-layer}}
+
 ## What the JD actually describes
 
 Strip the company names and the posting describes a single idea worth internalizing: **experimentation, progressive rollout, dynamic configuration, and impact measurement — unified as one owned platform, sitting "on the critical path for how teams learn."** Not a tool. Not a team's side capability. The institutional learning system, productized, with an owner, a strategy, and success criteria.

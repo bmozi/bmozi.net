@@ -12,6 +12,8 @@ Here's what happened next, and if you've been senior for more than a few years y
 
 I've thought about that no for years, because everything wrong with it was in the *delivery*, not the verdict. It came with no written reasoning anyone could inspect or appeal. It didn't distinguish "not ever" from "not like this, not yet." It forbade a path without paving an alternative. And it spent my authority as if authority were free. Four defects — and it turns out the senior craft of refusal is the practice of fixing exactly those four.
 
+{{visual:mind-durable-no}}
+
 ## The tension
 
 Architects live on refusal. The whole value of the role, compressed, is that someone with long horizons can veto the locally-convenient in favor of the globally-survivable; an architect who can't say no is a very expensive diagram service. And yet nobody teaches refusal. We promote engineers on a decade of yes — of building, shipping, making things possible — then hand them a role whose defining verb is no, and act surprised when they wield it like I did: as a verdict, delivered from the bench, unaccompanied.

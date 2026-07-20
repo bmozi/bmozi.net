@@ -9,6 +9,8 @@
 
 ---
 
+{{visual:getting-it-right-series-map}}
+
 ## The arc
 
 The series moves through four layers, each depending on the one before. **Delivery** (Parts 1–2): getting a fact from one system to another without loss or duplication — the substrate everything else assumes. **Meaning** (Parts 3–5): keeping facts legible and derivable across years of schema drift, renames, and rebuilds. **Trust** (Parts 6–8): identity, tamper-evidence, and privacy — the properties that make a record worth believing and legal to keep. **Control** (Parts 9–10): policy and time — who may act, and what happens automatically when nobody does. Each article stands alone, but the sequence builds one conviction: reliability is not a temperament, it's a set of testable properties, and every one of them has a known correct construction.

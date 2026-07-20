@@ -12,6 +12,8 @@ Everything else — the everything-in-the-lake ideology, the MapReduce jobs, the
 
 That day changed how I read hype. I stopped asking "is this wave real?" — the question everyone argues about, and the wrong one — and started asking "what will the residue be?"
 
+{{visual:mind-hype-residue}}
+
 ## The tension
 
 Senior technologists mostly hold one of two postures toward hype, and both are ways of not thinking.

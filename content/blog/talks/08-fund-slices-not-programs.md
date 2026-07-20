@@ -6,6 +6,8 @@ Views my own.*
 
 ---
 
+{{visual:talk-fund-slices-stage}}
+
 ## Why this is a good conference talk
 
 **The edge is that it's a money talk wearing an architecture jacket.** Executive rooms

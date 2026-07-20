@@ -9,6 +9,8 @@
 
 ---
 
+{{visual:architects-mind-arc}}
+
 ## The arc
 
 The series moves from *the decision itself* (how to pace it, how to hold conviction about it) → *the evidence around it* (hype as signal, organizations as material) → *the social act of deciding* (consensus, refusal) → *what decisions are ultimately for* (people, and the architects who come after you). Each essay stands alone, but the sequence builds one claim: architecture is not the diagrams — it is the quality of the judgment that produced them, and judgment is the one thing you cannot download.

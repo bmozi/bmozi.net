@@ -9,6 +9,8 @@ policy review (social media, outside activity, IP) — same gate as publishing.*
 
 ---
 
+{{visual:talk-portfolio-podium}}
+
 ## The portfolio at a glance
 
 **Talk 1 · "The Tools Were Never the Gap"** — the flagship keynote. Systems thinking for

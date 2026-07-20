@@ -7,6 +7,8 @@
 
 ---
 
+{{visual:seams-series-arc}}
+
 ## The arc
 
 **Publication opens with Part 0 — "What Is a Seam?"** (file 00a): written after the series was complete, it turned out to be the foundation the whole arc stands on — the definition, the four crossings of a governed seam, the symptom list and trace method for finding one, and the five-scale generalization. It publishes FIRST, and every later piece may assume its vocabulary.

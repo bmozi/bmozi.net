@@ -6,6 +6,8 @@ prosecution record. Views my own.*
 
 ---
 
+{{visual:talk-prosecute-stage}}
+
 ## Why this is a good conference talk
 
 **The edge is receipts.** Most talks about intellectual honesty are sermons; this one

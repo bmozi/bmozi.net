@@ -8,6 +8,8 @@ contribution), **One-by-One** (you join a team one relationship at a time).*
 
 ---
 
+{{visual:reference-introduction-kit}}
+
 ## The one rule above all the scripts
 
 **Servant leadership is never claimed; it is only witnessed.** The moment you say

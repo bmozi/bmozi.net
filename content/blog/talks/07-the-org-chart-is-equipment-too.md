@@ -6,6 +6,8 @@ my own.*
 
 ---
 
+{{visual:talk-org-chart-equipment}}
+
 ## Why this is a good conference talk
 
 **The edge is agreeing with the hype and completing it.** Every leadership feed is full

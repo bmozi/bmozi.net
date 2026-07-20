@@ -14,6 +14,8 @@ A decade later, the broker had in fact been swapped — uneventfully, in roughly
 
 Eleven weeks on the reversible decision. Eight minutes on the permanent one. And here is the uncomfortable part: at the time, almost nobody in that building — including, for too long, me — thought anything was wrong with that allocation.
 
+{{visual:mind-door-physics}}
+
 ## The tension
 
 You know the two-door model. Everyone knows the two-door model; it has been in shareholder letters and keynotes for years. Type 1 decisions are one-way doors — walk through and you can't come back. Type 2 decisions are two-way doors — walk through, look around, walk back if you don't like it. Move slowly and deliberately on the first kind; move fast on the second, because the cost of a wrong reversible decision is small and the cost of deciding slowly is paid on every decision.

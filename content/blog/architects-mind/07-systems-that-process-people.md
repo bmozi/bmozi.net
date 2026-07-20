@@ -10,6 +10,8 @@ Then, for reasons I no longer remember, I asked to see the oldest item in the qu
 
 I have designed worse failures and better systems since, but that queue item is the one I keep, because of what I understood standing at that dashboard: every number on the screen was someone's month. We had built the system as if we were processing applications. We were processing people.
 
+{{visual:mind-people-queue}}
+
 ## The tension
 
 This essay is the one in the series I most expect to be politely skipped, so let me state the tension without decoration.

@@ -6,6 +6,8 @@ carries what that kit doesn't: the conference framing — rooms, edge, and Q&A d
 
 ---
 
+{{visual:talk-harness-ten-minutes}}
+
 ## Why this is a good conference talk
 
 **The edge is the format itself.** Ten minutes, memorized, no slides needed — it fits

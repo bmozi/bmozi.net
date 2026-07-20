@@ -12,6 +12,8 @@ The second architect had watched people like the first, and had drawn the fashio
 
 Solitary correctness that dies of neglect; consensus that's actually cowardice wearing a facilitator's badge. Every significant decision in your organization is currently being pulled toward one of these two graves. The senior skill is knowing which pull to resist, for *this* decision, *this* room.
 
+{{visual:mind-consensus-accountability}}
+
 ## The tension
 
 Let's be honest about why both failure modes are seductive, because each one flatters a real virtue.

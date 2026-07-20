@@ -14,6 +14,8 @@ The build-everything failure: five years into a bespoke CRM-replacement, the tea
 
 The buy-everything failure: the organization's one truly differentiating capability — the thing its business model depends on and no vendor has ever modeled properly — is jammed into a product built for a different industry's assumptions, held together with customization so extensive that nobody, including the vendor, can upgrade it. They own all the maintenance burden of a build with none of the fit.
 
+{{visual:seams-build-buy-ground}}
+
 ## The test that settles it
 
 Here's the question that cuts through the war, and it has nothing to do with technology:

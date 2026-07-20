@@ -14,6 +14,8 @@ I've also watched the opposite failure, more times than I can count: the archite
 
 Between these two failures sits one of the hardest judgment problems in this profession, and I've never seen it taught: how do you hold a ten-year conviction while shipping ninety-day evidence — without the conviction hardening into dogma or dissolving into drift?
 
+{{visual:mind-ten-year-slices}}
+
 ## The tension
 
 The tension is real, not rhetorical, so let's state both sides at full strength.

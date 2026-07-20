@@ -12,6 +12,8 @@ I started doing this out of self-defense, honestly. I'd fallen in love with an e
 
 What happened next changed how I work.
 
+{{visual:seams-prosecution-case}}
+
 ## What the prosecution found
 
 Some of my design survived beautifully. Under the harshest framing I could construct, backed by the failure retrospectives of teams who'd tried similar things, parts of the architecture stood there undamaged — and I now *knew* they were strong rather than hoped it.

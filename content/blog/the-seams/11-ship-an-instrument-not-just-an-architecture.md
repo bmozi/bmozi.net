@@ -10,6 +10,8 @@ Consider the most influential piece of software-delivery thinking of the last de
 
 The same shape repeats everywhere you look. Credit ratings changed lending more than any banking system design. The Apgar score changed delivery-room outcomes more than any hospital reorganization — five observations, scored 0 to 2, one minute after birth. Nobody had to adopt a philosophy. They just had to measure, and the measurement quietly installed the philosophy underneath.
 
+{{visual:seams-instrument-score}}
+
 ## Why the instrument beats the architecture
 
 I've spent months of my life building architecture documents I'm proud of — target states, decision records, diagrams with every arrow earned. That work matters; it's how you get the design right. But watch what happens when each artifact meets an organization:

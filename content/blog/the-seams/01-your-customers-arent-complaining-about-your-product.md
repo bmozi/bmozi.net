@@ -22,6 +22,8 @@ The product barely came up. What came up, over and over, in different words from
 
 I've since run this exercise on organizations in half a dozen industries — education, healthcare, financial services, government. The pattern holds every time. People rarely complain about the thing you sell. They complain about what it feels like to be *processed* by you.
 
+{{visual:seams-complaint-radar}}
+
 ## Five failure modes, one root
 
 Once you've seen the pattern, you can name it. Nearly every system-around-the-product complaint is one of five failure modes:

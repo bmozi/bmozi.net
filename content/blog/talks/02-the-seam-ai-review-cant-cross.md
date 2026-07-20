@@ -5,6 +5,8 @@ QA/testing conferences. Backed in full by Seams Special 15. Views my own.*
 
 ---
 
+{{visual:talk-ai-review-seam}}
+
 ## Why this talk exists, and its edge
 
 The consensus on stage everywhere: generation outran human review, so let AI review AI.

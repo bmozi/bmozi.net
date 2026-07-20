@@ -13,6 +13,8 @@ processed by the system — the reader's customer, student, patient, or applican
 must make excellent practice more accessible, not more gatekept.* Writing that shows off
 instead of teaching fails the mission test.
 
+{{visual:reference-editorial-north-star}}
+
 ## Working crosswalk → where it lives in the writing
 
 **Aim True** — every series plan states its purpose and audience before its content;

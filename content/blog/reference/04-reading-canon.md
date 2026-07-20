@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:reference-reading-canon}}
+
 ## Tier 1 · The spine (read fully, in this order)
 
 **Gregor Hohpe — *The Software Architect Elevator*** · **[P, strong practitioner validation]**

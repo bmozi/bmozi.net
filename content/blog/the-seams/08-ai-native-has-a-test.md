@@ -10,6 +10,8 @@
 
 If yes, you're AI-native. If no, whatever AI you deploy is bolted on — consuming a system built for humans, through interfaces built for humans, with all the fragility that implies. The difference isn't the sophistication of your models. It's a property of your *architecture*, and you can hear it in five contrasts.
 
+{{visual:seams-ai-native-gate}}
+
 ## Bolted-on vs. native, five ways
 
 **Bolted-on:** the chatbot is wired to your screens and APIs-of-convenience, scraping what it can reach, breaking when the UI changes.

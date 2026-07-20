@@ -676,6 +676,348 @@ const visuals: Record<string, Visual> = {
     ],
     aside: "Monitoring without a monitor is another silent seam.",
   },
+  "architects-mind-arc": {
+    kind: "flow",
+    eyebrow: "Series Map",
+    title: "The architect's mind moves from decision physics to durable absence.",
+    caption:
+      "The series is a discipline arc: pace decisions, keep a long horizon, read evidence, shape the org, own judgment, say no well, protect people, and leave reasons behind.",
+    steps: [
+      { label: "Physics", detail: "Classify reversible and irreversible decisions.", tone: "signal" },
+      { label: "Horizon", detail: "Hold the ten-year picture while shipping slices.", tone: "amber" },
+      { label: "Evidence", detail: "Treat hype as a signal stream, not a religion.", tone: "magenta" },
+      { label: "Shape", detail: "Use Conway's Law as a tool.", tone: "muted" },
+      { label: "Judgment", detail: "Consult deeply without hiding in consensus.", tone: "signal" },
+      { label: "Absence", detail: "Build reasons others can use later.", tone: "amber" },
+    ],
+    aside: "The goal is not architectural taste. It is judgment that survives contact with people, time, and evidence.",
+  },
+  "getting-it-right-series-map": {
+    kind: "flow",
+    eyebrow: "Series Map",
+    title: "Getting it right means making the mechanism replayable.",
+    caption:
+      "The series moves from reliable publication to durable meaning, identity, privacy, policy, and escalation.",
+    steps: [
+      { label: "Publish", detail: "Outbox, idempotency, and event versioning.", tone: "signal" },
+      { label: "Mean", detail: "Business facts and projection rebuilds.", tone: "amber" },
+      { label: "Identify", detail: "One person across many systems.", tone: "magenta" },
+      { label: "Protect", detail: "Hash chains, PII by reference, and policy gates.", tone: "muted" },
+      { label: "Watch", detail: "Timers and dead-man switches close the loop.", tone: "signal" },
+    ],
+    aside: "The reliable system is not the one that never retries. It is the one whose retries have the same effect.",
+  },
+  "seams-for-everyone-arc": {
+    kind: "flow",
+    eyebrow: "Series Map",
+    title: "Everyday systems teach enterprise architecture without the jargon.",
+    caption:
+      "The series uses familiar artifacts to make identity, queues, event history, ledgers, tracking, scoped access, adapters, and watchdogs memorable.",
+    steps: [
+      { label: "Chart", detail: "Shared identity and record context.", tone: "signal" },
+      { label: "Rail", detail: "Queue visibility, owner, and age.", tone: "amber" },
+      { label: "Recorder", detail: "Ordered replay before incidents.", tone: "magenta" },
+      { label: "Ledger", detail: "Correction without erasure.", tone: "muted" },
+      { label: "Key", detail: "Scoped and expiring access.", tone: "signal" },
+      { label: "Chirp", detail: "A safeguard that complains before silence.", tone: "amber" },
+    ],
+    aside: "A picture people already know can carry a principle they will remember.",
+  },
+  "seams-series-arc": {
+    kind: "flow",
+    eyebrow: "Series Map",
+    title: "The Seams series moves from recognition to governed transformation.",
+    caption:
+      "The arc names the failure, proves where it lives, and turns it into operating controls: events, queues, funding, instrumentation, transitions, org shape, AI review, and delegation.",
+    steps: [
+      { label: "Recognize", detail: "Complaints point between systems.", tone: "magenta" },
+      { label: "Govern", detail: "Events, queues, and crossings get owners.", tone: "signal" },
+      { label: "Choose", detail: "Build and buy on the right ground.", tone: "amber" },
+      { label: "Measure", detail: "Trust becomes numbers with consequences.", tone: "muted" },
+      { label: "Transform", detail: "Fund slices, instruments, transitions, and org shape.", tone: "signal" },
+      { label: "Extend", detail: "AI review and delegation move the seam upward.", tone: "magenta" },
+    ],
+    aside: "The word is only useful if it changes what gets owned on Monday.",
+  },
+  "mind-door-physics": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "Pace the decision by the door it really is.",
+    caption:
+      "Some choices should move quickly because they reopen. Others deserve friction because they become load-bearing.",
+    src: "/blog/illustrations/mind-door-physics.webp",
+    alt: "Two architectural doors in a dark studio, one lightweight reversible door and one heavy sealed threshold, with decision paths branching between them",
+  },
+  "mind-ten-year-slices": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "Hold the horizon; let shipped slices correct the route.",
+    caption:
+      "The long picture gives direction, but humble production slices keep the picture honest.",
+    src: "/blog/illustrations/mind-ten-year-slices.webp",
+    alt: "Long-horizon architecture model with small production slices placed along the route and evidence signals correcting the path",
+  },
+  "mind-hype-residue": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "The residue is the signal after the wave burns off.",
+    caption:
+      "Hype is not useless; it is just not the artifact to trust. Trust what remains useful after the performance fades.",
+    src: "/blog/illustrations/mind-hype-residue.webp",
+    alt: "Decommissioned hype machine on a technical worktable with surviving useful artifacts glowing among spent promotional fragments",
+  },
+  "mind-conway-tool": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "Team shape and system shape are one design act.",
+    caption:
+      "Conway's Law is not a trap to complain about. It is a tool for arranging interfaces, ownership, and flow.",
+    src: "/blog/illustrations/mind-conway-tool.webp",
+    alt: "Organization chart and system architecture fused into a working aqueduct-like machine with teams controlling flow gates",
+  },
+  "mind-consensus-accountability": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "A decision needs consultation and a name on the receipt.",
+    caption:
+      "Consensus helps when it improves judgment. It becomes cowardice when it hides accountability.",
+    src: "/blog/illustrations/mind-consensus-accountability.webp",
+    alt: "Decision token balanced between a lone architect, a consultation circle, and an accountable receipt on a dark review table",
+  },
+  "mind-durable-no": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "A durable no leaves a receipt and a better path.",
+    caption:
+      "Saying no is architectural only when it preserves the reason, names the risk, and points to a usable alternative.",
+    src: "/blog/illustrations/mind-durable-no.webp",
+    alt: "Glowing stop gate with a signed receipt and an alternate paved route opening beside it in a dark architecture studio",
+  },
+  "mind-people-queue": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "The oldest item is where abstraction tells on itself.",
+    caption:
+      "A system that processes people must measure the human wait, not just the aggregate throughput.",
+    src: "/blog/illustrations/mind-people-queue.webp",
+    alt: "Human-impacting queue item aging under a spotlight while aggregate dashboards glow in the background",
+  },
+  "mind-absence-reasoning": {
+    kind: "image",
+    eyebrow: "Architect's Mind",
+    title: "The reasons should outlive the architect.",
+    caption:
+      "Designing for absence means future teams can recover the why, challenge it, and continue without folklore.",
+    src: "/blog/illustrations/mind-absence-reasoning.webp",
+    alt: "Empty architect chair beside a living reasoning library with decision records, diagrams, and preserved rationale threads",
+  },
+  "talk-portfolio-podium": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "The podium is governed by the corpus.",
+    caption:
+      "The talk portfolio is not a loose list. Each stage argument points back to a governed reference, series, or artifact.",
+    src: "/blog/illustrations/talk-portfolio-podium.webp",
+    alt: "Central conference podium surrounded by governed talk cards, reference artifacts, and audience rooms connected by light paths",
+  },
+  "talk-ai-review-seam": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "AI can review the work; intent still has a human floor.",
+    caption:
+      "The talk's visual claim is the same as its architectural claim: review automation does not remove the seam between code and truth.",
+    src: "/blog/illustrations/talk-ai-review-seam.webp",
+    alt: "Conference stage showing AI review signals crossing code artifacts but stopping at a human-owned intent boundary",
+  },
+  "talk-harness-ten-minutes": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "The ten-minute talk is the harness, compressed.",
+    caption:
+      "The harness story works when speed, files, tests, prompts, and approvals are visibly held together.",
+    src: "/blog/illustrations/talk-harness-ten-minutes.webp",
+    alt: "Conference prep room with a compact engineering harness apparatus holding files, tests, prompts, and approval gates together",
+  },
+  "talk-prosecute-stage": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "The talk earns trust by showing the trial.",
+    caption:
+      "The stage version of prosecution works because the audience sees the evidence, not just the conclusion.",
+    src: "/blog/illustrations/talk-prosecute-stage.webp",
+    alt: "Architecture model on trial on a conference stage with evidence boards, review panel silhouettes, and repair artifacts",
+  },
+  "talk-org-chart-equipment": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "The org chart changes the machine.",
+    caption:
+      "A talk about organization design needs the chart to look like equipment: interfaces, load, and flow, not boxes for their own sake.",
+    src: "/blog/illustrations/talk-org-chart-equipment.webp",
+    alt: "Conference stage where an organization chart operates like visible machinery controlling system flow",
+  },
+  "talk-fund-slices-stage": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "Slices earn the next funding gate.",
+    caption:
+      "The funding argument becomes visual when each slice proves enough live value to unlock the next step.",
+    src: "/blog/illustrations/talk-fund-slices-stage.webp",
+    alt: "Stage visual of small funded architecture slices crossing evidence gates while a large monolith remains dim in the background",
+  },
+  "talk-queue-owner-stage": {
+    kind: "image",
+    eyebrow: "Podium",
+    title: "A queue item needs a place, owner, and clock.",
+    caption:
+      "The stage image makes the failure immediate: without ownership, a queue is just a polished hiding place.",
+    src: "/blog/illustrations/talk-queue-owner-stage.webp",
+    alt: "Conference stage with queue rail, owner markers, clocks, and one ownerless work item dropping into a dark gap",
+  },
+  "reference-editorial-north-star": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "Every draft needs a north star before it ships.",
+    caption:
+      "The North Star keeps tone, evidence, audience, and purpose from drifting as the corpus grows.",
+    src: "/blog/illustrations/reference-editorial-north-star.webp",
+    alt: "Editorial navigation instrument with compass, north star, manuscript cards, evidence markers, and governed writing paths",
+  },
+  "reference-curriculum-mastery": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "Mastery is a portfolio of evidence, not seat time.",
+    caption:
+      "The curriculum is strongest when domains, practice, proof, and reflection are visible as one learning architecture.",
+    src: "/blog/illustrations/reference-curriculum-mastery.webp",
+    alt: "Enterprise architecture mastery curriculum map with domain stations, evidence portfolio cards, and learning progression arcs",
+  },
+  "reference-reading-canon": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "Read the canon with a highlighter and a prosecutor.",
+    caption:
+      "The canon is a working shelf, not a shrine: each source earns its place by improving judgment under pressure.",
+    src: "/blog/illustrations/reference-reading-canon.webp",
+    alt: "Adversarial reading table with books, source cards, colored evidence threads, challenge markers, and critique tools",
+  },
+  "reference-day-zero-baseline": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "Seal the belief before hindsight edits it.",
+    caption:
+      "A Day-Zero baseline protects learning by preserving what was believed before the work had a chance to teach back.",
+    src: "/blog/illustrations/reference-day-zero-baseline.webp",
+    alt: "Sealed baseline envelope on a calibration table with estate, organization, problem, people, and self-assessment stations",
+  },
+  "reference-build-guild": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "The guild is a capability network, not a meeting series.",
+    caption:
+      "A healthy guild turns standards, clinics, rituals, and senior engineering practice into shared capability that can eventually need less ceremony.",
+    src: "/blog/illustrations/reference-build-guild.webp",
+    alt: "Community of practice workshop table with architects, senior engineers, standards, clinics, and learning rituals linked into a capability network",
+  },
+  "reference-decision-layer": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "The decision layer converts inputs into accountable judgment.",
+    caption:
+      "Policy, evidence, authority, and human accountability belong in a visible layer above operational systems.",
+    src: "/blog/illustrations/reference-decision-layer.webp",
+    alt: "Governed enterprise decision layer suspended above operational systems with evidence streams, approval markers, and accountability artifacts",
+  },
+  "reference-harness-talk-kit": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "The harness turns AI speed into governed work.",
+    caption:
+      "The ten-minute kit is a compact teaching object: files, prompts, tests, review, and approvals held together.",
+    src: "/blog/illustrations/reference-harness-talk-kit.webp",
+    alt: "Engineering harness apparatus connecting code files, prompts, tests, review gates, and approvals beside a small podium",
+  },
+  "reference-introduction-kit": {
+    kind: "image",
+    eyebrow: "Reference Artifact",
+    title: "First words become safer when the kit carries the operating language.",
+    caption:
+      "The introduction kit frames values, student continuity, evidence, and accountability as shared working tools from day one.",
+    src: "/blog/illustrations/reference-introduction-kit.webp",
+    alt: "Elegant onboarding kit with compass, role markers, continuity threads, evidence cards, and shared-language tokens on a dark table",
+  },
+  "seams-complaint-radar": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "The product can be fine while the experience leaks around it.",
+    caption:
+      "Customer complaints often describe the seam: support, records, login, finance, documents, and status disagreeing around a product that still works.",
+    src: "/blog/illustrations/seams-complaint-radar.webp",
+    alt: "Strong central product core surrounded by support, records, login, finance, and message systems with complaint signals leaking through cracked seams",
+  },
+  "seams-prosecution-case": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "The architecture gets stronger when the evidence is allowed to accuse it.",
+    caption:
+      "A prosecution is not cynicism. It is a room where claims become stronger by surviving real exhibits.",
+    src: "/blog/illustrations/seams-prosecution-case.webp",
+    alt: "Architecture diagram and model on trial in a dark review room with evidence boards, logs, user journeys, and skeptical reviewers",
+  },
+  "seams-build-buy-ground": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "Choose the ground before you choose the tool.",
+    caption:
+      "Buy the commodity terrain. Own the differentiating ground. Do not confuse convenience with strategy.",
+    src: "/blog/illustrations/seams-build-buy-ground.webp",
+    alt: "Split terrain architecture map with commodity vendor blocks on one side and strategic student-journey infrastructure on the other",
+  },
+  "seams-ai-native-gate": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "AI-native means governed tool paths, not clever shortcuts.",
+    caption:
+      "The native test is whether an agent can act through scoped, typed, audited boundaries instead of scraping around them.",
+    src: "/blog/illustrations/seams-ai-native-gate.webp",
+    alt: "AI agent trace passing through scoped registered tool gates toward a protected data vault while an unsafe shortcut is blocked",
+  },
+  "seams-trust-numbers-board": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "Trust words become real when the board has thresholds and consequences.",
+    caption:
+      "Values matter, but systems change when ownership, clocks, measures, and escalation make the value operational.",
+    src: "/blog/illustrations/seams-trust-numbers-board.webp",
+    alt: "Mechanical trust instrument board converting abstract values into gauges, owners, timers, thresholds, receipts, and consequence levers",
+  },
+  "seams-instrument-score": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "Ship the instrument that makes the architecture observable.",
+    caption:
+      "A model becomes useful when it measures live behavior and lets teams replay what actually happened.",
+    src: "/blog/illustrations/seams-instrument-score.webp",
+    alt: "Live system architecture model connected to gauges, replay controls, journey traces, and operational evidence feeds",
+  },
+  "seams-transition-control": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "The crossing is the thing to govern.",
+    caption:
+      "Records can be accurate on both sides while the transition between them is ownerless, untimed, and unaudited.",
+    src: "/blog/illustrations/seams-transition-control.webp",
+    alt: "Glowing status object crossing between two record vaults through a governed checkpoint with owner, time, notice, and authority icons",
+  },
+  "seams-cornerstone-moved": {
+    kind: "image",
+    eyebrow: "Seam Visual",
+    title: "Put the cornerstone where the whole structure can use it.",
+    caption:
+      "A definition belongs before the argument depends on it. Moving it forward aligns the rest of the series.",
+    src: "/blog/illustrations/seams-cornerstone-moved.webp",
+    alt: "Glowing cornerstone block being placed at the front of a systems architecture foundation while later article tiles align behind it",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

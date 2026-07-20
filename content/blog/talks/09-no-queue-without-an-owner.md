@@ -6,6 +6,8 @@ Seams Part 6. Views my own.*
 
 ---
 
+{{visual:talk-queue-owner-stage}}
+
 ## Why this is a good conference talk
 
 **The edge is universality plus immediate actionability.** Every organization in every

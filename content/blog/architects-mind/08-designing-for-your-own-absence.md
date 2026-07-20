@@ -10,6 +10,8 @@ Not because they lacked ability — because they lacked *reasons*. The system wa
 
 Here is the thought I couldn't shake, and it's the reason this essay closes the series: everyone who described him as a genius was measuring the wrong artifact. The system was excellent. But the *job* — I've come to believe — was never only the system. It was the decision-making capability of the place. And by that measure, the most impressive architecture in the portfolio was a failure that took years to finish happening.
 
+{{visual:mind-absence-reasoning}}
+
 ## The tension
 
 Every essay in this series has been about judgment — pacing decisions by their physics, holding conviction against evidence, reading hype, wielding Conway, owning decisions, refusing well, answering for the people in the queue. The finale has to face the awkward corollary: if judgment is the scarce asset, then judgment concentrated in one head is a single point of failure, and the standard architectural response to a single point of failure is not admiration. We would never accept a database with no replica. We routinely accept — we routinely *celebrate* — an architecture whose reasoning has no replica, because the bus factor of one wears a flattering costume: indispensability.

@@ -12,6 +12,8 @@ And next quarter the same dashboards show the same fragmentation, because of a d
 
 **Observation governs records. Fragmentation happens in transitions.**
 
+{{visual:seams-transition-control}}
+
 ## The moment nobody owns
 
 Trace any lost-customer story to its actual moment of loss and you'll find it isn't a record that failed — it's a *state change*. The application was moved from "received" to "in review" by a batch job, and nothing told the customer. The case was reassigned between departments, and for six days it belonged to no one. The date was corrected in one system, and the correction never became anyone's obligation to propagate or announce. Each system's records were locally fine before the transition and locally fine after it. The damage lived entirely *in the changing* — who did it, on whose authority, who owns what it created, who was told.

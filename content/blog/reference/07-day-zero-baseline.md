@@ -8,6 +8,8 @@
 
 ---
 
+{{visual:reference-day-zero-baseline}}
+
 ## Section A · The estate (what systems exist and how they really run)
 
 | # | Statement | P(%) | What would change my mind | Day-30 | Day-90 |

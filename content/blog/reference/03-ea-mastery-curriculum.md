@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:reference-curriculum-mastery}}
+
 ## The organizing truth
 
 Thirty years of enterprise-architecture evidence reduces to one adversarial finding, and this entire curriculum is built on it:

@@ -4,6 +4,8 @@
 
 ---
 
+{{visual:reference-build-guild}}
+
 ## What the guild is, and pointedly is not
 
 The guild is an *enabling structure*: a community of practice that raises the architectural judgment of everyone who touches design decisions — architects by title, senior engineers by inclination, and the "accidental architects" every organization is full of. It teaches, reviews, and stewards shared standards.

@@ -9,6 +9,8 @@
 
 ---
 
+{{visual:seams-for-everyone-arc}}
+
 ## The arc
 
 The series moves through the life of a fact inside an organization: *seeing it in one place* (1), *working on it without losing it* (2), *remembering what happened* (3–4), *never losing track of a thing in motion* (5), *controlling who can touch it* (6), *talking to outsiders without being changed by them* (7), and *knowing your safeguards still work* (8). Each article stands alone; together they cover the ideas an executive most needs when an architect asks for money.

@@ -10,6 +10,8 @@ Read any organization's public materials and you'll find the trust words: *relia
 
 If yes, it's a commitment. If no, it's decoration. In my experience the ratio of decoration to commitment in enterprise trust language runs about ten to one — not because anyone is lying, but because nobody has done the unglamorous work of converting virtues into mechanisms. That conversion is the subject of this piece, because it's the last load-bearing idea this series needs before the finale.
 
+{{visual:seams-trust-numbers-board}}
+
 ## From virtue to mechanism, three examples
 
 **"We're reliable."** Decoration — until it becomes: *sign-in succeeds for 99.9% of real user attempts, weekly, measured on actual traffic rather than a synthetic probe.* Why real attempts? Because "the login service is up" and "customers can log in" are different facts, and only one of them appears in complaints. And then the part most organizations skip — the consequence: the target comes with an *error budget*, and when the budget is spent, feature work on that surface pauses while the team restores reliability. No exceptions by seniority. That last sentence is the entire difference between a target and a poster. A number nobody rearranges their week for is a poster.

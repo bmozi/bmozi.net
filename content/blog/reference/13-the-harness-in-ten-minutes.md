@@ -8,6 +8,8 @@ worship, works for any engineering team.*
 
 ---
 
+{{visual:reference-harness-talk-kit}}
+
 ## Why this exists — the genre comparison, honestly
 
 The internet is full of nine-minute "five principles for AI coding" videos, and the

@@ -12,6 +12,8 @@ Then the business restructured for unrelated reasons, the two units merged, one 
 
 I tell this story against myself because of what I was doing during that failed year: quoting Conway's Law in every deck, as a lament. "Organizations ship their communication structures." Nodding wisely at it, like weather. It took the reorg to teach me that I'd been holding a power tool by the wrong end.
 
+{{visual:mind-conway-tool}}
+
 ## The tension
 
 Conway's Law is probably the most-quoted, least-wielded idea in software. Everyone above a certain seniority can recite it; almost everyone deploys it as *fate* — an explanation for why the architecture is the way it is, a resigned shrug with a citation. The system mirrors the org chart; the org chart is someone else's department; therefore the architecture is someone else's weather. QED, and back to drawing diagrams the org will quietly veto.
