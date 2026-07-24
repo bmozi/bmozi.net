@@ -20,6 +20,14 @@ Progressive rollout → the cohort-based cutover and slice strategy (Ground-Up).
 
 **The integration, then, is one move: name the decision layer as a first-class capability with a single owner, rather than leaving its organs distributed across five pages.** In the operating-model capability map it lives inside "Platform, data & AI," but it deserves its own line: *Decision Layer — experimentation, progressive rollout, configuration, impact measurement — posture: build the loop, buy the plumbing.* When the institution asks "how do we know any of this is working?", the answer should have a name, not a scavenger hunt.
 
+## The upstream addition: intent before acceleration
+
+Agentic product and software-factory work adds one more responsibility to the decision layer: the institution needs a governed path from **Key Result → product outcome → initiative → requirement → ADR → architecture delta → built change → measured result**.
+
+Without that trace, faster delivery turns unclear intent into polished waste. With that trace, product-intent agents can help discover and structure the right work, and software-factory agents can accelerate only after evidence, ownership, and constraints are visible.
+
+The reusable instrument is now filed as Reference 18: [Vision-to-Work Trace Kit](/blog/reference/18-vision-to-work-trace-kit).
+
 ## The inversion that must survive translation
 
 Here is where adaptation matters more than adoption, and where the mission earns its keep. A consumer-products company can say "determine the winner" and mean it plainly: variant B beat variant A; ship B. An institution serving students cannot import that sentence unexamined, for three structural reasons:

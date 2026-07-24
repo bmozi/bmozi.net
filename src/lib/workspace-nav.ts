@@ -218,6 +218,12 @@ export const workspaceGroups: WorkspaceGroup[] = [
         description:
           "Experimentation, rollout, configuration, and impact measurement as one governed learning loop.",
       },
+      {
+        href: "/blog/reference/18-vision-to-work-trace-kit",
+        label: "Vision-to-work trace",
+        description:
+          "Trace Key Results through outcomes, requirements, ADRs, factory work, and measured results.",
+      },
     ],
   },
   {

@@ -403,17 +403,21 @@ export const practiceLabPages: PracticeLabPage[] = [
     title: "Turn architecture into portfolio choices.",
     eyebrow: "Priority 5 · sequencing and funding",
     signature:
-      "A roadmap is a financial argument with dependencies, risk, and student outcomes attached.",
+      "A roadmap is a financial argument with outcomes, decisions, dependencies, risk, and proof attached.",
     image: "/wgu/practice-lab/portfolio-investment-lab.webp",
     imageAlt:
       "Architecture portfolio investment board with capability slices, funding tokens, dependencies, and outcome gauges",
     summary:
-      "A lab for ranking slices, pricing option value, defining kill criteria, and making quarterly investment choices that connect architecture to mission economics and institutional capacity.",
+      "A lab for ranking slices, tracing work from institutional intent to execution, pricing option value, defining kill criteria, and making quarterly investment choices that connect architecture to mission economics and institutional capacity.",
     why:
       "Enterprise architecture earns strategic influence when it shapes what the organization funds, pauses, sequences, and stops. This page converts technical dependency thinking into portfolio discipline.",
     promise:
       "Every proposed slice has a student outcome, an institutional value case, dependency logic, evidence target, and stop rule.",
     operatingFrame: [
+      {
+        label: "Trace before fund",
+        text: "Can this work walk from Key Result to product outcome to requirement to ADR to architecture delta to measured result?",
+      },
       {
         label: "Student value",
         text: "What named student pain does this reduce, and how soon would a student feel the difference?",
@@ -433,6 +437,10 @@ export const practiceLabPages: PracticeLabPage[] = [
     ],
     artifacts: [
       {
+        label: "Vision-to-work trace",
+        text: "Key Result, product outcome, initiative, product owner, architecture owner, evidence, requirement, ADRs, factory package, metric, guardrail, and review date.",
+      },
+      {
         label: "Slice scorecard",
         text: "Student pain, owner, dependency, cost range, leading metric, guardrail, evidence date, and decision rule.",
       },
@@ -451,6 +459,10 @@ export const practiceLabPages: PracticeLabPage[] = [
     ],
     drills: [
       {
+        label: "OKR-to-PR walk",
+        text: "Pick one active project and trace it from institutional result to the pull request or software-factory task. Stop at the first missing owner or receipt.",
+      },
+      {
         label: "Kill your favorite slice",
         text: "Write the evidence that would make you stop the slice you like most. If none exists, it is faith, not strategy.",
       },
@@ -467,6 +479,7 @@ export const practiceLabPages: PracticeLabPage[] = [
       "Can finance see the value path without a translator?",
       "Can engineering see why the sequence is technically honest?",
       "Can student-facing partners see what improves first?",
+      "Can the software-factory work package prove its upstream intent?",
       "Does every expansion have earned evidence?",
     ],
     diagramTitle: "The investment decision loop",

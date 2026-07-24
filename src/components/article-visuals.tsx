@@ -1018,6 +1018,15 @@ const visuals: Record<string, Visual> = {
     src: "/blog/illustrations/seams-cornerstone-moved.webp",
     alt: "Glowing cornerstone block being placed at the front of a systems architecture foundation while later article tiles align behind it",
   },
+  "vision-to-work-trace-kit": {
+    kind: "image",
+    eyebrow: "Trace Kit",
+    title: "Govern the chain from institutional intent to built software.",
+    caption:
+      "A software factory is leverage only when Key Results, outcomes, evidence, requirements, decisions, architecture deltas, work packages, and measured results stay connected.",
+    src: "/blog/illustrations/vision-to-work-trace-kit.webp",
+    alt: "Governed trace table showing institutional outcomes flowing through requirements, decision gates, architecture deltas, software factory lanes, and measured results",
+  },
 };
 
 function FlowGraphic({ steps }: { steps: Step[] }) {

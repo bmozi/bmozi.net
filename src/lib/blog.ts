@@ -172,6 +172,11 @@ const articleVisuals: Record<
       imageAlt:
         "AI security operations table with quarantined hostile content, policy gates, delegation controls, and guarded data zones",
     },
+    "18-vision-to-work-trace-kit": {
+      image: "/blog/reference/vision-to-work-trace-kit.webp",
+      imageAlt:
+        "Governed vision-to-work trace board linking institutional outcomes to requirements, decisions, architecture deltas, factory work, and measured results",
+    },
   },
   talks: {
     "00-talk-portfolio": {

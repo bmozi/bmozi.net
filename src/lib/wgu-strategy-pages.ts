@@ -517,6 +517,30 @@ export const wguStrategyPages = {
     },
     sections: [
       {
+        eyebrow: "Intent before execution",
+        title: "The software factory needs an upstream product-decision trace.",
+        body:
+          "Agentic delivery should not begin from a vague prompt, a half-remembered OKR, or a generated task list. The safe handoff is approved intent: institutional result, product outcome, evidence, requirement, ADR context, architecture model, and review metric.",
+        cards: [
+          {
+            title: "Product-intent agents",
+            text: "Research, synthesize, question, draft, and maintain outcomes, opportunities, assumptions, evidence, risks, PRDs, and delivery-ready stories.",
+          },
+          {
+            title: "Factory agents",
+            text: "Plan, implement, test, document, and prepare changes only after approved intent and constraints are available.",
+          },
+          {
+            title: "Trace package",
+            text: "Every generated work package links Key Result, product outcome, owner, requirement, ADRs, architecture delta, metric, and guardrail.",
+          },
+          {
+            title: "Stop rule",
+            text: "No evidence, no owner, no metric, or no approved requirement means the work stays in discovery instead of entering the factory.",
+          },
+        ],
+      },
+      {
         eyebrow: "Platform optimization",
         title: "Engineer efficiency is a system property.",
         body:
@@ -596,8 +620,9 @@ export const wguStrategyPages = {
       "What machinery blocks unsafe or unverified agent output?",
       "Is there a written delegation filter for each engineering domain?",
       "Are developer-experience SLOs measured as carefully as production SLOs?",
+      "Can every factory work package trace back to an approved product outcome, requirement, ADR context, and result metric?",
     ],
     sourceNote:
-      "Grounded in the adjacent Harnessing the Horse repository, the Harness in Ten Minutes talk, the local engineering standards page, and the agentic security gap analysis.",
+      "Grounded in the adjacent Harnessing the Horse repository, the Harness in Ten Minutes talk, the local engineering standards page, the agentic security gap analysis, and the Vision-to-Work Trace Kit.",
   },
 } satisfies Record<string, WguStrategyPage>;

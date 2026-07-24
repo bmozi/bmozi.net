@@ -69,6 +69,7 @@ ea-mastery/09-INTRODUCTION-KIT.md|14-introduction-kit.md
 ea-mastery/10-AGENTIC-GAP-ANALYSIS.md|15-agentic-gap-analysis.md
 ea-mastery/11-THE-METHOD.md|16-the-method.md
 ea-mastery/12-AI-SECURITY-SEAMS.md|17-ai-security-seams.md
+ea-mastery/13-VISION-TO-WORK-TRACE-KIT.md|18-vision-to-work-trace-kit.md
 MAP
 
 if [ "$DRIFT" -eq 0 ]; then

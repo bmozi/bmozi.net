@@ -62,6 +62,12 @@ const capabilities = [
     posture: "Build thin, run well",
   },
   {
+    tier: "Vision-to-work trace",
+    caps: "Key Results · Product outcomes · Initiatives · Requirements · ADRs · Architecture deltas · Factory work · Measured results",
+    home: "Decision layer + portfolio cadence + product/architecture owners",
+    posture: "Build as the upstream control before agentic delivery accelerates",
+  },
+  {
     tier: "The decision layer",
     caps: "Experimentation with holdouts · Progressive rollout (slices, cohorts) · Dynamic configuration & action tiers · Impact measurement with paired outcome + guardrail metrics",
     home: "One named owner — the institutional learning loop, productized (spans decisioning service, backbone, lakehouse)",
@@ -95,6 +101,7 @@ const teams = [
 ];
 
 const cadence = [
+  "Weekly portfolio trace review: pick one active initiative and walk Key Result → outcome → owner → requirement → ADR → architecture delta → metric. Missing links become owned work, not meeting notes.",
   "ADRs for anything hard to reverse — decision, options, consequences, owner — written in days, not quarters; the record is the meeting.",
   "Weekly design clinic: any team brings any seam problem; architecture attends every time, decides only when asked.",
   "Contract changes ride the registry workflow — review is automatic where compatibility is provable, human only where semantics change.",
@@ -102,6 +109,13 @@ const cadence = [
 ];
 
 const risks = [
+  {
+    risk: "Factory acceleration outruns product intent",
+    sev: "High",
+    mitigation:
+      "No software-factory work package without a vision-to-work trace: Key Result, product outcome, evidence, owner, approved requirement, ADR context, metric, and stop rule. Owner: product + architecture.",
+    trigger: "Any generated plan, story, or PR cannot name the outcome and decision it serves",
+  },
   {
     risk: "Adoption stalls — teams route around the paved road",
     sev: "High",
